@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Authors>Jonathan Malek</Authors>
+        <Description>Morphine Milligram Equivalent (MME) Calculator</Description>
+        <Copyright>Copyright (c) 2021 Practice Fusion, Inc</Copyright>
+
+        <TargetFrameworks>net6.0;net5.0;netstandard2.0</TargetFrameworks>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <Features>strict</Features>
+        <RepositoryUrl>https://github.com/practicefusion/mmecalculator</RepositoryUrl>
+        <PackageTags>mme;sig;sigparser;opioid;prescription</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>../../PracticeFusion.MmeCalculator.Core.snk</AssemblyOriginatorKeyFile>
+
+        <!-- SourceLink -->
+        <!-- Publish the repo in the nupkg -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <!-- embed anything not in github -->
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <!-- Build a symbol package -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+        <Deterministic>true</Deterministic>
+        <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- for source link, and versioning -->
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.0" PrivateAssets="All" />
+        <PackageReference Include="MinVer" Version="2.5.0" PrivateAssets="All" />
+
+        <PackageReference Include="Antlr4.Runtime.Standard" Version="4.9.2" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="System.Text.Json" Version="6.0.0" />
+        <None Include="../../../README.md" Pack="true" PackagePath="."/>
+    </ItemGroup>
+
+</Project>

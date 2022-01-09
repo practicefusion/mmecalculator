@@ -1,0 +1,11 @@
+{
+    "antlr4.generation": {
+        "mode": "external",
+        "outputDir": ".csharp-output",
+        "package": "PracticeFusion.MmeCalculator.Core.Parsers.Generated",
+        "language": "CSharp",
+        "listeners": true,
+        "visitors": true,
+        "alternativeJar": "antlr-4.9.2-complete.jar"
+    }
+}

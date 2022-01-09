@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <AWSProjectType>Lambda</AWSProjectType>
+    <UserSecretsId>f061ba95-53b4-4d5c-8007-1e2d50bfa1cd</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.4" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.1" />
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="6.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\PracticeFusion.MmeCalculator.Core\PracticeFusion.MmeCalculator.Core.csproj" />
+    <ProjectReference Include="..\..\Core\PracticeFusion.MmeCalculator.RxNavRxNormResolver\PracticeFusion.MmeCalculator.RxNavRxNormResolver.csproj" />
+  </ItemGroup>
+</Project>

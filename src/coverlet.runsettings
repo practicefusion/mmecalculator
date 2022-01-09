@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+    <DataCollectionRunSettings>
+        <DataCollectors>
+            <DataCollector friendlyName="XPlat code coverage">
+                <Configuration>
+                    <Format>cobertura,opencover</Format>
+                    <Exclude>PracticeFusion.MmeCalculator.Client*,PracticeFusion.MmeCalculator.Console*,PracticeFusion.MmeCalculator.Host*,PracticeFusion.MmeCalculator.LocalRxNormResolver*,PracticeFusion.MmeCalculator.WebDemo*,PracticeFusion.MmeCalculator.Cli*,PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests*,PracticeFusion.MmeCalculator.SystemTests*,PracticeFusion.MmeCalculator.UnitTests*</Exclude>
+                    <SingleHit>false</SingleHit>
+                    <UseSourceLink>false</UseSourceLink>
+                    <IncludeTestAssembly>false</IncludeTestAssembly>
+                    <SkipAutoProps>true</SkipAutoProps>
+                    <DeterministicReport>false</DeterministicReport>
+                </Configuration>
+            </DataCollector>
+        </DataCollectors>
+    </DataCollectionRunSettings>
+</RunSettings>

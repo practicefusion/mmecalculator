@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeFusion.MmeCalculator.Core", "Core\PracticeFusion.MmeCalculator.Core\PracticeFusion.MmeCalculator.Core.csproj", "{DF74E45E-ADC7-4B2C-8A70-272539817746}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5010CEA9-0DC9-4AAD-865E-F189747F3415}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeFusion.MmeCalculator.LocalRxNormResolver", "Core\PracticeFusion.MmeCalculator.LocalRxNormResolver\PracticeFusion.MmeCalculator.LocalRxNormResolver.csproj", "{29B981A2-2B84-46F4-AD5B-E70C931D5C55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeFusion.MmeCalculator.RxNavRxNormResolver", "Core\PracticeFusion.MmeCalculator.RxNavRxNormResolver\PracticeFusion.MmeCalculator.RxNavRxNormResolver.csproj", "{33C74DB7-54DC-46BF-9E01-E9952529A392}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{2D530942-C8AE-4A9E-BE04-D790CF7B8CD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeFusion.MmeCalculator.SystemTests", "Test\PracticeFusion.MmeCalculator.SystemTests\PracticeFusion.MmeCalculator.SystemTests.csproj", "{20D1755A-1C4E-418A-B546-E628F3F8CF0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeFusion.MmeCalculator.UnitTests", "Test\PracticeFusion.MmeCalculator.UnitTests\PracticeFusion.MmeCalculator.UnitTests.csproj", "{BF1F928B-8231-482E-B94D-B65F6FB53525}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26484BDE-40E9-46F8-8699-E4001B4FF12A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\.gitignore = ..\.gitignore
+		..\CODE-OF-CONDUCT.md = ..\CODE-OF-CONDUCT.md
+		..\CONTRIBUTING.md = ..\CONTRIBUTING.md
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+		..\SECURITY.md = ..\SECURITY.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{86377DC2-E779-49A6-BB3B-6D5DB49EF27A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{FA41908F-16E8-433F-84DD-BA969A526272}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\ci.yml = ..\.github\workflows\ci.yml
+		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
+		..\.github\workflows\securityscan.yml = ..\.github\workflows\securityscan.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{2F1870C9-DED5-4755-B38E-0424232E780E}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\ISSUE_TEMPLATE\bug_report.md = ..\.github\ISSUE_TEMPLATE\bug_report.md
+		..\.github\ISSUE_TEMPLATE\feature_request.md = ..\.github\ISSUE_TEMPLATE\feature_request.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests", "Test\PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests\PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests.csproj", "{3554D80B-3477-4E7D-84E5-4512197440C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF74E45E-ADC7-4B2C-8A70-272539817746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF74E45E-ADC7-4B2C-8A70-272539817746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF74E45E-ADC7-4B2C-8A70-272539817746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF74E45E-ADC7-4B2C-8A70-272539817746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B981A2-2B84-46F4-AD5B-E70C931D5C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B981A2-2B84-46F4-AD5B-E70C931D5C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B981A2-2B84-46F4-AD5B-E70C931D5C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B981A2-2B84-46F4-AD5B-E70C931D5C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C74DB7-54DC-46BF-9E01-E9952529A392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C74DB7-54DC-46BF-9E01-E9952529A392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C74DB7-54DC-46BF-9E01-E9952529A392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C74DB7-54DC-46BF-9E01-E9952529A392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D1755A-1C4E-418A-B546-E628F3F8CF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D1755A-1C4E-418A-B546-E628F3F8CF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D1755A-1C4E-418A-B546-E628F3F8CF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D1755A-1C4E-418A-B546-E628F3F8CF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1F928B-8231-482E-B94D-B65F6FB53525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1F928B-8231-482E-B94D-B65F6FB53525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1F928B-8231-482E-B94D-B65F6FB53525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1F928B-8231-482E-B94D-B65F6FB53525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3554D80B-3477-4E7D-84E5-4512197440C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3554D80B-3477-4E7D-84E5-4512197440C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3554D80B-3477-4E7D-84E5-4512197440C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3554D80B-3477-4E7D-84E5-4512197440C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF74E45E-ADC7-4B2C-8A70-272539817746} = {5010CEA9-0DC9-4AAD-865E-F189747F3415}
+		{29B981A2-2B84-46F4-AD5B-E70C931D5C55} = {5010CEA9-0DC9-4AAD-865E-F189747F3415}
+		{33C74DB7-54DC-46BF-9E01-E9952529A392} = {5010CEA9-0DC9-4AAD-865E-F189747F3415}
+		{20D1755A-1C4E-418A-B546-E628F3F8CF0C} = {2D530942-C8AE-4A9E-BE04-D790CF7B8CD1}
+		{BF1F928B-8231-482E-B94D-B65F6FB53525} = {2D530942-C8AE-4A9E-BE04-D790CF7B8CD1}
+		{86377DC2-E779-49A6-BB3B-6D5DB49EF27A} = {26484BDE-40E9-46F8-8699-E4001B4FF12A}
+		{FA41908F-16E8-433F-84DD-BA969A526272} = {86377DC2-E779-49A6-BB3B-6D5DB49EF27A}
+		{2F1870C9-DED5-4755-B38E-0424232E780E} = {86377DC2-E779-49A6-BB3B-6D5DB49EF27A}
+		{3554D80B-3477-4E7D-84E5-4512197440C4} = {2D530942-C8AE-4A9E-BE04-D790CF7B8CD1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {441720A6-1F00-4A80-86F9-896A9459A703}
+	EndGlobalSection
+EndGlobal

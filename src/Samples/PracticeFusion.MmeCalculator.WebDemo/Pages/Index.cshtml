@@ -1,0 +1,441 @@
+﻿@page
+@using System.Diagnostics
+@using PracticeFusion.MmeCalculator.Core.Services
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/8.6.3/jsoneditor.min.css" integrity="sha256-thQmdfrg82/N5u9ybMxam1RKdSfaxOPCgl5q9AI/mDI=" crossorigin="anonymous"/>
+    <title>DEMO: MME Calculator</title>
+    <style>
+        .parsed {
+            font-size: x-large;
+            color: white;
+            padding: 10px 0px 30px 30px;
+        }
+
+        .parsed > mark {
+            display: inline-block;
+            background: none;
+        }
+        
+        .markValue {
+            padding: 2px;
+            background: none;
+        }
+        
+        .markLabel {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            color: navy;
+            text-transform: uppercase;
+            text-align: center;
+            border-top: 2px solid navy;
+            padding: 6px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background: #eeeeee;
+        }
+        
+        .markDetail {
+            display: inline-block;
+            padding-right: 4px;
+            background: none;
+        }
+        
+        .markDetailValue {
+            background: none;
+            text-align: center;
+        }
+        
+        .markDetailLabel {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            color: #cccccc;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-light p-5 rounded-lg m-3">
+        <h1 class="display-4">MME Calculator Demo</h1>
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="calculator-tab" data-bs-toggle="tab" href="#calculator" role="tab" aria-controls="calculator" aria-selected="true">Calculator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="sig-tab" data-bs-toggle="tab" href="#sig-realtime" role="tab" aria-controls="sig-realtime" aria-selected="true">Real-time Sig</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active mt-2" id="calculator" role="tabpanel" aria-labelledby="calculator-tab">
+                <div class="form-rows">
+                    <div class="row form-row">
+                        <div class="form-group mb-2 col-md-8">
+                            <input type="text" class="form-control sig" placeholder="Enter sig" autocomplete="on" />
+                        </div>
+                        <div class="form-group mb-2 col-md-2">
+                            <input type="text" class="form-control rxcui" placeholder="RxNorm" autocomplete="on" />
+                        </div>
+                        <div class="form-group mb-2 col-md-2">
+                            <button class="btn btn-secondary" onclick="addRow()" id="add-row">Add Row</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="btn-group mb-2 col-md-3" role="group">
+                        <button class="btn btn-primary" onclick="submit();this.blur();">Submit</button>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="examples" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Add from examples
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="examples">
+                                <a class="dropdown-item" href="#" onclick="addExample(this)">Percocet 7.5-325mg : 1-2 tabs every 6-8 hours prn pain : 1049642</a>
+                                <a class="dropdown-item" href="#" onclick="addExample(this)">Fentanyl 750mcg/hr : 1 patch every 72 hours : 197696</a>
+                                <a class="dropdown-item" href="#" onclick="addExample(this)">Ultram 200mg : 1 tab bid with water : 845315</a>
+                                <a class="dropdown-item" href="#" onclick="addExample(this)">Suboxone 2mg : 1 film sl a day x 2 days : 1010603</a>
+                                <a class="dropdown-item" href="#" onclick="addExample(this)">Zohydro 10mg : take 1 tab 2-3 times per day as needed: 1860492</a>
+                                <a class="dropdown-item" href="#" onclick="addExample(this)">Methadone 2mg/ml : take 2.5 ml every 12-24 hours : 864769</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="response">
+                </div>
+                <div class="mt-2" id="json"></div>
+                <div class="mt-5 mb-0">
+                    <p class="small">Core Version: @TransparencyUtils.ProductVersion</p>
+                    <p class="small">API documentation available <a href="/docs/index.html">here</a>.</p>
+                    <p class="small">RxNorm results from <a href="https://rxnav.nlm.nih.gov/RxNormAPIs.html">RxNorm API</a>. This product uses publicly available data from the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product.</p>
+                </div>
+            </div>
+            <div class="tab-pane fade mt-2" id="sig-realtime" role="tabpanel" aria-labelledby="sig-tab">
+                <div class="form-row mb-2">
+                    <input type="text" class="form-control realtime-sig" placeholder="Start typing sig" autocomplete="on" />
+                </div>
+                <div class="row mt-2 justify-content-center" id="parsedSig">
+
+                </div>
+                <div class="row mt-2" id="parsedSigJson">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/8.6.3/jsoneditor.min.js" integrity="sha256-iha/QQwSuta8sBMrJ7j9cR7WF/duYY3RmJy+1JIYWjU=" crossorigin="anonymous"></script>
+
+    <script>
+        let input = document.querySelector('.realtime-sig');
+        let timeout = null;
+
+        input.addEventListener('keyup',
+            function () {
+                let path = getApiPath();
+                path += '?sig=' + input.value;
+                clearTimeout(timeout);
+
+                timeout = setTimeout(function () {
+                    $.ajax({
+                        url: path,
+                        type: 'GET',
+                        success: function (data) {
+                            displayParsedSig(data);
+                        }
+                    });
+                },
+                    200);
+            });
+
+        function displayParsedSig(parsedSig) {
+            var div = $('<div class="col"/>');
+
+            // show key information
+            var cards = '<div class="card">';
+            cards += '<h5 class="card-header">Key Parsing Results</h5>';
+            cards += '<ul class="list-group list-group-flush">';
+            cards += `<li class="list-group-item"><strong>Human Readable:</strong> ${parsedSig.humanReadable}</li>`;
+            cards += `<li class="list-group-item"><strong>Maximum Daily Dosage:</strong> ${parsedSig.maximumDosage !== undefined ? parsedSig.maximumDosage.humanReadable : ''}</li>`;
+            cards += `<li class="list-group-item"><strong>Confidence:</strong> ${parsedSig.confidence}</li>`;
+            cards += `<li class="list-group-item"><strong>Confidence Reasons:</strong> ${parsedSig.confidenceReasons.length !== undefined ? '<span class="badge bg-danger">' +
+                parsedSig.confidenceReasons.join('</span> <span class="badge bg-danger">') + '</span>' : ''}</li>`;
+            cards += structureDisplay(parsedSig);
+            cards += '</ul>';
+            cards += '</div>';
+
+
+            // add the row to the results
+            div.append(cards);
+            $("#parsedSig").html(div);
+
+            // add the json for debugging
+            const options = {
+                mode: 'view'
+            };
+
+            const container = document.getElementById('parsedSigJson');
+            $(container).empty();
+            const editor = new JSONEditor(container, options, parsedSig);
+            editor.expandAll();
+        }
+
+        function structureDisplay(parsedSig) {
+            var result = '';
+            var tokens = [];
+
+            // return a placeholder
+            if (parsedSig.dosages.length == 0) {
+                return `<li class="list-group-item"><div class="d-inline-flex"><mark data-element="error"><div class="markValue">Confidence: ${parsedSig.confidence}</div><div class="markLabel">Error</div></mark></div></li>`;
+            }
+
+            parsedSig.dosages.forEach((element) => {
+                // ignore those elements that aren't tokens
+                tokens.push({ index: element.index, length: 0, type: "start-dosage", confidence: element.confidence });
+                tokens.push({ index: element.index + element.length, length: 0, type: "end-dosage" });
+                for (const component in element) {
+                    if (element[component].index !== undefined && component !== 'maximumDailyDose') {
+                        tokens.push({ index: element[component].index, length: element[component].length, type: component });
+                    }
+                }
+            });
+
+            // sort the tokens by order of index
+            tokens.sort((a, b) => {
+                // when they are equal, sort shorter sequences first, longer sequences
+                // last: this will put dosage tokens in the right sequence.
+                if (a.index === b.index) {
+                    return (a.length > b.length) ? 1 : -1;
+                }
+
+                return (a.index > b.index) ? 1 : -1;
+            });
+
+            // open the list item
+            result += '<li class="list-group-item">';
+
+            tokens.forEach((item) => {
+                if (item.type === "start-dosage") {
+                    result += '<div class="d-inline-flex">';
+                    return;
+                }
+
+                if (item.type === "end-dosage") {
+                    result += '</div>';
+                    return;
+                }
+
+                if (item.length > 0) {
+                    // start the mark
+                    result += ' <mark data-element="' + item.type + '">';
+
+                    // fetch the text
+                    var text = parsedSig.preprocessedSig.substr(item.index, item.length);
+
+                    // add the text
+                    result += '<div class="markValue">' + text + '</div>';
+                    result += '<div class="markLabel">' + item.type + '</div>';
+
+                    //end the mark
+                        result += '</mark>';
+                }
+            });
+
+            // add the clarifying free text
+            if (parsedSig.clarifyingFreeText && parsedSig.clarifyingFreeText.length > 0) {
+
+                result += '<div class="d-inline-flex">';
+
+                // start the mark
+                result += '<mark data-element="clarifyingFreeText">';
+
+                // add the text
+                result += '<div class="markValue">' + parsedSig.clarifyingFreeText + '</div>';
+                result += '<div class="markLabel">ClarifyingFreeText</div>';
+
+                //end the mark
+                result += '</mark>';
+
+                result += '</div>';
+            }
+
+            result += '</li>';
+
+            return result;
+        }
+
+        function addRow(rxcui, sig) {
+            var newRow = $('<div class="row form-row"/>');
+            var fields = '';
+
+            sig = sig || '';
+            rxcui = rxcui || '';
+
+            fields += '<div class="form-group mb-2 col-md-8">';
+            fields += '<input type="text" class="form-control sig" placeholder="Enter sig" value="' + sig + '" autocomplete="on"/>';
+            fields += '</div>';
+            fields += '<div class="form-group mb-2 col-md-2">';
+            fields += '<input type="text" class="form-control rxcui" placeholder="RxNorm" value="' + rxcui + '" autocomplete="on"/>';
+            fields += '</div>';
+            fields += '<div class="form-group mb-2 col-md-2">';
+            fields += '<button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>';
+            fields += '</div>';
+
+            newRow.append(fields);
+            $('.form-rows').append(newRow);
+        }
+
+        function deleteRow(row) {
+            $(row).closest(".form-row").remove();
+        }
+
+        function getApiPath() {
+            var noQuery = location.href.substring(0, location.href.lastIndexOf('?'));
+            if (noQuery === '')
+                noQuery = location.href.substring(0, location.href.lastIndexOf('#'));
+            if (noQuery === '')
+                noQuery = location.href;
+            var path = noQuery.substring(noQuery.lastIndexOf('/'));
+            if (path === '/')
+                path = '';
+
+            path = path + '/api/calculator';
+
+            return path;
+        }
+
+        function submit() {
+            var calculationRequest = {
+                'RequestId': 'WebDemo:' + Math.random(),
+                'CalculationItems': []
+            };
+
+            $('.form-rows .form-row').each(function (index) {
+                var calculationRequestItem = {
+                    'RequestItemId': '' + index,
+                    'RxCui': '',
+                    'Sig': ''
+                };
+
+                calculationRequestItem.RxCui = $(this).find('.rxcui').val();
+                calculationRequestItem.Sig = $(this).find('.sig').val();
+
+                calculationRequest.CalculationItems.push(calculationRequestItem);
+            });
+
+            var path = getApiPath();
+
+            $.ajax({
+                url: path,
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(calculationRequest),
+                success: function (data) {
+                    displayResults(data);
+                },
+                error: function (xhr, status, error) {
+                    displayError(xhr, status, error);
+                }
+            });
+
+            return true;
+        }
+
+        function displayError(xhr, status, error) {
+            var pre = $('<pre/>');
+            pre.text('Service returned:\n' + status + ': ' + error + '\n' + JSON.stringify(xhr, null, 2));
+            $(".response").html(pre);
+        };
+
+        function displayResults(calculatedResults) {
+            var div = $('<div class="row"/>');
+
+            var cards = '<div class="col-sm-12">';
+            cards += '<div class="card">';
+            cards += '<h5 class="card-header">Result</h5>';
+            cards += '<div class="card-body">';
+            cards += '<table class="table col-sm-4"><tbody>';
+            cards += '<tr><th scope="row">Max MME/Day</th><td>' + calculatedResults.calculatedResultAnalysis.maximumMmePerDay + '</td></tr>';
+            cards += '<tr><th scope="row">Confidence</th><td>' + calculatedResults.calculatedResultAnalysis.confidence + '</td></tr>';
+            cards += '</tbody></table>';
+            cards += '</div>';
+            if (calculatedResults.calculatedResultAnalysis.confidenceReasons.length > 0) {
+                cards +=
+                    '<ul class="list-group list-group-flush"><li class="list-group-item"><strong>Confidence Reasons</strong></li>';
+                cards += '<li class="list-group-item">' + calculatedResults.calculatedResultAnalysis.confidenceReasons.join('</li><li class="list-group-item">') + '</li>';
+                cards += '</ul>';
+            }
+            cards += '<h5 class="card-header">Opioid Details</h5>';
+            cards += '<div class="card-body">';
+            cards += '<table class="table"><thead><tr><th scope="col"></th><th scope="col">Form</th><th scope="col">TDD</th><th scope="col">Factor</th><th scope="col">MME/Day</th></tr></thead><tbody>';
+            calculatedResults.calculatedResultAnalysis.opioids.forEach((element) => {
+                var form = '-';
+                if (element.form && Array.isArray(element.form.valueEnums) && element.form.valueEnums.length) {
+                    form = element.form.valueEnums.join(' ');
+                }
+
+                cards += '<tr><th scope="row">' + element.opioid + '</th><td>' + form + '</td><td>' + element.tddDisplay + '</td><td>' + element.conversionFactor + '</td><td>' + element.maximumMmePerDay + '</td></tr>';
+            });
+            cards += '</tbody></table>';
+            cards += '</div>';
+            cards += '</div>';
+            cards += '</div>';
+
+            // add the row to the results
+            div.append(cards);
+            $(".response").html(div);
+
+            // add the json for debugging
+            const options = {
+                mode: 'view'
+            };
+            const container = document.getElementById('json');
+            $(container).empty();
+            const editor = new JSONEditor(container, options, calculatedResults);
+            editor.expandAll();
+        };
+
+        function addExample(example) {
+            var exampleText = $(example).text();
+            var parts = exampleText.split(":");
+            var sig = parts[1].trim();
+            var rxcui = parts[2].trim();
+            var inserted = false;
+
+            // loop through the form rows
+            $('.form-rows .form-row').each(function () {
+                var rowrxcui = $(this).find('.rxcui').val();
+                var rowsig = $(this).find('.sig').val();
+
+                if (rowrxcui === '' || rowsig === '') {
+                    // insert it
+                    inserted = true;
+
+                    $(this).find('.rxcui').val(rxcui);
+                    $(this).find('.sig').val(sig);
+
+                    // break out of the loop
+                    return false;
+                }
+            });
+
+            if (!inserted) {
+                // add a row
+                addRow(rxcui, sig);
+            }
+        }
+    </script>
+</body>
+</html>
+

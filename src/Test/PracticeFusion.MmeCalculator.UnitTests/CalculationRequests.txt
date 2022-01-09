@@ -1,0 +1,39 @@
+﻿1	892660	MS Contin 30 mg tablet, extended release	1 tab(s) orally every 12 hours x 30 days	60
+2	897696	HYDROmorphone 2 mg oral tablet	1 tab(s) orally every 6 hours, As needed, Pain	32
+1	92	Data test	High
+3	857005	acetaminophen-HYDROcodone 325 mg-7.5 mg oral tablet	1 tab(s) orally every 4 hours, as needed for breakthrough pain	45
+4	835603	tramadol 50 mg oral tablet	1 cap(s) orally 4 times a day x 5 days	20
+2	65	Data test	High
+5	1049642	Percocet 7.5/325 oral tablet	1 to 2  tab(s) orally every 6 hours As needed for pain	90
+6	1049640	Percocet 5/325 oral tablet	1 tab(s) orally 4 times a day, As Needed for breakthrough pain	30
+3	120	Data test	High
+7	857005	acetaminophen-hydrocodone 325 mg-7.5 mg oral tablet	1 tab(s) orally every 4 to 6 hours, As needed for pain	45
+8	1049642	Percocet 7.5/325 oral tablet	1 to 2  tab(s) orally every 6 hours As needed for pain	90
+4	135	Data test	High
+9	857005	acetaminophen-hydrocodone 325 mg-7.5 mg oral tablet	1 tab(s) orally every 4 to 6 hours x 3 days	45
+10	857005	acetaminophen-hydrocodone 325 mg-7.5 mg oral tablet	1 tab(s) orally every 4 to 6 hours x 3 days	45
+5	90	Data test	High
+11	857007	Norco 7.5 mg-325 mg oral tablet	1 tab(s) orally 3 times a day, As needed for breakthrough pain	22.5
+12	857107	acetaminophen-hydrocodone 500 mg-10 mg oral tablet	1 tab(s) orally every 6 hours, As Needed, Moderate Pain	40
+6	62.5	Data test	High
+13	1049642	Percocet 7.5/325 oral tablet	1 tab(s) orally every 4 hours	67.5
+14	1049642	Percocet 7.5/325 oral tablet	1 tab(s) orally every 4 hours	67.5
+7	135	Data test	High
+15	892625	morphine 20 mg/mL oral concentrate	0.5 milliliter(s) orally every 1 to 2 hours	240
+16	857120	Lortab 7.5/500 oral tablet	1 tab(s) orally every 4 hours x 3 days	45
+8	285	Data test	High
+17	857002	acetaminophen-hydrocodone 325 mg-5 mg oral tablet	1 tab(s) orally every 6 hours, As Needed	20
+18	1049640	Percocet 5/325 oral tablet	1 tab(s) orally every 6 hours As needed for pain	30
+9	50	Data test	High
+19	857007	Norco 7.5 mg-325 mg oral tablet	1 tab(s) orally every 4 hours, As needed for severe pain	45
+20	835605	Ultram 50 mg tablet	1 tab(s) orally every 4 hours x 7 days As needed for back pain	30
+10	75	Data test	High
+21	892625	morphine 20 mg/mL oral concentrate	1 milliliter(s) orally 4 times a day, As needed for breakthrough pain	80
+22	897698	Dilaudid 2 mg oral tablet	1 tab(s) orally 4 times a day, As needed for breakthrough pain	32
+11	112	Data test	High
+459	864706	methadone 10 mg oral tablet	2 tab(s) orally every 6 hours	960
+587	864706	methadone 10 mg tablet	1 tab(s) orally 4 times a day x 7 days	320
+1775	857001	Norco 10 mg-325 mg oral tablet	1 tab(s) orally per day As needed for pain	10
+12	1450	Multiple methadone prescriptions use the correct conversion factor	High
+1	857001	Norco 10 mg-325 mg oral tablet	take 1 tablet po daily for 3 weeks with breakfast food, then take 1 tablet every 4 days 	0
+13	0	Multiple dosages in single sig evaluate confidence correctly	None

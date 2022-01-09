@@ -1,0 +1,803 @@
+3952	835605	Ultram 50 mg oral tablet	1 tab(s) orally every 6 to 8 hours, as needed for moderate pain do not work and or drive while on the medication	20
+4620	835603	traMADol 50 mg oral tablet	1 tab(s) orally 3 times a day (after meals)	15
+4863	857120	Lortab 7.5/500 oral tablet	1 tab(s) orally every 6 hours-As needed for painAs needed for pain	30
+5009	1872269	Dilaudid 2 mg/mL injectable solution	1 milligram(s) injectable 2 times a day, as needed for breakthrough pain assoc with dressing changes	8
+5224	857120	Lortab 7.5/500 oral tablet	1 tab(s) orally once a day (at bedtime) As needed for pain	7.5
+5260	857120	Lortab 7.5/500 oral tablet	1 tab(s) orally once a day x 30 days-As needed for pain	7.5
+6243	856999	HYDROcodone-acetaminophen 10 mg-325 mg oral tablet	1 tab(s) orally every 4 hours while awake, as needed for pain	60
+6321	857001	Norco 10 mg-325 mg oral tablet	1 tab(s) orally 3 times a day (before meals)	30
+7068	1049221	oxyCODONE-acetaminophen 5 mg-325 mg oral tablet	1 tab(s) orally every 4 hours while awake, as needed for pain	45
+7164	1049625	Percocet 10/325 oral tablet	1 tab(s) orally 3 times a day pnr pain	45
+7602	857005	acetaminophen-HYDROcodone 325 mg-7.5 mg oral tablet	1 tab(s) orally every 6 hours x 4 days x 5 days	30
+7673	835603	tramadol 50 mg oral tablet	1 cap(s) orally once a day (at bedtime)	5
+7687	857004	Norco 5 mg-325 mg oral tablet	1 tab(s) orally 3 times a day (after meals), As Needed, Pain	15
+7839	1049214	acetaminophen-oxyCODONE 325 mg-10 mg oral tablet	1 tab(s) orally 3 times a day (after meals) as needed for breakthrough pain	45
+8254	856999	acetaminophen-HYDROcodone 325 mg-10 mg oral tablet	1 tab(s) orally 4 times a day (before meals and at bedtime), As Needed, Pain	40
+8308	857007	Norco 7.5 mg-325 mg oral tablet	1 tab(s) orally once a day (at bedtime)	7.5
+8337	897704	Dilaudid 4 mg oral tablet	1 tab(s) orally 4 times a day (before meals and at bedtime), as needed for breakthrough pain	64
+8823	835605	Ultram 50 mg oral tablet	1 tab(s) orally 3 times a day pr pain	15
+9106	836395	acetaminophen-traMADol 325 mg-37.5 mg oral tablet	1 tab(s) orally 3 times a day (after meals), as needed for breakthrough pain	11.25
+9250	856999	acetaminophen-HYDROcodone 325 mg-10 mg oral tablet	1 tab(s) orally 4 times a day (after meals and at bedtime) as needed for moderate pain	40
+9847	857004	Norco 5 mg-325 mg oral tablet	1 tab(s) orally once at bedtime, as needed for pain	5
+10033	1049574	oxyCODONE 30 mg oral tablet, extended release	1 tab(s) orally 4 times a day (with meals and at bedtime)	180
+10544	857120	Lortab 7.5/500 oral tablet	1 tab(s) orally every 8 to 12 hours x 30 days, As Needed-As needed for pain, As needed for back pain	22.5
+10603	857001	Norco 10 mg-325 mg oral tablet	1 tab(s) orally once a day (at bedtime)	10
+10634	835603	traMADol 50 mg oral tablet	1 tab(s) orally once a day (at bedtime)	5
+10836	857005	acetaminophen-HYDROcodone 325 mg-7.5 mg oral tablet	1 tab(s) orally every 6 hours x 4 days x 5 days	30
+11509	857001	Norco 10 mg-325 mg oral tablet	1 tab(s) orally 4 times a day (with meals and at bedtime)	40
+11606	863847	embeda 100-4 mg oral capsule extended release	TAKE 3 CAPSULE Daily. Do NOT take if drowsy.	300
+11634	863849	embeda 20-0.8 mg oral capsule extended release	TAKE 1 CAPSULE Every twelve hours chronic pain. Okay to fill today.	40
+11657	863849	embeda 20-0.8 mg oral capsule extended release	Take one tab po q12h for chronic pain.-partial supply for remainder of montly rx	40
+11688	863851	embeda 30-1.2 mg oral capsule extended release	TAKE 1 CAPSULE Every twelve hours to replace extended release morphine. Do not split or crush.	60
+11694	863851	embeda 30-1.2 mg oral capsule extended release	TAKE 1 TABLET BY MOUTH EVERY 12 HOURS REGARDLESS OF CURRENT PAIN LEVEL.	60
+11706	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE DAILY as needed for chronic pain in the morning	50
+11709	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE EVERY 12 HOURS Do not take if drowsy	100
+11710	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE EVERY 12 HOURS Do not take if drowsy	100
+11724	863855	embeda 60-2.4 mg oral capsule extended release	1 po qd-bid prn for breakthrough pain	60
+11743	1487288	endocet 2.5-325 mg oral tablet	TAKE 1 TABLET 3 times daily PRN for headache x30 days MDD:3	11.25
+11751	1049223	endocet 5-325 mg oral tablet	Take 1-2 tablets by mouth at bedtime or every 6 hours as needed for pain	15
+11760	902738	exalgo 16 mg t24a	One tab PO daily chronic pain.	64
+11782	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	One patch to upper torso change every 48 hours chronic pain. Exemption B	240
+11786	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS (Apotex or NOVA Plus) for non acute pain	240
+11792	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	Apply two (2) patches every seventy-two hours.  Patches should be applied on different days to avoid breakthrough.	480
+11793	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH Every other day MDD:q 48 hour	240
+11807	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	Apply two patches to upper torso q48h for chronic pain - exemption code B, palliative care	480
+11808	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH TO UPPER BODY EVERY 72 HOURS TO RELIEVE PAIN	240
+11810	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS ( HOSPICE PATIENT)	240
+11826	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS This prescription is not for acute pain.	240
+11839	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	1 q 72 hours chronic pain	240
+11844	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	One patch to upper torso and change q 48 h chronic pain. Exemption B.	240
+11856	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	TAKE 1 PATCH  Q 48 HOURS REMOVE OLD PATCH	240
+11878	262071	fentanyl 100 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS   (BIG BEND HOSPICE PATIENT)	240
+11880	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	Apply 1 patch to upper torso q48h chronic pain exempt code B	28.8
+11893	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH 3 days	28.8
+11897	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	One patch to upper torso changed q 48 hours chronic pain	28.8
+11910	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	One patch to upper torso and change q 72 hours chronic pain	28.8
+11918	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	Place one patch every 72 hours, rotate site and remove all used patch.	28.8
+11933	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	Apply 1 patch to upper torso and change q48h chronic pain. Exemption B. Must be Duragesic.	28.8
+11957	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	One patch to upper torso and change q 48 hours chronic pain. Exemption B	28.8
+11969	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS (HOSPICE)	28.8
+11974	583490	fentanyl 12 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH  3 days	28.8
+12005	261184	fentanyl 25 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH on upper torso and change EVERY OTHER DAY as needed for chronic pain.	60
+12008	261184	fentanyl 25 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH  change every 48 hrs chronic pain from Multiple Myeloma	60
+12014	261184	fentanyl 25 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS.  Nonacute pain.	60
+12049	261184	fentanyl 25 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH to upper torso q48hrs for chronic pain partial supply	60
+12068	261184	fentanyl 25 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS, be sure to remove old patch when applying new patch.	60
+12074	261184	fentanyl 25 mcg/hr transdermal patch 72 hour	APPLY ONE PATCH EVERY 72 HOURS (REMOVE OLD PATCH)	60
+12083	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	APPLY ONE PATCH TO SKIN EVERY 72 HOURS; REMOVE OLD PATCH	90
+12099	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	Place 1 patch as directed every 72 hours, be sure to remove the old patch	90
+12104	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	Apply one patch every 72 hours. Remove prior patch before placing the new patch. Please stop utilizing medication if drowsiness occurs.	90
+12105	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH EVERY OTHER DAY (every 48 hours); exemption code B; chronic	90
+12132	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	1 patch every 3 days, remove old patch	90
+12148	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS. - Chronic pain	90
+12169	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH Once every three days change the patch	90
+12170	1603495	fentanyl 37.5 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH Every three days  This prescription is for NON ACUTE PAIN.	90
+12185	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS on continuing basis	120
+12203	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS/ Hospice	120
+12209	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	apply two patches every 3 days. can use percocet for pain not controlled by duragesic	240
+12213	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	apply patch to upper torso change every 48 hours chronic pain exempt code B EPCS tech failure	120
+12217	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	Apply one patch to upper torso q48h for chronic pain--exemption code B, palliative care	120
+12245	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	PLACE 1 PATCH  to upper torso q 48h for chronic pain, exemption G, weaning dosages	120
+12258	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	APPLY ONE PATCH EVERY 3 DAYS (HOSPICE PAATIENT)	120
+12268	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	Unwrap and apply 1 patch to skin every 48 hours a s directed for chronic pain  Acute Pain Exception applies to this prescription.	120
+12274	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 72   HOURS REMOVE OLD PATCH ROTATE SITES	120
+12279	261185	fentanyl 50 mcg/hr transdermal patch 72 hour	Apply 1 patch to upper torso  every 48 hours as needed for chronic pain, exemption G, weaning dosage	120
+12309	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	ONE PATCH EVERY THREE DAYS ON EACH ARM  This prescription is for NON ACUTE PAIN.	180
+12322	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	APPLY ONE PATCH TO THE SKIN EVERY 72 HOURS. REMOVE OLD PATCH BEFORE AP	180
+12327	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	Apply one patch every three days. Remove the old before applying the new.	180
+12328	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS.  Exemption Code A.	180
+12355	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	APPLY 1 PATCH EVERY 3 DAYS Exemption G	180
+12359	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	apply patch every 48 hrs may overlap and wear for 72 hrs back to previous dose	180
+12369	261186	fentanyl 75 mcg/hr transdermal patch 72 hour	ONE PATCH EVERY THREE DAYS ON EACH ARM	180
+12429	668622	fentora 100 mcg buccal tablet	one every 6 hours as needed for breakthrough pain. do not exceed 4 a day	52
+12454	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	1 po q 4-6 hours prn,max 5/d	60
+12467	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	One tablet up to four times daily if needed for pain.	40
+12471	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1 TABLET 3 times daily PRN mod-sev neck and back pain	30
+12487	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	Take 1-2 tablets every 6 hours as needed for post-op tonsillectomy pain	80
+12509	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 4 TO 6 HOURS AS NEEDED FOR PAIN. MDD4	45
+12511	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	1 tablet every 4 hours as needed no more than 5 daily	7.5
+12514	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS as needed for chronic pain management - not for acute pain	30
+12518	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 8 HOURS AS NEEDED FOR PAIN (chronic pain management)	22.5
+12535	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	Take 1 tablet po daily prn pain   G89.4)	7.5
+12560	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN SEVERE PAIN  Non-Acute Pain	30
+12569	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET PO EVERY 4-6 HOURS AS NEEDED FOR SEVERE PAIN  Non-Acute Pain	45
+12571	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	1 tab qd-tid prn pain	7.5
+12577	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 4 HOURS AS NEEDED FOR PAIN.  MAXIMUM 5/DAY	45
+12589	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	1 tab q 4-6 hours prn (acute pain exception) for ankle pain injury	45
+12602	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	1 tab q 4-6 hours prn (for acute pain)	45
+12603	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 4 TO 6 HOURS AS NEEDED FOR PAIN do not drive while taking this medication.	45
+12606	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRN STRENGTH 10/650	30
+12675	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	one tablet q day  This prescription is for NON ACUTE PAIN.	48
+12680	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE 1 tab qam for chronic pain. exemption G	48
+12688	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE 1 TABLET Daily as needed for Chronic pain. Partial fill for remaining amount of last prescription	48
+12705	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE ONE BY MOUTH ONCE PER DAY CHRONIC PAIN	48
+12709	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE ONE TAB BY MOUTH EVERY 12 HOURS CHRONIC PAIN-exemption B, palliative care.	96
+12715	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	two tablets q day  This prescription is for NON ACUTE PAIN.	96
+12722	902738	hydromorphone hcl er 16 mg oral tablet er 24 hour abuse-deterrent	One tab PO q day chronic pain.	64
+12744	902738	hydromorphone hcl er 16 mg oral tablet er 24 hour abuse-deterrent	take one tab by mouth once a day chronic pain	64
+12750	1306900	hydromorphone hcl er 32 mg oral tablet er 24 hour abuse-deterrent	1 PO qday, med exempt B	128
+12751	1306900	hydromorphone hcl er 32 mg oral tablet er 24 hour abuse-deterrent	2 PO qday as needed for chronic pain	256
+12760	1306900	hydromorphone hcl er 32 mg oral tablet er 24 hour abuse-deterrent	take one q am	128
+12768	897712	hydromorphone hcl er 8 mg oral tablet er 24 hour abuse-deterrent	1 po QDAY chronic pain	32
+12777	897712	hydromorphone hcl er 8 mg oral tablet er 24 hour abuse-deterrent	one tablet daily  This prescription is for NON ACUTE PAIN.	32
+12781	897712	hydromorphone hcl er 8 mg oral tablet er 24 hour abuse-deterrent	TAKE 1 Tab Every 12 hours as needed for chronic pain Exemption G. Partial Rx	64
+12784	897712	hydromorphone hcl er 8 mg oral tablet er 24 hour abuse-deterrent	TAKE 1 TABLET 3 times daily Take at 8 am, 4 pm, and at bedtime.	96
+12798	897712	hydromorphone hcl er 8 mg oral tablet er 24 hour abuse-deterrent	TAKE 1 TABLET PO DAILY chronic pain.	32
+12837	897747	hydromorphone hcl pf 2 mg/ml injection solution	INJECT 0.25 ML Every 4 hours PRN for pain rated as 8-10	12
+12854	1595766	hysingla er 100 mg oral tablet er 24 hour abuse-deterrent	TAKE 1 TABLET BY MOUTH ONCE DAILY FOR LONG-ACTING PAIN CONTROL. USE OXYCODONE FOR BREAKTHROUGH PAIN.	100
+12862	1595736	hysingla er 20 mg oral tablet er 24 hour abuse-deterrent	1  tab PO DAILY chronic pain.	20
+12899	1595736	hysingla er 20 mg oral tablet er 24 hour abuse-deterrent	Take 1 tablet by mouth nightly for pain.	20
+12926	1595736	hysingla er 20 mg oral tablet er 24 hour abuse-deterrent	take one tab once a day chronic pain	20
+12927	1595736	hysingla er 20 mg oral tablet er 24 hour abuse-deterrent	Take one tab once a day chronic pain.	20
+12938	1595742	hysingla er 30 mg oral tablet er 24 hour abuse-deterrent	1 PO qday as needed for chronic pain	30
+12946	1595742	hysingla er 30 mg oral tablet er 24 hour abuse-deterrent	One tab PO qd chronic pain.	30
+13001	1595748	hysingla er 40 mg oral tablet er 24 hour abuse-deterrent	take 1 tablet daily in the morning. CHRONIC PAIN	40
+13036	1595754	hysingla er 60 mg oral tablet er 24 hour abuse-deterrent	TAKE ONE TAB PO ONCE A DAY CHRONIC PAIN	60
+13067	1303738	kadian 40 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily Break capsule and place sprinkles from broken capsules  into feeding tube.	40
+13079	894816	kadian 80 mg oral capsule extended release 24 hour	take one tab po q am	80
+13080	1492673	lorcet 5-325 mg oral tablet	1 PO TID prn pain - nonacute pain	15
+13092	1492673	lorcet 5-325 mg oral tablet	take 1 tablet by mouth every 8 hours if needed for pain maximum daily dose of 3	15
+13093	1492673	lorcet 5-325 mg oral tablet	TAKE 1 TABLET DAILY IN THE PM AS NEEDED	5
+13096	1492673	lorcet 5-325 mg oral tablet	Take 1 to 2 tablets every 4 to 6 hours as needed for pain -- nonacute pain	60
+13110	1492671	lorcet hd 10-325 mg oral tablet	TAKE 1 TABLET Every 8 hours PRN This prescription is for NON ACUTE PAIN.	30
+13115	1492671	lorcet hd 10-325 mg oral tablet	Take one tablet twice daily as needed for pain when level reaches 5/10.	20
+13131	1495472	lortab 10-325 mg oral tablet	TAKE 1 TABLET four times per day NEEDED FOR PAIN.	40
+13163	1495472	lortab 10-325 mg oral tablet	TAKE 1 TABLET THREE TIMES PER DAY AS NEEDED (for pain)	30
+13191	1495472	lortab 10-325 mg oral tablet	TAKE 1 TABLET EVERY 8 HOURS AS NEEDED FOR PAIN.may fill 5/27/205	30
+13218	1495472	lortab 10-325 mg oral tablet	TAKE 1/2-1 TABLET Every 6 hours PRN - early refill authorized	40
+13220	1495472	lortab 10-325 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN pain. G 89.4	40
+13243	1495472	lortab 10-325 mg tabs	TAKE 1 TAB QD-BID prn pain	10
+13257	1495472	lortab 10-325 mg tabs	TAKE 1 TABLET EVERY 4 HOURS/ PRN PAIN	60
+13281	1495472	lortab 10-325 mg tabs	TAKE 2 TABLET EVERY 4 HOURS AS NEEDED FOR PAIN. UP TO 10 A DAY	120
+13291	1495474	lortab 5-325 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN pain not relieved y other medications	20
+13310	1495474	lortab 5-325 mg oral tablet	1 PO QID for 7 days, then TID for 7 days then BID for 7 days then QD for 7 days and stop	20
+13312	1495474	lortab 5-325 mg oral tablet	1/2 to 1 tab po q8 hours severe pain	15
+13314	1495474	lortab 5-325 mg oral tablet	1/2  to 1 every 6 hours as needed for headaches not relieved by toradol (ketorolac)	20
+13333	1495474	lortab 5-325 mg oral tablet	TAKE 1 TABLET 2 TIMES DAILYas needed for breakthrough pain	10
+13334	1495474	lortab 5-325 mg oral tablet	TAKE 1 TABLET BY MOUTH EVERY 8 HOURS AS NEEDED  FOR PAIN. dont drive of it makes you sleepy	15
+13358	1495474	lortab 5-325 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED FOR PAIN. MDD:100	20
+13363	1495474	lortab 5-325 mg oral tablet	TAKE 1 TAB Q 4-6 HRS ( QID) PRN PAIN	30
+13394	1495474	lortab 5-325 mg tabs	1 PO TID for 7 days then BID for 7 days then QD for 7 days and stop	15
+13402	1495474	lortab 5-325 mg tabs	1/2 to 1 TABLET PO @ HS PRN MODERATE TO SEVERE BACK PAIN. NOT TO BE TAKEN SIMULTANEOUSLY WITH FLEXERIL	5
+13405	1495474	lortab 5-325 mg tabs	TAKE 1 TO 2 TABLETS BY MOUTH EVERY EVENING FOR 0A PAIN	10
+13423	1495474	lortab 5-325 mg tabs	TAKE 1 TABLET BY MOUTH EVERY HOUR OF SLEEP AS NEEDED FOR PAIN	120
+13427	1495474	lortab 5-325 mg tabs	TAKE 1 TABLET PO EVERY 8 HOURS PRN PAIN QTY 75	15
+13435	1495474	lortab 5-325 mg tabs	1 PO QHS prn L knee pain.	5
+13467	1495474	lortab 5-325 mg tabs	TAKE 1 TABLET Every 4 hours PRN - early refill authorized	30
+13480	1495474	lortab 5-325 mg tabs	TAKE 1 TO 2 TABLETS BY MOUTH EVERY night IF NEEDED FOR PAIN	10
+13481	1495474	lortab 5-325 mg tabs	TAKE 1-2 TABLETS EVERY 4-6 HOURS AS NEEDED FOR PAIN. CAUTION - SEDATING, DO NOT DRIVE.	60
+13485	1495474	lortab 5-325 mg tabs	Take 1 tablet at night to help with pain and to help her sleep	5
+13498	1495476	lortab 7.5-325 mg oral tablet	take 1 tab po q day back pain prn no refills	7.5
+13507	1495476	lortab 7.5-325 mg oral tablet	1 po qday prn headache	7.5
+13511	1495476	lortab 7.5-325 mg oral tablet	take 1 tablet by mouth every 3 to 4 hours if needed for pain MUST LAST 2 WEEKS	60
+13532	1495476	lortab 7.5-325 mg oral tablet	TAKE 1 TABLET Every 4 hours PRN mod.-severe arm pain	45
+13534	1495476	lortab 7.5-325 mg oral tablet	TAKE 1 TABLET BY MOUTH EVERY 8 HOURS AS NEEDED .*MAX 3 PER DAY*	22.5
+13555	1495476	lortab 7.5-325 mg oral tablet	TAKE 1 TABLET BY MOUTH at bedtime if needed for back pain	7.5
+13565	1495476	lortab 7.5-325 mg oral tablet	TAKE 1 TABLET Every 6 to 8 hours No further refills without f/u appointment. Wean off to tylenol/ibuprofen as tolerated	30
+13586	1495476	lortab 7.5-325 mg oral tablet	Take 1/2 to 1 tablet by mouth every 4-6 hours as needed for post-operative pain.	45
+13591	1495476	lortab 7.5-325 mg tabs	1 po nightly as needed for severe pain	7.5
+13598	1495476	lortab 7.5-325 mg tabs	1 tab QD-BID prn pain.	7.5
+13603	1495476	lortab 7.5-325 mg tabs	1 tablet by mouth every 6 hours as needed for pain, do not drive on medications	30
+13604	1495476	lortab 7.5-325 mg tabs	1 tablet every 6 hour for more severe pain or at night, can make tired, do not take same time as tramadol	30
+13643	1495476	lortab 7.5-325 mg tabs	TAKE 1 TABLET twice a day VERY sparingly as needed	15
+13689	864706	methadone hcl - 10 mg oral tablet	Take one tablet po up to 4 times daily only if needed for pain.	320
+13692	864706	methadone hcl - 10 mg oral tablet	One tab PO q AM chronic pain.	40
+13698	864706	methadone hcl - 10 mg oral tablet	TAKE 0.5 TABLET EVERY 8 HOURS CHRONIC PAIN	60
+13702	864706	methadone hcl - 10 mg oral tablet	1 BID chronic pain	80
+13708	864706	methadone hcl - 10 mg oral tablet	TAKE 2 TABLETS TWICE DAILY Chronic Pain exemption B	320
+13718	864706	methadone hcl - 10 mg oral tablet	TAKE 1 TABLET TWICE DAILY (maintenance pain control).	80
+13731	864706	methadone hcl - 10 mg oral tablet	One tab PO q AM and HS chronic pain.	40
+13732	864706	methadone hcl - 10 mg oral tablet	one tab in the am and pm  chronic pain	40
+13744	864706	methadone hcl - 10 mg oral tablet	Take One tab PO q 12 hours chronic pain.	80
+13758	864706	methadone hcl - 10 mg oral tablet	TAKE 2 TABLETS EVERY 8 HOURS  MEDICALLY NECESSARY  This prescription is for NON ACUTE PAIN.	600
+13777	864718	methadone hcl - 5 mg oral tablet	TAKE 1 TABLET 3 times daily taper as discussed	60
+13810	864718	methadone hcl - 5 mg oral tablet	take one po q am , midday and qhs  for chronic pain	20
+13814	864718	methadone hcl - 5 mg oral tablet	TAKE 1/2 TABLET BY MOUTH NIGHTLY AT BEDTIME	10
+13818	864718	methadone hcl - 5 mg oral tablet	TAKE 1 TABLET Every 8 hours fro chronic pain	60
+13820	864718	methadone hcl - 5 mg oral tablet	TAKE 1/2 TABLET THREE DAILY as needed for pain	10
+13840	864718	methadone hcl - 5 mg oral tablet	TAKE 1 TABLET Daily Midday as needed for chronic pain.  Exemption G	20
+13860	864718	methadone hcl - 5 mg oral tablet	take one half tablet twice daily morning and night t for back pain	20
+13885	864706	methadone hcl 10 mg oral tablet	1 tab tid to qid	240
+13889	864706	methadone hcl 10 mg oral tablet	1 PO UP TO 6 EVERY DAY.	600
+13982	864718	methadone hcl 5 mg oral tablet	1 TABLET BID TO TID PRN	40
+14039	864718	methadone hcl 5 mg oral tablet	take 1/2 to 1 twice a day if needed for pain	40
+14058	864718	methadone hcl 5 mg oral tablet	Take one in the am.	20
+14060	864718	methadone hcl 5 mg oral tablet	Take one tablet every 8 hours for treatment of chronic pain.	60
+14087	892556	morphine sulfate (concentrate) 100 mg/5ml oral concentrate	5 mg by mouth or sublingual every 3 hours when necessary to scheduled every 4 hours, hold for over sedation	40
+14088	892625	morphine sulfate (concentrate) 100 mg/5ml oral solution	give 0.25ml by mouth at bedtime scheduled and four times daily as needed for pain, chest pain, or shortness of breath	5
+14112	892625	morphine sulfate (concentrate) 100 mg/5ml oral solution	TAKE 1 ML EVERY 2 HOURS - PAIN/AIR HUNGER	240
+14124	892625	morphine sulfate (concentrate) 100 mg/5ml oral solution	TAKE 1 ML EVERY 4 HRS PRN (20MG/ML)	120
+14129	892625	morphine sulfate (concentrate) 100 mg/5ml oral solution	0.25ml P.O. or sublingual 2 to 4hrs PRN pain or shortness of breath	60
+14198	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	0.25 to 0.05 ml every 4 hours needed for pain	6
+14209	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	0.25 - 1ml q 1-2 hours PRN - pain, air hunger	480
+14213	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	Take  0.25 ml (5 mg) PO or S/L Q 4 HRS ATC	30
+14214	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	TAKE 5MG PO Q 6 HOURS AND EVERY 4 HOURS PRN, PAIN	20
+14271	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	0.25ML - 1ml PO Q 1 HR PRN SEVERE PAIN,SOB,OR AIR HUNGER.  (BBH PATIENT )	480
+14281	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	Take 1/2 ml to 1ml q 1-2 hours prn pain or air hunger. (Big Bend Hospice Patient)	480
+14285	892625	morphine sulfate (concentrate) 20 mg/ml oral solution	Take 1/2ML (10mg) q 2-3 hours prn pain0.2	120
+14291	892625	morphine sulfate (concentrate) 20 mg/ml soln	0.25 (5mg)  every four hrs prn pain or air hunger.	30
+14293	892625	morphine sulfate (concentrate) 20 mg/ml soln	0.25 (5mg) PO/ SL every One hour PRN pain/air hunger	120
+14294	892625	morphine sulfate (concentrate) 20 mg/ml soln	0.25 - 1ml q 1-4 hours PRN - pain, air hunger	480
+14314	892625	morphine sulfate (concentrate) 20 mg/ml soln	0.75ML SL Q 2 HR SCHEDULED  Pain/Air Hunger(HOSPICE PT)	180
+14326	892625	morphine sulfate (concentrate) 20 mg/ml soln	Give 0.5ml 3 times a day with meals scheduled and every hour prn pain	30
+14366	1728800	morphine sulfate 1 mg/ml intravenous solution	1-2 mg every 4 hours as needed when unable to tolerated oral pain meds	12
+14399	895194	morphine sulfate 15 mg/ml injection solution	5-10mg q 2hr prnfor pain	120
+14460	894807	morphine sulfate 5 mg/0.25ml soln	1 ML  to 2 ML EVERY TWO HOURS PRN FOR TERMINAL PAIN, OR AIR HUNGER (HOSPICE PATIENT)	24
+14464	894807	morphine sulfate 5 mg/0.25ml soln	1/2 ML  to 1ML EVERY TWO HOURS  PRN PAIN   (BIG BEND HOSPICE PATIENT)	12
+14465	894807	morphine sulfate 5 mg/0.25ml soln	1/2 ML  to 1ML EVERY TWO TO FOUR  HOURS PRN PAIN.   (HOSPICE PATIENT)	12
+14484	894807	morphine sulfate 5 mg/0.25ml soln	take 0.50 ml to 1ml q 2 hrs prn pain  ( BB Hospice patient)	12
+14487	894807	morphine sulfate 5 mg/0.25ml soln	TAKE 1/2 TO 1 ML EVERY HOUR IF NEEDED FOR DISCOMFORT	24
+14513	892560	morphine sulfate cr 100 mg oral tablet extended release 12 hour	TAKE 1 TABLET DAILY. (ANTIBIOTICS)	100
+14544	894813	morphine sulfate cr 60 mg oral tablet extended release 12 hour	1 tab twice day	120
+14545	894813	morphine sulfate cr 60 mg oral tablet extended release 12 hour	1 tablet every AM	60
+14553	894813	morphine sulfate cr 60 mg oral tablet extended release 12 hour	one tablet BID to TID PRN	120
+14554	894813	morphine sulfate cr 60 mg oral tablet extended release 12 hour	TAKE  TABLET  1 IN AM	60
+14559	894813	morphine sulfate cr 60 mg oral tablet extended release 12 hour	TAKE 1 TABLET 3 TIMES DAILY PRN mdd 3	180
+14567	894813	morphine sulfate cr 60 mg oral tablet extended release 12 hour	TAKE 2 TABLETS IN AM	120
+14582	892560	morphine sulfate er 100 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours for continued treatment of chronic pain	200
+14587	892560	morphine sulfate er 100 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours-Non acute pain	200
+14589	892560	morphine sulfate er 100 mg oral tablet extended release	1 po q12 hours around the clock	200
+14605	892560	morphine sulfate er 100 mg oral tablet extended release	1 tab PO QAM chronic pain.Exemption B	100
+14609	892560	morphine sulfate er 100 mg oral tablet extended release	TAKE 1 TABLET Every 6 hours as needed  This prescription is for NON ACUTE PAIN.	400
+14614	892560	morphine sulfate er 100 mg oral tablet extended release	One daily in am	100
+14623	892560	morphine sulfate er 100 mg oral tablet extended release	TAKE 1 TABLET Twice daily exemption code C - hospice	200
+14642	892560	morphine sulfate er 100 mg oral tablet extended release	TAKE 1 TABLET 3 times daily to fill now	300
+14645	892560	morphine sulfate er 100 mg oral tablet extended release	Take 1 tab in the PM	100
+14647	892560	morphine sulfate er 100 mg oral tablet extended release	1 q 12 hours chronic pain	200
+14653	892560	morphine sulfate er 100 mg oral tablet extended release	one q4 daily	100
+14666	892560	morphine sulfate er 100 mg oral tablet extended release	Take 1 tablet twice daily  This prescription is for NON ACUTE PAIN.	200
+14695	892574	morphine sulfate er 15 mg oral tablet extended release	1 PO qhs, added to regular MSER Rx	15
+14704	892574	morphine sulfate er 15 mg oral tablet extended release	1 po q 12 hours on a schedule for cancer pain.	30
+14706	892574	morphine sulfate er 15 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours (hasn't started)	30
+14718	892574	morphine sulfate er 15 mg oral tablet extended release	Take one tab by mouth twice a day when necessary pain	30
+14719	892574	morphine sulfate er 15 mg oral tablet extended release	Take one pill every 12 hours to control pain.	30
+14723	892574	morphine sulfate er 15 mg oral tablet extended release	1 tab twice daily. pt is a hospice pt.	30
+14729	892574	morphine sulfate er 15 mg oral tablet extended release	15mg po in the PM	15
+14755	892574	morphine sulfate er 15 mg oral tablet extended release	take 1 tab daily in the afternoon	15
+14777	892574	morphine sulfate er 15 mg oral tablet extended release	1 po q 8h regularly for low back pain.	45
+14786	892574	morphine sulfate er 15 mg tb12	1 po q 12 hrs. ( for pain control).	30
+14796	892574	morphine sulfate er 15 mg tb12	3 QDq 12 hrs prn	90
+14799	892574	morphine sulfate er 15 mg tb12	one tablet twice daily if needed for pain	30
+14815	892574	morphine sulfate er 15 mg tb12	TAKE 1 TABLET daily or EVERY 12 HOURS AS NEEDED. for back pain	15
+14827	892574	morphine sulfate er 15 mg tb12	TAKE 1 TABLET Twice daily hold for sedation	30
+14829	892574	morphine sulfate er 15 mg tb12	TAKE 1-2 BID-TID FOR CHRONIC PAIN	60
+14881	1303738	morphine sulfate er 40 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE DAILY. Not for acute pain.	40
+14886	1303738	morphine sulfate er 40 mg oral capsule extended release 24 hour	Take one tablet Twice a day - Acute on chronic pain - hip fracture	80
+14899	894813	morphine sulfate er 60 mg oral tablet extended release	Take one tab po in the am and hs for chronic pain. exemption code B, palliative care	60
+14904	894813	morphine sulfate er 60 mg oral tablet extended release	TAKE 3 TABLET Every twelve hours hold for sedation, for chronic pain	360
+14917	894813	morphine sulfate er 60 mg oral tablet extended release	TAKE ONE TAB BY MOUTH EVERY 12 HOURS CHRONIC PAIN, med exemp B	120
+14931	894813	morphine sulfate er 60 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours chronic pain, exemption code  B, Palliative care	120
+14933	894813	morphine sulfate er 60 mg oral tablet extended release	TAKE 1 TABLET PO q am and hs for chronic pain. Exemption B	60
+14943	894813	morphine sulfate er 60 mg oral tablet extended release	TAKE ONE TAB BY MOUTH EVERY 12 HOURS CHRONIC PAIN, exemption B	120
+14949	894813	morphine sulfate er 60 mg oral tablet extended release	1 tab PO Q am chronic pain. Exemption B	60
+14959	894813	morphine sulfate er 60 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours do not crush or chew - swallow whole	120
+14970	894813	morphine sulfate er 60 mg oral tablet extended release	one tab po q day chronic pain exempt code g	60
+14994	892351	morphine sulfate er 60 mg tb12	TAKE 1 TABLET 3 times daily PRN As Directed TDD:60MG	180
+14997	892351	morphine sulfate er 60 mg tb12	TAKE 1 TABLET EVERY 12 HOURS AS NEEDED, (BIG bEND HOSPICE PATIENT)	120
+15010	894816	morphine sulfate er 80 mg oral capsule extended release 24 hour	1 tab PO Q 12hours chronic pain.Exemption G.	160
+15016	894816	morphine sulfate er 80 mg oral capsule extended release 24 hour	ONE TABLET PO TWICE DAILYEXEMPTION A:  Active Cancer Treatment	160
+15022	894816	morphine sulfate er 80 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE DAILY IN AM	80
+15026	894816	morphine sulfate er 80 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE EVERY 12 HOURS. Do not take if drowsy	160
+15033	894816	morphine sulfate er 80 mg oral capsule extended release 24 hour	take 1 po bid for 15 days then qd for 15 days	160
+15043	894942	morphine sulfate er beads 45 mg oral capsule extended release 24 hour	One cap PO q AM chronic pain.Exemption G	45
+15045	894942	morphine sulfate er beads 45 mg oral capsule extended release 24 hour	One tab PO q 12 hours chronic pain. Exemption G	90
+15046	894942	morphine sulfate er beads 45 mg oral capsule extended release 24 hour	Take 1 cap  PO qday, med exempt G	45
+15051	894942	morphine sulfate er beads 45 mg oral capsule extended release 24 hour	take 1 tabs QH	1080
+15098	892574	ms contin 15 mg oral tablet extended release 12 hour	TAKE 1 TABLET TWICE DAILY as needed for chronic pain---MS CONTIN BRAND NECESSARY	30
+15102	892574	ms contin 15 mg tb12	1 p.o.   twice a day (BID)	30
+15137	892660	ms contin 30 mg oral tablet extended release 12 hour	Take 1 by mouth daily in AM	30
+15144	892660	ms contin 30 mg tb12	1 p.o.  q. 8 hours (TID)	90
+15145	892660	ms contin 30 mg tb12	1 p.o.  q. 8 hours (TID) prn pain	90
+15146	892660	ms contin 30 mg tb12	1-2 q pm	60
+15151	892660	ms contin 30 mg tb12	one po daily in AM	30
+15168	894813	ms contin 60 mg tb12	MS Contin( 60MG Oral  two times daily ) Active -Hx Entry	120
+15222	857001	norco 10-325 mg oral tablet	1-2 po q 4h prn 1 Q4H	120
+15236	857001	norco 10-325 mg oral tablet	1 tablet po @ HS prn back pain.	10
+15240	857001	norco 10-325 mg oral tablet	TAKE 1 PO UP TO 5 EVERY DAY.	50
+15250	857001	norco 10-325 mg oral tablet	Take 1 tablet every three to four hours while awake by mouth	80
+15262	857001	norco 10-325 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY. ONLY NORCO Medically necessary. For chronic pain.	40
+15264	857001	norco 10-325 mg oral tablet	1 Tablet(s) 4 times a day (as needed)	40
+15282	857004	norco 5-325 mg oral tablet	TAKE 1 TABLET  up to 3 times daily for Non - Acute arthritis pain	15
+15284	857004	norco 5-325 mg oral tablet	TAKE ONE (1) TABLET BY MOUTH EVERY 6 HOURS IF NEEDED FOR  PAIN	20
+15299	857004	norco 5-325 mg oral tablet	1 Tablet(s) 3 times a day (as needed)	15
+15303	857004	norco 5-325 mg oral tablet	1 Tablet(s) 2 times a day (as needed)	10
+15322	857004	norco 5-325 mg oral tablet	1-2 every 4-6 hrs if needed for pain	60
+15325	857004	norco 5-325 mg oral tablet	Take 1 tablet every 4 hours as needed for pain. MDD 6	30
+15326	857004	norco 5-325 mg oral tablet	take 1 tablet by mouth at bedtime if needed for severe pain	5
+15332	857004	norco 5-325 mg oral tablet	one bid to tid prn pain as needed	10
+15343	857004	norco 5-325 mg oral tablet	1 p.o.  q. 6 hours (QID)	20
+15349	857004	norco 5-325 mg oral tablet	1/2 to 1 tab q 6-8 hrs x prn	20
+15353	857004	norco 5-325 mg oral tablet	1 Tablet(s) 1 times a day (as needed)	5
+15361	857004	norco 5-325 mg oral tablet	1-2 tabs every 4-6 hrs if needed for pain	60
+15384	857007	norco 7.5-325 mg oral tablet	1-2 @ hs prn pain R shoulder	15
+15390	857007	norco 7.5-325 mg oral tablet	1/2 To 1 tab po @ hs prn  right wrist pain	7.5
+15448	854140	nucynta 100 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN  FOR POST-OP PAIN	160
+15450	854140	nucynta 100 mg oral tablet	TAKE 1 TABLET THREE TIMES DAILY PRN pain. G89.4 chronic pain	120
+15455	854140	nucynta 100 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRNFOR POST OP PAIN X 10 DAYS	160
+15458	854140	nucynta 100 mg oral tablet	TAKE 1 TABLETdaily at bedtime	40
+15474	854140	nucynta 100 mg oral tablet	Take one tablet  TID chronic pain	120
+15508	854140	nucynta 100 mg oral tablet	Take one (100mg) PO every 6-8 hours prn for ovarian cyst pain.	160
+15528	854142	nucynta 50 mg oral tablet	1 TAB PO Q4-6 HOURS PRN SEVERE PAIN (MAX 6 PER DAY)	120
+15533	854142	nucynta 50 mg oral tablet	TAKE 1 TABLET QDAY-BID PRN	20
+15540	854142	nucynta 50 mg oral tablet	TAKE 1 TABLET Every 4 hours PRN severe pain no more than 6 per day	120
+15546	854142	nucynta 50 mg oral tablet	Uses 1 tablet up to 4 times each day PRN uncontrolled pain. (Prescribed by Pain Management)	80
+15553	854142	nucynta 50 mg oral tablet	Take one tab every 4-6 hours when necessary pain	120
+15559	854142	nucynta 50 mg oral tablet	TAKE 1 TABLET TID-QID PRN	60
+15574	854142	nucynta 50 mg oral tablet	take 1 tablet q4-6hrs prn pain---Sent in to mail order	120
+15590	854142	nucynta 50 mg oral tablet	1 tab po qd-bid prn break through pain	20
+15603	854142	nucynta 50 mg oral tablet	TAKE 1-2 TABLET 3 TIMES DAILY PRN pain max 4/day	120
+15645	854144	nucynta 75 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY FOR 5 DAYS. PRN FOR DENTAL PAIN. STOP THE MORPHINE WHEN TAKING THE NUCYNTA	120
+15667	854144	nucynta 75 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRN FOR POST OP PAIN X 5 DAYS. DO NOT TAKE NORCO WHILE TAKING NUCYNTA	120
+15678	854144	nucynta 75 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRN FOR POST-OP PAIN. DO NOT TAKE VICODIN WHILE TAKING NUCYNTA	120
+15688	854144	nucynta 75 mg oral tablet	one po q 4-6 h prn.. up to three a day.	180
+15703	854144	nucynta 75 mg oral tablet	1 tablet by mouth three times a day as needed for pain. Do not drive while taking this medication.	90
+15719	854144	nucynta 75 mg oral tablet	TAKE 1 TABLET QD-BID daily PRN severe painful flare	30
+15741	1149367	nucynta er 100 mg oral tablet extended release 12 hour	1 tablet by mouth every 12 hours around the clock	80
+15754	1149367	nucynta er 100 mg oral tablet extended release 12 hour	Sig one three times daily. Non acute pain	120
+15768	1149367	nucynta er 100 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS - SWALLOW WHOLE	80
+15805	1149370	nucynta er 150 mg oral tablet extended release 12 hour	Take 1 tab PO in AM	60
+15814	1149370	nucynta er 150 mg oral tablet extended release 12 hour	Take 1 tablet twice daily ( q 12 hrs)	120
+15817	1149370	nucynta er 150 mg oral tablet extended release 12 hour	TAKE 1 TABLET Twice daily replaces his oxycodone	120
+15824	1149370	nucynta er 150 mg oral tablet extended release 12 hour	Take one tablet in the mornings as needed for pain	60
+15844	1149376	nucynta er 250 mg oral tablet extended release 12 hour	TAKE 1 TABLET Every twelve hours *** Temporary rx until can see Pain doctor ***	200
+15890	1149378	nucynta er 50 mg oral tablet extended release 12 hour	Take 1 tablet every 12 hours by mouith as directed for 30 days	40
+15892	1149378	nucynta er 50 mg oral tablet extended release 12 hour	TAKE 1 TABLET Every 8 hours as needed for chronic pain.  This is to complete a partially filled prescription.	60
+15926	1149378	nucynta er 50 mg oral tablet extended release 12 hour	TK 1 T PO BID for pain - bridge prescription pending establishment with new provider.	40
+15936	977943	opana 10 mg oral tablet	Take one tab po q4h prn btp/chronic pain-exemption code B, palliative care	180
+15937	977940	opana 5 mg oral tablet	1 tab tid to qid prn	45
+15951	977940	opana 5 mg oral tablet	take one po BID chronic pain BTP exempt code B	30
+15971	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	ONE @ BEDTIME	30
+15973	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	One tab PO q 8 h chronic pain. Exemption B.	90
+15975	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	One tab PO q am chronic pain.Exemption B	30
+15976	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	one tab po q12hrs chronic pain	60
+15977	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	one tablet at night CHRONIC PAIN EXEMPT CODE G	30
+15978	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	one tablet po TID  CHRONIC PAIN EXEMPT CODE G	90
+15993	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. ( Generic please)	60
+15994	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. chronic pain Expem G	60
+16003	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO BID a  day chronic pain	60
+16004	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO EVERY 12 HOURS DAILY chronic pain.	60
+16006	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO q 12 hours chronic pain.	60
+16009	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO Twice daily chronic pain exempt code g	60
+16013	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Twice daily chronic pain	60
+16026	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	take one tab po every PM	30
+16030	977876	opana er 10 mg oral tablet er 12 hour abuse-deterrent	TAke one tab po qhs for chronic pain, exemption G, weaning	30
+16049	977896	opana er 15 mg oral tablet er 12 hour abuse-deterrent	One tab PO q 12 hours chronic pain. Exemption B	90
+16060	977896	opana er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. Exemption G	90
+16064	977896	opana er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every morning for chronic pain, exemption code G, weaning dosage	45
+16065	977896	opana er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET once a day chronic pain.	45
+16066	977896	opana er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO EVERY 12 HOURS DAILY chronic pain.Exemption G	90
+16068	977896	opana er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET po qam chronic pain exempt code g	45
+16081	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	2 tabs PO q AM chronic pain.Exemption G.	120
+16101	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET BY MOUTH IN THE AM	60
+16123	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	Take one tab PO q am  for chronic pain.Exemption G	60
+16124	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE one tab po q8h for chronic pain-exemption code B, palliative care	180
+16125	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE ONE TAB PO QAM CHRONIC PAIN EXEMPT CODE G	60
+16129	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	Take one tablet po qam for 14 days, then stop--exemption code G, weaning dose	60
+16134	977904	opana er 20 mg t12a	TAKE 1 TABLET EVERY 12 HOURS DAILY./EXEMPT	120
+16137	977904	opana er 20 mg tb12	Opana ER( 20MG Oral  two times daily ) Active -Hx Entry	120
+16153	977911	opana er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET TWICE DAILY. chronic pain exempt code g	180
+16159	977911	opana er 30 mg oral tablet er 12 hour abuse-deterrent	Take one tab PO q AM for chronic pain. Exemption G	90
+16171	977917	opana er 40 mg oral tablet er 12 hour abuse-deterrent	one tablet twice daily Only if needed for pain. Appointment needed for more refills.	240
+16187	977917	opana er 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 2 TABLET 3 times daily/ Partial fill upon request	720
+16205	977925	opana er 5 mg oral tablet er 12 hour abuse-deterrent	one by mouth every 12 hours chronic pain	30
+16207	977925	opana er 5 mg oral tablet er 12 hour abuse-deterrent	one tab TID times per day as needed for chronic pain	45
+16212	977925	opana er 5 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET 4 TIMES DAILY CHRONIC PAIN EXEMPT CODE B	60
+16236	1664448	oxaydo 5 mg oral tablet abuse-deterrent	1 q 4-6 hours foot pain	45
+16239	1664448	oxaydo 5 mg oral tablet abuse-deterrent	TAKE 1 TABLET 2 times daily PRN pain. G89.4	15
+16243	1664448	oxaydo 5 mg oral tablet abuse-deterrent	Take 1 tablet bid prn breakthrough pain; max 2/day	15
+16245	1664448	oxaydo 5 mg oral tablet abuse-deterrent	Take 1-2 q 4 hours knee pain	90
+16307	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TK 1 ML (20 mg) PO Q 6 H PRN Pain   G89.4	6
+16309	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	1.5ml every 4 hours as needed and every 6 hours scheduled	9
+16315	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 2.5 MG Every 4 hours as needed for shortness of breathTERMINALLY ILL PATIENT	22.5
+16322	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 0.25 ML Every hour PRN pain/sob and 0.25ml po nightly at bedtime x30 days.	9
+16328	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 10 MG (0.5mL) EVERY 2 HOURS AS NEEDED FOR BREAKTHROUGH PAIN OR TROUBLE BREATHING - CHRONIC PAIN CAT B  -  TERMINAL ILLNESS	180
+16333	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	Administer 0.5mL orally, every 2-4 hours prn pain/restlessness/aggitation. (20mg/ mL)	9
+16354	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 10 MG (0.5mL) EVERY 4 HOURS AS NEEDED FOR BREAKTHROUGH PAIN OR TROUBLE BREATHING - CHRONIC PAIN CAT B  -  TERMINAL ILLNESS	90
+16365	1049615	oxycodone hcl - 20 mg/ml oral concentrate	TAKE 0.25 ML Every 2 hours (HOSPICE PT)	90
+16369	1049504	oxycodone hcl 10 mg tb12	1 QD IN AM	15
+16370	1049504	oxycodone hcl 10 mg tb12	1 tab nightly before bed	15
+16371	1049504	oxycodone hcl 10 mg tb12	1 TABLET DAILY IN AM	15
+16386	1049504	oxycodone hcl 10 mg tb12	ONE TAB Q AM	15
+16421	1049565	oxycodone hcl 20 mg tb12	1 tab po Q noon	30
+16478	1049565	oxycodone hcl 20 mg/ml conc	Administer 0.25mL - 1 mL orally, every 2 hours prn pain/restlessness/aggitation. (20mg/ mL)	18
+16479	1049565	oxycodone hcl 20 mg/ml conc	Give 0.25 - 1 ml every 2 hours prn   30ml	18
+16517	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET at 7 PM only daily.	15
+16523	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	Take 1 tablet PO QHSVacation override, patient travelling out of state	15
+16526	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	Take 1tab PO qdaily as needed for chronic pain	15
+16566	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. Chronic Pain	30
+16580	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	one tab by mouth at night chronic pain	15
+16589	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. exemption code f patient with acute on chronic pain	30
+16601	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY FOR NON-ACUTE LOWER BACK PAIN	30
+16605	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY DAILY IN THE EVENING	15
+16608	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY.  NON ACUTE PAIN	30
+16614	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. chronic pain, exemption G	30
+16624	1944535	oxycodone hcl er 15 mg oral tablet er 12 hour abuse-deterrent	1 tablet by mouth 3 times a day chronic pain	67.5
+16630	1944535	oxycodone hcl er 15 mg oral tablet er 12 hour abuse-deterrent	one tab po q8hrs chronic pain, med exemp G	67.5
+16637	1944535	oxycodone hcl er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET 3 times daily palliative care - chronic pain - metsatic cancer Exemption C	67.5
+16649	1944535	oxycodone hcl er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. MEDICATION CHANGE	45
+16650	1944535	oxycodone hcl er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. NONACUTE / CHRONIC CANCER RELATED PAIN	45
+16661	1944535	oxycodone hcl er 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 15 MG 3 times daily May skip dose if needed	67.5
+16677	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET 3 times daily Chronic Pain	90
+16679	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	ONE TABLET PO Q 12 HOURS.  EXEMPTION A:  ACTIVE CANCER TREATMENT	60
+16685	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	Take one tablet three times daily (every 8 hours).	90
+16687	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET AT BEDTIME FOR CHRONIC PAINRX COPY ONLY-DO NOT FILL-ORIGINAL RX SENT TO OMNICARE BY EPCS	30
+16696	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 8 HOURS DAILY.  EXEMPTION A	90
+16702	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY.EXEMPTION A:  ACTIVE CANCER TREATMENT	60
+16705	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every twelve hours chronic pain	60
+16707	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	One tab PO q 6 hours chronic pain.Exemption G	120
+16711	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE ONE TABLET 4 TIMES DAY	120
+16717	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS----this is your LONG ACTING pain medication	60
+16727	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET po qhs for chronic pain-weaning exemption code G	30
+16734	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every 8 hours Exemption A: Active Cancer Treatment	90
+16739	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every 8 hours fro chronic pain exemption G.	90
+16767	1049565	oxycodone hcl er 20 mg oral tablet er 12 hour abuse-deterrent	One tab PO q am and hs hours chronic pain.	30
+16772	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	1 TAB PO TID-CHRONIC	135
+16776	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	One tab PO q 12 hours chronic pain. Exemption B.	90
+16781	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	One tablet PO q 12 hours chronic pain. Exemption B.	90
+16793	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY CHRONIC PAIN EXEMPT CODE B	90
+16794	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY as needed for CHRONIC pain, EXEMPTION CODE G, WEANING DOSAGES	90
+16796	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. Chronic pain, palliative exemption code B	90
+16811	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every twelve hours Chronic Pain ,  Exemption B	90
+16813	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO q am for chronic pain.  Exemption B	45
+16814	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET po q pm and hs for chronic pain.  Exemption B	45
+16822	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	take one pill in am	45
+16823	1944540	oxycodone hcl er 30 mg oral tablet er 12 hour abuse-deterrent	TAKE one tab po every twelve hours as needed for chronic pain.-exemption B.	90
+16838	1049586	oxycodone hcl er 40 mg oral tablet er 12 hour abuse-deterrent	One tab PO q AM chronic pain.Exemption G	60
+16860	1049586	oxycodone hcl er 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 8 HOURS DAILY if eneded for pain	180
+16864	1049586	oxycodone hcl er 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO q am for chronic pain. Exemption B	60
+16891	1049595	oxycodone hcl er 60 mg oral tablet er 12 hour abuse-deterrent	One tab PO q 12 h chronic pain. Exemption B.	180
+16893	1049595	oxycodone hcl er 60 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY.  This prescription is for NON ACUTE PAIN.	180
+16900	1049595	oxycodone hcl er 60 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY EVENING FOR CHRONIC PAIN. EXCEPTION A:  ACTIVE CANCER TREATMENT	90
+16903	1049595	oxycodone hcl er 60 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO q am for chronic pain.Exemption B	90
+16914	1049601	oxycodone hcl er 80 mg oral tablet er 12 hour abuse-deterrent	take 1 tab 4 timesa a day as needed for pain	480
+16922	1049601	oxycodone hcl er 80 mg oral tablet er 12 hour abuse-deterrent	TAKE 2 TABLETS THREE TIMES  DAILYTERMINALLY ILL PALLIATIVE PATIENT	720
+16928	1049601	oxycodone hcl er 80 mg oral tablet er 12 hour abuse-deterrent	Take one tablet every eight hours as needed for pain, do not drive while taking this medication.	360
+16942	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET 3 TIMES DAILY TAKES FOR NON ACUTE PAIN	45
+16951	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TO 2 TABLETS EVERY 8 HOURS AS NEEDED FOR PAIN.  This prescription is for NON ACUTE PAIN.	90
+16961	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET 3 times daily; do not drive while taking this med	45
+16962	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET up to 7 a day as  NEEDED FOR PAIN.	105
+16964	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	Take one every 6 hours as needed for acute pain -do not use with hydrocodone	60
+16993	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TO 2 TABLETS EVERY 6 HOURS AS NEEDED FOR PAIN. Non-acute pain.	120
+16996	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	1 tab po qhs- may take extra tab prn	15
+17002	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET 2-3 DAILY	15
+17007	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	1-2 po q4-6h PRN NTE 4/day	180
+17025	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	1 TABLET BY MOUTH EVERY 4-6HOURS AROUND THE CLOCK	90
+17029	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 to 2 tablets every 8 hours PRN pain.  No more than 3 per day	90
+17043	1049650	oxycodone-acetaminophen 10-650 mg tabs	TAKE 1 TABLET 4 TIMES DAILY PRN Pain Supply Must last 30 days	60
+17064	1049637	oxycodone-acetaminophen 2.5-325 mg oral tablet	GIVE 1 TABLET BY MOUTH 3 TIMES A DAY AROUND THE CLOCK	11.25
+17066	1049637	oxycodone-acetaminophen 2.5-325 mg oral tablet	ONE PO BID PRN #60	7.5
+17069	1049637	oxycodone-acetaminophen 2.5-325 mg oral tablet	one tablet twice a day if needed for pain. NON ACUTE PAIN	7.5
+17072	1049637	oxycodone-acetaminophen 2.5-325 mg oral tablet	Please take 0.5 tablet 30 min prior to bone marrow biopsy, then every 8 hours as needed for pain.	90
+17074	1049637	oxycodone-acetaminophen 2.5-325 mg oral tablet	Take 1 pill every 12 hours not to exceed twice a day as needed for pain	7.5
+17152	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED FOR POST-OP PAIN for 2 days.	30
+17175	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take 1 q4-6h prn, This prescription is for NON ACUTE PAIN.	45
+17176	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	1-2 tabsPO q4hrs prn pain	90
+17183	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1/2 tablet  twice a day as needed for pain not relieved by ibuprofen.	7.5
+17184	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take 1 tablet every 8 hours as needed for neuropathic pain. NON-ACUTE PAIN	22.5
+17188	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1 TABLET EVERY 4 TO 6 HOURS AS NEEDED FOR PAIN. -  NonAcute / Chronic Pain	45
+17203	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	ONE TAB Q 8 HRS PRN FOR chronic neuropathic pain in legs - use sparingly	22.5
+17222	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take 1/2 tablet BID IF NEEDED	7.5
+17241	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	Take 1 tablet 2 -3 times daily as needed for -break through pain	33.75
+17264	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	1 tab daily to twice daily prn pain	11.25
+17280	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	1 qid when necessary pain	45
+17296	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	TAKE 1 TABLET 3 times daily PRN severe pain. MUST BE SEEN FOR MORE	33.75
+17317	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	TAKE 1 TABLET EVERY 4 HOURS AS NEEDED FOR NON- ACUTE PAIN.	67.5
+17318	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	TAKE 1 TABLET 1-2  daily PRN severe pain	11.25
+17319	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	1 every 4-6 hrs prn pain up to 5 per day	67.5
+17320	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	TAKE 1 TABLET DAILY AS NEEDED FOR PAIN. This prescription is for NON ACUTE PAIN.	11.25
+17321	1049227	oxycodone-acetaminophen 7.5-325 mg oral tablet	1 po q4-6 hrs prn pain # 60	67.5
+17345	1049647	oxycodone-acetaminophen 7.5-500 mg oral tablet	ONE TABLET QID PRN. MDD#4	45
+17351	1049647	oxycodone-acetaminophen 7.5-500 mg oral tablet	TAKE 1 or 2 TABLETS BID prn pain MDD 4	45
+17352	1049647	oxycodone-acetaminophen 7.5-500 mg oral tablet	TAKE 1 OR 2 TABS QID PRN PAIN. MDD 8	90
+17366	1049647	oxycodone-acetaminophen 7.5-500 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED. NOT TO EXCEED 4 A DAY	45
+17370	1049647	oxycodone-acetaminophen 7.5-500 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN pain.  MDD #4	45
+17400	1049647	oxycodone-acetaminophen 7.5-500 mg tabs	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED. (BIG BEND HOSPICE PATIENT.)	45
+17425	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY (8 AM and 8 PM.)	30
+17438	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 10 MG Every twelve hours abuse-deterrent  "Partial fill upon patient request."	30
+17452	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	Take 1 tab every 12-24 hrs until gone, starting on the morning of surgery.	30
+17457	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	1 po bid about Q 12 hours	30
+17492	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 6-8 HRS IF NEEDED	60
+17559	1049504	oxycontin 10 mg oral tablet extended release 12 hour	1 tab po q am	15
+17590	1049504	oxycontin 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS to prevent pain recurrance	30
+17654	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS.chronic  pain	45
+17660	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	Take 1 tablet daily for 2 wks, the QOD until gone	22.5
+17664	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	Two tabs PO q 12 hours chronic pain.	90
+17669	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	Take one tablet every night prior to bedtime.	22.5
+17682	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO Q 12 HOURS.  EXEMPTION A:  ACTIVE CANCER TREATMENT.	45
+17684	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	take one tab once a day chronic pain exempt code g	22.5
+17707	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO q am  and one pm for   chronic pain	22.5
+17708	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	1 tab po q12h chronic pain.	45
+17718	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	1-2 PO Q 4 hours prn pain.  Up to 10 per day.	270
+17720	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 8 HOURS DAILY. Exemption G	67.5
+17723	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	Take one tablet TID  This prescription is for NON ACUTE PAIN.	67.5
+17726	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET QHS.chronic  pain	22.5
+17730	1049545	oxycontin 15 mg oral tablet er 12 hour abuse-deterrent	TAKE ONE TABLET IN THE AM	22.5
+17753	1049545	oxycontin 15 mg oral tablet extended release 12 hour	1 po each AM	22.5
+17765	1049545	oxycontin 15 mg tb12	1 p.o.  three times a day (TID)	67.5
+17776	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET 3 times daily- hospice pt	90
+17800	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	one tab po every 12 hours.  Exemption code: B and G.	60
+17804	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS.    Acute pain exception	60
+17811	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	one tab by mouth every 12 hours chronic pain	60
+17815	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	take 2  tabs @ HS	60
+17841	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO QAM chronic pain.	30
+17842	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET qam for chronic pain-exemption code B, palliative care	30
+17852	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	Take 1 tablet in am for chronic pain	30
+17883	1049565	oxycontin 20 mg oral tablet extended release 12 hour	1 PO Q PM.	30
+17884	1049565	oxycontin 20 mg oral tablet extended release 12 hour	One tab in the AM	30
+17890	1049565	oxycontin 20 mg oral tablet extended release 12 hour	one tablet by mouth daily in am	30
+17906	1049565	oxycontin 20 mg oral tablet extended release 12 hour	1 TAB PO Q 12 HRS PRN PAIN/#60/0REFILLS/PT TO PICK UP	60
+17920	1049565	oxycontin 20 mg oral tablet extended release 12 hour	one two times a day to help control chronic pain	60
+17924	1049565	oxycontin 20 mg oral tablet extended release 12 hour	1 tab po q 8 hrs prn pain/#90/0refills/pt to pick up	90
+17952	1049565	oxycontin 20 mg oral tablet extended release 12 hour	TAKE 1 TABLET DAILY IN THE AM	30
+17960	1049565	oxycontin 20 mg oral tablet extended release 12 hour	1 po tid-qid	90
+17983	1049565	oxycontin 20 mg tb12	ONE IN THE AM	30
+17986	1049565	oxycontin 20 mg tb12	OxyCONTIN( 20MG Oral  two times daily ) Active -Hx Entry	60
+17998	1049565	oxycontin 20 mg tb12	TAKE 1 TABLET EVERY 12 HOURS AS NEEDED FOR PAIN. SUPPLY MUST LAST 30 DAYS.	60
+18002	1049565	oxycontin 20 mg tb12	TAKE 1 TABLET Twice daily Stop taking Oxycodone/APAP.	60
+18003	1049565	oxycontin 20 mg tb12	TAKE 1 TABLET TWICE DAILY, PREFERABLY WITH MORNING AND EVENING MEALS.	60
+18009	1049565	oxycontin 20 mg tb12	take one tablet every 12 hrs pain.  ( BB Hospice patient)	60
+18015	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET TWICE DAILY - SWALLOW WHOLE	90
+18017	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every morning Pain relief	45
+18020	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET in am.	45
+18035	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET BY MOUTH EVERY 8 HOURS DAILY as needed for CHRONIC pain excemption code B - terminal ill	135
+18070	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE TABLET  1 tab PO q 8 hours chronic pain.Exemption G	135
+18071	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	One tab PO q 8 h chronic pain. terminally ill palliative patient Exemption B	135
+18083	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	Take one tab po qam for chronic pain. Exemption G, weaning dosage.	45
+18086	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	1 PO qhs, med exemp G	45
+18087	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY.  Acute pain exception	90
+18088	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	Take 1 tab  PO qam for 14 days, then stop,  for chronic pain, med exemp  B	45
+18093	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO EVERY 8 HOURS as needed for CHRONIC pain-EXEMPTION B	135
+18104	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY chronic pain.	90
+18145	1049576	oxycontin 30 mg tb12	take one tablet q pm	45
+18162	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	One tab PO q AM and HS chronic pain.Exemption B	60
+18167	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	one tab po every 12 hours. Exemption codes: B and G.	120
+18168	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET TWICE DAILY. chronic pain Exemtion B	120
+18173	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	take 1 tablet twice a day (morning and early evening)	120
+18189	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Daily in the morning;  Code G	60
+18199	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	1 po q 12h regularly for low back pain	120
+18206	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	1 tablet po in am	60
+18213	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET TWICE DAILY,can do a partial fill	120
+18218	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY. Do not drive while taking this medcaiton.	120
+18224	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	One tab PO q HS chronic pain.Exemption B	60
+18236	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	One PO in the AM	60
+18244	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	1 po bid EFORSCE CHECK FOR NON ACUTE PAIN	120
+18246	1049586	oxycontin 40 mg oral tablet er 12 hour abuse-deterrent	TAKE 40 MG Twice daily  This prescription is for NON ACUTE PAIN.	120
+18257	1049586	oxycontin 40 mg oral tablet extended release 12 hour	One two times a day to decrease chronic pain	120
+18275	1049586	oxycontin 40 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS PRN MDD # 2	120
+18287	1049586	oxycontin 40 mg oral tablet extended release 12 hour	TAKE ONE TABLET IN THE AM.	60
+18311	1049586	oxycontin 40 mg oral tablet extended release 12 hour	TAKE 1 TABLET BID-TID prn	120
+18317	1049586	oxycontin 40 mg oral tablet extended release 12 hour	one in the pm	60
+18337	1049586	oxycontin 40 mg oral tablet extended release 12 hour	1 tab q pm	60
+18347	1049586	oxycontin 40 mg tb12	1 every AM	60
+18359	1049586	oxycontin 40 mg tb12	TAKE 1 TABLET 3-4  TIMES DAILY as needed for pain. MAY REPEAT OF PT VOMITS.	240
+18360	1049586	oxycontin 40 mg tb12	TAKE 1 TABLET EVERY 12 HOURS AS NEEDED FOR PAIN.             (HOSPICE PATIENT)	120
+18375	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	Take 1 pill (60mg) three times a day ( breakfast, lunch, dinner) - for chronic occipital neuralgia pain	270
+18386	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	Take one tablet in AM	90
+18400	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	one tablet tid   This prescription is for NON ACUTE PAIN.	270
+18404	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	1 po bid - tid prn SEVERE PAIN	180
+18405	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	Take 1 po in am.	90
+18426	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	take one tablet Q8hrs Code A	270
+18465	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	1 three times day prn	270
+18466	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS. may fill today due to death in family	180
+18469	1049595	oxycontin 60 mg oral tablet er 12 hour abuse-deterrent	Take 1 tablet in the AM.	90
+18493	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	take 4 tablets twice daily  This prescription is for NON ACUTE PAIN.	960
+18529	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET TWICE DAILY. Exemption code : B chronic back pain.	240
+18535	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	one tablet qid  This prescription is for NON ACUTE PAIN.	480
+18566	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	Take one tablet twice daily.  Appointment needed for more refills.	240
+18567	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	TAKE 2 TABLETS TWICE DAILY.PATIENT IS TERMNINALLY ILL	480
+18574	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	take 1 tabs in the am.	120
+18575	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET TWICE DAILY. MDD:bid	240
+18586	1049601	oxycontin 80 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 8 HOURS DAILY.  This prescription is for NON ACUTE PAIN.	360
+18591	1049601	oxycontin 80 mg oral tablet extended release 12 hour	1 PO Q 8 H PRN MDD 3	360
+18608	1049601	oxycontin 80 mg oral tablet extended release 12 hour	TAKE 1 TABLET TWICE DAILY (EVERY 12 HOURS)	240
+18625	1049601	oxycontin 80 mg tb12	1 p.o. three times a day (TID)	360
+18634	1049601	oxycontin 80 mg tb12	TAKE 1 TABLET TWICE DAILY. PT MAY NOT PICK UP WITHOUT SUPERVISION.	240
+18651	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET Every 4 hours PRN post-op pain x 15 days	180
+18661	977942	oxymorphone hcl - 10 mg oral tablet	1 po BID chronic pain	60
+18686	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET TWICE DAILY PRN chronic pain. G89.4	60
+18697	977942	oxymorphone hcl - 10 mg oral tablet	1 TABLET QD-BID FOR BREAKTHROUGH PAIN	30
+18698	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET PO QAM, MIDDAY AND QHS  FOR CHRONIC PAIN	30
+18701	977942	oxymorphone hcl - 10 mg oral tablet	One tab PO q 8 h chronic pain. Exemption B	90
+18723	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN for pain G89.4 CHRONIC PAIN	120
+18727	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN pain   G89.4	120
+18728	977942	oxymorphone hcl - 10 mg oral tablet	Take 1 tablet 4 times daily as needed ( PRN) for breakthrough pain/chronic pain, exemption code B, palliative care	120
+18735	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET Twice daily PRN breakthrough  This prescription is for NON ACUTE PAIN.	60
+18736	977942	oxymorphone hcl - 10 mg oral tablet	Take one tab po QID prn for chronic pain-exemption B. MDD:4	120
+18742	977939	oxymorphone hcl - 5 mg oral tablet	TAKE 1 TABLET  PO  EVERY 6 HOURS chronic pain.	60
+18752	977939	oxymorphone hcl - 5 mg oral tablet	Take 1 tablet po tid prn pain , Chronic Pain. G89.29; M54.2	45
+18764	977939	oxymorphone hcl - 5 mg oral tablet	One tab TID hours chronic pain.	45
+18771	977939	oxymorphone hcl - 5 mg oral tablet	One tab PO q 6 h chronic pain.	60
+18781	977939	oxymorphone hcl - 5 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN SEVERE PAIN. G89.4 chronic pain	60
+18782	977939	oxymorphone hcl - 5 mg oral tablet	Take 1 tablet po tid prn pain  G89.29; M54.2	45
+18813	977939	oxymorphone hcl - 5 mg oral tablet	take one tablet every 8hrs fo pain	45
+18834	977939	oxymorphone hcl - 5 mg oral tablet	take 1 tablet Q8hr/ PRN	45
+18849	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	2 tab q AM	60
+18850	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	One po q AM	30
+18852	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET 3 times daily  This prescription is for NON ACUTE PAIN.	90
+18854	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET DAILY  Exemption code G	30
+18856	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS   This prescription is for NON ACUTE PAIN.	60
+18858	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	Take 1 tablet every 12 hours  This prescription is for NON ACUTE PAIN.	60
+18861	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS AS NEEDED.  This prescription is for NON ACUTE PAIN.	60
+18862	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS AS NEEDED.  This prescription is not for acute pain.	60
+18865	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS as needed for chronic pain-exemption code G, weaning dosage	60
+18877	977876	oxymorphone hcl er 10 mg oral tablet extended release 12 hour	TAKE 1 TABLET PO QAM . CHRONIC PAIN	30
+18897	977896	oxymorphone hcl er 15 mg oral tablet extended release 12 hour	One tab PO q hs chronic pain. Exemption B.	45
+18899	977896	oxymorphone hcl er 15 mg oral tablet extended release 12 hour	one tablet bid  This prescription is for NON ACUTE PAIN.	90
+18933	977904	oxymorphone hcl er 20 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS AS NEEDED. MDD:two	120
+18937	977904	oxymorphone hcl er 20 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS.  This prescription is for NON ACUTE PAIN.	120
+18956	977911	oxymorphone hcl er 30 mg oral tablet extended release 12 hour	one twice daily as needed for chronic pain; Exemption B Pallitive care- seroius illness	180
+18957	977911	oxymorphone hcl er 30 mg oral tablet extended release 12 hour	take 1 tab po BID - pain mgmt	180
+18960	977911	oxymorphone hcl er 30 mg oral tablet extended release 12 hour	TAKE 1 TABLET  in AM and PM for chronic pain, med exemp G	90
+18962	977911	oxymorphone hcl er 30 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS - for control of chronic pain	180
+18965	977911	oxymorphone hcl er 30 mg oral tablet extended release 12 hour	TAKE 1 TABLET Every twelve hours  This prescription is for NON ACUTE PAIN.	180
+18969	977911	oxymorphone hcl er 30 mg oral tablet extended release 12 hour	TAKE 1 TABLET in the am and hs for chronic pain, exemption code B, palliative care	90
+18992	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	One tab PO q AM and midday chronic pain.	15
+18996	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	TAKE 1 TABLET DAILY   EXPEMPTION CODE G	15
+19002	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS CHROINC PAIN	30
+19003	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS as needed for chronic pain. May fill today due to traveling out of state for holidays.	30
+19006	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	TAKE 1 TABLET EVERY 12 HOURS.This prescription is not for acute pain.	30
+19009	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	TAKE 1 TABLET PO Every twelve hours chronic pain.Exemption G	30
+19014	977925	oxymorphone hcl er 5 mg oral tablet extended release 12 hour	take one tab 4 times per day btp chonic pain exempt code B	60
+19019	977931	oxymorphone hcl er 7.5 mg oral tablet extended release 12 hour	1 tab PO q 8 hours chronic pain. EPCS tech fail	67.5
+19022	977931	oxymorphone hcl er 7.5 mg oral tablet extended release 12 hour	One tab PO q 8 hours chronic pain.Exemption G.	67.5
+19028	977931	oxymorphone hcl er 7.5 mg oral tablet extended release 12 hour	tAke one tab po q12h for chronic pain, exemption code G, weaning dose	45
+19107	1049625	percocet 10-325 mg oral tablet	TAKE 1 TABLET EVERY 4 HOURS. medically necessary for branded meds	90
+19110	1049625	percocet 10-325 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS DAILY.    Non-acute pain	60
+19111	1049625	percocet 10-325 mg oral tablet	1 p.o.   twice a day (BID) prn	30
+19148	1049650	percocet 10-650 mg oral tablet	ONE TABPO Q 8 HRS PRN	45
+19155	1049650	percocet 10-650 mg oral tablet	Take 1 tablet every four to six hours while awake by mouth	90
+19158	1049650	percocet 10-650 mg tabs	1 p.o.  q. 12  hours (BID)	30
+19171	1049637	percocet 2.5-325 mg oral tablet	One tablet p.o. q.4 to 6 hours p.r.n. pain	22.5
+19194	1049640	percocet 5-325 mg oral tablet	TAKE 2 TABLET TWICE DAILY if needed for breakthrough pain	30
+19205	1049640	percocet 5-325 mg oral tablet	1 po tid to qid prn	22.5
+19207	1049640	percocet 5-325 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRN #80	30
+19208	1049640	percocet 5-325 mg oral tablet	Percocet( 5-325MG Oral  two times daily ) Active -Hx Entry	975
+19338	1049642	percocet 7.5-325 mg oral tablet	Take 1 Tablet every 4 to 6 hours prn mdd 6	67.5
+19339	1049642	percocet 7.5-325 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED FOR PAIN.  this is for chronic pain management	45
+19440	1050490	roxicet 5-325 mg oral tablet	1-2 TABS Oral q4-6h PRN pain Don't drive while taking	90
+19445	1050490	roxicet 5-325 mg oral tablet	ingest one tablet up to b.i.d. for relief of breakthrough right-sided discogenic pain as needed	15
+19448	1050490	roxicet 5-325 mg oral tablet	one QID prn back pain - not to mix with alcohol - or take and drive	30
+19456	1050490	roxicet 5-325 mg oral tablet	TAKE 1 daily only if needed for severe pain	7.5
+19463	1050490	roxicet 5-325 mg oral tablet	TAKE 1 TABLET BY MOUTH EVERY 4 TO 6 HOURS IF NEEDED AS DIRECTED	45
+19468	1050490	roxicet 5-325 mg oral tablet	TAKE 1 TABLET Twice daily PRN Stop Hydrocodone /APAP.	15
+19499	1050490	roxicet 5-325 mg tabs	May take one tablet four times per day if needed for pain	30
+19500	1050490	roxicet 5-325 mg tabs	one each 6 hours if needed for pain	30
+19503	1050490	roxicet 5-325 mg tabs	TAKE 1 TABLET BY MOUTH UP TO THREE TIMES A DAY IF NEEDED,	22.5
+19515	1049620	roxicodone 30 mg oral tablet	TAKE 1 TABLET Every 4 hours around the clock	270
+19518	1049623	roxicodone 5 mg oral tablet	1 TABLET TID-QID PRN SEVERE PAIN	22.5
+19529	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	1 pill bid to tid	20
+19530	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	1 PO Q 8 HOURS PRN, NO MORE THAN 3 PER DAY	30
+19531	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	1 PO QD-BID, prn RUQ pain	10
+19553	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET Daily with dinner.	10
+19572	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	take one tablet every 8 hours as needed for pain in the cervical neck. Use as needed for pain.	30
+19577	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	Take Tramadol extended release biphasic 100 mg one to 2 a day	20
+19584	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH NIGHTLY AT BEDTIME AS NEEDED	20
+19592	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET EVERY MORNING   CODE-D	20
+19607	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	Two tabs PO q am chronic pain.	20
+19611	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	TAKE 1 TABLET ONCE DAILY ACUTE PAIN	10
+19620	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE DAILY IN THE AM	10
+19634	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Every 8 hours PRN rectal/abdominal pain	30
+19678	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	take 1 capsule by mouth three times a day if needed for pain	30
+19689	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	one tab po daily in pm	10
+19698	1148478	tramadol hcl er 100 mg oral capsule extended release 24 hour	Take 1/2-1 tablet every 8 hours as needed for pain, #10	30
+19704	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET In AM with food	10
+19710	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	1 tablet each AM, for chronic pain	10
+19716	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY AS NEEDED. MDD:one	10
+19720	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET Daily PRN in the morning for pain	10
+19721	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET EVERY DAY IF NEEDED	10
+19737	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH  TWICE A DAY REGULARLY FOR  LOW BACK PAIN.	20
+19745	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TraMADol HCl( 100MG Oral  two times daily ) Active -Hx Entry	20
+19751	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	take 1 tablet daily only as needed for breakthrough pain	10
+19753	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET 3 TIMES DAILYPMP done	30
+19754	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	Take 1 tablet every 12 hours.  Non-Acute Pain.	20
+19775	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1-2 TABLET BY MOUTH IN THE EVENING  AS NEEDED FOR PAIN W/C	20
+19784	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	Take 1 tablet daily for non-acute pain from osteoarthritis of knees.	10
+19798	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET AT BEDTIME AS NEEDED FOR PAIN.  CODE-D	10
+19810	1248115	tramadol hcl er 150 mg oral capsule extended release 24 hour	one tablet daily as needed (non-acute pain)	15
+19811	1248115	tramadol hcl er 150 mg oral capsule extended release 24 hour	ONE TABLET EVERY 4 HOURS IF NEEDED	90
+19834	1248115	tramadol hcl er 150 mg oral capsule extended release 24 hour	take 1 tablet po Q12 h for acute pain of right shoulder	30
+19842	1248115	tramadol hcl er 150 mg oral capsule extended release 24 hour	Take one every 6 hours when necessary for migraine	60
+19853	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	1 po qd regularly for pain in low back and fractured leg.	20
+19861	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	One tablet daily in the am daily	20
+19872	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily Not for acute pain.	20
+19873	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily PRN mod-severe pain Not for acute pain: For chronic cervicalgia	20
+19883	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take 1 pill po Q AM	20
+19885	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take 1 tab PO QD. MUST BE SEEN TO CONTINUE ANY REFILLS.	20
+19893	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE ONE CAPSULE DAILY.   FOR NON-ACUTE PAIN	20
+19899	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take one po q AM	20
+19905	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH ONCE DAILY  NON-ACUTE PAIN	20
+19915	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH EVERY DAY AS DIRECTED PT NEEDS FOLLOW UP APPOINTMENT	20
+19931	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY.  This prescription is for NON ACUTE PAIN.	20
+19935	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY  FOR NON-ACUTE PAIN	20
+19941	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY FOR NON-ACUTE PAIN	20
+19942	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY.  Not For Acute Pain	20
+19949	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY.PLEASE SCHEDULE APPOINTMENT BEFORE NEXT REFILL IS DUE	20
+19959	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET AT BEDTIME AS NEEDED. (Patient states not taking)	20
+19964	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TraMADol HCl( 200MG Oral  two times daily, as needed ) Active -Hx Entry	40
+19970	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	One po q AM.	20
+19973	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	take one tablet by mouth every day as needed for pain (non-acute pain)	20
+19974	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	Take 1 tablet by mouth once daily if needed	20
+19983	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY AS DIRECTED. May use tramadol, immediate release for breakthrough pain.	20
+19995	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE (1)TAB DAILY AS DIRECTED BY YOUR PHYSICIAN	20
+19996	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET AT BEDTIME AS NEEDED FOR CONTROL OF PAIN.	20
+20007	1148489	tramadol hcl er 300 mg oral capsule extended release 24 hour	1 tab in am once daily	30
+20012	1148489	tramadol hcl er 300 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE DAILY -- FOR MANAGEMENT OF CHRONIC PAIN -- NONACUTE PAIN	30
+20020	1148489	tramadol hcl er 300 mg oral capsule extended release 24 hour	Take 1 tablet po daily prn pain   G89.4	30
+20043	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	take 1 tablet by mouth every night at bedtime  Non acute pain	30
+20056	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	take 1 tablet every day her for non acute pain	30
+20060	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	Take 1-2 tablets by mouth once daily if needed	60
+20069	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH   NIGHTLY AT BEDTIME	30
+20071	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH ONCE DAILY **LAST FILL WITHOUT BEING SEEN**	30
+20078	1087427	tussicaps 10-8 mg oral capsule extended release 12 hour	1 po bid prn cough (dont use with other cough meds)	20
+20126	835605	ultram 50 mg oral tablet	TAKE 1 TABLET BY MOUTH EVERY 4 TO 6 HOURS AS NEEDED, non-acute pain	30
+20139	835605	ultram 50 mg oral tablet	one po bid -tid	10
+20146	835605	ultram 50 mg oral tablet	1 po bid - tid prn pain	10
+20169	835605	ultram 50 mg oral tablet	TAKE 1 TABLET 3 TIMES DAILY NO MORE THAN # A DAY	15
+20180	835605	ultram 50 mg oral tablet	TAKE 1 TABLET BY MOUTH TWICE A DAY WITH FOOD AS NEEDED FOR MODERATE PAINDO NOT DRIVE WHILE ON ULTRAM.	10
+20196	835605	ultram 50 mg oral tablet	one tab po q 8 hrs / prn	15
+20215	835605	ultram 50 mg oral tablet	1 TAB PO Q 4-6 HRS/ PRN FOR PAIN	30
+20221	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 12 OR 3 TABLETS DAILY as needed for pain	30
+20236	845314	ultram er 100 mg oral tablet extended release 24 hour	1 Tablet daily for 5 days. please let dr office know if med is working after that.	10
+20243	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY please deliver to patient	10
+20255	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY WITH BREAKFAST.	10
+20279	845314	ultram er 100 mg oral tablet extended release 24 hour	1 PO Q AM	10
+20280	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY WITH DINNER	10
+20324	845315	ultram er 200 mg oral tablet extended release 24 hour	1 PO daily (samples given)	20
+20325	845315	ultram er 200 mg oral tablet extended release 24 hour	1 po q am for pain	20
+20327	845315	ultram er 200 mg oral tablet extended release 24 hour	1 TAB Q AM	20
+20363	845315	ultram er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY in the a.m.	20
+20369	845315	ultram er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET ONCE every AM	20
+20375	845315	ultram er 200 mg oral tablet extended release 24 hour	take one tablet at bedtime as needed for pain (samples provided)	20
+20376	845315	ultram er 200 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH EVERY DAY IF NEEDED FOR PAIN	20
+20413	1310202	vicodin 5-300 mg oral tablet	TAKE 1 TO 2 TABLETS EVERY  6 HOURS AS NEEDED FOR PAIN, #24	40
+20416	1310202	vicodin 5-300 mg oral tablet	One daily when necessary severe pain  no alcohol or driving etc.	5
+20418	1310202	vicodin 5-300 mg oral tablet	TAKE ONE TABLET AT NIGHT TO SLEEP IF PAIN IS SEVERE	5
+20421	1310202	vicodin 5-300 mg oral tablet	take 1-2 tabs by mouth twice a day, no etoh while taking, watch for drowsiness, constipation	20
+20440	1310202	vicodin 5-300 mg oral tablet	1 tab BID to TID prn severe pain	10
+20442	1310202	vicodin 5-300 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN pain >5/10 MDD:004 TDD:4	20
+20445	1310202	vicodin 5-300 mg oral tablet	one every 6 hours as needed for pain not controlled by duragesic patch	20
+20449	1310202	vicodin 5-300 mg oral tablet	take 1 tab bid to tid for severe acute pain as directed	10
+20455	1310202	vicodin 5-300 mg oral tablet	TAKE ONE TABLET BY MOUTH Q6 HOURS SPARINGLY PRN PAIN.	20
+20457	1310202	vicodin 5-300 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN pain MDD:three	20
+20468	1310202	vicodin 5-300 mg oral tablet	one tablet every 4 hours when necessary pain.	30
+20471	1310202	vicodin 5-300 mg oral tablet	TAKE 1/2 to 1 TABLET EVERY 8 HOURS PRN SEVERE PAIN, DO NOT COMBINE WITH ALCOHOL, DO NOT DRIVE FOR 6 HOURS AFTER TAKING	15
+20478	1310202	vicodin 5-300 mg oral tablet	take 1 daily severe pain  No alcohol or driving etc.	5
+20486	1310202	vicodin 5-300 mg oral tablet	take one pill at night if needed for severe pain	5
+20488	1310202	vicodin 5-300 mg oral tablet	take 1-2 tablets qhs or q8h as needed for pain	10
+20491	1310202	vicodin 5-300 mg oral tablet	TAKE 1 TABLET at bedtime  HABIT FORMING, DO NOT DRIVE AND AVOID ALCOHOL	5
+20492	1310202	vicodin 5-300 mg oral tablet	TAKE 1 TABLET PO DAILY NEEDED FOR PAIN.	5
+20494	1310202	vicodin 5-300 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN moderate - severe pain	20
+20502	1310212	vicodin es 7.5-300 mg oral tablet	1 PO QID PRN MDD:8	30
+20542	1310212	vicodin es 7.5-300 mg oral tablet	Take 1 tablet by mouth every 4-6 hours as needed for pain. WHITE TABLETS ONLY; ALLERGIC TO DYES	45
+20545	1310212	vicodin es 7.5-300 mg oral tablet	TAKE 1 TABLET EVERY 12 HOURS only AS NEEDED FOR PAIN.	15
+20554	1310212	vicodin es 7.5-300 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED FOR PAIN. Must last until ortho appointment	30
+20562	1310212	vicodin es 7.5-300 mg oral tablet	take 1 to 2 tablets by mouth every 4 to 6 hours if needed for pain	90
+20568	1310212	vicodin es 7.5-300 mg oral tablet	take 1/2 to one tab po qhs severe pain	7.5
+20578	1310212	vicodin es 7.5-300 mg oral tablet	TAKE ONE HALF TO ONE TABLET(S) TWICE A DAY BY MOUTHAS NEEDED FOR PAIN	15
+20594	1310212	vicodin es 7.5-300 mg oral tablet	TAKE ONE TABLET(S) TWICE A DAY BY MOUTHAS NEEDED FOR PAIN	15
+20628	1310270	vicodin hp 10-300 mg oral tablet	Take HALF - 2 tabs po q4 hrs if needed for pain	120
+20631	1310270	vicodin hp 10-300 mg oral tablet	take one pill up to 2 times daily if needed for severe pain	20
+20634	1310270	vicodin hp 10-300 mg oral tablet	TAKE ONE TABLET BY MOUTH EVERY SIX HOURS AS NEEDED STOP TAKING HYDROCODONE/APAP 10-660MG	40
+20635	1310270	vicodin hp 10-300 mg oral tablet	TK 1 T PO  Q 8 H PRF SEVERE PAIN	30
+20674	1791560	xtampza er 13.5 mg oral capsule er 12 hour abuse-deterrent	one tablet Q 12H  do not crush or chew.	40.5
+20680	1791560	xtampza er 13.5 mg oral capsule er 12 hour abuse-deterrent	Take 1 tablet 1 day. prn at night	20.25
+20681	1791560	xtampza er 13.5 mg oral capsule er 12 hour abuse-deterrent	Take 1 tablet daily at bedtime for long acting relief of RA chronic pain with hand deformities.	20.25
+20699	1791569	xtampza er 18 mg oral capsule er 12 hour abuse-deterrent	1 Tablet twice a day. (non acute chronic pain)	54
+20705	1791569	xtampza er 18 mg oral capsule er 12 hour abuse-deterrent	One cap PO q 12 h chronic pain.	54
+20708	1791569	xtampza er 18 mg oral capsule er 12 hour abuse-deterrent	one tablet daily  This prescription is not for acute pain.	27
+20713	1791569	xtampza er 18 mg oral capsule er 12 hour abuse-deterrent	Take 1 cap po Q12 hours as needed for chronic pain.  Printed due to temp failure of e-scribe software.	54
+20728	1791569	xtampza er 18 mg oral capsule er 12 hour abuse-deterrent	TAKE 1 CAPSULE TWICE DAILY BY MOUTH CHRONIC PAIN	54
+20749	1791576	xtampza er 27 mg oral capsule er 12 hour abuse-deterrent	1 cap every 12 hours--EMERGENCY FILL DUE TO QUANTITY NOT AVAIL AT PHARMACY	81
+20777	1791576	xtampza er 27 mg oral capsule er 12 hour abuse-deterrent	Take one capsule by mouth twice daily as needed for chronic pain, dose change	81
+20792	1791582	xtampza er 36 mg oral capsule er 12 hour abuse-deterrent	1 tid prn--NON ACUTE PAIN	162
+20803	1791582	xtampza er 36 mg oral capsule er 12 hour abuse-deterrent	Take 1 capsule every 8 hours daily. This prescription is for NON ACUTE PAIN	162
+20822	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	1 cap PO q12h chronic pain.	27
+20830	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	1 tab PO q8h chronic pain.	40.5
+20833	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	one capsule bid  This prescription is for NON ACUTE PAIN.	27
+20841	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	Take 1 capsule daily at bedtime for chronic pain          NON-ACUTE PAIN	13.5
+20874	1860492	zohydro er 10 mg oral capsule er 12 hour abuse-deterrent	1 by mouth twice daily as needed for pain from compression ractures of back	20
+20942	1860494	zohydro er 15 mg oral capsule er 12 hour abuse-deterrent	1 in AM as directed	15
+20973	1860496	zohydro er 20 mg oral capsule er 12 hour abuse-deterrent	1 PO qday; New Rx	20
+20974	1860496	zohydro er 20 mg oral capsule er 12 hour abuse-deterrent	1 tab po q 12 hours; To be swallowed whole	40
+21006	1860498	zohydro er 30 mg oral capsule er 12 hour abuse-deterrent	One tab PO q 12 hours chronic pain. For the remainder of a partial fill.	60
+21028	1860502	zohydro er 50 mg cp12	1 qd to bid	50

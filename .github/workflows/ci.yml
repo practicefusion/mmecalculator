@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # for minver
+        fetch-depth: 100
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Build release
+      run: dotnet build --configuration Release src/MmeCalculator.sln
+
+    - name: Test
+      run: dotnet test src/Test/PracticeFusion.MmeCalculator.UnitTests

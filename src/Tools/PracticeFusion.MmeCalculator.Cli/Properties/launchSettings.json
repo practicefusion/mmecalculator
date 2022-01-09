@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PracticeFusion.MmeCalculator.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "antlrperf -i feb_21_6k.txt"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags: ["*.*.*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # for MinVer
+        fetch-depth: 0
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Build release
+      run: dotnet build --configuration Release src/MmeCalculator.sln
+
+    - name: Test
+      run: dotnet test src/Test/PracticeFusion.MmeCalculator.UnitTests
+
+    - name: Create Core package 
+      run: dotnet pack --configuration Release --output nuget-packages src/Core/PracticeFusion.MmeCalculator.Core
+
+    - name: Create RxNav package
+      run: dotnet pack --configuration Release --output nuget-packages src/Core/PracticeFusion.MmeCalculator.RxNavRxNormResolver
+
+    - name: Create Local RxNorm package
+      run: dotnet pack --configuration Release --output nuget-packages src/Core/PracticeFusion.MmeCalculator.LocalRxNormResolver
+
+    - name: Publish packages
+      run: find nuget-packages -name '*.nupkg' | xargs -i dotnet nuget push {} --api-key ${{secrets.NUGET_SECRET}} --source https://api.nuget.org/v3/index.json
+
+    - name: Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget-packages
+        path: nuget-packages/**/*
