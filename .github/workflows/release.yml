@@ -23,8 +23,11 @@ jobs:
     - name: Build release
       run: dotnet build --configuration Release src/MmeCalculator.sln
 
-    - name: Test
+    - name: Unit Tests
       run: dotnet test src/Test/PracticeFusion.MmeCalculator.UnitTests
+
+    - name: System Tests
+      run: dotnet test src/Test/PracticeFusion.MmeCalculator.SystemTests
 
     - name: Create Core package 
       run: dotnet pack --configuration Release --output nuget-packages src/Core/PracticeFusion.MmeCalculator.Core
