@@ -48,7 +48,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
             // replace fractions
             normalized = Regex.Replace(normalized, @"(\d) 1(\\|\/)2", "$1.5", RegexOptions.Compiled);
-            normalized = Regex.Replace(normalized, @"1(\\|\/)2", "0.5", RegexOptions.Compiled);
+            // not preceded by another digit
+            normalized = Regex.Replace(normalized, @"(?<!\d)1(\\|\/)2", "0.5", RegexOptions.Compiled);
 
             // replace pairs of numbers "take 1 (1) tablets" -> "take 1 tablets"
             normalized = Regex.Replace(normalized, @"(\d+)\s\(\1\)", "$1", RegexOptions.Compiled);

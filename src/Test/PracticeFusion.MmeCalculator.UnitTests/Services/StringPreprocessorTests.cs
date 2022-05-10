@@ -185,6 +185,13 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         }
 
         [TestMethod]
+        public void DoNotNormalizeFractionsGTOneWithNoLeadingIntegerSpace()
+        {
+            var result = _stringPreprocessor.Normalize(@"take 31/2 tablets");
+            result.Should().BeEquivalentTo("take 31/2 tablets");
+        }
+
+        [TestMethod]
         public void NormalizeFractionsLTOne()
         {
             var result = _stringPreprocessor.Normalize(@"take 1/2 tablets");
