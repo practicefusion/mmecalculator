@@ -21,13 +21,18 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
             _helper.NullContextShouldThrowParseException();
         }
 
-        [TestMethod]
-        public void DoesNotYetParseOneQuarterAsAFraction()
+        [DataTestMethod]
+        [DataRow("1/3")] // not 0.5
+        [DataRow("1/4")]
+        [DataRow("1/10")]
+        [DataRow("20/10")] // not improper fractions
+        [DataRow("11/2")]
+        public void DoesNotParseFractionsOtherThanOneHalf(string statement)
         {
-            var tree = _helper.DefaultParser("1/4").numericValue();
+            var tree = _helper.DefaultParser(statement).numericValue();
             _helper.Visitor.Invoking(x => x.VisitRoot(tree)).Should().
                 Throw<ParsingException>().WithMessage("Expected a numeric value").
-                WithInnerException<ParsingException>().WithMessage("Failed to parse 1/4 as a valid number.");
+                WithInnerException<ParsingException>().WithMessage("Failed to parse " + statement + " as a valid number.");
         }
 
         [DataTestMethod]
