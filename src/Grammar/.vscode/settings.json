@@ -6,6 +6,6 @@
         "language": "CSharp",
         "listeners": true,
         "visitors": true,
-        "alternativeJar": "antlr-4.9.2-complete.jar"
+        "alternativeJar": "antlr-4.11.1-complete.jar"
     }
 }
