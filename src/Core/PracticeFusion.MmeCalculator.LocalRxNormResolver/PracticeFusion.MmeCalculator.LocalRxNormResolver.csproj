@@ -16,7 +16,7 @@
         </Description>
         <Copyright>Copyright (c) 2021 Practice Fusion, Inc</Copyright>
 
-        <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net7.0;net6.0;netstandard2.0</TargetFrameworks>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
         <RepositoryUrl>https://github.com/practicefusion/mmecalculator</RepositoryUrl>
