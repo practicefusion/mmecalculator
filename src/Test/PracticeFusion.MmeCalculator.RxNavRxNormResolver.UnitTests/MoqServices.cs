@@ -9,7 +9,7 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests
     {
         public static Mock<IDistributedCache> DistributedCache => new();
         
-        public static Mock<IRestClient> RestClient => new();
+        public static Mock<RestClient> RestClient => new();
 
         public static Mock<ILogger<T>> Logger<T>()
         {

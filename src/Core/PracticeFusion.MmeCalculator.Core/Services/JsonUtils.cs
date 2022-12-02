@@ -56,8 +56,13 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <typeparam name="T"></typeparam>
         /// <param name="json"></param>
         /// <returns></returns>
-        public static T Deserialize<T>(string json)
+        public static T? Deserialize<T>(string? json)
         {
+            if(string.IsNullOrEmpty(json))
+            {
+                return default;
+            }
+
             var options = new JsonSerializerOptions
             {
                 AllowTrailingCommas = true,
@@ -67,7 +72,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             };
             options.Converters.Add(new JsonStringEnumConverter());
 
-            return JsonSerializer.Deserialize<T>(json, options) ?? throw new InvalidOperationException();
+            return JsonSerializer.Deserialize<T>(json!, options) ?? throw new InvalidOperationException();
         }
 
         /// <summary>
@@ -86,9 +91,12 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>
-        public static string JsonFormat(string json)
+        public static string JsonFormat(string? json)
         {
-            using JsonDocument jsonDocument = JsonDocument.Parse(json);
+            if (string.IsNullOrEmpty(json))
+                return string.Empty;
+
+            using JsonDocument jsonDocument = JsonDocument.Parse(json!);
             using var memoryStream = new MemoryStream();
             var writer = new Utf8JsonWriter(memoryStream, new JsonWriterOptions { Indented = true });
 
