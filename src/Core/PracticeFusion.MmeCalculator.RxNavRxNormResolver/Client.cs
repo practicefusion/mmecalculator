@@ -17,7 +17,7 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
     {
         private const string BaseUrl = "https://rxnav.nlm.nih.gov";
 
-        private readonly IRestClient _client;
+        private readonly RestClient _client;
         private readonly IDistributedCache _cache;
         private readonly ILogger<Client> _logger;
 
@@ -40,7 +40,7 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
         /// <param name="cache"></param>
         /// <param name="logger"></param>
         /// <param name="client"></param>
-        public Client(IDistributedCache cache, ILogger<Client> logger, IRestClient client)
+        public Client(IDistributedCache cache, ILogger<Client> logger, RestClient client)
         {
             _logger = logger;
             _client = client;
@@ -66,10 +66,10 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
         /// <returns></returns>
         public AllPropertiesResponse SearchForDrugByRxNormCui(string rxNormCui)
         {
-            var request = new RestRequest("/REST/rxcui/{rxcui}/allProperties.json?prop=NAMES") { Method = Method.GET };
+            var request = new RestRequest("/REST/rxcui/{rxcui}/allProperties.json?prop=NAMES") { Method = Method.Get };
             request.AddParameter("rxcui", rxNormCui, ParameterType.UrlSegment);
             var response = Execute<AllPropertiesResponse>(request, rxNormCui);
-            return response;
+            return response ?? new AllPropertiesResponse();
         }
 
         /// <summary>
@@ -79,11 +79,11 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
         /// <returns></returns>
         public DrugSearchResponse SearchForDrugByNameOrSynonym(string sbdName)
         {
-            var request = new RestRequest("/REST/rxcui.json") { Method = Method.GET };
+            var request = new RestRequest("/REST/rxcui.json") { Method = Method.Get };
             request.AddParameter("name", sbdName, ParameterType.QueryString);
             request.AddParameter("search", "2", ParameterType.QueryString);
             var response = Execute<DrugSearchResponse>(request, "SearchForDrugByNameOrSynonym" + sbdName);
-            return response;
+            return response ?? new DrugSearchResponse();
         }
 
         /// <summary>
@@ -93,13 +93,13 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
         /// <returns></returns>
         public DrugSearchResponse SearchForDrugByName(string drugName)
         {
-            var request = new RestRequest("/REST/drugs.json") { Method = Method.GET };
+            var request = new RestRequest("/REST/drugs.json") { Method = Method.Get };
             request.AddParameter("name", drugName, ParameterType.QueryString);
             var response = Execute<DrugSearchResponse>(request, drugName);
-            return response;
+            return response ?? new DrugSearchResponse();
         }
 
-        private T Execute<T>(RestRequest request, string requestKey) where T : new()
+        private T? Execute<T>(RestRequest request, string requestKey) where T : new()
         {
             string? cachedResult = string.Empty;
 
@@ -131,7 +131,7 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
                 // cache the non-error result
                 try
                 {
-                    _cache?.SetString(requestKey, response.Content);
+                    _cache?.SetString(requestKey, response.Content ?? string.Empty);
                 }
                 catch (Exception rce)
                 {
@@ -144,7 +144,7 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
                 }
 
                 // return the value
-                return JsonUtils.Deserialize<T>(response.Content);
+                return JsonUtils.Deserialize<T>(response.Content ?? string.Empty);
             }
             else
             {
@@ -154,11 +154,11 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver
                     LogRequestResponse(0, request, null, cachedResult);
                 }
 
-                return JsonUtils.Deserialize<T>(cachedResult);
+                return JsonUtils.Deserialize<T>(cachedResult ?? string.Empty);
             }
         }
 
-        private void LogRequestResponse(long elapsedMilliseconds, IRestRequest request, IRestResponse? response, string? cachedContent = null)
+        private void LogRequestResponse(long elapsedMilliseconds, RestRequest request, RestResponse? response, string? cachedContent = null)
         {
             _logger.LogDebug("Request completed in {elapsedMilliseconds} ms.", elapsedMilliseconds);
 

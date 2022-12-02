@@ -17,7 +17,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
         private static T Get<T>(this IDistributedCache cache, string key, bool bestEffort)
         {
-            byte[] data = cache.Get(key);
+            byte[]? data = cache?.Get(key);
 
             if (data == null && bestEffort)
             {

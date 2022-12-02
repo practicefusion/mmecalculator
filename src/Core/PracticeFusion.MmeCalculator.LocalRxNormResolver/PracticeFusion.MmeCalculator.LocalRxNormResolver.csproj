@@ -16,7 +16,7 @@
         </Description>
         <Copyright>Copyright (c) 2021 Practice Fusion, Inc</Copyright>
 
-        <TargetFrameworks>net6.0;net5.0;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net7.0;net6.0;netstandard2.0</TargetFrameworks>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
         <RepositoryUrl>https://github.com/practicefusion/mmecalculator</RepositoryUrl>
@@ -45,8 +45,8 @@
 
     <ItemGroup>
         <!-- for source link, and versioning -->
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.0" PrivateAssets="All" />
-        <PackageReference Include="MinVer" Version="2.5.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+        <PackageReference Include="MinVer" Version="4.2.0" PrivateAssets="All" />
 
         <ProjectReference Include="..\PracticeFusion.MmeCalculator.Core\PracticeFusion.MmeCalculator.Core.csproj" />
     </ItemGroup>
