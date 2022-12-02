@@ -12,5 +12,5 @@ We use [MinVer](https://github.com/adamralph/minver) to version the project.
 
 ## Releases
 
-1. When a branch is ready to be released, take the branch with the release tag (e.g. 'v1.2.0') and push
+1. When a branch is ready to be released, tag the branch with the release tag (e.g. 'v1.2.0') and push
 2. The release action will upload the release package to Nuget
