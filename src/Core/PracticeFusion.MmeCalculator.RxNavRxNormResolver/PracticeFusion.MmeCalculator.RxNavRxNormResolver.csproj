@@ -42,7 +42,7 @@
         <PackageReference Include="MinVer" Version="4.2.0" PrivateAssets="All" />
 
         <PackageReference Include="RestSharp" Version="108.0.3" />
-        <PackageReference Include="System.Text.Json" Version="7.0.0" />
+        <PackageReference Include="System.Text.Json" Version="7.0.1" />
     </ItemGroup>
 
     <ItemGroup>
