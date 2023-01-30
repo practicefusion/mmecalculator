@@ -37,7 +37,7 @@
     <ItemGroup>
         <!-- for source link, and versioning -->
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-        <PackageReference Include="MinVer" Version="4.2.0" PrivateAssets="All" />
+        <PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All" />
 
         <PackageReference Include="Antlr4.Runtime.Standard" Version="4.11.1" />
         <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
