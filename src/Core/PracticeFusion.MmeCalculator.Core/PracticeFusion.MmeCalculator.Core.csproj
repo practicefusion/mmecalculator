@@ -43,7 +43,7 @@
         <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-        <PackageReference Include="System.Text.Json" Version="7.0.0" />
+        <PackageReference Include="System.Text.Json" Version="7.0.2" />
         <None Include="../../../README.md" Pack="true" PackagePath="." />
     </ItemGroup>
 
