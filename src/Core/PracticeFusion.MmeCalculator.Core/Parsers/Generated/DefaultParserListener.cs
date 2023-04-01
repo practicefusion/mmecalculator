@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /Users/jonathanmalek/src/mmecalculator/src/Grammar/DefaultParser.g4 by ANTLR 4.11.1
+// Generated from /Users/jmalek/src/mmecalculator/src/Grammar/DefaultParser.g4 by ANTLR 4.11.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -461,6 +461,16 @@ public interface IDefaultParserListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitWithLiquid([NotNull] DefaultParser.WithLiquidContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DefaultParser.doNotSwallow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDoNotSwallow([NotNull] DefaultParser.DoNotSwallowContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DefaultParser.doNotSwallow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDoNotSwallow([NotNull] DefaultParser.DoNotSwallowContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DefaultParser.indicationForUse"/>.
 	/// </summary>

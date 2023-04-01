@@ -50,6 +50,11 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 result.ValueEnum = AdditionalInstructionEnum.AsDirected;
             }
 
+            if(context.doNotSwallow() != null)
+            {
+                result.ValueEnum = AdditionalInstructionEnum.DoNotSwallow;
+            }
+
             result.Description = context.GetOriginalTextWithSpacing();
             return result;
         }

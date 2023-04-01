@@ -21,6 +21,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             {
                 DefaultLexer.ADMINISTER => DoseDeliveryMethodEnum.Administer,
                 DefaultLexer.APPLY => DoseDeliveryMethodEnum.Apply,
+                DefaultLexer.CHEW => context.SWALLOW() != null ? 
+                    DoseDeliveryMethodEnum.ChewAndSwallow : DoseDeliveryMethodEnum.Chew,
                 DefaultLexer.DISSOLVE => DoseDeliveryMethodEnum.Dissolve,
                 DefaultLexer.GIVE => DoseDeliveryMethodEnum.Give,
                 DefaultLexer.INFUSE => DoseDeliveryMethodEnum.Infuse,

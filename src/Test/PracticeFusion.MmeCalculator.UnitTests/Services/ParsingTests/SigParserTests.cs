@@ -56,6 +56,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
                 {
                     "take 1 tablets up to 4 times a day on an empty stomach as needed for pain", "4 tablets", "take 1 tablet 4 times every day on an empty stomach as needed for pain"
                 },
+                new object[] { "chew 1 tablets once a day", "1 tablet", "chew 1 tablet every day" },
+                new object[] { "take 1 tablets sl once a day do not swallow", "1 tablet", "take 1 tablet sublingually every day do not swallow" },
             };
 
         private static IEnumerable<object[]> MddTestData =>

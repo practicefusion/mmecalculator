@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /Users/jonathanmalek/src/mmecalculator/src/Grammar/DefaultParser.g4 by ANTLR 4.11.1
+// Generated from /Users/jmalek/src/mmecalculator/src/Grammar/DefaultParser.g4 by ANTLR 4.11.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -465,6 +465,16 @@ public partial class DefaultParserBaseVisitor<Result> : AbstractParseTreeVisitor
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	public virtual Result VisitWithLiquid([NotNull] DefaultParser.WithLiquidContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DefaultParser.doNotSwallow"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitDoNotSwallow([NotNull] DefaultParser.DoNotSwallowContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="DefaultParser.indicationForUse"/>.
 	/// <para>

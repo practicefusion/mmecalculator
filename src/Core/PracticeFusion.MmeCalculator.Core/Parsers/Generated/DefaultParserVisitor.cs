@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /Users/jonathanmalek/src/mmecalculator/src/Grammar/DefaultParser.g4 by ANTLR 4.11.1
+// Generated from /Users/jmalek/src/mmecalculator/src/Grammar/DefaultParser.g4 by ANTLR 4.11.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -290,6 +290,12 @@ public interface IDefaultParserVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitWithLiquid([NotNull] DefaultParser.WithLiquidContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DefaultParser.doNotSwallow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDoNotSwallow([NotNull] DefaultParser.DoNotSwallowContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="DefaultParser.indicationForUse"/>.
 	/// </summary>

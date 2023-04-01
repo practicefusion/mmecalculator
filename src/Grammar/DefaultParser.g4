@@ -23,6 +23,8 @@ dosageSeparator: AND? THEN | OR;
 doseDeliveryMethod:
 	ADMINISTER
 	| APPLY
+	| CHEW
+	| CHEW AND SWALLOW
 	| DISSOLVE
 	| GIVE
 	| INFUSE
@@ -71,6 +73,7 @@ form:
 	| LOLLIPOP
 	| LOZENGE
 	| PATCH
+	| PIECE
 	| PILL
 	| PUFF
 	| SOLUTION
@@ -233,7 +236,7 @@ durationUnbounded: THEREAFTER;
 
 //////////////////////////////////////////////////////////////////////////
 // Additional Instructions
-additionalInstruction: withFood | withLiquid | asDirected | emptyStomach;
+additionalInstruction: withFood | withLiquid | asDirected | emptyStomach | doNotSwallow;
 
 emptyStomach: ON A_AN? EMPTY_TOKEN STOMACH;
 
@@ -244,6 +247,8 @@ withFood: (BEFORE | AFTER | WITH) (MEAL | FOOD | EATING)
 	| PC;
 
 withLiquid: WITH (PLENTY OF)? (WATER | MILK | LIQUID);
+
+doNotSwallow: DONOTSWALLOW;
 
 //////////////////////////////////////////////////////////////////////////
 // Indication for Use

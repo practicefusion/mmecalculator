@@ -318,7 +318,7 @@ PASS	317	take 1 tab PO qHS	take 1 tablet by mouth every day at bedtime	1 tablet
 PASS	318	1 tid	1 3 times every day	3
 PASS	319	Take 1 tablet (200 mg) by mouth 3 times per day for 2 days after meals	take 1 tablet (200 mg) by mouth 3 times per day after meals for 2 days	3 tablets
 PASS	320	Take 1 tablet (60 mg) by mouth daily	take 1 tablet (60 mg) by mouth every day	1 tablet
-FAIL	321	Chew and swallow 1 tablet (81 mg) by mouth daily	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (81 mg) by mouth daily'|Not all dosages high confidence
+PASS	321	Chew and swallow 1 tablet (81 mg) by mouth daily	chew and swallow 1 tablet (81 mg) by mouth every day	1 tablet
 FAIL	322	Place 1 tablet (4 mg) on the tongue and allow to dissolve every 8 hours as needed	None	Syntax error: unexpected 'tongue' at Ln 1, Col 29|Syntax error: unexpected 'allow' at Ln 1, Col 40|Syntax error: unexpected 'to' at Ln 1, Col 46|Text from the original sig was not parsed: 'place 1 tablet (4 mg) on the tongue and allow to dissolve every 8 hours as needed'|Not all dosages high confidence
 PASS	323	Take 1 capsule (100 mg) by mouth 2 times per day as needed	take 1 capsule (100 mg) by mouth 2 times per day as needed	2 capsules
 PASS	324	Take 1 tablet (600 mg) by mouth 2 times per day	take 1 tablet (600 mg) by mouth 2 times per day	2 tablets
@@ -582,7 +582,7 @@ PASS	581	one tab po qAM	1 tablet by mouth every day in the morning	1 tablet
 PASS	582	Take 1 tab by mouth daily	take 1 tablet by mouth every day	1 tablet
 PASS	583	ONE TABLET BY MOUTH DAILY	1 tablet by mouth every day	1 tablet
 FAIL	584	i po QAM	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error: unexpected 'po' at Ln 1, Col 2|Text from the original sig was not parsed: 'i po qam'|Not all dosages high confidence
-FAIL	585	Chew and swallow 1 tablet (5 mg) by mouth daily	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (5 mg) by mouth daily'|Not all dosages high confidence
+PASS	585	Chew and swallow 1 tablet (5 mg) by mouth daily	chew and swallow 1 tablet (5 mg) by mouth every day	1 tablet
 PASS	586	Take 1 capsule (100 mg) by mouth every 12 hours for 5 days with food	take 1 capsule (100 mg) by mouth every 12 hours with food for 5 days	2 capsules
 FAIL	587	Take 1 tablet (400 mg) by mouth 3 times per day with food or milk as needed	None	Syntax error: unexpected 'milk' at Ln 1, Col 61|Text from the original sig was not parsed: 'take 1 tablet (400 mg) by mouth 3 times per day with food or milk as needed'|Not all dosages high confidence
 PASS	588	Take 1 tablet (25 mg) by mouth daily with food	take 1 tablet (25 mg) by mouth every day with food	1 tablet
@@ -1103,7 +1103,7 @@ PASS	1102	Take 1 tablet (40 mg) by mouth at bedtime	take 1 tablet (40 mg) by mou
 PASS	1103	Take 1 tablet (75 mg) by mouth 2 times per day with food	take 1 tablet (75 mg) by mouth 2 times per day with food	2 tablets
 PASS	1104	Take 1 tablet by mouth bid	take 1 tablet by mouth 2 times every day	2 tablets
 PASS	1105	Take one capsule PO QAM	take 1 capsule by mouth every day in the morning	1 capsule
-FAIL	1106	Chew and swallow 1 tablet (4 mg) by mouth daily	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (4 mg) by mouth daily'|Not all dosages high confidence
+PASS	1106	Chew and swallow 1 tablet (4 mg) by mouth daily	chew and swallow 1 tablet (4 mg) by mouth every day	1 tablet
 FAIL	1107	2 patches topically to affected area daily remove after 12 hours	None	Syntax error: unexpected 'to' at Ln 1, Col 20|Syntax error: unexpected 'daily' at Ln 1, Col 37|Text from the original sig was not parsed: '2 patches topically to affected area daily remove after 12 hours'|Not all dosages high confidence
 PASS	1108	1 tablet at bedtime	1 tablet at bedtime	1 tablet
 PASS	1109	take one tab by mouth daily	take 1 tablet by mouth every day	1 tablet
@@ -1433,7 +1433,7 @@ PASS	1432	TAKE 1 TAB BY MOUTH TWICE DAILY	take 1 tablet by mouth 2 times every d
 PASS	1433	Take 1 tablet (200 mg) by mouth 2 times per day with food	take 1 tablet (200 mg) by mouth 2 times per day with food	2 tablets
 PASS	1434	Take 1 tablet (1 mg) by mouth 2 times per day prn anxiety	take 1 tablet (1 mg) by mouth 2 times per day as needed for anxiety	2 tablets
 PASS	1435	Take 1 capsule (300 mg) by mouth every 8 hours for 14 days	take 1 capsule (300 mg) by mouth every 8 hours for 14 days	3 capsules
-FAIL	1436	Chew and swallow 1 tablet (20 mg) by mouth daily in the morning	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (20 mg) by mouth daily in the morning'|Not all dosages high confidence
+PASS	1436	Chew and swallow 1 tablet (20 mg) by mouth daily in the morning	chew and swallow 1 tablet (20 mg) by mouth every day in the morning	1 tablet
 PASS	1437	Take 1 tablet (25 mg) by mouth every 8 hours as needed for anxiety	take 1 tablet (25 mg) by mouth every 8 hours as needed for anxiety	3 tablets
 FAIL	1438	Test twice a day	None	Syntax error: unexpected 'test' at Ln 1, Col 0|Syntax error: unexpected 'times' at Ln 1, Col 7|Text from the original sig was not parsed: 'test 2 times a day'|Not all dosages high confidence
 FAIL	1439	APPLY EXTERNALLY TO THE AFFECTED AREA TWICE DAILY	None	Syntax error: unexpected 'externally' at Ln 1, Col 6|Syntax error: unexpected 'to' at Ln 1, Col 17|Text from the original sig was not parsed: 'apply externally to the affected area 2 times daily'|Not all dosages high confidence
@@ -2084,14 +2084,14 @@ FAIL	2083	take one po q am	None	Syntax error: unexpected 'am' at Ln 1, Col 12|Te
 PASS	2084	Take 1 tablet (40 mg) by mouth daily as needed	take 1 tablet (40 mg) by mouth every day as needed	1 tablet
 FAIL	2085	1 tablet PO Q AM	None	Syntax error: unexpected 'am' at Ln 1, Col 14|Text from the original sig was not parsed: '1 tablet po q am'|Not all dosages high confidence
 FAIL	2086	3 times a day as needed	None	Syntax error: unexpected 'times' at Ln 1, Col 2|Text from the original sig was not parsed: '3 times a day as needed'|Not all dosages high confidence
-FAIL	2087	Chew and swallow 1 tablet (80 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (80 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
+FAIL	2087	Chew and swallow 1 tablet (80 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'chew and swallow 1 tablet (80 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 PASS	2088	Take 1 tablet (20 mg) by mouth every 8 hours as needed	take 1 tablet (20 mg) by mouth every 8 hours as needed	3 tablets
 PASS	2089	TAKE 1 TABLET BY MOUTH EVERY 8 HOURS AS NEEDED FOR PAIN	take 1 tablet by mouth every 8 hours as needed for pain	3 tablets
 FAIL	2090	Take 1 tablet (75 mg) by mouth one time	None	Syntax error: unexpected '<EOF>' at Ln 1, Col 37|Text from the original sig was not parsed: 'take 1 tablet (75 mg) by mouth 1 time'|Not all dosages high confidence
 PASS	2091	Take one tab qd	take 1 tablet every day	1 tablet
 PASS	2092	TAKE 2 TABLETS BY MOUTH DAILY AT BEDTIME	take 2 tablets by mouth every day at bedtime	2 tablets
 PASS	2093	Take 1.5 tablets (75 mg) by mouth daily	take 1.5 tablets (75 mg) by mouth every day	1.5 tablets
-FAIL	2094	Chew and swallow 1 tablet (30 mg) by mouth daily in the morning	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (30 mg) by mouth daily in the morning'|Not all dosages high confidence
+PASS	2094	Chew and swallow 1 tablet (30 mg) by mouth daily in the morning	chew and swallow 1 tablet (30 mg) by mouth every day in the morning	1 tablet
 PASS	2095	2 qam	2 every day in the morning	2
 FAIL	2096	po qd	None	Syntax error: unexpected 'po' at Ln 1, Col 0|Text from the original sig was not parsed: 'po qd'|Not all dosages high confidence
 PASS	2097	1 pill BID	1 pill 2 times every day	2 pills
@@ -2351,7 +2351,7 @@ PASS	2350	1 tab daily PRN	1 tablet every day as needed	1 tablet
 FAIL	2351	1 TAB PO Q 8 HRS FOR 30 DAYS. *NON-ACUTE PAIN*	None	Syntax error: unexpected '-' at Ln 1, Col 32|Text from the original sig was not parsed: '1 tab po q 8 hrs for 30 days non-acute pain'|Not all dosages high confidence
 PASS	2352	1 tab PO bid x 5 days	1 tablet by mouth 2 times every day for 5 days	2 tablets
 PASS	2353	one tab po q day	1 tablet by mouth every day	1 tablet
-FAIL	2354	Chew and swallow 1 tablet (5 mg) by mouth daily in the evening	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (5 mg) by mouth daily in the evening'|Not all dosages high confidence
+PASS	2354	Chew and swallow 1 tablet (5 mg) by mouth daily in the evening	chew and swallow 1 tablet (5 mg) by mouth every day at night	1 tablet
 PASS	2355	INHALE 2 PUFFS BY MOUTH DAILY	inhale 2 puffs by mouth every day	2 puffs
 PASS	2356	Take 1 tablet (40 mg) by mouth daily.	take 1 tablet (40 mg) by mouth every day	1 tablet
 PASS	2357	TAKE 1 TABLET (500 MG) BY MOUTH TWICE DAILY	take 1 tablet (500 mg) by mouth 2 times every day	2 tablets
@@ -2410,7 +2410,7 @@ PASS	2409	TAKE 1 TABLET BY MOUTH  TWICE DAILY WITH FOOD	take 1 tablet by mouth 2
 PASS	2410	Take one tablet three times daily prn for pain	take 1 tablet 3 times every day as needed for pain	3 tablets
 FAIL	2411	Apply 2 grams topically to affected area 4 times per day	None	Syntax error: unexpected 'to' at Ln 1, Col 24|Syntax error: unexpected '4' at Ln 1, Col 41|Text from the original sig was not parsed: 'apply 2 grams topically to affected area 4 times per day'|Not all dosages high confidence
 PASS	2412	2 sprays each nostril qd	2 sprays per nostril every day	2 sprays
-FAIL	2413	CHEW AND SWALLOW 1 TABLET BY MOUTH DAILY	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet by mouth daily'|Not all dosages high confidence
+PASS	2413	CHEW AND SWALLOW 1 TABLET BY MOUTH DAILY	chew and swallow 1 tablet by mouth every day	1 tablet
 FAIL	2414	1 po daily (FUAD ZAYED MD)	None	Syntax error: unexpected '(' at Ln 1, Col 11|Syntax error: unexpected ')' at Ln 1, Col 25|Text from the original sig was not parsed: '1 po daily (fuad zayed md)'|Not all dosages high confidence
 FAIL	2415	1 film po bid f11.20	None	Ambiguous expression: 'bid'|Syntax error: unexpected '11.20' at Ln 1, Col 15|Text from the original sig was not parsed: '1 film po bid f11.20'|Not all dosages high confidence
 PASS	2416	1 BID prn anxiety	1 2 times every day as needed for anxiety	2
@@ -2589,7 +2589,7 @@ PASS	2588	1 tablet orally every 6 hours as needed, non acute pain	1 tablet by mo
 FAIL	2589	apply daily	None	Syntax error: unexpected 'daily' at Ln 1, Col 6|Text from the original sig was not parsed: 'apply daily'|Not all dosages high confidence
 PASS	2590	2 tabs PO TID	2 tablets by mouth 3 times every day	6 tablets
 PASS	2591	one po qHS prn	1 by mouth every day at bedtime as needed	1
-FAIL	2592	Chew 1 piece (4 mg) by mouth 24 times per day for 30 minute as needed	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected '(' at Ln 1, Col 13|Text from the original sig was not parsed: 'chew 1 piece (4 mg) by mouth 24 times per day for 30 minute as needed'|Not all dosages high confidence
+PASS	2592	Chew 1 piece (4 mg) by mouth 24 times per day for 30 minute as needed	chew 1 piece (4 mg) by mouth 24 times per day as needed for 30 minutes	24 pieces
 PASS	2593	Take 2 tablet (40 mg) by mouth daily	take 2 tablets (40 mg) by mouth every day	2 tablets
 PASS	2594	TAKE 2 TABLETS TWICE DAILY	take 2 tablets 2 times every day	4 tablets
 PASS	2595	Take 1 tablet (160 mg) by mouth 2 times per day	take 1 tablet (160 mg) by mouth 2 times per day	2 tablets
@@ -2799,7 +2799,7 @@ PASS	2798	1 daily for ADD	1 every day for add	1
 PASS	2799	1 po bid for 7 days	1 by mouth 2 times every day for 7 days	2
 PASS	2800	1 po q8 hours prn	1 by mouth every 8 hours as needed	3
 FAIL	2801	1 puffs inhaled orally 2 times per day	None	Syntax error: unexpected 'orally' at Ln 1, Col 16|Text from the original sig was not parsed: '1 puffs inhaled orally 2 times per day'|Not all dosages high confidence
-FAIL	2802	Chew and swallow 1 tablet (40 mg) by mouth daily in the morning	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (40 mg) by mouth daily in the morning'|Not all dosages high confidence
+PASS	2802	Chew and swallow 1 tablet (40 mg) by mouth daily in the Morning	chew and swallow 1 tablet (40 mg) by mouth every day in the morning	1 tablet
 FAIL	2803	PLEASE SEE ATTACHED FOR DETAILED DIRECTIONS	None	Syntax error: unexpected 'please' at Ln 1, Col 0|Syntax error: unexpected 'for' at Ln 1, Col 20|Text from the original sig was not parsed: 'please see attached for detailed directions'|Not all dosages high confidence
 PASS	2804	one tab bid prn	1 tablet 2 times every day as needed	2 tablets
 FAIL	2805	2 spray intranasally 2 times per day in each nostril	None	Syntax error: unexpected 'nostril' at Ln 1, Col 45|Text from the original sig was not parsed: '2 spray intranasally 2 times per day in each nostril'|Not all dosages high confidence
@@ -3217,7 +3217,7 @@ PASS	3216	Take 1 capsule (200 mg) by mouth 2 times per day with food	take 1 caps
 FAIL	3217	Take 1 capsule (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'take 1 capsule (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 PASS	3218	Take 1 tablet (120 mg) by mouth daily with food	take 1 tablet (120 mg) by mouth every day with food	1 tablet
 PASS	3219	1po qhs	1 by mouth every day at bedtime	1
-FAIL	3220	Chew 1 piece (2 mg) by mouth 24 times per day for 30 minute as needed	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected '(' at Ln 1, Col 13|Text from the original sig was not parsed: 'chew 1 piece (2 mg) by mouth 24 times per day for 30 minute as needed'|Not all dosages high confidence
+PASS	3220	Chew 1 piece (2 mg) by mouth 24 times per day for 30 minute as needed	chew 1 piece (2 mg) by mouth 24 times per day as needed for 30 minutes	24 pieces
 PASS	3221	One tab q hs	1 tablet every day at bedtime	1 tablet
 PASS	3222	1 capsule twice daily	1 capsule 2 times every day	2 capsules
 PASS	3223	1 by mouth daily at bedtime	1 by mouth every day at bedtime	1
@@ -3405,7 +3405,7 @@ FAIL	3404	1 tablet po qday	None	Not all dosages high confidence
 PASS	3405	1 tablet PO TID PRN	1 tablet by mouth 3 times every day as needed	3 tablets
 PASS	3406	1 po q 12 hours	1 by mouth every 12 hours	2
 FAIL	3407	One po qd x 7d antes de las 9 am.	None	Ambiguous expression: 'qd'|Syntax error: unexpected '9' at Ln 1, Col 26|Text from the original sig was not parsed: '1 po qd x 7d antes de las 9 am'|Not all dosages high confidence
-FAIL	3408	Chew and swallow 1 tablet (500 mg) by mouth daily	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (500 mg) by mouth daily'|Not all dosages high confidence
+PASS	3408	Chew and swallow 1 tablet (500 mg) by mouth daily	chew and swallow 1 tablet (500 mg) by mouth every day	1 tablet
 FAIL	3409	ONE DAILY 30-60 MINUTES BEFORE THE FIRST MEAL OF THE DAY	None	Syntax error: unexpected 'minutes' at Ln 1, Col 14|Text from the original sig was not parsed: '1 daily 30-60 minutes before the first meal of the day'|Not all dosages high confidence
 FAIL	3410	Administer 1 ml (1,000 mcg) subcutaneously every 30 days	None	Syntax error: unexpected 'every' at Ln 1, Col 43|Text from the original sig was not parsed: 'administer 1 ml (1,000 mcg) subcutaneously every 30 days'|Not all dosages high confidence
 FAIL	3411	5 ml topically to scalp every 14 days	None	Syntax error: unexpected 'to' at Ln 1, Col 15|Syntax error: unexpected 'every' at Ln 1, Col 24|Text from the original sig was not parsed: '5 ml topically to scalp every 14 days'|Not all dosages high confidence
@@ -3791,7 +3791,7 @@ PASS	3790	1 tab po qd for blood pressure	1 tablet by mouth every day for blood p
 PASS	3791	1 tablet orally once daily	1 tablet by mouth every day	1 tablet
 PASS	3792	1/2 qd	0.5 every day	0.5
 PASS	3793	10 ML PO BID X 10 DAYS	10 ml by mouth 2 times every day for 10 days	20 ml
-FAIL	3794	Chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
+FAIL	3794	Chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 FAIL	3795	INJECT 0.5 MG SUBCUTANEOUSLY WEEKLY	None	Syntax error: unexpected 'weekly' at Ln 1, Col 29|Text from the original sig was not parsed: 'inject 0.5 mg subcutaneously weekly'|Not all dosages high confidence
 FAIL	3796	POQD	None	Syntax error: unexpected 'poqd' at Ln 1, Col 0|Not all dosages high confidence
 PASS	3797	one weekly	1 every week	1
@@ -3995,7 +3995,7 @@ FAIL	3994	2 puffs inhaled orally every 4 hours as needed for shortness of breath
 PASS	3995	2 TABS HS	2 tablets at bedtime	2 tablets
 FAIL	3996	APPLY TO THE AFFECTED AREA(S) TWICE DAILY	None	Syntax error: unexpected 'to' at Ln 1, Col 6|Syntax error: unexpected '2' at Ln 1, Col 28|Text from the original sig was not parsed: 'apply to the affected areas 2 times daily'|Not all dosages high confidence
 PASS	3997	INHALE 2 PUFFS TWICE A DAY	inhale 2 puffs 2 times every day	4 puffs
-FAIL	3998	Chew and swallow 1 tablet (10 mg) by mouth daily in the morning	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (10 mg) by mouth daily in the morning'|Not all dosages high confidence
+PASS	3998	Chew and swallow 1 tablet (10 mg) by mouth daily in the morning	chew and swallow 1 tablet (10 mg) by mouth every day in the morning	1 tablet
 PASS	3999	one daily as needed	1 every day as needed	1
 PASS	4000	10 mg orally daily at bedtime as needed	10 mg by mouth every day at bedtime as needed	10 mg
 FAIL	4001	1 TAB PO Q 12 HORAS	None	Syntax error: unexpected 'horas' at Ln 1, Col 14|Text from the original sig was not parsed: '1 tab po q 12 horas'|Not all dosages high confidence
@@ -4082,7 +4082,7 @@ PASS	4081	one tab po once daily	1 tablet by mouth every day	1 tablet
 PASS	4082	one qd po	1 by mouth every day	1
 FAIL	4083	po Q Hs	None	Syntax error: unexpected 'po' at Ln 1, Col 0|Text from the original sig was not parsed: 'po q hs'|Not all dosages high confidence
 PASS	4084	ONE TABLET ORALLY DAILY	1 tablet by mouth every day	1 tablet
-FAIL	4085	Chew 1 piece (2 mg) by mouth 10 times per day as needed	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected '(' at Ln 1, Col 13|Text from the original sig was not parsed: 'chew 1 piece (2 mg) by mouth 10 times per day as needed'|Not all dosages high confidence
+PASS	4085	Chew 1 piece (2 mg) by mouth 10 times per day as needed	chew 1 piece (2 mg) by mouth 10 times per day as needed	10 pieces
 FAIL	4086	one cap PO aM daily	None	Syntax error: unexpected 'am' at Ln 1, Col 9|Text from the original sig was not parsed: '1 cap po am daily'|Not all dosages high confidence
 PASS	4087	Insert 1 suppository (1,000 mg) rectally daily at bedtime	insert 1 suppository (1000 mg) rectal every day at bedtime	1 suppository
 PASS	4088	one po bid prn pain	1 by mouth 2 times every day as needed for pain	2
@@ -4663,7 +4663,7 @@ FAIL	4662	Administer 1 ml (400 mg) intramuscularly every 30 days	None	Syntax err
 FAIL	4663	3 films sublingually daily F11.20	None	Syntax error: unexpected '11.20' at Ln 1, Col 28|Text from the original sig was not parsed: '3 films sublingually daily f11.20'|Not all dosages high confidence
 FAIL	4664	one tablet once before sleep	None	Syntax error: unexpected 'before' at Ln 1, Col 16|Text from the original sig was not parsed: '1 tablet 1 time before sleep'|Not all dosages high confidence
 FAIL	4665	q daily	None	Syntax error: unexpected 'q' at Ln 1, Col 0|Text from the original sig was not parsed: 'q daily'|Not all dosages high confidence
-FAIL	4666	CHEW AND SWALLOW 1 TABLET BY MOUTH ONCE DAILY	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet by mouth 1 time daily'|Not all dosages high confidence
+PASS	4666	CHEW AND SWALLOW 1 TABLET BY MOUTH ONCE DAILY	chew and swallow 1 tablet by mouth every day	1 tablet
 FAIL	4667	i tab po qam	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error: unexpected 'tab' at Ln 1, Col 2|Text from the original sig was not parsed: 'i tab po qam'|Not all dosages high confidence
 FAIL	4668	Inhale 1 spray (4 mg) into nostril one time, then call 911 for further treatment/evaluation	None	Syntax error: unexpected 'nostril' at Ln 1, Col 27|Text from the original sig was not parsed: 'inhale 1 spray (4 mg) into nostril 1 time then call 911 for further treatment/evaluation'|Not all dosages high confidence
 FAIL	4669	INSTILL 1 DROP IN BOTH EYES TWICE DAILY	None	Syntax error: unexpected 'instill' at Ln 1, Col 0|Syntax error: unexpected 'both' at Ln 1, Col 18|Syntax error: unexpected '2' at Ln 1, Col 28|Text from the original sig was not parsed: 'instill 1 drop in both eyes 2 times daily'|Not all dosages high confidence
@@ -5080,7 +5080,7 @@ FAIL	5079	Place 4 tablets (32 mg) under the tongue and allow to dissolve daily	N
 FAIL	5080	Q PM	None	Syntax error: unexpected 'q' at Ln 1, Col 0|Not all dosages high confidence
 PASS	5081	one po bid x 7d	1 by mouth 2 times every day for 7 days	2
 FAIL	5082	i TID	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error: unexpected 'tid' at Ln 1, Col 2|Text from the original sig was not parsed: 'i tid'|Not all dosages high confidence
-FAIL	5083	Chew and swallow 1 tablet (5 mg) by mouth daily at night	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 tablet (5 mg) by mouth daily at night'|Not all dosages high confidence
+PASS	5083	Chew and swallow 1 tablet (5 mg) by mouth daily at night	chew and swallow 1 tablet (5 mg) by mouth every day at night	1 tablet
 PASS	5084	1 tablet po twice daily	1 tablet by mouth 2 times every day	2 tablets
 PASS	5085	1/2 - 1 tab qd prn	0.5-1 tablet every day as needed	1 tablet
 FAIL	5086	1/am	None	Syntax error: unexpected '/' at Ln 1, Col 1|Not all dosages high confidence
@@ -5350,7 +5350,7 @@ FAIL	5349	one poxbid	None	Not all dosages high confidence
 PASS	5350	one po qd for blood pressure	1 by mouth every day for blood pressure	1
 FAIL	5351	ii po qhs	None	Syntax error: unexpected 'ii' at Ln 1, Col 0|Syntax error: unexpected 'po' at Ln 1, Col 3|Text from the original sig was not parsed: 'ii po qhs'|Not all dosages high confidence
 FAIL	5352	i po bid prn	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error: unexpected 'po' at Ln 1, Col 2|Text from the original sig was not parsed: 'i po bid prn'|Not all dosages high confidence
-FAIL	5353	Chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '2' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime'|Not all dosages high confidence
+FAIL	5353	Chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime'|Not all dosages high confidence
 PASS	5354	One cap qd	1 capsule every day	1 capsule
 FAIL	5355	1/day	None	Syntax error: unexpected '/' at Ln 1, Col 1|Text from the original sig was not parsed: '1/day'|Not all dosages high confidence
 PASS	5356	1/2 tab QID	0.5 tablet 4 times every day	2 tablets
@@ -5894,7 +5894,7 @@ PASS	5893	one po twice daily	1 by mouth 2 times every day	2
 FAIL	5894	Lidocaine HCl 1 % Injection Solution vial 4ml IA one time in both knees	None	Syntax error: unexpected 'lidocaine' at Ln 1, Col 0|Syntax error: unexpected 'hcl' at Ln 1, Col 10|Text from the original sig was not parsed: 'lidocaine hcl 1 injection solution vial 4ml ia 1 time in both knees'|Not all dosages high confidence
 FAIL	5895	one po bid-tid prn	None	Ambiguous expression: 'bid'|Syntax error: unexpected '-' at Ln 1, Col 8|Text from the original sig was not parsed: '1 po bid-tid prn'|Not all dosages high confidence
 PASS	5896	one pill bid	1 pill 2 times every day	2 pills
-FAIL	5897	Chew and swallow 1 ea (50,000 units) by mouth weekly	None	Syntax error: unexpected 'chew' at Ln 1, Col 0|Syntax error: unexpected 'swallow' at Ln 1, Col 9|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'chew and swallow 1 ea (50,000 units) by mouth weekly'|Not all dosages high confidence
+PASS	5897	Chew and swallow 1 ea (50,000 units) by mouth weekly	chew and swallow 1 dose (50000 iu) by mouth every week	1 dose
 PASS	5898	Half tab daily	0.5 tablet every day	0.5 tablet
 FAIL	5899	Inhale 3 ml (0.63 mg) via nebulizer every 4 hours as needed	None	Syntax error: unexpected 'nebulizer' at Ln 1, Col 26|Syntax error: unexpected 'every' at Ln 1, Col 36|Text from the original sig was not parsed: 'inhale 3 ml (0.63 mg) via nebulizer every 4 hours as needed'|Not all dosages high confidence
 PASS	5900	INHALE ONE PUFF BY MOUTH DAILY	inhale 1 puff by mouth every day	1 puff
