@@ -91,6 +91,7 @@ BREATH: B R E A T H;
 BEFORE: B E F O R E;
 BY: B Y;
 CHANGE: C H A N G E;
+CHEW: C H E W;
 COUGH: C O U G H;
 DINNER: D I N N E R;
 DIRECTED: D I R E C T E D;
@@ -141,6 +142,7 @@ SOB: S O B;
 STOMACH: S T O M A C H;
 SUCK: S U C K;
 SUPPLY: S U P P L Y;
+SWALLOW: S W A L L O W;
 TAKE: T A K E;
 THE: T H E;
 THEN: T H E N;
@@ -189,6 +191,7 @@ INJECTION: I N J E C T I O N S?;
 LOLLIPOP: L O L L I P O P S?;
 LOZENGE: L O Z E N G E S?;
 PATCH: P A T C H (E S)?;
+PIECE: P I E C E S?;
 PILL: P I L L S?;
 PUFF: P U F F S?;
 SOLUTION: S O L (N | U T I O N);
@@ -321,6 +324,9 @@ BITARTRATE: B I T A R T R A T E;
 TARTRATE: T A R T R A T E;
 PHOSPHATE: P H O S P H A T E;
 POLISTIREX: P O L I S T I R E X;
+
+// additional instructions
+DONOTSWALLOW: D O ' ' N O T ' ' S W A L L O W;
 
 // ignore whitespace
 WS: [ \r\t\n,]+ -> skip;

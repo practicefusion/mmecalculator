@@ -105,6 +105,12 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         Patch,
 
         /// <summary>
+        /// Piece
+        /// </summary>
+        [ParseableEnum("piece", "pieces")] 
+        Piece,
+
+        /// <summary>
         /// Pill
         /// </summary>
         [ParseableEnum("pill", "pills")] 

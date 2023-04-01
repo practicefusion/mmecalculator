@@ -116,6 +116,11 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                     "on empty stomach",
                     "on empty stomach"
                 },
+                new object[]
+                {
+                    "do not swallow",
+                    "do not swallow"
+                },
             };
 
         private static IEnumerable<object[]> MultiplesTestData =>

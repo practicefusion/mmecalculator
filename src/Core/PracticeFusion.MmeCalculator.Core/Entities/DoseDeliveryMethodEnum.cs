@@ -20,6 +20,16 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         [ParseableEnum("apply", "apply")] Apply,
 
         /// <summary>
+        /// Chew
+        /// </summary>
+        [ParseableEnum("chew", "chew")] Chew,
+
+        /// <summary>
+        /// Chew and Swallow
+        /// </summary>
+        [ParseableEnum("chew and swallow", "chew and swallow")] ChewAndSwallow,
+
+        /// <summary>
         /// Dissolve
         /// </summary>
         [ParseableEnum("dissolve", "dissolve")] Dissolve,

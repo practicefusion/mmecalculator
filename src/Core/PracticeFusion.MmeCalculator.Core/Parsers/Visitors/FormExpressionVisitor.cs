@@ -67,6 +67,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 DefaultLexer.NASAL => FormEnum.Nasal,
                 DefaultLexer.ORAL => FormEnum.Oral,
                 DefaultLexer.PATCH => FormEnum.Patch,
+                DefaultLexer.PIECE => FormEnum.Piece,
                 DefaultLexer.PILL => FormEnum.Pill,
                 DefaultLexer.PUFF => FormEnum.Puff,
                 DefaultLexer.RECTAL => FormEnum.Rectal,

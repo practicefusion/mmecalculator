@@ -66,5 +66,11 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         /// </summary>
         [ParseableEnum("on an empty stomach", "on an empty stomach")]
         EmptyStomach,
+
+        /// <summary>
+        /// do not swallow
+        /// </summary>
+        [ParseableEnum("do not swallow", "do not swallow")]
+        DoNotSwallow,
     }
 }

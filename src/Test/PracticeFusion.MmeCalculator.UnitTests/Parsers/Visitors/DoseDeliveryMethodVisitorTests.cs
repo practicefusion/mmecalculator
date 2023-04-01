@@ -25,6 +25,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
             {
                 new object[] { "administer", "administer" },
                 new object[] { "apply", "apply" },
+                new object[] { "chew", "chew" },
+                new object[] { "chew and swallow", "chew and swallow" },
                 new object[] { "dissolve", "dissolve" },
                 new object[] { "give", "give" },
                 new object[] { "infuse", "infuse" },
