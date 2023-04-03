@@ -92,4 +92,4 @@ We have adopted a Code of Conduct that we expect project participants to adhere 
 
 ## License
 
-The Practice Fusion MME Calculator is licensed under the [MIT license](https://github.com/practicefusion/mmecalculator/blob/master/LICENSE.md).
+The Practice Fusion MME Calculator is licensed under the [MIT license](https://github.com/practicefusion/mmecalculator/blob/master/LICENSE).
