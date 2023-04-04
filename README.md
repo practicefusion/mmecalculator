@@ -32,6 +32,15 @@ $ docker run -d -p 80:80 --name mmewebdemo mmewebdemo
 2. Browse to http://localhost/ to see the demo
 3. Browse to http://localhost/docs to view the api documentation.
 
+#### Web demo examples
+The web demo gives you a quick example of how to pass a sig and an RxNorm ID, and get a calculated MME in response:
+
+![A screenshot of the MME Calculator Demo web page, showing an MME calculation](docs/images/mme-calculator-demo.png?raw=true "Calculating MME")
+
+The demo also includes a simple example of just parsing a sig:
+
+![A screenshot of the MME Calculator Demo web page, showing a parsed sig](docs/images/sig-parser-demo.png?raw=true "Parsing sigs")
+
 ### Running the sample CLI in a docker image
 1. From the `src` directory, run:
 ```
