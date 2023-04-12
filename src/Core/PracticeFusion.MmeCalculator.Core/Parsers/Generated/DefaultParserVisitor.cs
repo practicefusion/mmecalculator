@@ -39,11 +39,23 @@ public interface IDefaultParserVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitSig([NotNull] DefaultParser.SigContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="DefaultParser.strictSig"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStrictSig([NotNull] DefaultParser.StrictSigContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="DefaultParser.dosage"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitDosage([NotNull] DefaultParser.DosageContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DefaultParser.strictDosage"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStrictDosage([NotNull] DefaultParser.StrictDosageContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="DefaultParser.dosageSeparator"/>.
 	/// </summary>

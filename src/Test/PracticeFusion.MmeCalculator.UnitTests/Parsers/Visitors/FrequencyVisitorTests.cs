@@ -23,6 +23,13 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         }
 
         [TestMethod]
+        public void FrequencyContainingTwiceADayAfterEveryMealDefersToTwiceADay()
+        {
+            var frequency = ParseStatement("1 tablet 2 times per day with meals");
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+        [TestMethod]
         public void FrequencyContainingBeforeEveryMealInfers3TimesADay()
         {
             var frequency = ParseStatement("1 tablet daily before every meal");

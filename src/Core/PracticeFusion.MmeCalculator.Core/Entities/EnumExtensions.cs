@@ -28,5 +28,25 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
 
             return attributes.ToList();
         }
+
+        public static bool EventTimingAboutFood(this EventTimingEnum e)
+        {
+            return 
+                e == EventTimingEnum.BeforeEveryMeal || 
+                e == EventTimingEnum.WithEveryMeal ||
+                e == EventTimingEnum.AfterEveryMeal || 
+                e == EventTimingEnum.BeforeMeals || 
+                e == EventTimingEnum.WithMeals ||
+                e == EventTimingEnum.AfterMeals || 
+                e == EventTimingEnum.BeforeBreakfast ||
+                e == EventTimingEnum.WithBreakfast ||
+                e == EventTimingEnum.AfterBreakfast ||
+                e == EventTimingEnum.BeforeLunch ||
+                e == EventTimingEnum.WithLunch ||
+                e == EventTimingEnum.AfterLunch ||
+                e == EventTimingEnum.BeforeDinner ||
+                e == EventTimingEnum.WithDinner ||
+                e == EventTimingEnum.AfterDinner;
+        }
     }
 }

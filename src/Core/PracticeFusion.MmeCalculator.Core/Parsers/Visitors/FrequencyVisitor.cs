@@ -283,6 +283,44 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
         }
 
+        private static void VisitTimingEventMeal(DefaultParser.TimingEventContext context, Frequency result, bool every, bool specific, 
+            EventTimingEnum before, EventTimingEnum with, EventTimingEnum after)
+        {
+            // when "every" or "each" is present, infer 3 (all meals)
+            // when there is a specific meal (breakfast, lunch, dinner), infer 1.
+            // otherwise, infer at least 1
+            result.Intervals.Add(InferMealInterval(every ? 3 : 1));
+
+            if(context.BEFORE() != null)
+            {
+                result.When.Add(before);
+            }
+
+            if(context.WITH() != null)
+            {
+                result.When.Add(with);
+            }
+
+            if(context.AFTER() != null)
+            {
+                result.When.Add(after);
+            }
+        }
+
+        private static Interval InferMealInterval(int countOfMeals)
+        {
+            return new Interval
+            {
+                Freq = countOfMeals,
+                FreqMax = countOfMeals,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ExpressAsPer = false,
+                Inferred = true
+            };
+        }
+
         private static void VisitTimingEvent(DefaultParser.TimingEventContext context, Frequency result)
         {
             if (context == null)
@@ -297,34 +335,32 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                     $"Identified an administration timing, but cannot parse offset timings yet '{context.GetOriginalTextWithSpacing()}'");
             }
 
-            // set up an inferred interval
-            var interval = new Interval
+            bool every = (context.EVERY() != null || context.EACH() != null);
+            if(context.meals()?.BREAKFAST() != null)
             {
-                Freq = 3,
-                FreqMax = 3,
-                Period = 1,
-                PeriodMax = 1,
-                PeriodUnit = PeriodEnum.Day,
-                ExpressAsPer = false,
-                Inferred = true
-            };
-
-            // add it to the frequency
-            result.Intervals.Add(interval);
-
-            if (context.BEFORE() != null)
-            {
-                result.When.Add(EventTimingEnum.BeforeEveryMeal);
+                VisitTimingEventMeal(context, result, every, true, EventTimingEnum.BeforeBreakfast, EventTimingEnum.WithBreakfast, EventTimingEnum.AfterBreakfast);
             }
 
-            if (context.AFTER() != null)
+            if(context.meals()?.LUNCH() != null)
             {
-                result.When.Add(EventTimingEnum.AfterEveryMeal);
+                VisitTimingEventMeal(context, result, every, true, EventTimingEnum.BeforeLunch, EventTimingEnum.WithLunch, EventTimingEnum.AfterLunch);
             }
 
-            if (context.WITH() != null)
+            if(context.meals()?.DINNER() != null)
             {
-                result.When.Add(EventTimingEnum.WithEveryMeal);
+                VisitTimingEventMeal(context, result, every, true, EventTimingEnum.BeforeDinner, EventTimingEnum.WithDinner, EventTimingEnum.AfterDinner);
+            }
+
+            if(context.meals()?.MEAL() != null)
+            {
+                if(every)
+                {
+                    VisitTimingEventMeal(context, result, every, false, EventTimingEnum.BeforeEveryMeal, EventTimingEnum.WithEveryMeal, EventTimingEnum.AfterEveryMeal);
+                }
+                else
+                {
+                    VisitTimingEventMeal(context, result, every, false, EventTimingEnum.BeforeMeals, EventTimingEnum.WithMeals, EventTimingEnum.AfterMeals);
+                }
             }
         }
 

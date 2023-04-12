@@ -49,6 +49,18 @@ public partial class DefaultParserBaseListener : IDefaultParserListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitSig([NotNull] DefaultParser.SigContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="DefaultParser.strictSig"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStrictSig([NotNull] DefaultParser.StrictSigContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DefaultParser.strictSig"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStrictSig([NotNull] DefaultParser.StrictSigContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="DefaultParser.dosage"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -60,6 +72,18 @@ public partial class DefaultParserBaseListener : IDefaultParserListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitDosage([NotNull] DefaultParser.DosageContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DefaultParser.strictDosage"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStrictDosage([NotNull] DefaultParser.StrictDosageContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DefaultParser.strictDosage"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStrictDosage([NotNull] DefaultParser.StrictDosageContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DefaultParser.dosageSeparator"/>.
 	/// <para>The default implementation does nothing.</para>

@@ -5831,7 +5831,7 @@ PASS	5830	Take 1 tablet (250 mg) by mouth twice daily	take 1 tablet (250 mg) by 
 FAIL	5831	Take 1 tablet (5 mg) by mouth daily AM	None	Syntax error: unexpected 'am' at Ln 1, Col 36|Text from the original sig was not parsed: 'take 1 tablet (5 mg) by mouth daily am'|Not all dosages high confidence
 PASS	5832	Take 1 tablet (20 mEq) by mouth 3 times per day with food	take 1 tablet (20 meq) by mouth 3 times per day with food	3 tablets
 PASS	5833	Take 1 tablet (2.5 mg) by mouth at bedtime	take 1 tablet (2.5 mg) by mouth at bedtime	1 tablet
-FAIL	5834	Take 1 tablet (150 mg) by mouth one time at night for the first 3 nights, then 2 times per day	None	Syntax error: unexpected 'at' at Ln 1, Col 39|Ambiguous expression: 'atnightfor'|Syntax error: unexpected '3' at Ln 1, Col 62|Ambiguous expression: '3nights'|Syntax error: unexpected 'then' at Ln 1, Col 71|Text from the original sig was not parsed: 'take 1 tablet (150 mg) by mouth 1 time at night for the first 3 nights then 2 times per day'|Not all dosages high confidence
+FAIL	5834	Take 1 tablet (150 mg) by mouth one time at night for the first 3 nights, then 2 times per day	None	Syntax error: unexpected 'at' at Ln 1, Col 39|Syntax error: unexpected '3' at Ln 1, Col 62|Ambiguous expression: '3nights'|Syntax error: unexpected 'then' at Ln 1, Col 71|Text from the original sig was not parsed: 'take 1 tablet (150 mg) by mouth 1 time at night for the first 3 nights then 2 times per day'|Not all dosages high confidence
 PASS	5835	Take 1 tablet (20 mg) by mouth QOD	take 1 tablet (20 mg) by mouth every 2 days	1 tablet
 FAIL	5836	Take 1 tablet (20 mg) by mouth one time at bedtime	None	Syntax error: unexpected 'at' at Ln 1, Col 38|Ambiguous expression: 'atbedtime'|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth 1 time at bedtime'|Not all dosages high confidence
 PASS	5837	Take 1 tablet (522 mg) by mouth daily in the morning	take 1 tablet (522 mg) by mouth every day in the morning	1 tablet
@@ -5892,7 +5892,7 @@ FAIL	5891	po BID PRN anxiety	None	Syntax error: unexpected 'po' at Ln 1, Col 0|T
 PASS	5892	one po q 6 hours prn pain	1 by mouth every 6 hours as needed for pain	4
 PASS	5893	one po twice daily	1 by mouth 2 times every day	2
 FAIL	5894	Lidocaine HCl 1 % Injection Solution vial 4ml IA one time in both knees	None	Syntax error: unexpected 'lidocaine' at Ln 1, Col 0|Syntax error: unexpected 'hcl' at Ln 1, Col 10|Text from the original sig was not parsed: 'lidocaine hcl 1 injection solution vial 4ml ia 1 time in both knees'|Not all dosages high confidence
-FAIL	5895	one po bid-tid prn	None	Ambiguous expression: 'bid'|Syntax error: unexpected '-' at Ln 1, Col 8|Text from the original sig was not parsed: '1 po bid-tid prn'|Not all dosages high confidence
+FAIL	5895	one po bid-tid prn	None	Syntax error: unexpected 'prn' at Ln 1, Col 13|Text from the original sig was not parsed: '1 po bid-tid prn'|Not all dosages high confidence
 PASS	5896	one pill bid	1 pill 2 times every day	2 pills
 PASS	5897	Chew and swallow 1 ea (50,000 units) by mouth weekly	chew and swallow 1 dose (50000 iu) by mouth every week	1 dose
 PASS	5898	Half tab daily	0.5 tablet every day	0.5 tablet

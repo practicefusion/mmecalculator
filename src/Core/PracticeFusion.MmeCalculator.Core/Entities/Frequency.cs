@@ -57,6 +57,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                 }
 
                 // get the highest frequency
+                // return Math.Max(intervalMax, MaximumDailyTiming);
                 return Math.Max(intervalMax, MaximumDailyTiming);
             }
         }
@@ -65,25 +66,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         {
             get
             {
-                decimal maxTiming = 0m;
-
-                if (When.Count > 0)
-                {
-                    if (When.Contains(EventTimingEnum.BeforeEveryMeal) || When.Contains(EventTimingEnum.AfterEveryMeal) ||
-                        When.Contains(EventTimingEnum.WithEveryMeal))
-                    {
-                        // food is 3 times a day
-                        maxTiming = 3m;
-                    }
-                    else
-                    {
-                        // others are single occurrence events
-                        maxTiming = When.Count;
-
-                    }
-                }
-
-                return Math.Max(TimeOfDay.Count, maxTiming);
+                return Math.Max(TimeOfDay.Count, When.Count(x => !x.EventTimingAboutFood()));
             }
         }
 
@@ -116,9 +99,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         private static void RationalizeCannotHaveMoreThanOneTimingWhenFoodIsInvolved(Frequency frequency)
         {
             if (frequency.When.Count > 1 &&
-                (frequency.When.Contains(EventTimingEnum.BeforeEveryMeal) ||
-                 frequency.When.Contains(EventTimingEnum.AfterEveryMeal) ||
-                 frequency.When.Contains(EventTimingEnum.WithEveryMeal)))
+                (frequency.When.Any(x => x.EventTimingAboutFood())))
             {
                 throw new ParsingException($"Ambiguous event timing directions '{frequency.HumanReadable}'");
             }
@@ -352,19 +333,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
 
         private static string ExpressEventTiming(EventTimingEnum timing)
         {
-            return timing switch
-            {
-                EventTimingEnum.BeforeEveryMeal => "before every meal",
-                EventTimingEnum.AfterEveryMeal => "after every meal",
-                EventTimingEnum.WithEveryMeal => "with every meal",
-                EventTimingEnum.BeforeNoon => "before noon",
-                EventTimingEnum.Morning => "in the morning",
-                EventTimingEnum.BedTime => "at bedtime",
-                EventTimingEnum.Night => "at night",
-                EventTimingEnum.AfterNoon => "afternoon",
-                EventTimingEnum.AtNoon => "at noon",
-                _ => throw new ParsingException($"Unexpected event timing: {timing}"),
-            };
+            ParseableEnumAttribute data = timing.GetParseableEnumData();
+            return data.FriendlyName;
         }
     }
 }

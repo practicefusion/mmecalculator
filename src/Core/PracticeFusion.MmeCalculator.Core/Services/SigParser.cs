@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Antlr4.Runtime;
 using Microsoft.Extensions.Caching.Distributed;
@@ -44,6 +45,50 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <inheritdoc />
         public ParsedSig Parse(string sig)
         {
+            return Parse(sig, BuildSigTree, VisitSigRoot);
+        }
+
+        /// <inheritdoc />
+        public ParsedSig ParseStrict(string sig)
+        {
+            return Parse(sig, BuildStrictSigTree, VisitStrictSigRoot);
+        }
+
+        private ParserRuleContext BuildSigTree(DefaultParser parser) => parser.sig();
+
+        private ParserRuleContext BuildStrictSigTree(DefaultParser parser) => parser.strictSig();
+
+        private ParsedSig VisitSigRoot(ParserRuleContext parserRuleContext)
+        {
+            DefaultParser.SigContext? tree = parserRuleContext as DefaultParser.SigContext;
+            if(tree != null)
+            {
+                var visitor = new SigVisitor();
+                return visitor.VisitRoot(tree);
+            }
+            else
+            {
+                throw new InvalidCastException("Expected the parser rule context to be a SigContext.");
+            }
+        }
+
+        private ParsedSig VisitStrictSigRoot(ParserRuleContext parserRuleContext)
+        {
+            DefaultParser.StrictSigContext? tree = parserRuleContext as DefaultParser.StrictSigContext;
+            if(tree != null)
+            {
+                var visitor = new StrictSigVisitor();
+                return visitor.VisitRoot(tree);
+            }
+            else
+            {
+                throw new InvalidCastException("Expected the parser rule context to be a StrictSigContext.");
+            }
+        }
+
+        /// <inheritdoc />
+        private ParsedSig Parse(string sig, Func<DefaultParser, ParserRuleContext> GetParserRuleContext, Func<ParserRuleContext, ParsedSig> VisitTree)
+        {
             using (_logger.BeginScope("Parsing sig '{sig}'", sig))
             {
                 var key = $"{_cachePrefix}{{{sig}}}";
@@ -71,7 +116,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     parser.AddErrorListener(new ConfidenceErrorListener(parserErrors));
 
                     // parse
-                    DefaultParser.SigContext tree = parser.sig();
+                    ParserRuleContext tree = GetParserRuleContext(parser);
 
                     // check for errors or exceptions
                     if (parser.NumberOfSyntaxErrors > 0)
@@ -85,14 +130,12 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     }
 
                     // visit the tree
-                    var visitor = new SigVisitor();
-                    var result = visitor.VisitRoot(tree);
+                    var result = VisitTree(tree);
                     result.OriginalSig = sig;
                     result.PreprocessedSig = preprocessedSig;
 
                     // Add the maximum dosage
                     CalculateMaximumDosage(result);
-
 
                     // cache the result
                     if (_distributedCache != null && !_distributedCache.Exists(key))

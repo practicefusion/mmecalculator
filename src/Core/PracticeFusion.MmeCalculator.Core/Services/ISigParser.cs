@@ -13,5 +13,12 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <param name="sig"></param>
         /// <returns></returns>
         ParsedSig Parse(string sig);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="sig"></param>
+        /// <returns></returns>
+        ParsedSig ParseStrict(string sig);
     }
 }
