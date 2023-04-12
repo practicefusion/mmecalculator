@@ -254,6 +254,11 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 result.When.Add(EventTimingEnum.Morning);
             }
 
+            if( context.AFTERNOON() != null)
+            {
+                result.When.Add(EventTimingEnum.InTheAfternoon);
+            }
+
             if (context.NOON() != null || context.MIDDAY() != null)
             {
                 if (context.BEFORE() != null)

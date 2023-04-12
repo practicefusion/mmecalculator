@@ -214,6 +214,7 @@ timeOfDay:
 	(EVERY | EACH)? (
 		MORNING
 		| DAY? (BEFORE | AFTER | AT) (NOON | MIDDAY)
+		| AFTERNOON
 		| EVENING
 		| NIGHT TIME?
 		| (periodBeforeOrAfter)? BEDTIME

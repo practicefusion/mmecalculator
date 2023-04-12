@@ -79,6 +79,7 @@ CLOCKNUMBER: DIGIT+ ':' DIGIT+;
 // general
 A_AN: A | A N;
 ADMINISTER: A D M I N I S T E R;
+AFTERNOON: A F T E R N O O N;
 AFTER: A F T E R;
 AM: A M;
 AND: A N D;

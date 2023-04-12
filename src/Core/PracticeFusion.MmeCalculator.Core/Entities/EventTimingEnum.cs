@@ -15,6 +15,12 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         AfterNoon,
 
         /// <summary>
+        /// In the afternoon
+        /// </summary>
+        [ParseableEnum("in the afternoon")]
+        InTheAfternoon,
+
+        /// <summary>
         /// At noon
         /// </summary>
         [ParseableEnum("at noon")]

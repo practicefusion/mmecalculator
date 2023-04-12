@@ -224,6 +224,13 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
             result.ContainsLatinAbbreviations.Should().BeFalse();
         }
 
+        [TestMethod]
+        public void CanParseInTheAfternoonCorrectly()
+        {
+            var result = ParseStatement("1 tablet every day in the afternoon");
+            result.When.Should().Contain(EventTimingEnum.InTheAfternoon);
+        }
+
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
             {
@@ -313,6 +320,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
             new List<object[]>
             {
                 new object[] { "every day before noon", "every day before noon" },
+                new object[] { "every day in the afternoon", "every day in the afternoon" },
                 new object[] { "every morning", "in the morning" },
                 new object[] { "every night", "at night" },
                 new object[] { "qhs after", "every day at bedtime" },
