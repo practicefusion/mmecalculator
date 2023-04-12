@@ -220,7 +220,7 @@ timeOfDay:
 	);
 
 timingEvent:
-	(BEFORE | AFTER | WITH | periodBeforeOrAfter) (EVERY | EACH) meals;
+	(BEFORE | AFTER | WITH | periodBeforeOrAfter) (EVERY | EACH)? meals;
 
 latinAdministrationTiming: EVERY? (HS | QPC | QAC);
 
