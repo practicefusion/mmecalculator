@@ -331,7 +331,7 @@ DONOTSWALLOW: D O ' ' N O T ' ' S W A L L O W;
 // ignore whitespace
 WS: [ \r\t\n,]+ -> skip;
 
-WORD: [a-zA-Z]+;
+WORD: [a-zA-Z]+ | [a-zA-Z]+ DASH [a-zA-Z]+;
 
 BRANDNAME: '[' ANYTOKEN+ ']';
 
