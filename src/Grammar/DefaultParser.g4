@@ -7,6 +7,8 @@ options {
 
 sig: dosage (dosage)* ((DOT | COMMA)? freeText)? EOF;
 
+strictSig: strictDosage (strictDosage)* EOF;
+
 dosage:
 	dosageSeparator? doseDeliveryMethod? (dose | ambiguousDose) (
 		route
@@ -15,6 +17,13 @@ dosage:
 		| additionalInstruction
 		| indicationForUse
 	)*;
+
+strictDosage:
+	dosageSeparator? doseDeliveryMethod dose 
+	route
+	frequencies ?
+	additionalInstruction ?
+	indicationForUse? duration?;
 
 //////////////////////////////////////////////////////////////////////////
 // Dose
