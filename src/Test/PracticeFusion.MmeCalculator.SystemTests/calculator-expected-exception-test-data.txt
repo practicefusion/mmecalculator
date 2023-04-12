@@ -703,13 +703,10 @@
 19873	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily PRN mod-severe pain Not for acute pain: For chronic cervicalgia	20
 19883	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take 1 pill po Q AM	20
 19885	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take 1 tab PO QD. MUST BE SEEN TO CONTINUE ANY REFILLS.	20
-19893	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE ONE CAPSULE DAILY.   FOR NON-ACUTE PAIN	20
 19899	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take one po q AM	20
 19905	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH ONCE DAILY  NON-ACUTE PAIN	20
 19915	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH EVERY DAY AS DIRECTED PT NEEDS FOLLOW UP APPOINTMENT	20
 19931	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY.  This prescription is for NON ACUTE PAIN.	20
-19935	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY  FOR NON-ACUTE PAIN	20
-19941	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY FOR NON-ACUTE PAIN	20
 19942	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY.  Not For Acute Pain	20
 19949	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY.PLEASE SCHEDULE APPOINTMENT BEFORE NEXT REFILL IS DUE	20
 19959	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET AT BEDTIME AS NEEDED. (Patient states not taking)	20
@@ -729,7 +726,6 @@
 20069	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH   NIGHTLY AT BEDTIME	30
 20071	833714	tramadol hcl er 300 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH ONCE DAILY **LAST FILL WITHOUT BEING SEEN**	30
 20078	1087427	tussicaps 10-8 mg oral capsule extended release 12 hour	1 po bid prn cough (dont use with other cough meds)	20
-20126	835605	ultram 50 mg oral tablet	TAKE 1 TABLET BY MOUTH EVERY 4 TO 6 HOURS AS NEEDED, non-acute pain	30
 20139	835605	ultram 50 mg oral tablet	one po bid -tid	10
 20146	835605	ultram 50 mg oral tablet	1 po bid - tid prn pain	10
 20169	835605	ultram 50 mg oral tablet	TAKE 1 TABLET 3 TIMES DAILY NO MORE THAN # A DAY	15
@@ -741,7 +737,6 @@
 20243	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY please deliver to patient	10
 20255	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY WITH BREAKFAST.	10
 20279	845314	ultram er 100 mg oral tablet extended release 24 hour	1 PO Q AM	10
-20280	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY WITH DINNER	10
 20324	845315	ultram er 200 mg oral tablet extended release 24 hour	1 PO daily (samples given)	20
 20325	845315	ultram er 200 mg oral tablet extended release 24 hour	1 po q am for pain	20
 20327	845315	ultram er 200 mg oral tablet extended release 24 hour	1 TAB Q AM	20

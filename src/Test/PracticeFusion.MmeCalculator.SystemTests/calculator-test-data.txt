@@ -15761,6 +15761,7 @@
 19890	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE ONE CAPSULE BY MOUTH EVERY 24 HOURS	20
 19891	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE ONE CAPSULE BY MOUTH EVERY 6 TO 8 HOURS AS NEEDED	80
 19892	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take one capsule daily.	20
+19893	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE ONE CAPSULE DAILY.   FOR NON-ACUTE PAIN	20
 19894	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	take one capsule every morning	20
 19895	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	Take one capsule po q day	20
 19896	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	take one once a day	20
@@ -15783,10 +15784,12 @@
 19932	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET AT 7:30 pm EVERYDAY	20
 19933	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET ORALLY AT BEDTIME	20
 19934	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY PRN pain Industrial Accident	20
+19935	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY  FOR NON-ACUTE PAIN	20
 19936	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY AS NEEDED  FOR NON ACUTE PAIN	20
 19937	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	one tablet twice a week	20
 19938	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	take 1 capsule daily prn.	20
 19939	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY as needed for CHRONIC pain.	20
+19941	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH DAILY FOR NON-ACUTE PAIN	20
 19943	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET EVERY 6 HOURS, AS NEEDED FOR PAIN.	80
 19944	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	1 PO Daily.	20
 19945	833712	tramadol hcl er 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH  DAILY	20
@@ -15893,6 +15896,7 @@
 20123	835605	ultram 50 mg oral tablet	1 Four Times A Day, As Needed for pain	20
 20124	835605	ultram 50 mg oral tablet	1-2 TABS orally q4-6h   PRN PRN	60
 20125	835605	ultram 50 mg oral tablet	1 or 2 qd	10
+20126	835605	ultram 50 mg oral tablet	TAKE 1 TABLET BY MOUTH EVERY 4 TO 6 HOURS AS NEEDED, non-acute pain	30
 20128	835605	ultram 50 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRN AS NEEDED.	20
 20130	835605	ultram 50 mg oral tablet	One every six hours as needed for severe pain	20
 20131	835605	ultram 50 mg oral tablet	TAKE 1 TABLET BY MOUTH  EVERY 6 HOURS AS NEEDED FOR PAIN	20
@@ -15981,6 +15985,7 @@
 20275	845314	ultram er 100 mg oral tablet extended release 24 hour	ONE PO QAM	10
 20276	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE ONE TABLET DAILY FOR ARTHRITIS	10
 20277	845314	ultram er 100 mg oral tablet extended release 24 hour	Take 1-2 tablets every day as needed	20
+20280	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY WITH DINNER	10
 20281	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 OR 2 TABLETS  DAILY	20
 20283	845314	ultram er 100 mg oral tablet extended release 24 hour	one daily with food	10
 20285	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 2 TABLETS BY MOUTH EVERY DAY AS NEEDED	20

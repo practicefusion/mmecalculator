@@ -587,7 +587,7 @@ PASS	586	Take 1 capsule (100 mg) by mouth every 12 hours for 5 days with food	ta
 FAIL	587	Take 1 tablet (400 mg) by mouth 3 times per day with food or milk as needed	None	Syntax error: unexpected 'milk' at Ln 1, Col 61|Text from the original sig was not parsed: 'take 1 tablet (400 mg) by mouth 3 times per day with food or milk as needed'|Not all dosages high confidence
 PASS	588	Take 1 tablet (25 mg) by mouth daily with food	take 1 tablet (25 mg) by mouth every day with food	1 tablet
 PASS	589	take one tablet once a day	take 1 tablet every day	1 tablet
-FAIL	590	Take 1 tablet (10 mg) by mouth daily with breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 42|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth daily with breakfast'|Not all dosages high confidence
+PASS	590	Take 1 tablet (10 mg) by mouth daily with breakfast	take 1 tablet (10 mg) by mouth every day with breakfast	1 tablet
 FAIL	591	APPLY TO AFFECTED AREA BID	None	Syntax error: unexpected 'to' at Ln 1, Col 6|Syntax error: unexpected 'bid' at Ln 1, Col 23|Text from the original sig was not parsed: 'apply to affected area bid'|Not all dosages high confidence
 PASS	592	TAKE ONE CAPSULE BY MOUTH TWICE A DAY	take 1 capsule by mouth 2 times every day	2 capsules
 PASS	593	Take 1 tablet (500 mg) by mouth 3 times per day with meals	take 1 tablet (500 mg) by mouth 3 times per day with meals	3 tablets
@@ -817,7 +817,7 @@ FAIL	816	1 application topically to affected area 2 times per day for 7 days	Non
 FAIL	817	0.25 mg subcutaneously weekly	None	Syntax error: unexpected 'weekly' at Ln 1, Col 23|Text from the original sig was not parsed: '0.25 mg subcutaneously weekly'|Not all dosages high confidence
 FAIL	818	po daily	None	Syntax error: unexpected 'po' at Ln 1, Col 0|Text from the original sig was not parsed: 'po daily'|Not all dosages high confidence
 PASS	819	TAKE ONE CAPSULE BY MOUTH AT BEDTIME	take 1 capsule by mouth at bedtime	1 capsule
-FAIL	820	Take 1 tablet (2.5 mg) by mouth daily with breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 43|Text from the original sig was not parsed: 'take 1 tablet (2.5 mg) by mouth daily with breakfast'|Not all dosages high confidence
+PASS	820	Take 1 tablet (2.5 mg) by mouth daily with breakfast	take 1 tablet (2.5 mg) by mouth every day with breakfast	1 tablet
 PASS	821	Take 1 tablet (160 mg) by mouth daily with food	take 1 tablet (160 mg) by mouth every day with food	1 tablet
 FAIL	822	Take half of a tablet (12.5 mg) by mouth daily	None	Syntax error: unexpected 'of' at Ln 1, Col 9|Text from the original sig was not parsed: 'take 0.5 of a tablet (12.5 mg) by mouth daily'|Not all dosages high confidence
 PASS	823	1 po q daily	1 by mouth every day	1
@@ -1001,7 +1001,7 @@ PASS	1000	Take 2 capsules (2,000 mg) by mouth 2 times per day	take 2 capsules (2
 FAIL	1001	Take 1 tablet (500 mg) by mouth one time	None	Syntax error: unexpected '<EOF>' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 1 tablet (500 mg) by mouth 1 time'|Not all dosages high confidence
 PASS	1002	Take 1 tablet (20 mg) by mouth 2 times per day for 7 days	take 1 tablet (20 mg) by mouth 2 times per day for 7 days	2 tablets
 PASS	1003	TAKE 1 CAPSULE BY MOUTH EVERY NIGHT AT BEDTIME	take 1 capsule by mouth at bedtime	1 capsule
-PASS	1004	1 PO QPM	1 by mouth every day afternoon	1
+PASS	1004	1 PO QPM	1 by mouth every day after noon	1
 FAIL	1005	2 grams topically to affected area 3 times per day	None	Syntax error: unexpected 'to' at Ln 1, Col 18|Syntax error: unexpected '3' at Ln 1, Col 35|Text from the original sig was not parsed: '2 grams topically to affected area 3 times per day'|Not all dosages high confidence
 FAIL	1006	Place 1 tablet (8 mg) under the tongue and allow to dissolve daily	None	Syntax error: unexpected 'allow' at Ln 1, Col 43|Syntax error: unexpected 'to' at Ln 1, Col 49|Text from the original sig was not parsed: 'place 1 tablet (8 mg) under the tongue and allow to dissolve daily'|Not all dosages high confidence
 FAIL	1007	Take 1 capsule (72 mcg) by mouth daily at least 30 minutes before the first meal of the day on an empty stomach	None	Syntax error: unexpected 'least' at Ln 1, Col 42|Syntax error: unexpected '30' at Ln 1, Col 48|Text from the original sig was not parsed: 'take 1 capsule (72 mcg) by mouth daily at least 30 minutes before the first meal of the day on an empty stomach'|Not all dosages high confidence
@@ -1326,7 +1326,7 @@ PASS	1325	Take 1 tablet (1,000 mg) by mouth 3 times per day for 7 days	take 1 ta
 PASS	1326	Take 1 tablet (15 mg) by mouth daily as needed	take 1 tablet (15 mg) by mouth every day as needed	1 tablet
 PASS	1327	Take 1 tablet (500 mg) by mouth every 8 hours for 5 days	take 1 tablet (500 mg) by mouth every 8 hours for 5 days	3 tablets
 PASS	1328	Take 1 capsule (300 mg) by mouth qhs	take 1 capsule (300 mg) by mouth every day at bedtime	1 capsule
-PASS	1329	One PO QPM	1 by mouth every day afternoon	1
+PASS	1329	One PO QPM	1 by mouth every day after noon	1
 FAIL	1330	1 tab PO Q/day	None	Syntax error: unexpected '/' at Ln 1, Col 10|Syntax error: unexpected '<EOF>' at Ln 1, Col 14|Text from the original sig was not parsed: '1 tab po q/day'|Not all dosages high confidence
 PASS	1331	Take 1 tablet (15 mg) by mouth every 8 hours as needed	take 1 tablet (15 mg) by mouth every 8 hours as needed	3 tablets
 FAIL	1332	SHAKE LIQUID AND USE 2 SPRAYS IN EACH NOSTRIL DAILY	None	Syntax error: unexpected 'shake' at Ln 1, Col 0|Syntax error: unexpected 'liquid' at Ln 1, Col 6|Text from the original sig was not parsed: 'shake liquid and use 2 sprays in each nostril daily'|Not all dosages high confidence
@@ -1336,7 +1336,7 @@ PASS	1335	one cap po QAM	1 capsule by mouth every day in the morning	1 capsule
 PASS	1336	Take 1 tablet QD	take 1 tablet every day	1 tablet
 PASS	1337	TAKE TWO TABLETS BY MOUTH EVERY DAY	take 2 tablets by mouth every day	2 tablets
 FAIL	1338	TEST TWICE DAILY	None	Syntax error: unexpected 'test' at Ln 1, Col 0|Syntax error: unexpected 'times' at Ln 1, Col 7|Text from the original sig was not parsed: 'test 2 times daily'|Not all dosages high confidence
-PASS	1339	1 tab po qpm	1 tablet by mouth every day afternoon	1 tablet
+PASS	1339	1 tab po qpm	1 tablet by mouth every day after noon	1 tablet
 PASS	1340	Take 1 tablet (20 mg) by mouth daily at night	take 1 tablet (20 mg) by mouth every day at night	1 tablet
 PASS	1341	Take 1 tablet (4 mg) by mouth every 8 hours as needed for nausea	take 1 tablet (4 mg) by mouth every 8 hours as needed for nausea	3 tablets
 PASS	1342	Take 1 tablet (3 mg) by mouth daily at bedtime	take 1 tablet (3 mg) by mouth every day at bedtime	1 tablet
@@ -1365,7 +1365,7 @@ PASS	1364	1 TAB TWICE A DAY	1 tablet 2 times every day	2 tablets
 FAIL	1365	take 1 po q am	None	Syntax error: unexpected 'am' at Ln 1, Col 12|Text from the original sig was not parsed: 'take 1 po q am'|Not all dosages high confidence
 FAIL	1366	use bid	None	Syntax error: unexpected 'bid' at Ln 1, Col 4|Text from the original sig was not parsed: 'use bid'|Not all dosages high confidence
 PASS	1367	TAKE 2 CAPSULES BY MOUTH TWICE A DAY	take 2 capsules by mouth 2 times every day	4 capsules
-FAIL	1368	Take 1 capsule (20 mg) by mouth daily before breakfast in the morning	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (20 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
+FAIL	1368	Take 1 capsule (20 mg) by mouth daily before breakfast in the morning	None	 Ambiguous event timing directions 'every day before breakfast and in the morning'|Text from the original sig was not parsed: 'take 1 capsule (20 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
 PASS	1369	Take 1 capsule (10 mg) by mouth 2 times per day	take 1 capsule (10 mg) by mouth 2 times per day	2 capsules
 PASS	1370	Take 1 capsule (40 mg) by mouth QD	take 1 capsule (40 mg) by mouth every day	1 capsule
 PASS	1371	TAKE 1 TABLET TWICE A DAY WITH MEALS	take 1 tablet 2 times every day with meals	2 tablets
@@ -1707,7 +1707,7 @@ PASS	1706	Take 1 tablet (80 mg) by mouth 2 times per day	take 1 tablet (80 mg) b
 PASS	1707	Take 1 tablet (450 mg) by mouth daily at bedtime	take 1 tablet (450 mg) by mouth every day at bedtime	1 tablet
 FAIL	1708	1 tablet orally 2 times per day with water or juice between meals	None	Syntax error: unexpected 'juice' at Ln 1, Col 46|Syntax error: unexpected 'meals' at Ln 1, Col 60|Text from the original sig was not parsed: '1 tablet orally 2 times per day with water or juice between meals'|Not all dosages high confidence
 FAIL	1709	1 drop into both eyes daily in the evening	None	Syntax error: unexpected 'daily' at Ln 1, Col 22|Text from the original sig was not parsed: '1 drop into both eyes daily in the evening'|Not all dosages high confidence
-FAIL	1710	Take 1 capsule (30 mg) by mouth daily before breakfast in the morning	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (30 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
+FAIL	1710	Take 1 capsule (30 mg) by mouth daily before breakfast in the morning	None	Ambiguous event timing directions 'every day before breakfast and in the morning'|Text from the original sig was not parsed: 'take 1 capsule (30 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
 PASS	1711	TAKE 1 CAPSULE BY MOUTH ONCE WEEKLY	take 1 capsule by mouth every week	1 capsule
 PASS	1712	take 1 cap po BID	take 1 capsule by mouth 2 times every day	2 capsules
 PASS	1713	Take 1 tablet (1 mg) by mouth daily prn	take 1 tablet (1 mg) by mouth every day as needed	1 tablet
@@ -1757,12 +1757,12 @@ PASS	1756	Take 1 capsule (20 mg) by mouth 2 times per day with food	take 1 capsu
 FAIL	1757	TAKE ONE TABLET BY MOUTH NIGHTLY AT BEDTIME	None	Syntax error: unexpected 'at' at Ln 1, Col 31|Text from the original sig was not parsed: 'take 1 tablet by mouth nightly at bedtime'|Not all dosages high confidence
 FAIL	1758	TEST THREE TIMES DAILY	None	Syntax error: unexpected 'test' at Ln 1, Col 0|Syntax error: unexpected 'times' at Ln 1, Col 7|Text from the original sig was not parsed: 'test 3 times daily'|Not all dosages high confidence
 PASS	1759	TAKE TWO CAPSULES BY MOUTH DAILY	take 2 capsules by mouth every day	2 capsules
-FAIL	1760	1 tablet orally daily with breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 27|Text from the original sig was not parsed: '1 tablet orally daily with breakfast'|Not all dosages high confidence
+PASS	1760	1 tablet orally daily with breakfast	1 tablet by mouth every day with breakfast	1 tablet
 FAIL	1761	3 films buccally daily	None	Syntax error: unexpected 'daily' at Ln 1, Col 17|Text from the original sig was not parsed: '3 films buccally daily'|Not all dosages high confidence
 PASS	1762	INHALE 1 PUFF BY MOUTH TWICE A DAY	inhale 1 puff by mouth 2 times every day	2 puffs
 FAIL	1763	Take half of a tablet (50 mg) by mouth daily	None	Syntax error: unexpected 'of' at Ln 1, Col 9|Text from the original sig was not parsed: 'take 0.5 of a tablet (50 mg) by mouth daily'|Not all dosages high confidence
 PASS	1764	Take 1/2 tablet (12.5 mg) by mouth daily	take 0.5 tablet (12.5 mg) by mouth every day	0.5 tablet
-FAIL	1765	Take 2 tablets (20 mg) by mouth daily with breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 43|Text from the original sig was not parsed: 'take 2 tablets (20 mg) by mouth daily with breakfast'|Not all dosages high confidence
+PASS	1765	Take 2 tablets (20 mg) by mouth daily with breakfast	take 2 tablets (20 mg) by mouth every day with breakfast	2 tablets
 FAIL	1766	Take 1 tablet (5 mg) by mouth daily with breakfast or the first main meal of the day	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 41|Syntax error: unexpected 'the' at Ln 1, Col 54|Syntax error: unexpected 'meal' at Ln 1, Col 69|Text from the original sig was not parsed: 'take 1 tablet (5 mg) by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
 PASS	1767	Take 1 tablet (500 mg) by mouth 3 times per day for 10 days	take 1 tablet (500 mg) by mouth 3 times per day for 10 days	3 tablets
 FAIL	1768	1 film buccally twice daily	None	Syntax error: unexpected '2' at Ln 1, Col 16|Text from the original sig was not parsed: '1 film buccally 2 times daily'|Not all dosages high confidence
@@ -2281,7 +2281,7 @@ FAIL	2280	i tab po qd	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax er
 PASS	2281	1 pill PO QAM	1 pill by mouth every day in the morning	1 pill
 PASS	2282	1 po once daily	1 by mouth every day	1
 PASS	2283	1/2 PO QHS	0.5 by mouth every day at bedtime	0.5
-PASS	2284	1 qPM	1 every day afternoon	1
+PASS	2284	1 qPM	1 every day after noon	1
 PASS	2285	TAKE 1 TABLET(50 MG) BY MOUTH DAILY AT BEDTIME AS NEEDED	take 1 tablet (50 mg) by mouth every day at bedtime as needed	1 tablet
 FAIL	2286	Take half of a tablet (7.5 mg) by mouth 2 times per day	None	Syntax error: unexpected 'of' at Ln 1, Col 9|Text from the original sig was not parsed: 'take 0.5 of a tablet (7.5 mg) by mouth 2 times per day'|Not all dosages high confidence
 PASS	2287	Take 1 tablet (20 mg) by mouth 3 times per day as needed	take 1 tablet (20 mg) by mouth 3 times per day as needed	3 tablets
@@ -2622,7 +2622,7 @@ PASS	2621	Take 1 tablet (5 mg) by mouth every 12 hours as needed	take 1 tablet (
 PASS	2622	Take 1 tablet (500 mg) by mouth daily at bedtime	take 1 tablet (500 mg) by mouth every day at bedtime	1 tablet
 PASS	2623	Take 1 tablet BID PRN	take 1 tablet 2 times every day as needed	2 tablets
 PASS	2624	take 1 tablet by mouth at bedtime as needed for insomnia	take 1 tablet by mouth at bedtime as needed for insomnia	1 tablet
-FAIL	2625	Take 1 tablet (20 mg) by mouth daily in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 44|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth daily in the afternoon'|Not all dosages high confidence
+PASS	2625	Take 1 tablet (20 mg) by mouth daily in the afternoon	take 1 tablet (20 mg) by mouth every day in the afternoon	1 tablet
 PASS	2626	Take 1 tablet (250 mg) by mouth daily for 10 days	take 1 tablet (250 mg) by mouth every day for 10 days	1 tablet
 FAIL	2627	3 patches topically to affected area daily remove after 12 hours	None	Syntax error: unexpected 'to' at Ln 1, Col 20|Syntax error: unexpected 'daily' at Ln 1, Col 37|Text from the original sig was not parsed: '3 patches topically to affected area daily remove after 12 hours'|Not all dosages high confidence
 PASS	2628	3 po daily	3 by mouth every day	3
@@ -2665,7 +2665,7 @@ PASS	2664	2 tabs qhs	2 tablets every day at bedtime	2 tablets
 FAIL	2665	2 films sublingually daily, F11.2 exempt	None	Syntax error: unexpected '11.2' at Ln 1, Col 28|Text from the original sig was not parsed: '2 films sublingually daily f11.2 exempt'|Not all dosages high confidence
 PASS	2666	take 1 tablet daily by mouth	take 1 tablet by mouth every day	1 tablet
 PASS	2667	Take 2 tabs PO BID	take 2 tablets by mouth 2 times every day	4 tablets
-FAIL	2668	Take 1 tablet (600 mg) by mouth 2 times per day in the late afternoon and 2 hours before bedtime	None	Syntax error: unexpected 'late' at Ln 1, Col 55|Syntax error: unexpected 'and' at Ln 1, Col 70|Text from the original sig was not parsed: 'take 1 tablet (600 mg) by mouth 2 times per day in the late afternoon and 2 hours before bedtime'|Not all dosages high confidence
+FAIL	2668	Take 1 tablet (600 mg) by mouth 2 times per day in the late afternoon and 2 hours before bedtime	None	Ambiguous expression: 'and2hoursbeforebedtime'|Syntax error: unexpected 'and' at Ln 1, Col 70|Text from the original sig was not parsed: 'take 1 tablet (600 mg) by mouth 2 times per day in the late afternoon and 2 hours before bedtime'|Not all dosages high confidence
 PASS	2669	TAKE 1 TABLET BY MOUTH EVERY DAY ON AN EMPTY STOMACH	take 1 tablet by mouth every day on an empty stomach	1 tablet
 PASS	2670	Take 1 tablet (20 mg) by mouth every other day	take 1 tablet (20 mg) by mouth every 2 days	1 tablet
 PASS	2671	Take 1 tablet (20 mg) by mouth daily at bed time	take 1 tablet (20 mg) by mouth every day at bedtime	1 tablet
@@ -2728,7 +2728,7 @@ PASS	2727	Take one tab by mouth twice daily	take 1 tablet by mouth 2 times every
 FAIL	2728	Take half of a tablet (1 mg) by mouth 2 times per day	None	Syntax error: unexpected 'of' at Ln 1, Col 9|Text from the original sig was not parsed: 'take 0.5 of a tablet (1 mg) by mouth 2 times per day'|Not all dosages high confidence
 PASS	2729	Take 2 capsules (20 mg) by mouth daily in the morning	take 2 capsules (20 mg) by mouth every day in the morning	2 capsules
 PASS	2730	Take 1 tablet (3 mg) by mouth daily in the morning	take 1 tablet (3 mg) by mouth every day in the morning	1 tablet
-FAIL	2731	Take 1 tablet (40 mg) by mouth daily before breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 44|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily before breakfast'|Not all dosages high confidence
+PASS	2731	Take 1 tablet (40 mg) by mouth daily before breakfast	take 1 tablet (40 mg) by mouth every day before breakfast	1 tablet
 FAIL	2732	Take 1 tablet (5 mg) by mouth daily in am	None	Syntax error: unexpected 'am' at Ln 1, Col 39|Text from the original sig was not parsed: 'take 1 tablet (5 mg) by mouth daily in am'|Not all dosages high confidence
 PASS	2733	Take 1 tablet by mouth 2 times per day as needed	take 1 tablet by mouth 2 times per day as needed	2 tablets
 FAIL	2734	INJECT 0.75 MG SUBCUTANEOUSLY WEEKLY	None	Syntax error: unexpected 'weekly' at Ln 1, Col 30|Text from the original sig was not parsed: 'inject 0.75 mg subcutaneously weekly'|Not all dosages high confidence
@@ -2755,7 +2755,7 @@ PASS	2754	take 3 tablets by mouth once daily	take 3 tablets by mouth every day	3
 PASS	2755	TAKE ONE TABLET BY MOUTH DAILY IN THE EVENING	take 1 tablet by mouth every day at night	1 tablet
 FAIL	2756	Take 1 tablet (10 mg) by mouth daily am	None	Syntax error: unexpected 'am' at Ln 1, Col 37|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth daily am'|Not all dosages high confidence
 PASS	2757	Take 1 tablet (0.25 mg) by mouth daily at bedtime	take 1 tablet (0.25 mg) by mouth every day at bedtime	1 tablet
-FAIL	2758	1 tablet orally every 6 hours as needed for non-acute pain	None	Ambiguous expression: 'asneededfornon'|Syntax error: unexpected '-' at Ln 1, Col 47|Syntax error: unexpected 'pain' at Ln 1, Col 54|Text from the original sig was not parsed: '1 tablet orally every 6 hours as needed for non-acute pain'|Not all dosages high confidence
+PASS	2758	1 tablet orally every 6 hours as needed for non-acute pain	1 tablet by mouth every 6 hours as needed for non-acute pain	4 tablets
 PASS	2759	1 tablet orally 2 times per day before meals	1 tablet by mouth 2 times per day before meals	2 tablets
 FAIL	2760	1 day	None	Syntax error: unexpected '<EOF>' at Ln 1, Col 5|Text from the original sig was not parsed: '1 day'|Not all dosages high confidence
 PASS	2761	Take one tablet by mouth every other day	take 1 tablet by mouth every 2 days	1 tablet
@@ -2767,7 +2767,7 @@ FAIL	2766	1 po nightly	None	Not all dosages high confidence
 FAIL	2767	i tab PO QHS	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error: unexpected 'tab' at Ln 1, Col 2|Text from the original sig was not parsed: 'i tab po qhs'|Not all dosages high confidence
 PASS	2768	2 sprays each nostril daily	2 sprays per nostril every day	2 sprays
 FAIL	2769	Apply as directed	None	Syntax error: unexpected 'as' at Ln 1, Col 6|Text from the original sig was not parsed: 'apply as directed'|Not all dosages high confidence
-PASS	2770	Take 1 tablet (10 mg) by mouth qpm	take 1 tablet (10 mg) by mouth every day afternoon	1 tablet
+PASS	2770	Take 1 tablet (10 mg) by mouth qpm	take 1 tablet (10 mg) by mouth every day after noon	1 tablet
 PASS	2771	Take 1 tablet (1 mg) by mouth daily prn anxiety	take 1 tablet (1 mg) by mouth every day as needed for anxiety	1 tablet
 PASS	2772	Take 1 capsule (25 mg) by mouth 3 times per day	take 1 capsule (25 mg) by mouth 3 times per day	3 capsules
 FAIL	2773	QID PRN	None	Syntax error: unexpected 'qid' at Ln 1, Col 0|Text from the original sig was not parsed: 'qid prn'|Not all dosages high confidence
@@ -3118,7 +3118,7 @@ PASS	3117	Take 1 troche (10 mg) by mouth 5 times per day for 14 days	take 1 troc
 PASS	3118	TAKE ONE TABLET BY MOUTH FOUR TIMES DAILY	take 1 tablet by mouth 4 times every day	4 tablets
 FAIL	3119	Take 1 tablet (40 mg) by mouth daily am	None	Syntax error: unexpected 'am' at Ln 1, Col 37|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily am'|Not all dosages high confidence
 PASS	3120	Take 1 tablet (25 mg) by mouth every 6 hours as needed for Anxiety	take 1 tablet (25 mg) by mouth every 6 hours as needed for anxiety	4 tablets
-FAIL	3121	Take 1 tablet (20 mg) by mouth 2 times per day for 14 days 30 minutes before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 77|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth 2 times per day for 14 days 30 minutes before meals'|Not all dosages high confidence
+FAIL	3121	Take 1 tablet (20 mg) by mouth 2 times per day for 14 days 30 minutes before meals	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth 2 times per day for 14 days 30 minutes before meals'|Not all dosages high confidence
 PASS	3122	TAKE ONE TABLET PO QD.	take 1 tablet by mouth every day	1 tablet
 FAIL	3123	Use as instructed	None	Syntax error: unexpected 'as' at Ln 1, Col 4|Text from the original sig was not parsed: 'use as instructed'|Not all dosages high confidence
 FAIL	3124	Use 2 spray(s) in each nostril once daily	None	Syntax error: unexpected 'nostril' at Ln 1, Col 21|Syntax error: unexpected 'time' at Ln 1, Col 31|Ambiguous expression: 'daily'|Text from the original sig was not parsed: 'use 2 sprays in each nostril 1 time daily'|Not all dosages high confidence
@@ -3155,7 +3155,7 @@ PASS	3154	TAKE 2 TABLETS BY MOUTH EVERY DAY AT BEDTIME	take 2 tablets by mouth e
 FAIL	3155	Take 1 capsule (67 mg) by mouth daily with a meal	None	Syntax error: unexpected 'a' at Ln 1, Col 43|Text from the original sig was not parsed: 'take 1 capsule (67 mg) by mouth daily with a meal'|Not all dosages high confidence
 FAIL	3156	Take 1 and a half tablets (150 mg) by mouth one time	None	Syntax error: unexpected '<EOF>' at Ln 1, Col 41|Text from the original sig was not parsed: 'take 1.5 tablets (150 mg) by mouth 1 time'|Not all dosages high confidence
 PASS	3157	Take 1 capsule (1,200 mg) by mouth 2 times per day	take 1 capsule (1200 mg) by mouth 2 times per day	2 capsules
-FAIL	3158	Take 1 capsule (10 mg) by mouth daily before breakfast in the morning	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (10 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
+FAIL	3158	Take 1 capsule (10 mg) by mouth daily before breakfast in the morning	None	Ambiguous event timing directions 'every day before breakfast and in the morning'|Text from the original sig was not parsed: 'take 1 capsule (10 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
 PASS	3159	Take 1 tablet (15 mg) by mouth 4 times per day	take 1 tablet (15 mg) by mouth 4 times per day	4 tablets
 FAIL	3160	apply twice daily	None	Syntax error: unexpected 'times' at Ln 1, Col 8|Text from the original sig was not parsed: 'apply 2 times daily'|Not all dosages high confidence
 PASS	3161	2 tabs po q hs	2 tablets by mouth every day at bedtime	2 tablets
@@ -3214,7 +3214,7 @@ PASS	3213	TAKE 1 CAPSULE(100 MG) BY MOUTH THREE TIMES DAILY	take 1 capsule (100 
 PASS	3214	Take 1 capsule (300 mg) by mouth 3 times per day PRN	take 1 capsule (300 mg) by mouth 3 times per day as needed	3 capsules
 PASS	3215	Take 1 1/2 tablets by mouth daily	take 1.5 tablets by mouth every day	1.5 tablets
 PASS	3216	Take 1 capsule (200 mg) by mouth 2 times per day with food	take 1 capsule (200 mg) by mouth 2 times per day with food	2 capsules
-FAIL	3217	Take 1 capsule (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'take 1 capsule (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
+FAIL	3217	Take 1 capsule (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequency: contradicting directions '4 times per day after meals and at bedtime'|Text from the original sig was not parsed: 'take 1 capsule (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 PASS	3218	Take 1 tablet (120 mg) by mouth daily with food	take 1 tablet (120 mg) by mouth every day with food	1 tablet
 PASS	3219	1po qhs	1 by mouth every day at bedtime	1
 PASS	3220	Chew 1 piece (2 mg) by mouth 24 times per day for 30 minute as needed	chew 1 piece (2 mg) by mouth 24 times per day as needed for 30 minutes	24 pieces
@@ -3255,12 +3255,12 @@ FAIL	3254	Take 1 pill po qdaily	None	Not all dosages high confidence
 PASS	3255	Take 1 tablet (10 mg) by mouth 3 times per day before meals	take 1 tablet (10 mg) by mouth 3 times per day before meals	3 tablets
 FAIL	3256	Take 1 tablet (100 mg) by mouth daily AM	None	Syntax error: unexpected 'am' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 1 tablet (100 mg) by mouth daily am'|Not all dosages high confidence
 PASS	3257	Take 1 capsule (15 mg) by mouth 2 times per day	take 1 capsule (15 mg) by mouth 2 times per day	2 capsules
-FAIL	3258	Take 1 capsule (40 mg) by mouth 2 times per day for 14 days 30 minutes before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 78|Text from the original sig was not parsed: 'take 1 capsule (40 mg) by mouth 2 times per day for 14 days 30 minutes before meals'|Not all dosages high confidence
+FAIL	3258	Take 1 capsule (40 mg) by mouth 2 times per day for 14 days 30 minutes before meals	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'take 1 capsule (40 mg) by mouth 2 times per day for 14 days 30 minutes before meals'|Not all dosages high confidence
 PASS	3259	2 sl qd	2 sublingually every day	2
 FAIL	3260	2 times a day (with meals)	None	Syntax error: unexpected 'times' at Ln 1, Col 2|Text from the original sig was not parsed: '2 times a day (with meals)'|Not all dosages high confidence
 FAIL	3261	Administer half of a ml (1.5 mg) subcutaneously weekly	None	Syntax error: unexpected 'of' at Ln 1, Col 15|Text from the original sig was not parsed: 'administer 0.5 of a ml (1.5 mg) subcutaneously weekly'|Not all dosages high confidence
 PASS	3262	one puff daily	1 puff every day	1 puff
-FAIL	3263	1 tablet orally every 8 hours as needed for non-acute pain	None	Ambiguous expression: 'asneededfornon'|Syntax error: unexpected '-' at Ln 1, Col 47|Syntax error: unexpected 'pain' at Ln 1, Col 54|Text from the original sig was not parsed: '1 tablet orally every 8 hours as needed for non-acute pain'|Not all dosages high confidence
+PASS	3263	1 tablet orally every 8 hours as needed for non-acute pain	1 tablet by mouth every 8 hours as needed for non-acute pain	3 tablets
 PASS	3264	1 tsp po BID x 10 days	1 teaspoon by mouth 2 times every day for 10 days	2 teaspoons
 PASS	3265	1 tab bid po	1 tablet by mouth 2 times every day	2 tablets
 PASS	3266	1 po daily PRN Anxiety	1 by mouth every day as needed for anxiety	1
@@ -3279,7 +3279,7 @@ PASS	3278	Take 3 tablets (1,875 mg) by mouth 2 times per day with meals	take 3 t
 PASS	3279	TAKE 1 TABLET BY MOUTH EVERY DAY IN THE MORNING ON AN EMPTY STOMACH	take 1 tablet by mouth every day in the morning on an empty stomach	1 tablet
 FAIL	3280	TAKE 1 TABLET BY MOUTH ONCE DAILY WITH EVENING MEAL	None	Syntax error: unexpected 'evening' at Ln 1, Col 41|Text from the original sig was not parsed: 'take 1 tablet by mouth 1 time daily with evening meal'|Not all dosages high confidence
 PASS	3281	Take 1 tablet (500 mg) by mouth daily with food	take 1 tablet (500 mg) by mouth every day with food	1 tablet
-FAIL	3282	Take 1 tablet (5 mg) by mouth in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 37|Text from the original sig was not parsed: 'take 1 tablet (5 mg) by mouth in the afternoon'|Not all dosages high confidence
+PASS	3282	Take 1 tablet (5 mg) by mouth in the afternoon	take 1 tablet (5 mg) by mouth in the afternoon	1 tablet
 FAIL	3283	Take 1 tablet (40 mg) by mouth daily in pm	None	Syntax error: unexpected 'pm' at Ln 1, Col 40|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily in pm'|Not all dosages high confidence
 PASS	3284	Take 1 tablet (150 mg) by mouth twice daily	take 1 tablet (150 mg) by mouth 2 times every day	2 tablets
 FAIL	3285	TOME UNA TABLETA TODOS LOS DIAS EN LA MANANA	None	Syntax error: unexpected 'tome' at Ln 1, Col 0|Text from the original sig was not parsed: 'tome una tableta todos los dias en la manana'|Not all dosages high confidence
@@ -3342,7 +3342,7 @@ FAIL	3341	take i tab po q am	None	Syntax error: unexpected 'i' at Ln 1, Col 5|Sy
 PASS	3342	Take 1 tablet (800 mg) by mouth 3 times per day PRN	take 1 tablet (800 mg) by mouth 3 times per day as needed	3 tablets
 PASS	3343	Take 1 tablet (8 mg) by mouth daily as needed	take 1 tablet (8 mg) by mouth every day as needed	1 tablet
 PASS	3344	Take 1 tablet (40 mg) by mouth daily qhs	take 1 tablet (40 mg) by mouth every day at bedtime	1 tablet
-FAIL	3345	Take 1 tablet (20 mg) by mouth in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth in the afternoon'|Not all dosages high confidence
+PASS	3345	Take 1 tablet (20 mg) by mouth in the afternoon	take 1 tablet (20 mg) by mouth in the afternoon	1 tablet
 PASS	3346	Take 1 tablet (20 mg) by mouth daily in the morning.	take 1 tablet (20 mg) by mouth every day in the morning	1 tablet
 FAIL	3347	Take 1 tablet (20 mg) by mouth 2 times per day with food or milk	None	Syntax error: unexpected 'milk' at Ln 1, Col 60|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth 2 times per day with food or milk'|Not all dosages high confidence
 PASS	3348	Take 1 tablet (25 mg) by mouth at bedtime as needed	take 1 tablet (25 mg) by mouth at bedtime as needed	1 tablet
@@ -3394,7 +3394,7 @@ PASS	3393	Take 1 tablet (400 mg) by mouth 3 times per day with meals	take 1 tabl
 PASS	3394	Take 1 tablet (70 mg) by mouth weekly	take 1 tablet (70 mg) by mouth every week	1 tablet
 PASS	3395	TAKE 1 TABLET BY MOUTH DAILY FOR CHOLESTEROL	take 1 tablet by mouth every day for cholesterol	1 tablet
 PASS	3396	TAKE 1 TABLET BY MOUTH EVERY 6 HOURS	take 1 tablet by mouth every 6 hours	4 tablets
-FAIL	3397	TAKE 1 TABLET BY MOUTH DAILY WITH BREAKFAST	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 34|Text from the original sig was not parsed: 'take 1 tablet by mouth daily with breakfast'|Not all dosages high confidence
+PASS	3397	TAKE 1 TABLET BY MOUTH DAILY WITH BREAKFAST	take 1 tablet by mouth every day with breakfast	1 tablet
 FAIL	3398	TOME UNA (1) TABLETA(S) POR LA BOCA UNA VEZ AL DIA.	None	Syntax error: unexpected 'tome' at Ln 1, Col 0|Syntax error: unexpected '1' at Ln 1, Col 9|Text from the original sig was not parsed: 'tome una 1 tabletas por la boca una vez al dia'|Not all dosages high confidence
 FAIL	3399	TOME UNA TABLETA POR VIA ORAL DOS VECES AL DIA	None	Syntax error: unexpected 'tome' at Ln 1, Col 0|Syntax error: unexpected 'via' at Ln 1, Col 21|Text from the original sig was not parsed: 'tome una tableta por via oral dos veces al dia'|Not all dosages high confidence
 PASS	3400	take one tablet QHS	take 1 tablet every day at bedtime	1 tablet
@@ -3438,7 +3438,6 @@ PASS	3437	Take 1 capsule (7 mg) by mouth daily	take 1 capsule (7 mg) by mouth ev
 FAIL	3438	Check BS BID	None	Syntax error: unexpected 'check' at Ln 1, Col 0|Syntax error: unexpected 'bid' at Ln 1, Col 9|Text from the original sig was not parsed: 'check bs bid'|Not all dosages high confidence
 PASS	3439	5 ml orally every 4 hours as needed for cough	5 ml by mouth every 4 hours as needed for cough	30 ml
 PASS	3440	2 tablets orally every 4 hours as needed	2 tablets by mouth every 4 hours as needed	12 tablets
-FAIL	3441	Once daily-E11.9 Type 2 diabetes mellitus without complications -Not on Insulin	None	Syntax error: unexpected 'time' at Ln 1, Col 2|Text from the original sig was not parsed: '1 time daily-e11.9 type 2 diabetes mellitus without complications -not on insulin'|Not all dosages high confidence
 PASS	3442	ONE PO QID FOR CHRONIC PAIN	1 by mouth 4 times every day for chronic pain	4
 FAIL	3443	Place 1 film (150 mcg) to the gum every 12 hours	None	Syntax error: unexpected 'to' at Ln 1, Col 23|Text from the original sig was not parsed: 'place 1 film (150 mcg) to the gum every 12 hours'|Not all dosages high confidence
 PASS	3444	1 po QD x 7 days	1 by mouth every day for 7 days	1
@@ -3464,7 +3463,7 @@ PASS	3463	1 tablet orally up to every 4 hours as needed for pain	1 tablet by mou
 PASS	3464	1 every morning	1 in the morning	1
 FAIL	3465	0.6 mg subcutaneously daily	None	Syntax error: unexpected 'daily' at Ln 1, Col 22|Text from the original sig was not parsed: '0.6 mg subcutaneously daily'|Not all dosages high confidence
 FAIL	3466	Q12h	None	Syntax error: unexpected 'q' at Ln 1, Col 0|Syntax error: unexpected 'h' at Ln 1, Col 3|Not all dosages high confidence
-PASS	3467	one tab po qpm	1 tablet by mouth every day afternoon	1 tablet
+PASS	3467	one tab po qpm	1 tablet by mouth every day after noon	1 tablet
 FAIL	3468	once a day as needed	None	Syntax error: unexpected 'time' at Ln 1, Col 2|Text from the original sig was not parsed: '1 time a day as needed'|Not all dosages high confidence
 FAIL	3469	2.5 mg via nebulizer every 6 hours as needed	None	Syntax error: unexpected 'nebulizer' at Ln 1, Col 11|Syntax error: unexpected 'every' at Ln 1, Col 21|Text from the original sig was not parsed: '2.5 mg via nebulizer every 6 hours as needed'|Not all dosages high confidence
 PASS	3470	3 daily	3 every day	3
@@ -3505,7 +3504,7 @@ PASS	3504	1 Po at HS	1 by mouth at bedtime	1
 PASS	3505	10 ml orally every 6 hours as needed for cough	10 ml by mouth every 6 hours as needed for cough	40 ml
 PASS	3506	1/2 tablet po BID	0.5 tablet by mouth 2 times every day	1 tablet
 PASS	3507	1 tab PO bid for 7 days	1 tablet by mouth 2 times every day for 7 days	2 tablets
-PASS	3508	1 tab qpm	1 tablet every day afternoon	1 tablet
+PASS	3508	1 tab qpm	1 tablet every day after noon	1 tablet
 PASS	3509	Take 2 tablets (1,200 mg) by mouth 2 times per day	take 2 tablets (1200 mg) by mouth 2 times per day	4 tablets
 PASS	3510	Take 3 Capsules Daily	take 3 capsules every day	3 capsules
 PASS	3511	TAKE 2 TABLETS BY MOUTH DAILY IN THE MORNING	take 2 tablets by mouth every day in the morning	2 tablets
@@ -3594,7 +3593,7 @@ PASS	3593	Take 1 capsules (5 mg) by mouth daily in the morning	take 1 capsule (5
 PASS	3594	Take 1 ml (40 mg) by mouth 2 times per day	take 1 ml (40 mg) by mouth 2 times per day	2 ml
 FAIL	3595	Take 1 tablet (25 mg) by mouth 3 times per day at the start of each main meal	None	Syntax error: unexpected 'start' at Ln 1, Col 54|Syntax error: unexpected 'of' at Ln 1, Col 60|Text from the original sig was not parsed: 'take 1 tablet (25 mg) by mouth 3 times per day at the start of each main meal'|Not all dosages high confidence
 PASS	3596	Take 1 tablet (15 mg) by mouth one time daily	take 1 tablet (15 mg) by mouth every day	1 tablet
-FAIL	3597	Take 1 tablet (2.5 mg) by mouth daily with breakfast or the first main meal of the day	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 43|Syntax error: unexpected 'the' at Ln 1, Col 56|Syntax error: unexpected 'meal' at Ln 1, Col 71|Text from the original sig was not parsed: 'take 1 tablet (2.5 mg) by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
+FAIL	3597	Take 1 tablet (2.5 mg) by mouth daily with breakfast or the first main meal of the day	None	Ambiguous expression: 'withbreakfast'|Syntax error: unexpected 'the' at Ln 1, Col 56|Syntax error: unexpected 'meal' at Ln 1, Col 71|Text from the original sig was not parsed: 'take 1 tablet (2.5 mg) by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
 PASS	3598	Take 1 tablet (250 mg) by mouth DAILY for 7 days	take 1 tablet (250 mg) by mouth every day for 7 days	1 tablet
 PASS	3599	TAKE 1 TABLET (7.5 MG) BY MOUTH DAILY WITH FOOD	take 1 tablet (7.5 mg) by mouth every day with food	1 tablet
 FAIL	3600	Take 1 tablet (500 mg) by mouth every 12 hours with food or milk	None	Syntax error: unexpected 'milk' at Ln 1, Col 60|Text from the original sig was not parsed: 'take 1 tablet (500 mg) by mouth every 12 hours with food or milk'|Not all dosages high confidence
@@ -3606,7 +3605,7 @@ PASS	3605	TAKE ONE CAPSULE BY MOUTH 3 TIMES A DAY	take 1 capsule by mouth 3 time
 FAIL	3606	take as directed with FOOD	None	Syntax error: unexpected 'as' at Ln 1, Col 5|Text from the original sig was not parsed: 'take as directed with food'|Not all dosages high confidence
 PASS	3607	TAKE 1 TABLET(20 MG) BY MOUTH DAILY IN THE MORNING	take 1 tablet (20 mg) by mouth every day in the morning	1 tablet
 PASS	3608	TAKE 1 TAB PO ONCE A DAY	take 1 tablet by mouth every day	1 tablet
-FAIL	3609	Take 1 tablet (10 mg) by mouth daily with dinner	None	Syntax error: unexpected 'dinner' at Ln 1, Col 42|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth daily with dinner'|Not all dosages high confidence
+PASS	3609	Take 1 tablet (10 mg) by mouth daily with dinner	take 1 tablet (10 mg) by mouth every day with dinner	1 tablet
 PASS	3610	Take 1 tablet (10 mg) by mouth up to every 4 hours as needed for pain	take 1 tablet (10 mg) by mouth every 4 hours as needed for pain	6 tablets
 PASS	3611	Take 1 tablet (1,000 mg) by mouth daily for 5 days	take 1 tablet (1000 mg) by mouth every day for 5 days	1 tablet
 PASS	3612	Take 1 tablet (1 mg) by mouth 3 times per day prn for anxiety	take 1 tablet (1 mg) by mouth 3 times per day as needed for anxiety	3 tablets
@@ -3711,7 +3710,7 @@ FAIL	3710	1 pack as directed	None	Syntax error: unexpected 'as' at Ln 1, Col 7|T
 PASS	3711	1 PO BID PC	1 by mouth 2 times every day after meals	2
 PASS	3712	1 capsule orally every 12 hours as needed	1 capsule by mouth every 12 hours as needed	2 capsules
 PASS	3713	1 tab po q hs prn	1 tablet by mouth every day at bedtime as needed	1 tablet
-FAIL	3714	1 tablet orally every 8 hours as needed Non-acute pain	None	Syntax error: unexpected '-' at Ln 1, Col 43|Syntax error: unexpected 'pain' at Ln 1, Col 50|Text from the original sig was not parsed: '1 tablet orally every 8 hours as needed non-acute pain'|Not all dosages high confidence
+PASS	3714	1 tablet orally every 8 hours as needed Non-acute pain	1 tablet by mouth every 8 hours as needed for non-acute pain	3 tablets
 PASS	3715	TAKE 1 TABLET(12.5 MG) BY MOUTH TWICE DAILY WITH FOOD	take 1 tablet (12.5 mg) by mouth 2 times every day with food	2 tablets
 FAIL	3716	take 1 tablet by mouth twice a day if needed	None	Syntax error: unexpected 'needed' at Ln 1, Col 40|Text from the original sig was not parsed: 'take 1 tablet by mouth 2 times a day if needed'|Not all dosages high confidence
 PASS	3717	TAKE ONE (1) CAPSULE(S) BY MOUTH ONCE A DAY.	take 1 capsule by mouth every day	1 capsule
@@ -3766,7 +3765,6 @@ FAIL	3765	i po q d	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error
 PASS	3766	one cap po QHS	1 capsule by mouth every day at bedtime	1 capsule
 FAIL	3767	1 drop into affected eye 4 times per day for 7 days	None	Syntax error: unexpected '4' at Ln 1, Col 25|Text from the original sig was not parsed: '1 drop into affected eye 4 times per day for 7 days'|Not all dosages high confidence
 FAIL	3768	1 po qam and 1 po qnoon	None	Expected time of day in hour, or hour:minute format, but found '1'|Text from the original sig was not parsed: '1 po qam and 1 po qnoon'|Not all dosages high confidence
-FAIL	3769	1 po q afternoon and 1 po q evening	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 7|Syntax error: unexpected 'and' at Ln 1, Col 17|Text from the original sig was not parsed: '1 po q afternoon and 1 po q evening'|Not all dosages high confidence
 PASS	3770	Take 2 tablets (30 mg) by mouth 2 times per day	take 2 tablets (30 mg) by mouth 2 times per day	4 tablets
 PASS	3771	Take 2 tablets (8 mg) by mouth daily	take 2 tablets (8 mg) by mouth every day	2 tablets
 FAIL	3772	TAKE 1 TABLET BY MOUTH DAILY WITH THE EVENING MEAL	None	Syntax error: unexpected 'the' at Ln 1, Col 34|Text from the original sig was not parsed: 'take 1 tablet by mouth daily with the evening meal'|Not all dosages high confidence
@@ -3775,7 +3773,7 @@ PASS	3774	Take 1 tablet by mouth Q8H as needed for pain	take 1 tablet by mouth e
 FAIL	3775	TAKE 1 TABLET BY MOUTH 3 TIMES A DAY WITH FOOD OR MILK	None	Syntax error: unexpected 'milk' at Ln 1, Col 50|Text from the original sig was not parsed: 'take 1 tablet by mouth 3 times a day with food or milk'|Not all dosages high confidence
 FAIL	3776	Take 1 tablet (500 mg) by mouth 2 times per day with food or milk as needed	None	Syntax error: unexpected 'milk' at Ln 1, Col 61|Text from the original sig was not parsed: 'take 1 tablet (500 mg) by mouth 2 times per day with food or milk as needed'|Not all dosages high confidence
 PASS	3777	Take 1 tablet (5 mg) by mouth daily prn	take 1 tablet (5 mg) by mouth every day as needed	1 tablet
-FAIL	3778	Take 1 tablet (20 mg) by mouth daily with dinner	None	Syntax error: unexpected 'dinner' at Ln 1, Col 42|Text from the original sig was not parsed: 'take 1 tablet (20 mg) by mouth daily with dinner'|Not all dosages high confidence
+PASS	3778	Take 1 tablet (20 mg) by mouth daily with dinner	take 1 tablet (20 mg) by mouth every day with dinner	1 tablet
 PASS	3779	Take 1 tablet (200 mg) by mouth one time daily	take 1 tablet (200 mg) by mouth every day	1 tablet
 PASS	3780	Take 1 tablet (25 mg) by mouth 2 times per day as needed for dizziness	take 1 tablet (25 mg) by mouth 2 times per day as needed for dizziness	2 tablets
 PASS	3781	Take 1 tablet (25 mg) by mouth 3 times per day as needed for vertigo	take 1 tablet (25 mg) by mouth 3 times per day as needed for vertigo	3 tablets
@@ -3791,7 +3789,7 @@ PASS	3790	1 tab po qd for blood pressure	1 tablet by mouth every day for blood p
 PASS	3791	1 tablet orally once daily	1 tablet by mouth every day	1 tablet
 PASS	3792	1/2 qd	0.5 every day	0.5
 PASS	3793	10 ML PO BID X 10 DAYS	10 ml by mouth 2 times every day for 10 days	20 ml
-FAIL	3794	Chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
+FAIL	3794	Chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed	None	Ambiguous frequency: contradicting directions '4 times per day after meals and at bedtime'|Text from the original sig was not parsed: 'chew and swallow 1 tablet (125 mg) by mouth 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 FAIL	3795	INJECT 0.5 MG SUBCUTANEOUSLY WEEKLY	None	Syntax error: unexpected 'weekly' at Ln 1, Col 29|Text from the original sig was not parsed: 'inject 0.5 mg subcutaneously weekly'|Not all dosages high confidence
 FAIL	3796	POQD	None	Syntax error: unexpected 'poqd' at Ln 1, Col 0|Not all dosages high confidence
 PASS	3797	one weekly	1 every week	1
@@ -3805,7 +3803,7 @@ PASS	3804	Take 1 tab TID prn	take 1 tablet 3 times every day as needed	3 tablets
 PASS	3805	Take 1 tab po BID.	take 1 tablet by mouth 2 times every day	2 tablets
 PASS	3806	Take 1 tablet (10 mg) by mouth daily x 30 days	take 1 tablet (10 mg) by mouth every day for 30 days	1 tablet
 PASS	3807	Take 1 capsule (300 mg) by mouth HS	take 1 capsule (300 mg) by mouth at bedtime	1 capsule
-FAIL	3808	Take 1 capsule (40 mg) by mouth 1 times per day 30 minutes before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 66|Text from the original sig was not parsed: 'take 1 capsule (40 mg) by mouth 1 times per day 30 minutes before meals'|Not all dosages high confidence
+FAIL	3808	Take 1 capsule (40 mg) by mouth 1 times per day 30 minutes before meals	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 1 capsule (40 mg) by mouth 1 times per day 30 minutes before meals'|Not all dosages high confidence
 PASS	3809	Take 1 capsule (40 mg) by mouth daily in the morning.	take 1 capsule (40 mg) by mouth every day in the morning	1 capsule
 FAIL	3810	Take 1 capsule (72 mcg) by mouth daily on an empty stomach before first meal of the day	None	Syntax error: unexpected 'first' at Ln 1, Col 66|Text from the original sig was not parsed: 'take 1 capsule (72 mcg) by mouth daily on an empty stomach before first meal of the day'|Not all dosages high confidence
 FAIL	3811	Take 1 capsule (100 mg) by mouth daily at bedtime with food or milk	None	Ambiguous expression: 'atbedtime'|Syntax error: unexpected 'milk' at Ln 1, Col 63|Text from the original sig was not parsed: 'take 1 capsule (100 mg) by mouth daily at bedtime with food or milk'|Not all dosages high confidence
@@ -3857,7 +3855,7 @@ PASS	3856	Take 1.5 tabs daily	take 1.5 tablets every day	1.5 tablets
 FAIL	3857	take 2 capsules by mouth at once	None	Syntax error: unexpected 'time' at Ln 1, Col 30|Text from the original sig was not parsed: 'take 2 capsules by mouth at 1 time'|Not all dosages high confidence
 FAIL	3858	Take one cap PO q AM	None	Syntax error: unexpected 'am' at Ln 1, Col 16|Text from the original sig was not parsed: 'take 1 cap po q am'|Not all dosages high confidence
 PASS	3859	Take one tablet by mouth daily as needed for anxiety	take 1 tablet by mouth every day as needed for anxiety	1 tablet
-FAIL	3860	take 1 tablet by mouth twice a day 30 MINUTES BEFORE MEALS	None	Syntax error: unexpected 'meals' at Ln 1, Col 55|Text from the original sig was not parsed: 'take 1 tablet by mouth 2 times a day 30 minutes before meals'|Not all dosages high confidence
+FAIL	3860	take 1 tablet by mouth twice a day 30 MINUTES BEFORE MEALS	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 1 tablet by mouth 2 times a day 30 minutes before meals'|Not all dosages high confidence
 PASS	3861	Take 1 tablet by mouth daily for supplement	take 1 tablet by mouth every day for supplement	1 tablet
 PASS	3862	Take 1 tablet (81 mg) by mouth daily WITH FOOD	take 1 tablet (81 mg) by mouth every day with food	1 tablet
 PASS	3863	Take 1 tablet (75 mg) by mouth 2 times per day as needed for pain	take 1 tablet (75 mg) by mouth 2 times per day as needed for pain	2 tablets
@@ -3907,7 +3905,7 @@ PASS	3906	TAKE 1 TABLET BY MOUTH 3 TIMES A DAY WITH MEALS	take 1 tablet by mouth
 PASS	3907	Take one tablet by mouth every 12 hours as needed	take 1 tablet by mouth every 12 hours as needed	2 tablets
 PASS	3908	Take one tablet by mouth every 8 hours as needed for pain	take 1 tablet by mouth every 8 hours as needed for pain	3 tablets
 FAIL	3909	TAKE ONE TABLET BY MOUTH EVERYDAY	None	Not all dosages high confidence
-FAIL	3910	Take one tablet after breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 20|Text from the original sig was not parsed: 'take 1 tablet after breakfast'|Not all dosages high confidence
+PASS	3910	Take one tablet after breakfast	take 1 tablet after breakfast	1 tablet
 PASS	3911	take one tab daily as needed	take 1 tablet every day as needed	1 tablet
 PASS	3912	TAKE 2 CAPSULES AT BEDTIME	take 2 capsules at bedtime	2 capsules
 PASS	3913	Take 2 capsules (200 mg) by mouth 2 times per day	take 2 capsules (200 mg) by mouth 2 times per day	4 capsules
@@ -4048,7 +4046,7 @@ PASS	4047	Take 1 capsule (0.6 mg) by mouth 2 times per day	take 1 capsule (0.6 m
 PASS	4048	Take 1 capsule (10,000 units) by mouth weekly	take 1 capsule (10000 iu) by mouth every week	1 capsule
 FAIL	4049	Take 1 capsule (20 mg) by mouth daily 1 hour before a meal	None	Syntax error: unexpected 'a' at Ln 1, Col 52|Text from the original sig was not parsed: 'take 1 capsule (20 mg) by mouth daily 1 hour before a meal'|Not all dosages high confidence
 PASS	4050	Take 1 capsule (150 mg) by mouth every 6 hours for 10 days	take 1 capsule (150 mg) by mouth every 6 hours for 10 days	4 capsules
-FAIL	4051	Take 1 capsule (50 mg) by mouth daily before breakfast in the morning	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (50 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
+FAIL	4051	Take 1 capsule (50 mg) by mouth daily before breakfast in the morning	None	Ambiguous event timing directions 'every day before breakfast and in the morning'|Text from the original sig was not parsed: 'take 1 capsule (50 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
 PASS	4052	Take 1 capsule (300 mg) by mouth every 12 hours for 5 days	take 1 capsule (300 mg) by mouth every 12 hours for 5 days	2 capsules
 PASS	4053	Take 1 capsule (30 mg) by mouth daily at bedtime as needed for insomnia	take 1 capsule (30 mg) by mouth every day at bedtime as needed for insomnia	1 capsule
 PASS	4054	take one three times a day	take 1 3 times every day	3
@@ -4103,7 +4101,7 @@ PASS	4102	TAKE ONE TABLET BY MOUTH EVERY DAY AS DIRECTED	take 1 tablet by mouth 
 PASS	4103	take one po q HS	take 1 by mouth every day at bedtime	1
 FAIL	4104	Take half of a tablet (250 mg) by mouth every 8 hours for 7 days	None	Syntax error: unexpected 'of' at Ln 1, Col 9|Text from the original sig was not parsed: 'take 0.5 of a tablet (250 mg) by mouth every 8 hours for 7 days'|Not all dosages high confidence
 PASS	4105	TAKE ONE (1) TABLET BY MOUTH TWICE DAILY	take 1 tablet by mouth 2 times every day	2 tablets
-FAIL	4106	TAKE 1 TABLET BY MOUTH DAILY WITH BREAKFAST OR THE FIRST MAIN MEAL OF THE DAY	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 34|Syntax error: unexpected 'the' at Ln 1, Col 47|Syntax error: unexpected 'meal' at Ln 1, Col 62|Text from the original sig was not parsed: 'take 1 tablet by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
+FAIL	4106	TAKE 1 TABLET BY MOUTH DAILY WITH BREAKFAST OR THE FIRST MAIN MEAL OF THE DAY	None	Ambiguous expression: 'withbreakfast'|Syntax error: unexpected 'the' at Ln 1, Col 47|Syntax error: unexpected 'meal' at Ln 1, Col 62|Text from the original sig was not parsed: 'take 1 tablet by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
 PASS	4107	Take 1 tablet (50 mg) by mouth 2 times per day prn	take 1 tablet (50 mg) by mouth 2 times per day as needed	2 tablets
 PASS	4108	Take 1 tablet (50 mg) by mouth bid prn	take 1 tablet (50 mg) by mouth 2 times every day as needed	2 tablets
 PASS	4109	Take 1 tablet (50 mg) by mouth twice a day as needed	take 1 tablet (50 mg) by mouth 2 times every day as needed	2 tablets
@@ -4245,7 +4243,7 @@ PASS	4244	Take 1 tablet every night	take 1 tablet at night	1 tablet
 FAIL	4245	TAKE 1 TABLET(500 MG) BY MOUTH TWICE DAILY WITH FOOD OR MILK	None	Syntax error: unexpected 'milk' at Ln 1, Col 58|Text from the original sig was not parsed: 'take 1 tablet(500 mg) by mouth 2 times daily with food or milk'|Not all dosages high confidence
 PASS	4246	Take 1 capsule (36 mg) by mouth every 12 hours with food	take 1 capsule (36 mg) by mouth every 12 hours with food	2 capsules
 FAIL	4247	Take 1 capsule (500 mg) by mouth every 6 hours for 7 days 1 hour before or 2 hours after a meal	None	Syntax error: unexpected 'or' at Ln 1, Col 72|Syntax error: unexpected 'hours' at Ln 1, Col 77|Text from the original sig was not parsed: 'take 1 capsule (500 mg) by mouth every 6 hours for 7 days 1 hour before or 2 hours after a meal'|Not all dosages high confidence
-PASS	4248	Take 1 capsule (200 mg) by mouth daily after meal for joint pain	take 1 capsule (200 mg) by mouth every day after meal for joint pain	1 capsule
+PASS	4248	Take 1 capsule (200 mg) by mouth daily after meal for joint pain	take 1 capsule (200 mg) by mouth every day after meals for joint pain	1 capsule
 PASS	4249	Take 1 capsule (20 mg) by mouth daily in the morning FOR ADHD	take 1 capsule (20 mg) by mouth every day in the morning for adhd	1 capsule
 FAIL	4250	SIG: One tablet BID	None	Syntax error: unexpected 'sig' at Ln 1, Col 0|Ambiguous expression: 'bid'|Text from the original sig was not parsed: 'sig 1 tablet bid'|Not all dosages high confidence
 PASS	4251	Take 1 tablet (100 mg) by mouth daily for blood pressure	take 1 tablet (100 mg) by mouth every day for blood pressure	1 tablet
@@ -4326,7 +4324,7 @@ PASS	4325	Take 1 tablet (150 mg) by mouth every 12 hours	take 1 tablet (150 mg) 
 FAIL	4326	TAKE 1 TABLET BY MOUTH THREE TIMES DAILY WITH FOOD OR MILK	None	Syntax error: unexpected 'milk' at Ln 1, Col 50|Text from the original sig was not parsed: 'take 1 tablet by mouth 3 times daily with food or milk'|Not all dosages high confidence
 FAIL	4327	TAKE 1 TABLET BY MOUTH ONCE DAILY IF NEEDED	None	Syntax error: unexpected 'needed' at Ln 1, Col 39|Text from the original sig was not parsed: 'take 1 tablet by mouth 1 time daily if needed'|Not all dosages high confidence
 PASS	4328	Take one tablet (20 mg) by mouth daily	take 1 tablet (20 mg) by mouth every day	1 tablet
-FAIL	4329	Take one tablet after dinner	None	Syntax error: unexpected 'dinner' at Ln 1, Col 20|Text from the original sig was not parsed: 'take 1 tablet after dinner'|Not all dosages high confidence
+PASS	4329	Take one tablet after dinner	take 1 tablet after dinner	1 tablet
 PASS	4330	take one tab po bid PRN	take 1 tablet by mouth 2 times every day as needed	2 tablets
 PASS	4331	Take one tablet by mouth each morning	take 1 tablet by mouth in the morning	1 tablet
 FAIL	4332	Take as directed orally for colonoscopy bowel preparation	None	Syntax error: unexpected 'as' at Ln 1, Col 5|Text from the original sig was not parsed: 'take as directed orally for colonoscopy bowel preparation'|Not all dosages high confidence
@@ -4360,7 +4358,7 @@ PASS	4359	1 tab PO at 6 PM	1 tablet by mouth at 18:00	1 tablet
 PASS	4360	1 tab at bedtime as needed for insomnia	1 tablet at bedtime as needed for insomnia	1 tablet
 PASS	4361	1 tab twice daily as needed for anxiety	1 tablet 2 times every day as needed for anxiety	2 tablets
 PASS	4362	1 tablet by mouth one time a day	1 tablet by mouth every day	1 tablet
-PASS	4363	1 po qd with meal	1 by mouth every day with meal	1
+PASS	4363	1 po qd with meal	1 by mouth every day with meals	1
 FAIL	4364	1 in am	None	Syntax error: unexpected 'am' at Ln 1, Col 5|Text from the original sig was not parsed: '1 in am'|Not all dosages high confidence
 PASS	4365	1 po hs prn insomnia	1 by mouth at bedtime as needed for insomnia	1
 PASS	4366	1 capsule orally 3 times per day before meals	1 capsule by mouth 3 times per day before meals	3 capsules
@@ -4375,7 +4373,6 @@ PASS	4374	Take 2 capsule (200 mg) by mouth 2 times per day	take 2 capsules (200 
 PASS	4375	take 1 tablet twice a day for 10 days	take 1 tablet 2 times every day for 10 days	2 tablets
 FAIL	4376	Take as prescribed	None	Syntax error: unexpected 'as' at Ln 1, Col 5|Text from the original sig was not parsed: 'take as prescribed'|Not all dosages high confidence
 PASS	4377	take one capsule bid	take 1 capsule 2 times every day	2 capsules
-FAIL	4378	Take one (1) tablet po q 8 hours prn pain. Chronic non-acute pain. (ICD10 = M51.26; M54.5; G89.4).	None	Ambiguous expression: 'non'|Syntax error: unexpected '-' at Ln 1, Col 47|Syntax error: unexpected 'pain' at Ln 1, Col 54|Text from the original sig was not parsed: 'take 1 tablet po q 8 hours prn pain chronic non-acute pain (icd10 = m51.26 m54.5 g89.4)'|Not all dosages high confidence
 PASS	4379	Take 3 tablets by mouth daily at bedtime	take 3 tablets by mouth every day at bedtime	3 tablets
 FAIL	4380	Take 1 tablet (150 mg) by mouth once	None	Syntax error: unexpected '<EOF>' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 1 tablet (150 mg) by mouth 1 time'|Not all dosages high confidence
 FAIL	4381	Take 1 tablet (15 mg) by mouth daily before bedtime in the evening	None	Syntax error: unexpected 'bedtime' at Ln 1, Col 44|Text from the original sig was not parsed: 'take 1 tablet (15 mg) by mouth daily before bedtime in the evening'|Not all dosages high confidence
@@ -4404,7 +4401,7 @@ PASS	4403	2 tablets SL, QD. Do not swallow	2 tablets sublingually every day do n
 FAIL	4404	Take 1 tab Q am	None	Syntax error: unexpected 'am' at Ln 1, Col 13|Text from the original sig was not parsed: 'take 1 tab q am'|Not all dosages high confidence
 PASS	4405	Take 1 capsule (300 mg) by mouth twice daily	take 1 capsule (300 mg) by mouth 2 times every day	2 capsules
 PASS	4406	Take 1 cap by mouth daily	take 1 capsule by mouth every day	1 capsule
-FAIL	4407	Take 1 capsule (20 mg) by mouth 1 times per day 30 minutes before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 66|Text from the original sig was not parsed: 'take 1 capsule (20 mg) by mouth 1 times per day 30 minutes before meals'|Not all dosages high confidence
+FAIL	4407	Take 1 capsule (20 mg) by mouth 1 times per day 30 minutes before meals	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 1 capsule (20 mg) by mouth 1 times per day 30 minutes before meals'|Not all dosages high confidence
 PASS	4408	Take 1 capsule (100 mg) by mouth every 12 hours for 3 days with food	take 1 capsule (100 mg) by mouth every 12 hours with food for 3 days	2 capsules
 PASS	4409	Take 1 tablet (100 mg) by mouth every 6 hours as needed	take 1 tablet (100 mg) by mouth every 6 hours as needed	4 tablets
 PASS	4410	two tablets daily	2 tablets every day	2 tablets
@@ -4474,7 +4471,7 @@ PASS	4473	1 capsule ONCE A DAY	1 capsule every day	1 capsule
 FAIL	4474	1 gtt OU qd hs	None	Syntax error: unexpected 'qd' at Ln 1, Col 9|Text from the original sig was not parsed: '1 gtt ou qd hs'|Not all dosages high confidence
 FAIL	4475	1 PO Q EVE	None	Syntax error: unexpected 'eve' at Ln 1, Col 7|Text from the original sig was not parsed: '1 po q eve'|Not all dosages high confidence
 FAIL	4476	1 po q evening	None	Syntax error: unexpected 'evening' at Ln 1, Col 7|Ambiguous expression: 'evening'|Text from the original sig was not parsed: '1 po q evening'|Not all dosages high confidence
-PASS	4477	1 po qpm prn	1 by mouth every day afternoon as needed	1
+PASS	4477	1 po qpm prn	1 by mouth every day after noon as needed	1
 PASS	4478	1 tab p o q daily	1 tablet by mouth every day	1 tablet
 PASS	4479	1 tab PO bid with meals	1 tablet by mouth 2 times every day with meals	2 tablets
 PASS	4480	1 TAB PO BID.	1 tablet by mouth 2 times every day	2 tablets
@@ -4496,8 +4493,8 @@ PASS	4495	one tab po  daily	1 tablet by mouth every day	1 tablet
 FAIL	4496	ONE TAB 6 HOURS AS PRN	None	Syntax error: unexpected 'as' at Ln 1, Col 14|Text from the original sig was not parsed: '1 tab 6 hours as prn'|Not all dosages high confidence
 FAIL	4497	Apply to sutures QID for 7-10 days after surgery	None	Syntax error: unexpected 'to' at Ln 1, Col 6|Syntax error: unexpected 'qid' at Ln 1, Col 17|Text from the original sig was not parsed: 'apply to sutures qid for 7-10 days after surgery'|Not all dosages high confidence
 PASS	4498	3 tablets daily	3 tablets every day	3 tablets
-FAIL	4499	2 AND 1/2 TABLETS SUBLINGUALLY DAILY ; F11.20 ICD 10 ; EXEMPT	None	Syntax error: unexpected 'tablets' at Ln 1, Col 10|Text from the original sig was not parsed: '2 and 0.5 tablets sublingually daily f11.20 icd 10 exempt'|Not all dosages high confidence
-FAIL	4500	take 1 tab p.o. q6hrs Non-acute pain	None	Syntax error: unexpected '-' at Ln 1, Col 24|Text from the original sig was not parsed: 'take 1 tab p o q6hrs non-acute pain'|Not all dosages high confidence
+PASS	4499	2 1/2 TABLETS SUBLINGUALLY DAILY	2.5 tablets sublingually every day	2.5 tablets
+FAIL	4500	take 1 tab p.o. q6hrs Non-acute pain	None	Syntax error: unexpected 'pain' at Ln 1, Col 31|Text from the original sig was not parsed: 'take 1 tab p o q6hrs non-acute pain'|Not all dosages high confidence
 PASS	4501	TAKE 1 TABLET  BY MOUTH DAILY	take 1 tablet by mouth every day	1 tablet
 PASS	4502	Take 1 tablet (0.125 mg) every 4 hours as needed	take 1 tablet (0.125 mg) every 4 hours as needed	6 tablets
 PASS	4503	Take 1 tablet (0.5 mg) by mouth once a day as needed for anxiety	take 1 tablet (0.5 mg) by mouth every day as needed for anxiety	1 tablet
@@ -4532,7 +4529,7 @@ PASS	4531	Take 1 capsule by mouth 3 times per day	take 1 capsule by mouth 3 time
 PASS	4532	Take 1 capsule by mouth bid	take 1 capsule by mouth 2 times every day	2 capsules
 PASS	4533	Take 1 capsule (40 mg) by mouth daily with food	take 1 capsule (40 mg) by mouth every day with food	1 capsule
 PASS	4534	Take 1 tablet (0.35 mg) by mouth daily	take 1 tablet (0.35 mg) by mouth every day	1 tablet
-FAIL	4535	Take 1 tab PO after dinner	None	Syntax error: unexpected 'dinner' at Ln 1, Col 20|Text from the original sig was not parsed: 'take 1 tab po after dinner'|Not all dosages high confidence
+PASS	4535	Take 1 tab PO after dinner	take 1 tablet by mouth after dinner	1 tablet
 PASS	4536	take 1 po Q daily	take 1 by mouth every day	1
 PASS	4537	Take 1 tablet (1 mg) by mouth 2 times per day as needed.	take 1 tablet (1 mg) by mouth 2 times per day as needed	2 tablets
 PASS	4538	Take 1 tablet (10 mEq) by mouth 1 time per day with food	take 1 tablet (10 meq) by mouth once per day with food	1 tablet
@@ -4571,13 +4568,13 @@ PASS	4570	TAKE 1 TABLET (500 MG) BY MOUTH 2 TIMES PER DAY WITH MEALS FOR DIABETE
 FAIL	4571	Take 1 tablet (5 mg) by mouth one time at onset of headache may repeat after 2 hours up to 10 mg per 24 hours as needed	None	Syntax error: unexpected 'at' at Ln 1, Col 37|Syntax error: unexpected 'of' at Ln 1, Col 46|Text from the original sig was not parsed: 'take 1 tablet (5 mg) by mouth 1 time at onset of headache may repeat after 2 hours up to 10 mg per 24 hours as needed'|Not all dosages high confidence
 PASS	4572	Take 1 tablet (50 mg) by mouth 1 times per day with food	take 1 tablet (50 mg) by mouth once per day with food	1 tablet
 PASS	4573	Take 1 tablet (500 mg) by mouth once daily	take 1 tablet (500 mg) by mouth every day	1 tablet
-FAIL	4574	Take 1 tablet by mouth once daily with breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 41|Text from the original sig was not parsed: 'take 1 tablet by mouth 1 time daily with breakfast'|Not all dosages high confidence
+PASS	4574	Take 1 tablet by mouth once daily with breakfast	take 1 tablet by mouth every day with breakfast	1 tablet
 PASS	4575	Take 1 tablet (5 mg) by mouth 4 times per day	take 1 tablet (5 mg) by mouth 4 times per day	4 tablets
 PASS	4576	Take 1 tablet (30 mg) by mouth every 8 hours as needed	take 1 tablet (30 mg) by mouth every 8 hours as needed	3 tablets
 PASS	4577	Take 1 tablet (250 mg) by mouth daily for 3 days	take 1 tablet (250 mg) by mouth every day for 3 days	1 tablet
 PASS	4578	Take 1 tablet (200 mg) by mouth twice daily	take 1 tablet (200 mg) by mouth 2 times every day	2 tablets
 PASS	4579	Take 1 tablet (20 mg) by mouth at night	take 1 tablet (20 mg) by mouth at night	1 tablet
-FAIL	4580	Take 1 tablet (15 mg) by mouth daily in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 44|Text from the original sig was not parsed: 'take 1 tablet (15 mg) by mouth daily in the afternoon'|Not all dosages high confidence
+PASS	4580	Take 1 tablet (15 mg) by mouth daily in the afternoon	take 1 tablet (15 mg) by mouth every day in the afternoon	1 tablet
 FAIL	4581	USE 1 INHALATION TWICE A DAY	None	Syntax error: unexpected '2' at Ln 1, Col 17|Text from the original sig was not parsed: 'use 1 inhalation 2 times a day'|Not all dosages high confidence
 FAIL	4582	TRI CAO MAU*** UONG 1 VIEN MOI NGAY 1 LAN	None	Syntax error: unexpected 'tri' at Ln 1, Col 0|Syntax error: unexpected '1' at Ln 1, Col 17|Text from the original sig was not parsed: 'tri cao mau uong 1 vien moi ngay 1 lan'|Not all dosages high confidence
 FAIL	4583	use as directed BID	None	Syntax error: unexpected 'as' at Ln 1, Col 4|Text from the original sig was not parsed: 'use as directed bid'|Not all dosages high confidence
@@ -4588,7 +4585,7 @@ FAIL	4587	1 INHALATION DAILY	None	Syntax error: unexpected 'daily' at Ln 1, Col 
 PASS	4588	1 po q day prn anxiety	1 by mouth every day as needed for anxiety	1
 FAIL	4589	1 po qd am	None	Ambiguous expression: 'qd'|Syntax error: unexpected 'am' at Ln 1, Col 8|Text from the original sig was not parsed: '1 po qd am'|Not all dosages high confidence
 PASS	4590	1 tablet 3 times daily	1 tablet 3 times every day	3 tablets
-FAIL	4591	1 tab PO Q afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 11|Text from the original sig was not parsed: '1 tab po q afternoon'|Not all dosages high confidence
+FAIL	4591	1 tab PO Q afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 11|Ambiguous expression: 'afternoon'|Text from the original sig was not parsed: '1 tab po q afternoon'|Not all dosages high confidence
 FAIL	4592	1 tab po qnoon	None	Not all dosages high confidence
 PASS	4593	1 tablet orally every 8 hours as needed FOR CHRONIC PAIN	1 tablet by mouth every 8 hours as needed for chronic pain	3 tablets
 PASS	4594	1 tablet orally every 8 hours	1 tablet by mouth every 8 hours	3 tablets
@@ -4621,7 +4618,7 @@ FAIL	4620	Take 1 capsule (50 mg) by mouth daily at bedtime with food or milk	Non
 PASS	4621	Take 1 capsule (30 mg) by mouth twice a day	take 1 capsule (30 mg) by mouth 2 times every day	2 capsules
 PASS	4622	Take 1 capsule by mouth every 12 hours for indigestion	take 1 capsule by mouth every 12 hours for indigestion	2 capsules
 PASS	4623	TAKE 1 CAPSULE BY MOUTH EVERY 8 HOURS AS NEEDED	take 1 capsule by mouth every 8 hours as needed	3 capsules
-FAIL	4624	Take 1 capsule (60 mg) by mouth daily before breakfast in the morning	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (60 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
+FAIL	4624	Take 1 capsule (60 mg) by mouth daily before breakfast in the morning	None	Ambiguous event timing directions 'every day before breakfast and in the morning'|Text from the original sig was not parsed: 'take 1 capsule (60 mg) by mouth daily before breakfast in the morning'|Not all dosages high confidence
 PASS	4625	Take 1 capsule (500 mg) by mouth daily	take 1 capsule (500 mg) by mouth every day	1 capsule
 PASS	4626	Take 1 capsule (100 mg) by mouth every 12 hours for 21 days	take 1 capsule (100 mg) by mouth every 12 hours for 21 days	2 capsules
 PASS	4627	Take 1 capsule (20 mg) by mouth QAM	take 1 capsule (20 mg) by mouth every day in the morning	1 capsule
@@ -4833,10 +4830,10 @@ PASS	4832	Take 3 Tabs PO daily	take 3 tablets by mouth every day	3 tablets
 FAIL	4833	take once a day	None	Syntax error: unexpected 'time' at Ln 1, Col 7|Text from the original sig was not parsed: 'take 1 time a day'|Not all dosages high confidence
 PASS	4834	take one tablet four times daily	take 1 tablet 4 times every day	4 tablets
 FAIL	4835	TAKE ONE CAPSULE BY MOUTH ONCE DAILY 30 MINUTOS BEFORE BREAKFAST	None	Ambiguous expression: '30minutos'|Syntax error: unexpected 'before' at Ln 1, Col 48|Text from the original sig was not parsed: 'take 1 capsule by mouth 1 time daily 30 minutos before breakfast'|Not all dosages high confidence
-FAIL	4836	TAKE ONE CAPSULE BY MOUTH TWICE A DAY 30 MINUTES BEFORE MEALS	None	Syntax error: unexpected 'meals' at Ln 1, Col 56|Text from the original sig was not parsed: 'take 1 capsule by mouth 2 times a day 30 minutes before meals'|Not all dosages high confidence
+FAIL	4836	TAKE ONE CAPSULE BY MOUTH TWICE A DAY 30 MINUTES BEFORE MEALS	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 1 capsule by mouth 2 times a day 30 minutes before meals'|Not all dosages high confidence
 FAIL	4837	Take 1 tablet (5 mg) by mouth daily in PM	None	Syntax error: unexpected 'pm' at Ln 1, Col 39|Text from the original sig was not parsed: 'take 1 tablet (5 mg) by mouth daily in pm'|Not all dosages high confidence
 PASS	4838	Take 1 tablet (4 mg) by mouth 4 times per day as needed	take 1 tablet (4 mg) by mouth 4 times per day as needed	4 tablets
-FAIL	4839	Take 1 tablet (40 mg) by mouth daily 30 minutes before breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 55|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily 30 minutes before breakfast'|Not all dosages high confidence
+FAIL	4839	Take 1 tablet (40 mg) by mouth daily 30 minutes before breakfast	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before breakfast'|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily 30 minutes before breakfast'|Not all dosages high confidence
 PASS	4840	Take 1 tablet (4 mg) by mouth 1 times per day as needed	take 1 tablet (4 mg) by mouth once per day as needed	1 tablet
 PASS	4841	Take 1 tablet (30 mg) by mouth 1 times per day	take 1 tablet (30 mg) by mouth once per day	1 tablet
 PASS	4842	Take 1 tablet (30 mg) by mouth twice a day	take 1 tablet (30 mg) by mouth 2 times every day	2 tablets
@@ -4850,7 +4847,7 @@ PASS	4849	1 QID for pain	1 4 times every day for pain	4
 PASS	4850	1 tab sl bid prn pain	1 tablet sublingually 2 times every day as needed for pain	2 tablets
 PASS	4851	1 tab q 8 h	1 tablet every 8 hours	3 tablets
 PASS	4852	1 tablet orally every 6 to 8 hours as needed	1 tablet by mouth every 6-8 hours as needed	4 tablets
-FAIL	4853	1 tablet orally every 12 hours as needed non-acute pain	None	Syntax error: unexpected '-' at Ln 1, Col 44|Syntax error: unexpected 'pain' at Ln 1, Col 51|Text from the original sig was not parsed: '1 tablet orally every 12 hours as needed non-acute pain'|Not all dosages high confidence
+PASS	4853	1 tablet orally every 12 hours as needed non-acute pain	1 tablet by mouth every 12 hours as needed for non-acute pain	2 tablets
 PASS	4854	1 tablets orally every 6 hours as needed	1 tablet by mouth every 6 hours as needed	4 tablets
 PASS	4855	1.5 QD	1.5 every day	1.5
 PASS	4856	INHALE 2 PUFFS BY MOUTH EVERY 4 HOURS AS NEEDED FOR SHORTNESS OF BREATH	inhale 2 puffs by mouth every 4 hours as needed for shortness of breath	12 puffs
@@ -4876,7 +4873,7 @@ FAIL	4875	Take 1 tablet (100 mg) by mouth daily as needed at bedtime for insomni
 PASS	4876	Take 1 tablet (0.5 mg) by mouth daily PRN for anxiety	take 1 tablet (0.5 mg) by mouth every day as needed for anxiety	1 tablet
 PASS	4877	Take 1 tab po q hs.	take 1 tablet by mouth every day at bedtime	1 tablet
 FAIL	4878	Take 1 tab nightly	None	Not all dosages high confidence
-FAIL	4879	TAKE 1 CAPSULE(20 MG) BY MOUTH TWICE DAILY 30 MINUTES BEFORE MEALS	None	Syntax error: unexpected 'meals' at Ln 1, Col 63|Text from the original sig was not parsed: 'take 1 capsule(20 mg) by mouth 2 times daily 30 minutes before meals'|Not all dosages high confidence
+FAIL	4879	TAKE 1 CAPSULE(20 MG) BY MOUTH TWICE DAILY 30 MINUTES BEFORE MEALS	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 1 capsule(20 mg) by mouth 2 times daily 30 minutes before meals'|Not all dosages high confidence
 PASS	4880	Take 1 1/2 tablet (75 mg) by mouth daily	take 1.5 tablets (75 mg) by mouth every day	1.5 tablets
 PASS	4881	Take 1 capsule (100 mg) by mouth every 8 hours	take 1 capsule (100 mg) by mouth every 8 hours	3 capsules
 PASS	4882	Take 1 capsule (112 mcg) by mouth daily in the morning on an empty stomach	take 1 capsule (112 mcg) by mouth every day in the morning on an empty stomach	1 capsule
@@ -4978,7 +4975,7 @@ PASS	4977	Take 1 tablet (50 mg) by mouth 4 times per day with food	take 1 tablet
 PASS	4978	TAKE 1 TABLET (5 MG) BY MOUTH DAILY AT BEDTIME.	take 1 tablet (5 mg) by mouth every day at bedtime	1 tablet
 FAIL	4979	Take 1 tablet (30 mg) by mouth daily before bedtime in the evening	None	Syntax error: unexpected 'bedtime' at Ln 1, Col 44|Text from the original sig was not parsed: 'take 1 tablet (30 mg) by mouth daily before bedtime in the evening'|Not all dosages high confidence
 PASS	4980	Take 1 Tablet (300 mg) by mouth daily in the morning.	take 1 tablet (300 mg) by mouth every day in the morning	1 tablet
-FAIL	4981	Take 1 tablet (25 mg) by mouth 3 times per day 1 hour before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 61|Text from the original sig was not parsed: 'take 1 tablet (25 mg) by mouth 3 times per day 1 hour before meals'|Not all dosages high confidence
+FAIL	4981	Take 1 tablet (25 mg) by mouth 3 times per day 1 hour before meals	None	Identified an administration timing, but cannot parse offset timings yet '1 hour before meals'|Text from the original sig was not parsed: 'take 1 tablet (25 mg) by mouth 3 times per day 1 hour before meals'|Not all dosages high confidence
 PASS	4982	Take 1 tablet (15 mg) by mouth daily with food prn pain	take 1 tablet (15 mg) by mouth every day with food as needed for pain	1 tablet
 PASS	4983	Take 1 tablet (15 mg) by mouth daily for pain	take 1 tablet (15 mg) by mouth every day for pain	1 tablet
 FAIL	4984	USE 2 INHALATIONS TWICE A DAY	None	Syntax error: unexpected '2' at Ln 1, Col 18|Text from the original sig was not parsed: 'use 2 inhalations 2 times a day'|Not all dosages high confidence
@@ -5024,7 +5021,7 @@ PASS	5023	Take 1 capsule (500 mg) by mouth 3 times per day for 7 days	take 1 cap
 PASS	5024	Take 1 capsule (40 mg) by mouth daily on an empty stomach	take 1 capsule (40 mg) by mouth every day on an empty stomach	1 capsule
 PASS	5025	Take 1 capsule (40 mg) by mouth daily.	take 1 capsule (40 mg) by mouth every day	1 capsule
 PASS	5026	TAKE 1 CAPSULE (1.25 MG) BY MOUTH DAILY	take 1 capsule (1.25 mg) by mouth every day	1 capsule
-FAIL	5027	Take 1 capsule (10 mg) by mouth daily in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (10 mg) by mouth daily in the afternoon'|Not all dosages high confidence
+PASS	5027	Take 1 capsule (10 mg) by mouth daily in the afternoon	take 1 capsule (10 mg) by mouth every day in the afternoon	1 capsule
 FAIL	5028	T po q HS	None	Syntax error: unexpected 't' at Ln 1, Col 0|Text from the original sig was not parsed: 't po q hs'|Not all dosages high confidence
 PASS	5029	TAKE ONE TABLET ONCE A WEEK	take 1 tablet every week	1 tablet
 PASS	5030	Take 1 tablet (40 mg) by mouth q hs	take 1 tablet (40 mg) by mouth every day at bedtime	1 tablet
@@ -5055,7 +5052,7 @@ PASS	5054	Take 1/2 tablet (50 mg) by mouth daily	take 0.5 tablet (50 mg) by mout
 PASS	5055	TAKE 1 TO 2 TABLETS BY MOUTH AT BEDTIME AS NEEDED FOR INSOMNIA	take 1-2 tablets by mouth at bedtime as needed for insomnia	2 tablets
 PASS	5056	take 1-2 tablets at bedtime	take 1-2 tablets at bedtime	2 tablets
 FAIL	5057	Take 2 tablets (20 mg) by mouth one time	None	Syntax error: unexpected '<EOF>' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 2 tablets (20 mg) by mouth 1 time'|Not all dosages high confidence
-FAIL	5058	Take 2 tablets (10 mg) by mouth 2 times per day 30 minutes before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 66|Text from the original sig was not parsed: 'take 2 tablets (10 mg) by mouth 2 times per day 30 minutes before meals'|Not all dosages high confidence
+FAIL	5058	Take 2 tablets (10 mg) by mouth 2 times per day 30 minutes before meals	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 2 tablets (10 mg) by mouth 2 times per day 30 minutes before meals'|Not all dosages high confidence
 FAIL	5059	T po q daily	None	Syntax error: unexpected 't' at Ln 1, Col 0|Text from the original sig was not parsed: 't po q daily'|Not all dosages high confidence
 PASS	5060	Take 1 capsule (100 mcg) by mouth daily in the morning on an empty stomach	take 1 capsule (100 mcg) by mouth every day in the morning on an empty stomach	1 capsule
 PASS	5061	Take 1 capsule (15 mg) by mouth daily at bedtime as needed for insomnia	take 1 capsule (15 mg) by mouth every day at bedtime as needed for insomnia	1 capsule
@@ -5106,12 +5103,12 @@ FAIL	5105	Take half of a tablet (0.5 mg) by mouth daily	None	Syntax error: unexp
 PASS	5106	TAKE ONE (1) TABLET(S) BY MOUTH EVERY MORNING.	take 1 tablet by mouth in the morning	1 tablet
 FAIL	5107	TAKE ONE TAB PO AM	None	Syntax error: unexpected 'am' at Ln 1, Col 14|Text from the original sig was not parsed: 'take 1 tab po am'|Not all dosages high confidence
 PASS	5108	TAKE ONE TABLET BY MOUTH WEEKLY	take 1 tablet by mouth every week	1 tablet
-FAIL	5109	take 1 tablet 30 minutes before breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 32|Text from the original sig was not parsed: 'take 1 tablet 30 minutes before breakfast'|Not all dosages high confidence
+FAIL	5109	take 1 tablet 30 minutes before breakfast	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before breakfast'|Text from the original sig was not parsed: 'take 1 tablet 30 minutes before breakfast'|Not all dosages high confidence
 FAIL	5110	TAKE 1 TABLET BY MOUTH  DAILY WITH A MEAL	None	Syntax error: unexpected 'a' at Ln 1, Col 34|Text from the original sig was not parsed: 'take 1 tablet by mouth daily with a meal'|Not all dosages high confidence
 PASS	5111	TAKE 1 TABLET BY MOUTH THREE TIMES A DAY WITH MEALS	take 1 tablet by mouth 3 times every day with meals	3 tablets
 PASS	5112	take 1 tablet by mouth qam	take 1 tablet by mouth every day in the morning	1 tablet
 PASS	5113	TAKE 1 TABLET BY MOUTH EVERY 12 HOURS FOR 10 DAYS	take 1 tablet by mouth every 12 hours for 10 days	2 tablets
-FAIL	5114	Take 1 tablet (500 mg) by mouth daily with dinner	None	Syntax error: unexpected 'dinner' at Ln 1, Col 43|Text from the original sig was not parsed: 'take 1 tablet (500 mg) by mouth daily with dinner'|Not all dosages high confidence
+PASS	5114	Take 1 tablet (500 mg) by mouth daily with dinner	take 1 tablet (500 mg) by mouth every day with dinner	1 tablet
 PASS	5115	Take 1 tablet (50 mg) by mouth QD	take 1 tablet (50 mg) by mouth every day	1 tablet
 PASS	5116	Take 1 tablet (400 mg) by mouth every 4 hours as needed	take 1 tablet (400 mg) by mouth every 4 hours as needed	6 tablets
 PASS	5117	Take 1 tablet (30 mg) by mouth every 6- 8 hours as needed Non acute pain	take 1 tablet (30 mg) by mouth every 6-8 hours as needed for non acute pain	4 tablets
@@ -5147,7 +5144,7 @@ PASS	5146	2 per day	2 per day	2
 PASS	5147	2 PUFFS DAILY	2 puffs every day	2 puffs
 PASS	5148	1-2 tabs qhs	1-2 tablets every day at bedtime	2 tablets
 PASS	5149	Take 1 tablet (0.25 mg) by mouth 3 times per day as needed for anxiety	take 1 tablet (0.25 mg) by mouth 3 times per day as needed for anxiety	3 tablets
-PASS	5150	take 1 tab po qpm	take 1 tablet by mouth every day afternoon	1 tablet
+PASS	5150	take 1 tab po qpm	take 1 tablet by mouth every day after noon	1 tablet
 PASS	5151	Take 1 tablet (10 mg) by mouth every morning	take 1 tablet (10 mg) by mouth in the morning	1 tablet
 PASS	5152	Take 1 tablet (10 mg) by mouth one time per day	take 1 tablet (10 mg) by mouth once per day	1 tablet
 PASS	5153	Take 1 tablet (10 mg) by mouth 2 times daily	take 1 tablet (10 mg) by mouth 2 times every day	2 tablets
@@ -5163,7 +5160,7 @@ PASS	5162	TAKE ONE TABLET(S) BY MOUTH DAILY	take 1 tablet by mouth every day	1 t
 FAIL	5163	TOME UNA CAPSULA DOS VECES AL DIA	None	Syntax error: unexpected 'tome' at Ln 1, Col 0|Text from the original sig was not parsed: 'tome una capsula dos veces al dia'|Not all dosages high confidence
 PASS	5164	Take 1 tablet (250 mg) by mouth every 8 hours for 10 days	take 1 tablet (250 mg) by mouth every 8 hours for 10 days	3 tablets
 FAIL	5165	Take 1 tablet (50 mg) by mouth nightly	None	Not all dosages high confidence
-FAIL	5166	Take 1 tablet (8 mg) by mouth 3 times per day 30 minutes before meals	None	Syntax error: unexpected 'meals' at Ln 1, Col 64|Text from the original sig was not parsed: 'take 1 tablet (8 mg) by mouth 3 times per day 30 minutes before meals'|Not all dosages high confidence
+FAIL	5166	Take 1 tablet (8 mg) by mouth 3 times per day 30 minutes before meals	None	Identified an administration timing, but cannot parse offset timings yet '30 minutes before meals'|Text from the original sig was not parsed: 'take 1 tablet (8 mg) by mouth 3 times per day 30 minutes before meals'|Not all dosages high confidence
 PASS	5167	Take 1 tablet (7.5 mg) by mouth 2 times per day as needed	take 1 tablet (7.5 mg) by mouth 2 times per day as needed	2 tablets
 PASS	5168	Take 1 tablet (600 mg) by mouth daily HS	take 1 tablet (600 mg) by mouth every day at bedtime	1 tablet
 PASS	5169	TAKE 1 TABLET BY MOUTH ONCE A DAY AT BEDTIME	take 1 tablet by mouth every day at bedtime	1 tablet
@@ -5280,7 +5277,7 @@ PASS	5279	Take 1 tablet (15 mg) by mouth 2 times per day as needed	take 1 tablet
 PASS	5280	Take 1 capsule TID	take 1 capsule 3 times every day	3 capsules
 PASS	5281	take 1 tab po bid x 10 days	take 1 tablet by mouth 2 times every day for 10 days	2 tablets
 PASS	5282	Take 1 tablet (100 mg) by mouth daily QAM	take 1 tablet (100 mg) by mouth every day in the morning	1 tablet
-FAIL	5283	TAKE 1 TABLET (10 MG) BY MOUTH DAILY AFTER DINNER	None	Syntax error: unexpected 'dinner' at Ln 1, Col 43|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth daily after dinner'|Not all dosages high confidence
+PASS	5283	TAKE 1 TABLET (10 MG) BY MOUTH DAILY AFTER DINNER	take 1 tablet (10 mg) by mouth every day after dinner	1 tablet
 PASS	5284	Take 1 tablet (10 mg) by mouth daily Q HS	take 1 tablet (10 mg) by mouth every day at bedtime	1 tablet
 PASS	5285	Take 1 capsule (15 mg) by mouth twice daily	take 1 capsule (15 mg) by mouth 2 times every day	2 capsules
 FAIL	5286	take 1 cap po in AM	None	Syntax error: unexpected 'am' at Ln 1, Col 17|Text from the original sig was not parsed: 'take 1 cap po in am'|Not all dosages high confidence
@@ -5291,7 +5288,7 @@ PASS	5290	TAKE 1 CAPSULE 3 TIMES A DAY	take 1 capsule 3 times every day	3 capsul
 PASS	5291	Take 1 capsule (50,000 units) by mouth weekly for osteoporosis	take 1 capsule (50000 iu) by mouth every week for osteoporosis	1 capsule
 FAIL	5292	USE 1 SPRAY IN EACH NOSTRIL EVERY DAY	None	Syntax error: unexpected 'nostril' at Ln 1, Col 20|Ambiguous expression: 'everyday'|Text from the original sig was not parsed: 'use 1 spray in each nostril every day'|Not all dosages high confidence
 FAIL	5293	take one tablet q am	None	Syntax error: unexpected 'am' at Ln 1, Col 16|Text from the original sig was not parsed: 'take 1 tablet q am'|Not all dosages high confidence
-PASS	5294	Take one tablet QPM	take 1 tablet every day afternoon	1 tablet
+PASS	5294	Take one tablet QPM	take 1 tablet every day after noon	1 tablet
 FAIL	5295	Take one tablet qPM. Take also 100mg CoQ10 daily	None	Ambiguous expression: 'qpm'|Syntax error: unexpected 'also' at Ln 1, Col 23|Syntax error: unexpected '10' at Ln 1, Col 37|Text from the original sig was not parsed: 'take 1 tablet qpm take also 100mg coq10 daily'|Not all dosages high confidence
 FAIL	5296	Take Pack as directed	None	Syntax error: unexpected 'pack' at Ln 1, Col 5|Syntax error: unexpected 'as' at Ln 1, Col 10|Text from the original sig was not parsed: 'take pack as directed'|Not all dosages high confidence
 FAIL	5297	TOME UNA TABLETA DIARIAMENTE	None	Syntax error: unexpected 'tome' at Ln 1, Col 0|Text from the original sig was not parsed: 'tome una tableta diariamente'|Not all dosages high confidence
@@ -5350,7 +5347,7 @@ FAIL	5349	one poxbid	None	Not all dosages high confidence
 PASS	5350	one po qd for blood pressure	1 by mouth every day for blood pressure	1
 FAIL	5351	ii po qhs	None	Syntax error: unexpected 'ii' at Ln 1, Col 0|Syntax error: unexpected 'po' at Ln 1, Col 3|Text from the original sig was not parsed: 'ii po qhs'|Not all dosages high confidence
 FAIL	5352	i po bid prn	None	Syntax error: unexpected 'i' at Ln 1, Col 0|Syntax error: unexpected 'po' at Ln 1, Col 2|Text from the original sig was not parsed: 'i po bid prn'|Not all dosages high confidence
-FAIL	5353	Chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: 'chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime'|Not all dosages high confidence
+FAIL	5353	Chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime	None	Ambiguous frequency: contradicting directions '4 times per day with meals and at bedtime'|Text from the original sig was not parsed: 'chew and swallow 2 tablets (524 mg) by mouth 4 times per day with meals and at bedtime'|Not all dosages high confidence
 PASS	5354	One cap qd	1 capsule every day	1 capsule
 FAIL	5355	1/day	None	Syntax error: unexpected '/' at Ln 1, Col 1|Text from the original sig was not parsed: '1/day'|Not all dosages high confidence
 PASS	5356	1/2 tab QID	0.5 tablet 4 times every day	2 tablets
@@ -5393,10 +5390,10 @@ PASS	5392	Take 1 tablet (50 mg) by mouth daily for high blood pressure	take 1 ta
 PASS	5393	Take 1 tablet (500 mg) by mouth BID for 7 days	take 1 tablet (500 mg) by mouth 2 times every day for 7 days	2 tablets
 PASS	5394	Take 1 tablet (50 mg) by mouth bid as needed for pain	take 1 tablet (50 mg) by mouth 2 times every day as needed for pain	2 tablets
 PASS	5395	Take 1 tablet (5 mg) by mouth daily in the morning.	take 1 tablet (5 mg) by mouth every day in the morning	1 tablet
-PASS	5396	Take 1 tablet (20 mg) by mouth QPM	take 1 tablet (20 mg) by mouth every day afternoon	1 tablet
+PASS	5396	Take 1 tablet (20 mg) by mouth QPM	take 1 tablet (20 mg) by mouth every day after noon	1 tablet
 PASS	5397	Take 1 tablet (20 mg) by mouth every evening	take 1 tablet (20 mg) by mouth at night	1 tablet
 PASS	5398	Take 1 tablet (25 mg) by mouth every 6 hours as needed for itching	take 1 tablet (25 mg) by mouth every 6 hours as needed for itching	4 tablets
-FAIL	5399	TAKE 1 TABLET (40 MG) BY MOUTH DAILY 1/2 HOUR BEFORE BREAKFAST	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 53|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily 0.5 hour before breakfast'|Not all dosages high confidence
+FAIL	5399	TAKE 1 TABLET (40 MG) BY MOUTH DAILY 1/2 HOUR BEFORE BREAKFAST	None	Identified an administration timing, but cannot parse offset timings yet '0.5 hour before breakfast'|Text from the original sig was not parsed: 'take 1 tablet (40 mg) by mouth daily 0.5 hour before breakfast'|Not all dosages high confidence
 PASS	5400	Take 1 tablet (4 mg) by mouth every 12 hours for 5 days	take 1 tablet (4 mg) by mouth every 12 hours for 5 days	2 tablets
 PASS	5401	Take 1 tablet (40 mg) by mouth every evening	take 1 tablet (40 mg) by mouth at night	1 tablet
 FAIL	5402	test 2 times per day	None	Syntax error: unexpected 'test' at Ln 1, Col 0|Syntax error: unexpected 'times' at Ln 1, Col 7|Text from the original sig was not parsed: 'test 2 times per day'|Not all dosages high confidence
@@ -5443,7 +5440,7 @@ PASS	5442	Take 1 capsule (100 mg) by mouth 3 times per day PRN	take 1 capsule (1
 FAIL	5443	TAKE 1 AND 1/2 TABLETS BY MOUTH EVERY MORNING	None	Syntax error: unexpected 'tablets' at Ln 1, Col 15|Text from the original sig was not parsed: 'take 1 and 0.5 tablets by mouth every morning'|Not all dosages high confidence
 FAIL	5444	SL FILM BID	None	Syntax error: unexpected 'sl' at Ln 1, Col 0|Text from the original sig was not parsed: 'sl film bid'|Not all dosages high confidence
 FAIL	5445	sig 1 tab po qd x 5 days	None	Syntax error: unexpected 'sig' at Ln 1, Col 0|Ambiguous expression: 'qd'|Text from the original sig was not parsed: 'sig 1 tab po qd x 5 days'|Not all dosages high confidence
-FAIL	5446	Take 1 capsule (20 mg) by mouth daily in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 capsule (20 mg) by mouth daily in the afternoon'|Not all dosages high confidence
+PASS	5446	Take 1 capsule (20 mg) by mouth daily in the afternoon	take 1 capsule (20 mg) by mouth every day in the afternoon	1 capsule
 PASS	5447	Take 1 capsule (50 mg) by mouth bid	take 1 capsule (50 mg) by mouth 2 times every day	2 capsules
 PASS	5448	Take 1 capsule (400 units) by mouth daily	take 1 capsule (400 iu) by mouth every day	1 capsule
 PASS	5449	TAKE 1 CAPSULE BY MOUTH 2 TIMES DAILY	take 1 capsule by mouth 2 times every day	2 capsules
@@ -5592,7 +5589,7 @@ PASS	5591	1 film sublingually two times daily	1 film sublingually 2 times every 
 FAIL	5592	1 filmstrip SL TID	None	Syntax error: unexpected 'sl' at Ln 1, Col 12|Text from the original sig was not parsed: '1 filmstrip sl tid'|Not all dosages high confidence
 FAIL	5593	1 mg intramuscularly one time	None	Syntax error: unexpected '1' at Ln 1, Col 21|Text from the original sig was not parsed: '1 mg intramuscularly 1 time'|Not all dosages high confidence
 PASS	5594	1 PO every other day	1 by mouth every 2 days	1
-FAIL	5595	1 PO bid-tid	None	Ambiguous expression: 'bid'|Syntax error: unexpected '-' at Ln 1, Col 8|Text from the original sig was not parsed: '1 po bid-tid'|Not all dosages high confidence
+FAIL	5595	1 PO bid-tid	None	Not all dosages high confidence
 PASS	5596	1 po Q 8 hours PRN pain	1 by mouth every 8 hours as needed for pain	3
 FAIL	5597	1 po q8 prn	None	Syntax error: unexpected 'prn' at Ln 1, Col 8|Text from the original sig was not parsed: '1 po q8 prn'|Not all dosages high confidence
 PASS	5598	1 puff twice a day	1 puff 2 times every day	2 puffs
@@ -5668,7 +5665,7 @@ PASS	5667	TAKE 1 TABLET BY MOUTH  DAILY ON AN EMPTY STOMACH	take 1 tablet by mou
 PASS	5668	Take 1 tablet (81 mg) by mouth daily for CAD	take 1 tablet (81 mg) by mouth every day for cad	1 tablet
 PASS	5669	TAKE 1 TABLET BY MOUTH THREE TIMES DAILY AS NEEDED FOR PAIN	take 1 tablet by mouth 3 times every day as needed for pain	3 tablets
 FAIL	5670	TAKE 1 TABLET BY MOUTH THREE TIMES DAILY WITH FOOD OR MILK AS NEEDED	None	Syntax error: unexpected 'milk' at Ln 1, Col 50|Text from the original sig was not parsed: 'take 1 tablet by mouth 3 times daily with food or milk as needed'|Not all dosages high confidence
-FAIL	5671	TAKE 1 TABLET BY MOUTH EVERY DAY IN THE EVENING WITH DINNER	None	Ambiguous expression: 'intheevening'|Syntax error: unexpected 'dinner' at Ln 1, Col 53|Text from the original sig was not parsed: 'take 1 tablet by mouth every day in the evening with dinner'|Not all dosages high confidence
+FAIL	5671	TAKE 1 TABLET BY MOUTH EVERY DAY IN THE EVENING WITH DINNER	None	Ambiguous event timing directions 'every day at night and with dinner'|Text from the original sig was not parsed: 'take 1 tablet by mouth every day in the evening with dinner'|Not all dosages high confidence
 FAIL	5672	take one PO daily in am	None	Syntax error: unexpected 'am' at Ln 1, Col 19|Text from the original sig was not parsed: 'take 1 po daily in am'|Not all dosages high confidence
 PASS	5673	Take one po qid	take 1 by mouth 4 times every day	4
 PASS	5674	TAKE ONE TABLET BY MOUTH ONCE WEEKLY	take 1 tablet by mouth every week	1 tablet
@@ -5699,7 +5696,7 @@ PASS	5698	Take 1 capsule (13 mcg) by mouth daily in the morning on an empty stom
 FAIL	5699	Take 1 capsule (200 mg) by mouth daily for 12 days at bedtime every cycle	None	Syntax error: unexpected 'cycle' at Ln 1, Col 68|Text from the original sig was not parsed: 'take 1 capsule (200 mg) by mouth daily for 12 days at bedtime every cycle'|Not all dosages high confidence
 PASS	5700	Take 1 capsule (200 mg) by mouth at bedtime	take 1 capsule (200 mg) by mouth at bedtime	1 capsule
 PASS	5701	Take 1 tablet (1 mg) by mouth daily.	take 1 tablet (1 mg) by mouth every day	1 tablet
-FAIL	5702	Take 1 tablet (10 mg) by mouth one time in the afternoon	None	Syntax error: unexpected 'in' at Ln 1, Col 38|Syntax error: unexpected 'afternoon' at Ln 1, Col 45|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth 1 time in the afternoon'|Not all dosages high confidence
+FAIL	5702	Take 1 tablet (10 mg) by mouth one time in the afternoon	None	Ambiguous expression: 'intheafternoon'|Syntax error: unexpected 'in' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth 1 time in the afternoon'|Not all dosages high confidence
 PASS	5703	Take 1 tablet (10 mg) by mouth daily as needed for allergy	take 1 tablet (10 mg) by mouth every day as needed for allergy	1 tablet
 FAIL	5704	Take 1 tablet (0.5 mg) by mouth as needed	None	Not all dosages high confidence
 PASS	5705	take 1 tab po bid x 7 days	take 1 tablet by mouth 2 times every day for 7 days	2 tablets
@@ -5709,8 +5706,8 @@ PASS	5708	TAKE 1 CAPSULE BY MOUTH TWO TIMES DAILY	take 1 capsule by mouth 2 time
 PASS	5709	TAKE 1 CAPSULE BY MOUTH TWICE DAILY.	take 1 capsule by mouth 2 times every day	2 capsules
 PASS	5710	Take 1 tablet (15 mg) by mouth daily as needed with food	take 1 tablet (15 mg) by mouth every day with food as needed	1 tablet
 PASS	5711	Take 1 tablet (100 mg) PO QAM	take 1 tablet (100 mg) by mouth every day in the morning	1 tablet
-PASS	5712	1QPM	1 every day afternoon	1
-FAIL	5713	15 ml orally 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: '15 ml orally 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
+PASS	5712	1QPM	1 every day after noon	1
+FAIL	5713	15 ml orally 4 times per day after meals and at bedtime as needed	None	Ambiguous frequency: contradicting directions '4 times per day after meals and at bedtime'|Text from the original sig was not parsed: '15 ml orally 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 FAIL	5714	2 sprays intranasally daily in each nostril qd	None	Syntax error: unexpected 'nostril' at Ln 1, Col 36|Ambiguous expression: 'qd'|Ambiguous expression: 'qd'|Text from the original sig was not parsed: '2 sprays intranasally daily in each nostril qd'|Not all dosages high confidence
 FAIL	5715	2 tablets sublingually daily x 14 days #28	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: '2 tablets sublingually daily x 14 days 28'|Not all dosages high confidence
 FAIL	5716	ad bid	None	Syntax error: unexpected 'ad' at Ln 1, Col 0|Syntax error: unexpected 'bid' at Ln 1, Col 3|Text from the original sig was not parsed: 'ad bid'|Not all dosages high confidence
@@ -5732,7 +5729,7 @@ PASS	5731	one po at bedtime	1 by mouth at bedtime	1
 PASS	5732	1 tablet HS	1 tablet at bedtime	1 tablet
 PASS	5733	1 TABLET PO QID PRN PAIN	1 tablet by mouth 4 times every day as needed for pain	4 tablets
 PASS	5734	1/2-1 po bid	0.5-1 by mouth 2 times every day	2
-FAIL	5735	10 ml orally 4 times per day after meals and at bedtime as needed	None	Ambiguous frequencies: multiple frequencies.|Text from the original sig was not parsed: '10 ml orally 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
+FAIL	5735	10 ml orally 4 times per day after meals and at bedtime as needed	None	Ambiguous frequency: contradicting directions '4 times per day after meals and at bedtime'|Text from the original sig was not parsed: '10 ml orally 4 times per day after meals and at bedtime as needed'|Not all dosages high confidence
 PASS	5736	1 tab PO QID for pain	1 tablet by mouth 4 times every day for pain	4 tablets
 PASS	5737	1 tab po q6h prn for pain	1 tablet by mouth every 6 hours as needed for pain	4 tablets
 PASS	5738	1 tab PO q12hrs	1 tablet by mouth every 12 hours	2 tablets
@@ -5801,7 +5798,7 @@ FAIL	5800	2 tablets orally one time	None	Syntax error: unexpected '<EOF>' at Ln 
 FAIL	5801	2 times a day (after meals)	None	Syntax error: unexpected 'times' at Ln 1, Col 2|Text from the original sig was not parsed: '2 times a day (after meals)'|Not all dosages high confidence
 PASS	5802	1-2 tid prn	1-2 3 times every day as needed	6
 PASS	5803	1tab po qhs	1 tablet by mouth every day at bedtime	1 tablet
-PASS	5804	1tab po qpm	1 tablet by mouth every day afternoon	1 tablet
+PASS	5804	1tab po qpm	1 tablet by mouth every day after noon	1 tablet
 PASS	5805	Take 1 capsule PO once a week	take 1 capsule by mouth every week	1 capsule
 PASS	5806	take 1 po bid x 10 days	take 1 by mouth 2 times every day for 10 days	2
 PASS	5807	Take 1 tablet (0.5 mg) by mouth daily as needed.	take 1 tablet (0.5 mg) by mouth every day as needed	1 tablet
@@ -5838,7 +5835,7 @@ PASS	5837	Take 1 tablet (522 mg) by mouth daily in the morning	take 1 tablet (52
 PASS	5838	Take 1 tablet (5 mg) by mouth hs	take 1 tablet (5 mg) by mouth at bedtime	1 tablet
 PASS	5839	TAKE 1 TABLET BY MOUTH TWICE A DAY FOR 10 DAYS	take 1 tablet by mouth 2 times every day for 10 days	2 tablets
 PASS	5840	TAKE 1 TABLET BY MOUTH EACH MORNING	take 1 tablet by mouth in the morning	1 tablet
-FAIL	5841	Take 1 tablet by mouth every day with breakfast	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 38|Text from the original sig was not parsed: 'take 1 tablet by mouth every day with breakfast'|Not all dosages high confidence
+PASS	5841	Take 1 tablet by mouth every day with breakfast	take 1 tablet by mouth every day with breakfast	1 tablet
 PASS	5842	Take 1 tablet (800 mg) by mouth HS	take 1 tablet (800 mg) by mouth at bedtime	1 tablet
 PASS	5843	Take 1 tablet (800 mg) by mouth one time daily	take 1 tablet (800 mg) by mouth every day	1 tablet
 PASS	5844	Take 1 tablet (875 mg) by mouth every 12 hours for 7days	take 1 tablet (875 mg) by mouth every 12 hours for 7 days	2 tablets
@@ -5860,7 +5857,7 @@ PASS	5859	Take 2 tablet (300 mg) by mouth daily	take 2 tablets (300 mg) by mouth
 PASS	5860	Take 2 tablets (1 mg) by mouth daily at bedtime	take 2 tablets (1 mg) by mouth every day at bedtime	2 tablets
 PASS	5861	Take 2 tablets (40 mg) by mouth daily with food	take 2 tablets (40 mg) by mouth every day with food	2 tablets
 PASS	5862	Take 2 tablets (34.6 mg) by mouth daily in the morning	take 2 tablets (34.6 mg) by mouth every day in the morning	2 tablets
-FAIL	5863	TAKE 1 TABLET(2 MG) BY MOUTH DAILY WITH BREAKFAST OR THE FIRST MAIN MEAL OF THE DAY	None	Syntax error: unexpected 'breakfast' at Ln 1, Col 40|Syntax error: unexpected 'the' at Ln 1, Col 53|Syntax error: unexpected 'meal' at Ln 1, Col 68|Text from the original sig was not parsed: 'take 1 tablet(2 mg) by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
+FAIL	5863	TAKE 1 TABLET(2 MG) BY MOUTH DAILY WITH BREAKFAST OR THE FIRST MAIN MEAL OF THE DAY	None	Ambiguous expression: 'withbreakfast'|Syntax error: unexpected 'the' at Ln 1, Col 53|Syntax error: unexpected 'meal' at Ln 1, Col 68|Text from the original sig was not parsed: 'take 1 tablet(2 mg) by mouth daily with breakfast or the first main meal of the day'|Not all dosages high confidence
 PASS	5864	take 1 tablet daily po	take 1 tablet by mouth every day	1 tablet
 FAIL	5865	TAKE 1 TABLET BY MOUTH TWICE A DAY WITH FOOD OR MILK AS NEEDED	None	Syntax error: unexpected 'milk' at Ln 1, Col 50|Text from the original sig was not parsed: 'take 1 tablet by mouth 2 times a day with food or milk as needed'|Not all dosages high confidence
 PASS	5866	TAKE 1 CAPSULE BY MOUTH TWICE A DAY WITH FOOD	take 1 capsule by mouth 2 times every day with food	2 capsules
@@ -5872,7 +5869,7 @@ PASS	5871	Take 1 by mouth each day	take 1 by mouth every day	1
 PASS	5872	Take 1 capsule (10 mg) by mouth daily at Noon	take 1 capsule (10 mg) by mouth every day at noon	1 capsule
 PASS	5873	Take 1 capsule (10 mg) by mouth twice daily	take 1 capsule (10 mg) by mouth 2 times every day	2 capsules
 FAIL	5874	Take 1 tablet (10 mg) by mouth one time HS	None	Syntax error: unexpected 'hs' at Ln 1, Col 38|Ambiguous expression: 'hs'|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth 1 time hs'|Not all dosages high confidence
-FAIL	5875	Take 1 tablet (10 mg) by mouth once daily in the afternoon	None	Syntax error: unexpected 'afternoon' at Ln 1, Col 51|Text from the original sig was not parsed: 'take 1 tablet (10 mg) by mouth 1 time daily in the afternoon'|Not all dosages high confidence
+PASS	5875	Take 1 tablet (10 mg) by mouth once daily in the after noon	take 1 tablet (10 mg) by mouth every day after noon	1 tablet
 PASS	5876	Take 1 tablet (0.25 mg) by mouth once daily as needed	take 1 tablet (0.25 mg) by mouth every day as needed	1 tablet
 PASS	5877	Take 1 tablet (0.25 mg) by mouth QD prn	take 1 tablet (0.25 mg) by mouth every day as needed	1 tablet
 FAIL	5878	TAKE 1 CAPSULE(0.4 MG) BY MOUTH DAILY 30 MINUTES AFTER THE SAME MEAL	None	Syntax error: unexpected 'the' at Ln 1, Col 55|Syntax error: unexpected 'meal' at Ln 1, Col 64|Text from the original sig was not parsed: 'take 1 capsule(0.4 mg) by mouth daily 30 minutes after the same meal'|Not all dosages high confidence
