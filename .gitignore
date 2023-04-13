@@ -364,3 +364,5 @@ console/mme.csv
 dataconsole/mme.csv
 
 .DS_Store
+
+src/.idea/
