@@ -76,18 +76,18 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
                 {
                     "864769", "2mg every 6 hours prn moderate pain or 2mg every 4 hours prn severe pain",
                     "Methadone Hydrochloride 2 MG/ML Oral Solution", 48m
-                }
+                },
+                new object[]
+                {
+                    "892625", "0.5 milliliter(s) to 1 mL daily orally 4 times a day, as needed for breakthrough pain", 
+                    "Morphine Sulfate 20 MG/ML Oral Solution", 80m
+                },
             };
 
         private static IEnumerable<object[]> ExceptionTestData =>
             new List<object[]>
             {
                 new object[] { "864769", "1,5 tablets daily", ConfidenceEnum.None, "Failed to parse the sig" },
-                new object[]
-                {
-                    "892625", "0.5 milliliter(s) to 1 mL daily orally 4 times a day, as needed for breakthrough pain", ConfidenceEnum.None,
-                    "Failed to parse the sig"
-                },
                 new object[]
                 {
                     "262071", "Apply two patches to upper torso q48h for chronic pain - exemption code B, palliative care", ConfidenceEnum.None,

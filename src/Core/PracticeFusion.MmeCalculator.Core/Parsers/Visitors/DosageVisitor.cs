@@ -1,5 +1,6 @@
 ﻿using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
@@ -44,12 +45,14 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
             if (context.frequencies() != null && context.frequencies().Length > 0)
             {
-                if (context.frequencies().Length > 1)
+                // combine all frequencies (even across separate rules) into a single frequency
+                List<DefaultParser.FrequencyContext> frequencyContexts = new List<DefaultParser.FrequencyContext>();
+                foreach(var frequencies in context.frequencies())
                 {
-                    throw new ParsingException("Ambiguous frequencies: multiple frequencies.");
+                    frequencyContexts.AddRange(frequencies.frequency());
                 }
 
-                result.Frequency = new FrequencyVisitor().VisitAllRoot(context.frequencies()[0].frequency());
+                result.Frequency = new FrequencyVisitor().VisitAllRoot(frequencyContexts.ToArray());
             }
 
             if (context.duration() != null && context.duration().Length > 0)
