@@ -11586,7 +11586,7 @@
 11703	863853	embeda 50-2 mg oral capsule extended release	1 CAP PO DAILY as needed for pain	50
 11704	863853	embeda 50-2 mg oral capsule extended release	1 capsule po q 12h	100
 11705	863853	embeda 50-2 mg oral capsule extended release	ONE TABLET DAILY	50
-11706	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE DAILY as needed for chronic pain	50
+11706	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE DAILY as needed for chronic pain in the morning	50
 11707	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE Daily	50
 11709	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE EVERY 12 HOURS	100
 11710	863853	embeda 50-2 mg oral capsule extended release	TAKE 1 CAPSULE EVERY 12 HOURS	100
@@ -11986,7 +11986,7 @@
 12464	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	ONE BY MOUTH EVERY 6 HOURS PRN	40
 12466	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	one tablet every 4-6 hours as needed for pain	60
 12469	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	take 1 tab po q6 hours prn pain	40
-12471	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1 TABLET 3 times daily PRN mod sev neck and back pain	30
+12471	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1 TABLET 3 times daily PRN mod-sev neck and back pain	30
 12472	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1 TABLET 3 TIMES DAILY PRN pain	30
 12473	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY, for nonacute pain,	40
 12474	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY	40
@@ -12000,7 +12000,7 @@
 12484	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	take 1 up to 3 times daily as needed for severe headache pain	30
 12485	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	take 1 up to QID as needed for pain.	40
 12486	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	Take 1-2 tab q 6 hrs prn severe pain	80
-12487	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	Take 1-2 tablets every 6 hours as needed for post op tonsillectomy pain	80
+12487	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	Take 1-2 tablets every 6 hours as needed for post-op tonsillectomy pain	80
 12488	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 1-2 TABLETS ORALLY EVERY 6 HRS PRN PAIN	80
 12490	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	take 2 tabs 3 times daily	60
 12491	859317	hydrocodone-ibuprofen 10-200 mg oral tablet	TAKE 3 TABLET Every twelve hours PRN	60
@@ -12051,7 +12051,7 @@
 12554	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY AS NEEDED FOR PAIN.	30
 12555	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET 3 TIMES DAILY PRN WITH FOOD	22.5
 12559	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE ONE TABLET BY MOUTH EVERY 8 HOURS WITH FOOD AS NEEDED FOR PAIN	22.5
-12560	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN SEVERE PAIN	30
+12560	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN SEVERE PAIN  Non-Acute Pain	30
 12561	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY  6 HOURS AS NEEDED  FOR PAIN..	30
 12563	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET EVERY 4 HOURS as needed for pain. No Refills.	45
 12564	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET BY MOUTH  EVERY 8 HOURS AS NEEDED FOR PAIN.	22.5
@@ -12059,7 +12059,7 @@
 12566	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN..	30
 12567	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE one tablet every 12 hours as needed	15
 12568	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 0.5 TABLET Every 8 hours PRN kidney stones	11.25
-12569	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET PO EVERY 4-6 HOURS AS NEEDED FOR SEVERE PAIN	45
+12569	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET PO EVERY 4-6 HOURS AS NEEDED FOR SEVERE PAIN  Non-Acute Pain	45
 12571	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	1 tab tid prn pain	22.5
 12572	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 tablet q12  HOURS AS NEEDED FOR PAIN.	15
 12574	858838	hydrocodone-ibuprofen 7.5-200 mg oral tablet	TAKE 1 TABLET THREE TIMES DAILY	22.5
@@ -12119,7 +12119,7 @@
 12704	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	Take 2 tabs daily for 1 week.	96
 12705	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE ONE BY MOUTH ONCE PER DAY PRN CHRONIC PAIN	48
 12707	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	take one po q day	48
-12709	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE ONE TAB BY MOUTH EVERY 12 HOURS FOR CHRONIC PAIN	96
+12709	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	TAKE ONE TAB BY MOUTH EVERY 12 HOURS CHRONIC PAIN-exemption B, palliative care.	96
 12710	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	Take one tab orally every day as needed.	48
 12711	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	Take one tab po daily	48
 12712	902733	hydromorphone hcl er 12 mg oral tablet er 24 hour abuse-deterrent	Take one tab po qhs for Chronic pain,	48
@@ -12632,6 +12632,7 @@
 13582	1495476	lortab 7.5-325 mg oral tablet	TAKE 1 tablet q 8hrs prn pain	22.5
 13583	1495476	lortab 7.5-325 mg oral tablet	Take 1-2 tabs every 4-6 hours PRN forpain	90
 13584	1495476	lortab 7.5-325 mg oral tablet	TAKE 1 TAB PO EVERY 8 HOURS AS NEEDED FOR SEVERE PAIN	22.5
+13586	1495476	lortab 7.5-325 mg oral tablet	Take 1/2 to 1 tablet by mouth every 4-6 hours as needed for post-operative pain.	45
 13587	1495476	lortab 7.5-325 mg tabs	1 every 8 to 12 hrs prn	22.5
 13588	1495476	lortab 7.5-325 mg tabs	1 PILL TID PRN R KNEE PAIN	22.5
 13589	1495476	lortab 7.5-325 mg tabs	1 PO BID PRN R KNEE PAIN	15
@@ -13227,6 +13228,7 @@
 14752	892574	morphine sulfate er 15 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours*	30
 14753	892574	morphine sulfate er 15 mg oral tablet extended release	Take one BID	30
 14754	892574	morphine sulfate er 15 mg oral tablet extended release	TAKE 1 TABLET EVERY 8HOURS	45
+14755	892574	morphine sulfate er 15 mg oral tablet extended release	take 1 tab daily in the afternoon	15
 14758	892574	morphine sulfate er 15 mg oral tablet extended release	one tablet po twice a day	30
 14760	892574	morphine sulfate er 15 mg oral tablet extended release	TAKE 1 TABLET Every twelve hours as needed for neoplastic pain.	30
 14761	892574	morphine sulfate er 15 mg oral tablet extended release	Take 1 tab po BID x 5 days	30
@@ -13559,6 +13561,7 @@
 15439	854140	nucynta 100 mg oral tablet	Take 1 tablet four times per day as needed for pain.	160
 15443	854140	nucynta 100 mg oral tablet	one po q6hrs prn pain	160
 15447	854140	nucynta 100 mg oral tablet	1 PO Q 8 HOURS PRN PAIN.	120
+15448	854140	nucynta 100 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN  FOR POST-OP PAIN	160
 15451	854140	nucynta 100 mg oral tablet	1 tab PO TID FOR NONACUTE PAIN	120
 15453	854140	nucynta 100 mg oral tablet	1 tab q4-6 hours prn	240
 15456	854140	nucynta 100 mg oral tablet	TAKE 1 TABLET BY MOUTH UP TO 6 TIMES DAILY	240
@@ -13826,6 +13829,7 @@
 15930	977943	opana 10 mg oral tablet	TAKE 1 - 2 TABS EVERY 4 - 6 HOURS PRN PAIN	360
 15933	977943	opana 10 mg oral tablet	TAKE 1 TABLET TWICE DAILY as needed for breakthrough pain	60
 15935	977943	opana 10 mg oral tablet	TAKE 3 TABLET EVERY 4-6 HOURS PRN	540
+15936	977943	opana 10 mg oral tablet	Take one tab po q4h prn btp/chronic pain-exemption code B, palliative care	180
 15938	977940	opana 5 mg oral tablet	1/2 to 1 three times a day as needed	45
 15940	977940	opana 5 mg oral tablet	One tab PO BID prn BTP/chronic pain	30
 15942	977940	opana 5 mg oral tablet	TAKE 1 OR 2 TABLETS EVERY 4 HOURS PRN SEVERE PAIN	180
@@ -13888,6 +13892,7 @@
 16107	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS  as needed for CHRONIC pain	120
 16118	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET Every twelve hours as needed for chronic pain	120
 16122	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	Take one tab PO q 12 hours as needed for chronic pain	120
+16124	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	TAKE one tab po q8h for chronic pain-exemption code B, palliative care	180
 16127	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	Take one tablet PO q12 hours	120
 16128	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	Take one tablet PO q8 hours	180
 16130	977904	opana er 20 mg oral tablet er 12 hour abuse-deterrent	take one twice daily as needed for pain	120
@@ -13973,6 +13978,7 @@
 16303	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	5-20mg Q2hrs PRN pain or SOB	360
 16305	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	10 mg SL q 4 hr	90
 16306	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 0.5 ml TO 1ml EVERY 1 TO 2 HOURS AS NEEDED FOR PAIN.	36
+16309	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	1.5ml every 4 hours as needed and every 6 hours scheduled	9
 16310	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 0.25-1mL EVERY 1 HOUR PRN SOB OR PAIN	36
 16311	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 2.5 MG Every 4 hours PRN Pain, Dyspnea	22.5
 16312	1944543	oxycodone hcl - 100 mg/5ml oral concentrate	TAKE 0.125 ML Every 4 hours PRN pain/dyspnea x 30 days	1.125
@@ -14124,6 +14130,7 @@
 16598	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS as needed for chronic pain	30
 16599	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	take one tab once a day as needed for chronic pain	15
 16600	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY AS NEEDED FOR PAIN.	30
+16601	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS DAILY FOR NON-ACUTE LOWER BACK PAIN	30
 16602	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLETS DAILY FOR CHRONIC NECK AND BACK PAIN	15
 16603	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO TWICE DAILY.	30
 16604	1049504	oxycodone hcl er 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 10 MG Twice daily PRN Pain	30
@@ -14295,6 +14302,7 @@
 16982	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET Every eight hours PRN	45
 16989	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET 34TIMES DAILY.	510
 16991	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	take 1 tab po tid.	45
+16993	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TO 2 TABLETS EVERY 6 HOURS AS NEEDED FOR PAIN. Non-acute pain.	120
 16995	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	TAKE 1 TABLET Every twelve hours for 3 days	30
 16998	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	1/2  to 1 tablet 3-4 times a day as needed for pain must last 30 days	60
 16999	1049216	oxycodone-acetaminophen 10-325 mg oral tablet	Take one tablet po bid prn for pain	30
@@ -14389,6 +14397,7 @@
 17148	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1 TABLET Every 6 hours PRN migraines	30
 17150	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	1  tablets every 4-6 hours as needed for pain	45
 17151	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1 TABLET DAILY PRN pain	7.5
+17152	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS AS NEEDED FOR POST-OP PAIN for 2 days.	30
 17154	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take one tablet at bedtime as needed for pain	7.5
 17155	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 1 TABLET  twice daily prn pain prn severe pain	15
 17156	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	TAKE 2 TABLET Daily PRN back pain	15
@@ -14406,6 +14415,7 @@
 17174	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	2 tabs q 6 hours prn pain.	60
 17180	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	2 tabs every 4 hours	90
 17182	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take 1 tab po qid prn for pain	30
+17184	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take 1 tablet every 8 hours as needed for neuropathic pain. NON-ACUTE PAIN	22.5
 17186	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	1-2 Q 4-6H PRN	90
 17187	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	1 tab BID PRN pain	15
 17189	1049223	oxycodone-acetaminophen 5-325 mg oral tablet	Take 1/2 tablet 2-3 times a day	11.25
@@ -14554,6 +14564,7 @@
 17429	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	one tablet one time daily	15
 17431	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET P.O. TWICE DAILY	30
 17435	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	take 1 tab po q 12hrs	30
+17438	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 10 MG Every twelve hours abuse-deterrent  "Partial fill upon patient request."	30
 17439	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET EVERY 12 HOURS x 10 days	30
 17441	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	one tab bid prn severe pains in back	30
 17442	1049504	oxycontin 10 mg oral tablet er 12 hour abuse-deterrent	1 TAB BID PRN SEVERE PAIN	30
@@ -14743,6 +14754,7 @@
 17832	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1/2 to 1 TABLET EVERY 12 HOURS DAILY as needed for pain.	60
 17835	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET q8h for chronic pain	90
 17838	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 MG Every twelve hours PRN	3
+17842	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET qam for chronic pain-exemption code B, palliative care	30
 17844	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 pill 3 times daily	90
 17845	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET daily at bedtime	30
 17846	1049565	oxycontin 20 mg oral tablet er 12 hour abuse-deterrent	1-2 TABS BID	120
@@ -14835,6 +14847,7 @@
 18085	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	Take 1 tablet q12 hours	90
 18090	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	Take 2 tablets PO Q 8 hours as needed for pain.	270
 18092	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET po every 12 hours as needed for chronic pain	90
+18093	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	TAKE 1 TABLET PO EVERY 8 HOURS as needed for CHRONIC pain-EXEMPTION B	135
 18096	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	Take one po QAM.	45
 18098	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	1 po BID x 10 days	90
 18102	1049576	oxycontin 30 mg oral tablet er 12 hour abuse-deterrent	1 tablet by mouth every 12 hours as needed for pain.	90
@@ -15089,6 +15102,7 @@
 18646	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN pain	120
 18647	977942	oxymorphone hcl - 10 mg oral tablet	1 PO Five times a day as needed for breaklthrough pain	150
 18650	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 CAPSULE TWICE DAILY PRN PAIN.	60
+18651	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET Every 4 hours PRN post-op pain x 15 days	180
 18652	977942	oxymorphone hcl - 10 mg oral tablet	one tab po bid for 2 weeks	60
 18655	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET 4 TIMES DAILY PRN PAIN.	120
 18659	977942	oxymorphone hcl - 10 mg oral tablet	TAKE 1 TABLET EVERY 6 HOURS PRN breakthrough pain,.	120
@@ -15561,6 +15575,7 @@
 19550	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY AS NEEDED FOR PAIN.	10
 19551	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET Daily as needed for pain.  Watch for constipation	10
 19552	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY qhs AS NEEDED FOR PAIN.	10
+19553	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET Daily with dinner.	10
 19554	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET ONCE daily AS DIRECTED	10
 19556	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET THREE TIMES A DAY PRN PAIN.	30
 19557	833710	tramadol hcl er (biphasic) 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET TWICE  DAILY AS DIRECTED.	20
@@ -15583,6 +15598,7 @@
 19583	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH EVERY NIGHT AT BEDTIME.	20
 19586	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH ONE TIME DAILY	20
 19591	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY AS NEEDED FOR PAIN.	20
+19592	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET EVERY MORNING   CODE-D	20
 19593	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET Q 12 hours as needed for pain.	40
 19594	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE 1 TABLET TWICE DAILY AS Needed;	40
 19595	833712	tramadol hcl er (biphasic) 200 mg oral tablet extended release 24 hour	TAKE ONE TABLET BY MOUTH ONCE DAILY AS NEEDED.	20
@@ -15663,6 +15679,7 @@
 19714	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	one tab 4x daily as needed for pain	40
 19715	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE ONE (1) TABLET BY MOUTH EVERY NIGHT AT BEDTIME AS NEEDED	10
 19717	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	Take 2-3 tablets daily.	30
+19720	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET Daily PRN in the morning for pain	10
 19723	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE ONE TO THREE TABLETS DAILY AS NEEDED FOR PAIN	30
 19725	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	Take 1 tablet at bedtime daily.	10
 19726	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TO 2 TABLETS BY MOUTH EVERY DAY	20
@@ -15698,6 +15715,7 @@
 19793	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY. at hs	10
 19795	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	Take 1 tab(s) orally once a day	10
 19797	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1-2 TABLETS BY MOUTH EVERY NIGHT AT BEDTIME	20
+19798	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET AT BEDTIME AS NEEDED FOR PAIN.  CODE-D	10
 19799	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	1-2  Q6 HRS  PRN	80
 19800	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET BY MOUTH EVERY DAY AT BEDTIME AS NEEDED FOR PAIN	10
 19801	833710	tramadol hcl er 100 mg oral tablet extended release 24 hour	2 PO qHS prn sleep	20
@@ -15746,6 +15764,7 @@
 19867	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE daily with food	20
 19868	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE BY MOUTH EVERY DAY	20
 19869	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE BY MOUTH EVERY NIGHT AT BEDTIME AS NEEDED	20
+19873	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily PRN mod-severe pain Not for acute pain: For chronic cervicalgia	20
 19874	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily PRN pain    *Exempt	20
 19875	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE Daily PRN right middle finger pain	20
 19876	1148485	tramadol hcl er 200 mg oral capsule extended release 24 hour	TAKE 1 CAPSULE DAILY with food	20
@@ -15959,6 +15978,7 @@
 20219	835605	ultram 50 mg tablet	Take 1-2 tablets q daily prn pain	10
 20220	845314	ultram er 100 mg oral tablet extended release 24 hour	Take one (1) tablet(s) daily	10
 20223	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY qpm	10
+20255	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1 TABLET DAILY WITH BREAKFAST.	10
 20227	845314	ultram er 100 mg oral tablet extended release 24 hour	1 PO TWICE DAILY WITH FOOD	20
 20230	845314	ultram er 100 mg oral tablet extended release 24 hour	one daily as needed for back pain	10
 20231	845314	ultram er 100 mg oral tablet extended release 24 hour	TAKE 1-2 TABS DAILY PRN PAIN	20
@@ -16311,6 +16331,7 @@
 20837	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	TAKE 1 CAPSULE  BID	27
 20838	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	take 1 capsule by mouth bid	27
 20839	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	Take 1 capsule by mouth twice a day  as needed for CHRONIC pain	27
+20841	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	Take 1 capsule daily at bedtime for chronic pain          NON-ACUTE PAIN	13.5
 20842	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	TAKE 1 CAPSULE every day.	13.5
 20843	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	Take 1 capsule PO every 12 hours	27
 20844	1790533	xtampza er 9 mg oral capsule er 12 hour abuse-deterrent	Take 1 Capsule PO every 12 hours.	27
