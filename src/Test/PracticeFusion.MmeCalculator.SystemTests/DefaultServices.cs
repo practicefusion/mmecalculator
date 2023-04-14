@@ -1,10 +1,10 @@
-﻿using System;
-using Microsoft.Extensions.Caching.Distributed;
+﻿using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using PracticeFusion.MmeCalculator.Core.Services;
 using PracticeFusion.MmeCalculator.LocalRxNormResolver;
 using Serilog;
+using System;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace PracticeFusion.MmeCalculator.SystemTests
@@ -23,7 +23,7 @@ namespace PracticeFusion.MmeCalculator.SystemTests
             services.AddSingleton<IStringPreprocessor, StringPreprocessor>();
             services.AddSingleton<IRxNormInformationResolver, Client>();
             services.AddSingleton<IOpioidConversionFactor, OpioidConversionFactor>();
-            services.AddSingleton<IMmeCalculator, MmeCalculator.Core.Services.MmeCalculator>();
+            services.AddSingleton<IMmeCalculator, Core.Services.MmeCalculator>();
             services.AddSingleton<IQualityAnalyzer, QualityAnalyzer>();
             services.AddSingleton<IMedicationParser, MedicationParser>();
             services.AddSingleton<ISigParser, SigParser>();

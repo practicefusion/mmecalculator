@@ -12,7 +12,8 @@ namespace PracticeFusion.MmeCalculator.SystemTests
         {
         }
 
-        public CalculatorTestItem(string[] testData) : this(testData[0], testData[1], testData[2], testData[3], testData[4])
+        public CalculatorTestItem(string[] testData) : this(testData[0], testData[1], testData[2], testData[3],
+            testData[4])
         {
         }
 

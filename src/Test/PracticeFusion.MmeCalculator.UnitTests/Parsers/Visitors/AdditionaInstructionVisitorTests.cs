@@ -1,12 +1,11 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
-using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -14,124 +13,42 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
     public class AdditionalInstructionVisitorTests
     {
         private readonly
-            CoreParserTestHelper<AdditionalInstructionVisitor, DefaultParser.AdditionalInstructionContext, AdditionalInstruction> _helper =
+            CoreParserTestHelper<AdditionalInstructionVisitor, DefaultParser.AdditionalInstructionContext,
+                AdditionalInstruction> _helper =
                 new();
+
+        private static IEnumerable<object[]> TestData =>
+            new List<object[]>
+            {
+                new object[] { "with food", "with food" },
+                new object[] { "before food", "before food" },
+                new object[] { "after food", "after food" },
+                new object[] { "with meal", "with meal" },
+                new object[] { "before meals", "before meals" },
+                new object[] { "after meals", "after meals" },
+                new object[] { "with meals", "with meals" },
+                new object[] { "with water", "with water" },
+                new object[] { "with plenty of water", "with plenty of water" },
+                new object[] { "with milk", "with milk" },
+                new object[] { "with plenty of milk", "with plenty of milk" },
+                new object[] { "with liquid", "with liquid" },
+                new object[] { "before eating", "before eating" },
+                new object[] { "after eating", "after eating" },
+                new object[] { "with eating", "with eating" },
+                new object[] { "on an empty stomach", "on an empty stomach" },
+                new object[] { "on a empty stomach", "on a empty stomach" },
+                new object[] { "on empty stomach", "on empty stomach" },
+                new object[] { "do not swallow", "do not swallow" }
+            };
+
+        private static IEnumerable<object[]> MultiplesTestData =>
+            new List<object[]> { new object[] { "with liquid with food", "with liquid with food" } };
 
         [TestMethod]
         public void NullContextShouldThrowParseException()
         {
             _helper.NullContextShouldThrowParseException();
         }
-
-        private static IEnumerable<object[]> TestData =>
-            new List<object[]>
-            {
-                new object[]
-                {
-                    "with food",
-                    "with food"
-                },
-                new object[]
-                {
-                    "before food",
-                    "before food"
-                },
-                new object[]
-                {
-                    "after food",
-                    "after food"
-                },
-                new object[]
-                {
-                    "with meal",
-                    "with meal"
-                },
-                new object[]
-                {
-                    "before meals",
-                    "before meals"
-                },
-                new object[]
-                {
-                    "after meals",
-                    "after meals"
-                },
-                new object[]
-                {
-                    "with meals",
-                    "with meals"
-                },
-                new object[]
-                {
-                    "with water",
-                    "with water"
-                },
-                new object[]
-                {
-                    "with plenty of water",
-                    "with plenty of water"
-                },
-                new object[]
-                {
-                    "with milk",
-                    "with milk"
-                },
-                new object[]
-                {
-                    "with plenty of milk",
-                    "with plenty of milk"
-                },
-                new object[]
-                {
-                    "with liquid",
-                    "with liquid"
-                },
-                new object[]
-                {
-                    "before eating",
-                    "before eating"
-                },
-                new object[]
-                {
-                    "after eating",
-                    "after eating"
-                },
-                new object[]
-                {
-                    "with eating",
-                    "with eating"
-                },
-                new object[]
-                {
-                    "on an empty stomach",
-                    "on an empty stomach"
-                },
-                new object[]
-                {
-                    "on a empty stomach",
-                    "on a empty stomach"
-                },
-                new object[]
-                {
-                    "on empty stomach",
-                    "on empty stomach"
-                },
-                new object[]
-                {
-                    "do not swallow",
-                    "do not swallow"
-                },
-            };
-
-        private static IEnumerable<object[]> MultiplesTestData =>
-            new List<object[]>
-            {
-                new object[]
-                {
-                    "with liquid with food",
-                    "with liquid with food"
-                },
-            };
 
 
         [DataTestMethod]
@@ -161,8 +78,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).additionalInstruction();
-            var result = _helper.Visitor.VisitRoot(tree);
+            DefaultParser.AdditionalInstructionContext tree = _helper.DefaultParser(statement).additionalInstruction();
+            AdditionalInstruction result = _helper.Visitor.VisitRoot(tree);
 
             result.ToString().Should().Be(expected);
             result.Index.Should().Be(0);
@@ -171,10 +88,10 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitAllRootTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).testAdditionalInstruction().additionalInstruction();
+            DefaultParser.AdditionalInstructionContext[] tree = _helper.DefaultParser(statement)
+                .testAdditionalInstruction().additionalInstruction();
             _helper.Visitor.Invoking(x => x.VisitAllRoot(tree)).Should().ThrowExactly<ParsingException>()
                 .WithMessage("Ambiguous additional instructions: there are multiple additional instructions.");
         }
-
     }
 }

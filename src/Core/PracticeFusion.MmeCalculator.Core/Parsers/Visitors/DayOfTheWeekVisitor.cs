@@ -1,5 +1,5 @@
-﻿using System;
-using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+﻿using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {

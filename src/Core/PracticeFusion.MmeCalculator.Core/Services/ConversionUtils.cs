@@ -60,10 +60,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     {
                         return 1000m;
                     }
-                    else
-                    {
-                        return 0m;
-                    }
+
+                    return 0m;
 
                 case UnitOfMeasureEnum.Milligram:
                 case UnitOfMeasureEnum.MilligramPerActuation:
@@ -75,10 +73,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     {
                         return 1 / 1000m;
                     }
-                    else
-                    {
-                        return 0m;
-                    }
+
+                    return 0m;
 
                 default:
                     // they are not the same (the first check), so err on the side of caution
@@ -104,10 +100,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+
+                    return false;
 
                 case UnitOfMeasureEnum.Milligram:
                 case UnitOfMeasureEnum.MilligramPerActuation:
@@ -120,10 +114,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+
+                    return false;
 
                 case UnitOfMeasureEnum.Milliliter:
                 case UnitOfMeasureEnum.CubicCentimeter:
@@ -131,10 +123,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+
+                    return false;
 
                 default:
                     return false;

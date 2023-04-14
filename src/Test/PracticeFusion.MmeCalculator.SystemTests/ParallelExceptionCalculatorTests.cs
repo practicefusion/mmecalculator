@@ -1,11 +1,11 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.SystemTests
 {
@@ -17,15 +17,17 @@ namespace PracticeFusion.MmeCalculator.SystemTests
 
         private static IEnumerable<object[]> TestData => File.ReadLines("calculator-expected-exception-test-data.txt")
             .Select(x => new object[] { new CalculatorTestItem(x) });
-        
+
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
         public void BasicTestsThatShouldFail(CalculatorTestItem testItem)
         {
-            CalculationRequest request = new CalculationRequest() { RequestId = testItem.Id };
+            var request = new CalculationRequest { RequestId = testItem.Id };
             request.CalculationItems.Add(
-                new CalculationItem()
-                    { RequestItemId = testItem.Id, RxCui = testItem.RxCui, Sig = testItem.Instruction });
+                new CalculationItem
+                {
+                    RequestItemId = testItem.Id, RxCui = testItem.RxCui, Sig = testItem.Instruction
+                });
 
             // calculate the request
             CalculatedResult result = _calculator.Calculate(request);

@@ -3,81 +3,82 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Dose delivery method enumeration
+    ///     Dose delivery method enumeration
     /// </summary>
     [Serializable]
     public enum DoseDeliveryMethodEnum
     {
-
         /// <summary>
-        /// Administer
+        ///     Administer
         /// </summary>
-        [ParseableEnum("administer", "administer")] Administer,
+        [ParseableEnum("administer", "administer")]
+        Administer,
 
         /// <summary>
-        /// Apply
+        ///     Apply
         /// </summary>
         [ParseableEnum("apply", "apply")] Apply,
 
         /// <summary>
-        /// Chew
+        ///     Chew
         /// </summary>
         [ParseableEnum("chew", "chew")] Chew,
 
         /// <summary>
-        /// Chew and Swallow
+        ///     Chew and Swallow
         /// </summary>
-        [ParseableEnum("chew and swallow", "chew and swallow")] ChewAndSwallow,
+        [ParseableEnum("chew and swallow", "chew and swallow")]
+        ChewAndSwallow,
 
         /// <summary>
-        /// Dissolve
+        ///     Dissolve
         /// </summary>
-        [ParseableEnum("dissolve", "dissolve")] Dissolve,
+        [ParseableEnum("dissolve", "dissolve")]
+        Dissolve,
 
         /// <summary>
-        /// Give
+        ///     Give
         /// </summary>
         [ParseableEnum("give", "give")] Give,
 
         /// <summary>
-        /// Infuse
+        ///     Infuse
         /// </summary>
         [ParseableEnum("infuse", "infuse")] Infuse,
 
         /// <summary>
-        /// Inhale
+        ///     Inhale
         /// </summary>
         [ParseableEnum("inhale", "inhale")] Inhale,
 
         /// <summary>
-        /// Inject
+        ///     Inject
         /// </summary>
         [ParseableEnum("inject", "inject")] Inject,
 
         /// <summary>
-        /// Insert
+        ///     Insert
         /// </summary>
         [ParseableEnum("insert", "insert")] Insert,
 
         /// <summary>
-        /// Place
+        ///     Place
         /// </summary>
         [ParseableEnum("place", "place")] Place,
 
         /// <summary>
-        /// Suck
+        ///     Suck
         /// </summary>
         [ParseableEnum("suck", "suck")] Suck,
 
         /// <summary>
-        /// Take
+        ///     Take
         /// </summary>
         [ParseableEnum("take", "take")] Take,
 
         /// <summary>
-        /// Use
+        ///     Use
         /// </summary>
-        [ParseableEnum("use", "use")] Use,
-
+        [ParseableEnum("use", "use")] Use
     }
 }

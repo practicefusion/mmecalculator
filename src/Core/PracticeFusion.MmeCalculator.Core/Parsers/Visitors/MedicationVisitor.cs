@@ -6,10 +6,10 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
     internal class MedicationVisitor : IVisitorCreator<DefaultParser.MedicationContext, ParsedMedication>
     {
-        private readonly FormExpressionVisitor _formExpressionVisitor = new();
-        private readonly OpioidVisitor _opioidVisitor = new();
-        private readonly NumericValueVisitor _numericValueVisitor = new();
         private readonly DoseUnitOfMeasureVisitor _doseUnitOfMeasureVisitor = new();
+        private readonly FormExpressionVisitor _formExpressionVisitor = new();
+        private readonly NumericValueVisitor _numericValueVisitor = new();
+        private readonly OpioidVisitor _opioidVisitor = new();
 
         public ParsedMedication VisitRoot(DefaultParser.MedicationContext context)
         {
@@ -19,7 +19,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
 
             var result = new ParsedMedication();
-            foreach (DefaultParser.MedicationComponentContext medicationComponentContext in context.medicationComponent())
+            foreach (DefaultParser.MedicationComponentContext medicationComponentContext in
+                     context.medicationComponent())
             {
                 result.MedicationComponents.Add(VisitMedicationComponent(medicationComponentContext));
             }
@@ -70,7 +71,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             result.UnitOfMeasure = _doseUnitOfMeasureVisitor.VisitRoot(context.doseUnitOfMeasure());
         }
 
-        private void VisitSimpleMedicationComponent(DefaultParser.SimpleMedicationComponentContext context, MedicationComponent result)
+        private void VisitSimpleMedicationComponent(DefaultParser.SimpleMedicationComponentContext context,
+            MedicationComponent result)
         {
             if (context == null)
             {
@@ -99,7 +101,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
         }
 
-        private void VisitComplexMedicationComponent(DefaultParser.ComplexMedicationComponentContext context, MedicationComponent result)
+        private void VisitComplexMedicationComponent(DefaultParser.ComplexMedicationComponentContext context,
+            MedicationComponent result)
         {
             if (context == null)
             {

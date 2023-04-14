@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -10,24 +7,27 @@ using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Parsers;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
     /// <inheritdoc />
     public class SigParser : ISigParser
     {
-        private readonly string _cachePrefix = "{ParsedSig}";
+        private const string CachePrefix = "{ParsedSig}";
         private readonly IDistributedCache? _distributedCache;
         private readonly ILogger _logger;
         private readonly IStringPreprocessor _stringPreprocessor;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="distributedCache"></param>
         /// <param name="stringPreprocessor"></param>
-        public SigParser(ILogger<SigParser> logger, IDistributedCache? distributedCache, IStringPreprocessor stringPreprocessor)
+        public SigParser(ILogger<SigParser> logger, IDistributedCache? distributedCache,
+            IStringPreprocessor stringPreprocessor)
         {
             _logger = logger;
             _distributedCache = distributedCache;
@@ -35,11 +35,10 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Constructor uses <see cref="NullLogger"/> and sets <see cref="IDistributedCache"/> to null.
+        ///     Constructor uses <see cref="NullLogger" /> and sets <see cref="IDistributedCache" /> to null.
         /// </summary>
         public SigParser() : this(NullLogger<SigParser>.Instance, null, new StringPreprocessor())
         {
-
         }
 
         /// <inheritdoc />
@@ -47,7 +46,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         {
             using (_logger.BeginScope("Parsing sig '{sig}'", sig))
             {
-                var key = $"{_cachePrefix}{{{sig}}}";
+                var key = $"{CachePrefix}{{{sig}}}";
 
                 if (_distributedCache != null && _distributedCache.TryGetValue(key, out ParsedSig cachedResult))
                 {
@@ -87,7 +86,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
                     // visit the tree
                     var visitor = new SigVisitor();
-                    var result = visitor.VisitRoot(tree);
+                    ParsedSig result = visitor.VisitRoot(tree);
                     result.OriginalSig = sig;
                     result.PreprocessedSig = preprocessedSig;
 
@@ -135,7 +134,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         {
             using (_logger.BeginScope("Parsing sig '{sig}'", sig))
             {
-                var key = $"{_cachePrefix}{{{sig}}}";
+                var key = $"{CachePrefix}{{{sig}}}";
 
                 if (_distributedCache != null && _distributedCache.TryGetValue(key, out ParsedSig cachedResult))
                 {
@@ -175,7 +174,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
                     // visit the tree
                     var visitor = new StrictSigVisitor();
-                    var result = visitor.VisitRoot(tree);
+                    ParsedSig result = visitor.VisitRoot(tree);
                     result.OriginalSig = sig;
                     result.PreprocessedSig = preprocessedSig;
 
@@ -228,7 +227,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 {
                     Dose? calculated = dosage.MaximumDailyDose;
                     if (maximumDailyDose == null ||
-                        calculated != null && calculated.MaxDose > maximumDailyDose.MaxDose)
+                        (calculated != null && calculated.MaxDose > maximumDailyDose.MaxDose))
                     {
                         maximumDailyDose = calculated;
                     }

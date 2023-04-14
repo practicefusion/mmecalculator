@@ -1,5 +1,4 @@
 ﻿@page
-@using System.Diagnostics
 @using PracticeFusion.MmeCalculator.Core.Services
 @{
     Layout = null;
@@ -64,81 +63,81 @@
     </style>
 </head>
 <body>
-    <div class="bg-light p-5 rounded-lg m-3">
-        <h1 class="display-4">MME Calculator Demo</h1>
-    </div>
-    <div class="container">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="calculator-tab" data-bs-toggle="tab" href="#calculator" role="tab" aria-controls="calculator" aria-selected="true">Calculator</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="sig-tab" data-bs-toggle="tab" href="#sig-realtime" role="tab" aria-controls="sig-realtime" aria-selected="true">Real-time Sig</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane fade show active mt-2" id="calculator" role="tabpanel" aria-labelledby="calculator-tab">
-                <div class="form-rows">
-                    <div class="row form-row">
-                        <div class="form-group mb-2 col-md-8">
-                            <input type="text" class="form-control sig" placeholder="Enter sig" autocomplete="on" />
-                        </div>
-                        <div class="form-group mb-2 col-md-2">
-                            <input type="text" class="form-control rxcui" placeholder="RxNorm" autocomplete="on" />
-                        </div>
-                        <div class="form-group mb-2 col-md-2">
-                            <button class="btn btn-secondary" onclick="addRow()" id="add-row">Add Row</button>
-                        </div>
+<div class="bg-light p-5 rounded-lg m-3">
+    <h1 class="display-4">MME Calculator Demo</h1>
+</div>
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="calculator-tab" data-bs-toggle="tab" href="#calculator" role="tab" aria-controls="calculator" aria-selected="true">Calculator</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="sig-tab" data-bs-toggle="tab" href="#sig-realtime" role="tab" aria-controls="sig-realtime" aria-selected="true">Real-time Sig</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active mt-2" id="calculator" role="tabpanel" aria-labelledby="calculator-tab">
+            <div class="form-rows">
+                <div class="row form-row">
+                    <div class="form-group mb-2 col-md-8">
+                        <input type="text" class="form-control sig" placeholder="Enter sig" autocomplete="on"/>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="btn-group mb-2 col-md-3" role="group">
-                        <button class="btn btn-primary" onclick="submit();this.blur();">Submit</button>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="examples" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Add from examples
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="examples">
-                                <a class="dropdown-item" href="#" onclick="addExample(this)">Percocet 7.5-325mg : 1-2 tabs every 6-8 hours prn pain : 1049642</a>
-                                <a class="dropdown-item" href="#" onclick="addExample(this)">Fentanyl 750mcg/hr : 1 patch every 72 hours : 197696</a>
-                                <a class="dropdown-item" href="#" onclick="addExample(this)">Ultram 200mg : 1 tab bid with water : 845315</a>
-                                <a class="dropdown-item" href="#" onclick="addExample(this)">Suboxone 2mg : 1 film sl a day x 2 days : 1010603</a>
-                                <a class="dropdown-item" href="#" onclick="addExample(this)">Zohydro 10mg : take 1 tab 2-3 times per day as needed: 1860492</a>
-                                <a class="dropdown-item" href="#" onclick="addExample(this)">Methadone 2mg/ml : take 2.5 ml every 12-24 hours : 864769</a>
-                            </div>
-                        </div>
+                    <div class="form-group mb-2 col-md-2">
+                        <input type="text" class="form-control rxcui" placeholder="RxNorm" autocomplete="on"/>
                     </div>
-                </div>
-                <div class="response">
-                </div>
-                <div class="mt-2" id="json"></div>
-                <div class="mt-5 mb-0">
-                    <p class="small">Core Version: @TransparencyUtils.ProductVersion</p>
-                    <p class="small">API documentation available <a href="/docs/index.html">here</a>.</p>
-                    <p class="small">RxNorm results from <a href="https://rxnav.nlm.nih.gov/RxNormAPIs.html">RxNorm API</a>. This product uses publicly available data from the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product.</p>
+                    <div class="form-group mb-2 col-md-2">
+                        <button class="btn btn-secondary" onclick="addRow()" id="add-row">Add Row</button>
+                    </div>
                 </div>
             </div>
-            <div class="tab-pane fade mt-2" id="sig-realtime" role="tabpanel" aria-labelledby="sig-tab">
-                <div class="form-row mb-2">
-                    <input type="checkbox" class="form-check-input use-strict"/> 
-                    <label class="form-check-label">Use strict parsing rules</label><br/>
-                    <input type="text" class="form-control realtime-sig" placeholder="Start typing sig" autocomplete="on"/>
+            <div class="form-row">
+                <div class="btn-group mb-2 col-md-3" role="group">
+                    <button class="btn btn-primary" onclick="submit();this.blur();">Submit</button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="examples" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Add from examples
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="examples">
+                            <a class="dropdown-item" href="#" onclick="addExample(this)">Percocet 7.5-325mg : 1-2 tabs every 6-8 hours prn pain : 1049642</a>
+                            <a class="dropdown-item" href="#" onclick="addExample(this)">Fentanyl 750mcg/hr : 1 patch every 72 hours : 197696</a>
+                            <a class="dropdown-item" href="#" onclick="addExample(this)">Ultram 200mg : 1 tab bid with water : 845315</a>
+                            <a class="dropdown-item" href="#" onclick="addExample(this)">Suboxone 2mg : 1 film sl a day x 2 days : 1010603</a>
+                            <a class="dropdown-item" href="#" onclick="addExample(this)">Zohydro 10mg : take 1 tab 2-3 times per day as needed: 1860492</a>
+                            <a class="dropdown-item" href="#" onclick="addExample(this)">Methadone 2mg/ml : take 2.5 ml every 12-24 hours : 864769</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row mt-2 justify-content-center" id="parsedSig">
+            </div>
+            <div class="response">
+            </div>
+            <div class="mt-2" id="json"></div>
+            <div class="mt-5 mb-0">
+                <p class="small">Core Version: @TransparencyUtils.ProductVersion</p>
+                <p class="small">API documentation available <a href="/docs/index.html">here</a>.</p>
+                <p class="small">RxNorm results from <a href="https://rxnav.nlm.nih.gov/RxNormAPIs.html">RxNorm API</a>. This product uses publicly available data from the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product.</p>
+            </div>
+        </div>
+        <div class="tab-pane fade mt-2" id="sig-realtime" role="tabpanel" aria-labelledby="sig-tab">
+            <div class="form-row mb-2">
+                <input type="checkbox" class="form-check-input use-strict"/>
+                <label class="form-check-label">Use strict parsing rules</label><br/>
+                <input type="text" class="form-control realtime-sig" placeholder="Start typing sig" autocomplete="on"/>
+            </div>
+            <div class="row mt-2 justify-content-center" id="parsedSig">
 
-                </div>
-                <div class="row mt-2" id="parsedSigJson">
+            </div>
+            <div class="row mt-2" id="parsedSigJson">
 
-                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/8.6.3/jsoneditor.min.js" integrity="sha256-iha/QQwSuta8sBMrJ7j9cR7WF/duYY3RmJy+1JIYWjU=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/8.6.3/jsoneditor.min.js" integrity="sha256-iha/QQwSuta8sBMrJ7j9cR7WF/duYY3RmJy+1JIYWjU=" crossorigin="anonymous"></script>
 
-    <script>
+<script>
         let input = document.querySelector('.realtime-sig');
         let useStrict = document.querySelector('.use-strict');
         let timeout = null;
@@ -363,7 +362,7 @@
             var pre = $('<pre/>');
             pre.text('Service returned:\n' + status + ': ' + error + '\n' + JSON.stringify(xhr, null, 2));
             $(".response").html(pre);
-        };
+        }
 
         function displayResults(calculatedResults) {
             var div = $('<div class="row"/>');
@@ -411,7 +410,7 @@
             $(container).empty();
             const editor = new JSONEditor(container, options, calculatedResults);
             editor.expandAll();
-        };
+        }
 
         function addExample(example) {
             var exampleText = $(example).text();
@@ -445,4 +444,3 @@
     </script>
 </body>
 </html>
-

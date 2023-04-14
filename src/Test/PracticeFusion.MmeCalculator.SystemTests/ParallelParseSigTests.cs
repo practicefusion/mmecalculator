@@ -1,11 +1,11 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.SystemTests
 {
@@ -16,7 +16,7 @@ namespace PracticeFusion.MmeCalculator.SystemTests
         private readonly ICalculator _calculator = DefaultServices.Calculator;
 
         private static IEnumerable<object[]> TestData => File.ReadLines("sig-test-data.txt")
-            .Select(x => new object[] {new SigTestItem(x)});
+            .Select(x => new object[] { new SigTestItem(x) });
 
 
         [DataTestMethod]

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -8,6 +6,8 @@ using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Parsers;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
@@ -20,7 +20,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         private readonly IRxNormInformationResolver _rxNormResolver;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="distributedCache"></param>
@@ -36,7 +36,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Constructor uses <see cref="NullLogger"/> and sets <see cref="IDistributedCache"/> to null.
+        ///     Constructor uses <see cref="NullLogger" /> and sets <see cref="IDistributedCache" /> to null.
         /// </summary>
         /// <param name="rxNormResolver"></param>
         public MedicationParser(IRxNormInformationResolver rxNormResolver) : this(
@@ -58,7 +58,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     return cachedResult;
                 }
 
-                string rxNormName = _rxNormResolver.ResolveRxNormCode(rxCui);
+                var rxNormName = _rxNormResolver.ResolveRxNormCode(rxCui);
 
                 if (_distributedCache != null && !_distributedCache.Exists(key))
                 {
@@ -92,7 +92,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     var parser = new DefaultParser(tokens);
 
                     // set up the list of errors
-                    List<(ConfidenceEnum Confidence, string ConfidenceReason)> parserErrors =
+                    var parserErrors =
                         new List<(ConfidenceEnum Confidence, string ConfidenceReason)>();
                     parser.RemoveErrorListeners();
                     parser.AddErrorListener(new ConfidenceErrorListener(parserErrors));
@@ -128,8 +128,12 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 }
                 catch (ParsingSyntaxException e)
                 {
-                    var result = new ParsedMedication()
-                        { OriginalMedication = rxNormName, PreprocessedMedication = preprocessedMedication, RxCui = rxCui };
+                    var result = new ParsedMedication
+                    {
+                        OriginalMedication = rxNormName,
+                        PreprocessedMedication = preprocessedMedication,
+                        RxCui = rxCui
+                    };
 
                     result.MedicationComponents.Clear();
                     result.Confidence = ConfidenceEnum.None;
@@ -139,8 +143,12 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 }
                 catch (ParsingException e)
                 {
-                    var result = new ParsedMedication()
-                        { OriginalMedication = rxNormName, PreprocessedMedication = preprocessedMedication, RxCui = rxCui };
+                    var result = new ParsedMedication
+                    {
+                        OriginalMedication = rxNormName,
+                        PreprocessedMedication = preprocessedMedication,
+                        RxCui = rxCui
+                    };
 
                     result.MedicationComponents.Clear();
                     result.Confidence = ConfidenceEnum.None;

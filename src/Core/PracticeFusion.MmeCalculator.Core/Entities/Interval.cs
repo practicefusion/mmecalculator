@@ -4,62 +4,62 @@ using System.Text;
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// An interval of frequency and/or period
+    ///     An interval of frequency and/or period
     /// </summary>
     /// <inheritdoc />
     [Serializable]
     public class Interval : BaseParsedEntity
     {
         /// <summary>
-        /// Indicates whether the interval contains latin abbreviations like "bid"
+        ///     Indicates whether the interval contains latin abbreviations like "bid"
         /// </summary>
         public bool ContainsLatinAbbreviations { get; set; }
 
         /// <summary>
-        /// The minimum frequency, e.g. <strong>1</strong> time per day (1 is the minimum frequency)
+        ///     The minimum frequency, e.g. <strong>1</strong> time per day (1 is the minimum frequency)
         /// </summary>
         public decimal Freq { get; set; }
 
         /// <summary>
-        /// The maximum frequency, e.g. 1-<strong>2</strong> times per day (2 is the maximum frequency)
+        ///     The maximum frequency, e.g. 1-<strong>2</strong> times per day (2 is the maximum frequency)
         /// </summary>
         public decimal FreqMax { get; set; }
 
         /// <summary>
-        /// The minimum period, e.g. 1 time every <strong>4</strong> hours (4 is the minimum period)
+        ///     The minimum period, e.g. 1 time every <strong>4</strong> hours (4 is the minimum period)
         /// </summary>
         public decimal Period { get; set; }
 
         /// <summary>
-        /// The maximum period, e.g. 1 time every 4-<strong>6</strong> hours (6 is the maximum period)
+        ///     The maximum period, e.g. 1 time every 4-<strong>6</strong> hours (6 is the maximum period)
         /// </summary>
         public decimal PeriodMax { get; set; }
 
         /// <summary>
-        /// Express the frequency as "per" period, e.g. once <strong>per</strong> hour
+        ///     Express the frequency as "per" period, e.g. once <strong>per</strong> hour
         /// </summary>
         public bool ExpressAsPer { get; set; }
 
         /// <summary>
-        /// The unit of time, e.g. once every <strong>week</strong>
+        ///     The unit of time, e.g. once every <strong>week</strong>
         /// </summary>
         public PeriodEnum? PeriodUnit { get; set; }
 
         /// <summary>
-        /// Indicates that the Interval was inferred. It will be used for calculations,
-        /// but will be displayed as an empty string in <see cref="ToString()"/>.
+        ///     Indicates that the Interval was inferred. It will be used for calculations,
+        ///     but will be displayed as an empty string in <see cref="ToString()" />.
         /// </summary>
         public bool Inferred { get; set; }
 
         /// <summary>
-        /// The maximum frequency per day, calculated by multiplying the maximum frequency and the minimum period. For example,
-        /// <strong>1-2 times every 4-6 hours</strong> returns 12 (2 times every 4 hours)
+        ///     The maximum frequency per day, calculated by multiplying the maximum frequency and the minimum period. For example,
+        ///     <strong>1-2 times every 4-6 hours</strong> returns 12 (2 times every 4 hours)
         /// </summary>
         public decimal MaximumDailyFrequency
         {
             get
             {
-                decimal freqMax = FreqMax;
+                var freqMax = FreqMax;
 
                 // otherwise, calculate it from the frequency/period
                 int periodsPerDay;
@@ -103,14 +103,14 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                     return 0;
                 }
 
-                decimal period = periodsPerDay / Period;
+                var period = periodsPerDay / Period;
 
                 // since we're looking at maximum per day, if periodsPerDay/Period is less than 1, set it to one
                 if (period < 1)
                 {
                     period = 1;
                 }
-                
+
                 // take 1 tablet daily has 0 frequency, but is implied as 1
                 if (freqMax == 0)
                 {
@@ -128,8 +128,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         }
 
         /// <summary>
-        /// Returns the interval as a string, using "a" instead of "every" where possible, eg.
-        /// "once a day" rather than "once every day".
+        ///     Returns the interval as a string, using "a" instead of "every" where possible, eg.
+        ///     "once a day" rather than "once every day".
         /// </summary>
         /// <param name="useAInsteadOfEvery">if true, substitutes "a" instead of "every"</param>
         public string ToString(bool useAInsteadOfEvery)
@@ -178,15 +178,15 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             Interval merged = new();
 
             // identify which one was first in the stream
-            var first = x.Index < y.Index ? x : y;
-            var second = (first == x) ? y : x;
+            Interval first = x.Index < y.Index ? x : y;
+            Interval second = first == x ? y : x;
 
             // combine the index and lengths, starting with the first
             merged.Index = first.Index;
             merged.Length = second.Index + second.Length;
 
             // other properties (except for inferred--this is not inferred)
-            merged.ExpressAsPer = (x.ExpressAsPer || y.ExpressAsPer);
+            merged.ExpressAsPer = x.ExpressAsPer || y.ExpressAsPer;
             merged.Inferred = false;
 
             // frequency, period and periodunit
@@ -256,7 +256,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                     sb.AppendFormat("{0}{1}", sb.Length > 0 ? " " : "", "once");
                 }
 
-                if(Freq > 1)
+                if (Freq > 1)
                 {
                     sb.AppendFormat("{0}{1} times", sb.Length > 0 ? " " : "", Freq);
                 }
@@ -274,9 +274,9 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                     sb.AppendFormat(
                         "{0}{1} {2}{3}",
                         sb.Length > 0 ? " " : "",
-                        ExpressAsPer ? "per" : (useAInsteadOfEvery ? "a" : "every"),
+                        ExpressAsPer ? "per" : useAInsteadOfEvery ? "a" : "every",
                         Period == 1 ? "" : Period + " ",
-                        new Period() {ValueEnum = PeriodUnit.Value}.Pluralize(Period));
+                        new Period { ValueEnum = PeriodUnit.Value }.Pluralize(Period));
                 }
                 else
                 {
@@ -285,7 +285,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                         sb.Length > 0 ? " " : "",
                         Period,
                         PeriodMax,
-                        new Period() {ValueEnum = PeriodUnit.Value}.Pluralize(PeriodMax));
+                        new Period { ValueEnum = PeriodUnit.Value }.Pluralize(PeriodMax));
                 }
             }
         }

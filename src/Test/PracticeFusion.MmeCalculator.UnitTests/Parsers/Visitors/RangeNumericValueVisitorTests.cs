@@ -1,32 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
     [TestClass]
     public class RangeNumericValueVisitorTests
     {
-        private readonly CoreParserTestHelper<RangeNumericValueVisitor, DefaultParser.RangeNumericValueContext, Tuple<decimal, decimal>>
+        private readonly CoreParserTestHelper<RangeNumericValueVisitor, DefaultParser.RangeNumericValueContext,
+                Tuple<decimal, decimal>>
             _helper = new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
             {
                 new object[] { "1 - 2", 1m, 2m },
                 new object[] { "1 to 2", 1m, 2m },
-                new object[] { "1.5 to 2.5", 1.5m, 2.5m },
+                new object[] { "1.5 to 2.5", 1.5m, 2.5m }
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -47,8 +48,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, decimal min, decimal max)
         {
-            var tree = _helper.DefaultParser(statement).rangeNumericValue();
-            var result = _helper.Visitor.VisitRoot(tree);
+            DefaultParser.RangeNumericValueContext tree = _helper.DefaultParser(statement).rangeNumericValue();
+            Tuple<decimal, decimal> result = _helper.Visitor.VisitRoot(tree);
 
             result.Item1.Should().Be(min);
             result.Item2.Should().Be(max);

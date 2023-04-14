@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
@@ -16,7 +16,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void ExistsHandlesExistenceCorrectly()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
             cache.Set("key", "value");
             cache.Exists("key").Should().BeTrue();
@@ -25,7 +25,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void GetReturnsDefaultWhenValueIsNull()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
             var result = cache.Get<List<string>>("key");
             result.Should().BeEquivalentTo(default);
@@ -34,7 +34,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void SetWritesToCacheCorrectly()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
 
             // set up the entity to cache
@@ -52,7 +52,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void SetWithOptionsWritesToCacheCorrectly()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
 
             // set up the entity to cache
@@ -73,7 +73,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void SetWithOptionsExpiresCorrectly()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
 
             // set up the entity to cache
@@ -98,9 +98,9 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void GetReturnsTypedValueWhenValueIsPresent()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
-            
+
             // set up the entity to cache
             var entity = new List<string> { "test" };
 
@@ -116,7 +116,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void TryGetValueReturnsTypedValueWhenValueIsPresent()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
 
             // set up the entity to cache
@@ -133,7 +133,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void TryGetValueReturnsDefaultWhenValueIsNotPresent()
         {
-            var cache = DefaultDistributedCache();
+            IDistributedCache cache = DefaultDistributedCache();
             Assert.IsFalse(cache.Exists("key"));
 
             // check it
@@ -143,7 +143,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
 
         private static IDistributedCache DefaultDistributedCache()
         {
-            var options = Options.Create(new MemoryDistributedCacheOptions());
+            IOptions<MemoryDistributedCacheOptions> options = Options.Create(new MemoryDistributedCacheOptions());
             IDistributedCache cache = new MemoryDistributedCache(options);
             return cache;
         }

@@ -1,10 +1,10 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -12,28 +12,6 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
     public class RouteVisitorTests
     {
         private readonly CoreParserTestHelper<RouteVisitor, DefaultParser.RouteContext, Route> _helper = new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
-
-        [TestMethod]
-        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresent()
-        {
-            var tree = _helper.DefaultParser("po").testRoute().route();
-            var result = _helper.Visitor.VisitAllRoot(tree);
-            result.ContainsLatinAbbreviations.Should().BeTrue();
-        }
-
-        [TestMethod]
-        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsent()
-        {
-            var tree = _helper.DefaultParser("by mouth").testRoute().route();
-            var result = _helper.Visitor.VisitAllRoot(tree);
-            result.ContainsLatinAbbreviations.Should().BeFalse();
-        }
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
@@ -46,14 +24,33 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "sl", "sublingually" },
                 new object[] { "p.o./sl", "by mouth/sublingually" },
                 new object[] { "topically", "topically" },
-                new object[] { "inhaled intranasally", "inhaled intranasally" },
+                new object[] { "inhaled intranasally", "inhaled intranasally" }
             };
 
         private static IEnumerable<object[]> IndexAndLengthData =>
-            new List<object[]>
-            {
-                new object[] { "po", 0, 2 },
-            };
+            new List<object[]> { new object[] { "po", 0, 2 } };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
+
+        [TestMethod]
+        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresent()
+        {
+            DefaultParser.RouteContext[] tree = _helper.DefaultParser("po").testRoute().route();
+            Route result = _helper.Visitor.VisitAllRoot(tree);
+            result.ContainsLatinAbbreviations.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsent()
+        {
+            DefaultParser.RouteContext[] tree = _helper.DefaultParser("by mouth").testRoute().route();
+            Route result = _helper.Visitor.VisitAllRoot(tree);
+            result.ContainsLatinAbbreviations.Should().BeFalse();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -67,8 +64,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         [DynamicData(nameof(IndexAndLengthData), DynamicDataDisplayName = "DisplayName")]
         public void IndexAndLengthTests(string statement, int index, int length)
         {
-            var tree = _helper.DefaultParser(statement).testRoute().route();
-            var result = _helper.Visitor.VisitAllRoot(tree);
+            DefaultParser.RouteContext[] tree = _helper.DefaultParser(statement).testRoute().route();
+            Route result = _helper.Visitor.VisitAllRoot(tree);
             result.Index.Should().Be(index);
             result.Length.Should().Be(length);
         }
@@ -85,8 +82,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).testRoute().route();
-            var result = _helper.Visitor.VisitAllRoot(tree);
+            DefaultParser.RouteContext[] tree = _helper.DefaultParser(statement).testRoute().route();
+            Route result = _helper.Visitor.VisitAllRoot(tree);
 
             result.ToString().Should().Be(expected);
         }

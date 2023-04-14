@@ -3,24 +3,24 @@
 namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.Entities
 {
     /// <summary>
-    /// Property concept
+    ///     Property concept
     /// </summary>
     public class PropertyConcept
     {
         /// <summary>
-        /// Property category
+        ///     Property category
         /// </summary>
         [JsonPropertyName("propCategory")]
         public string? Category { get; set; }
 
         /// <summary>
-        /// Property name
+        ///     Property name
         /// </summary>
         [JsonPropertyName("propName")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// Property value
+        ///     Property value
         /// </summary>
         [JsonPropertyName("propValue")]
         public string? Value { get; set; }

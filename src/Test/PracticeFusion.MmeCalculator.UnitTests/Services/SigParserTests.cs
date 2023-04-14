@@ -1,23 +1,21 @@
-using System;
-using System.Collections.Generic;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
     [TestClass]
     public class SigParserTests
     {
-
         [TestMethod]
         public void WhenParsingSigStrictWillReturnSigSuggestions()
         {
             var sigParser = new SigParser();
-            var response = sigParser.ParseStrict("take every");
-            response.SigSuggestions.Should().Contain(new List<string>{"doseVal", "rangeNumericValueWithUOM"});
+            ParsedSig response = sigParser.ParseStrict("take every");
+            response.SigSuggestions.Should().Contain(new List<string> { "doseVal", "rangeNumericValueWithUOM" });
         }
 
         [TestMethod]
@@ -31,8 +29,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
                 MoqServices.MmeCalculator.Object,
                 MoqServices.QualityAnalyzer.Object);
 
-            var requestWithNullItems = new CalculationRequest() { RequestId = Guid.NewGuid().ToString() };
-            var response = calculator.Calculate(requestWithNullItems);
+            var requestWithNullItems = new CalculationRequest { RequestId = Guid.NewGuid().ToString() };
+            CalculatedResult response = calculator.Calculate(requestWithNullItems);
             response.CalculatedResultAnalysis.Should().BeEquivalentTo(new CalculatedResultAnalysis());
             response.ParsedResults.Should().BeEquivalentTo(new List<ParsedResult>());
             response.RequestId.Should().BeEquivalentTo(requestWithNullItems.RequestId);

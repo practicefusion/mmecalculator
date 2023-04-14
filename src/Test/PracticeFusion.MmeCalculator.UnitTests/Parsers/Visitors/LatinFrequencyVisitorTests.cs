@@ -6,7 +6,7 @@ using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
-    [TestClass()]
+    [TestClass]
     public class LatinFrequencyVisitorTests
     {
         private readonly CoreParserTestHelper<LatinFrequencyVisitor, DefaultParser.LatinFrequencyContext, Frequency>
@@ -22,11 +22,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void QD()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qd").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qd").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 2, Freq = 1, FreqMax = 1, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true};
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 2,
+                Freq = 1,
+                FreqMax = 1,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
         }
 
@@ -34,11 +43,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void QHS()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qhs").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qhs").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 3, Freq = 1, FreqMax = 1, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 3,
+                Freq = 1,
+                FreqMax = 1,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
             frequency.When.Should().HaveCount(1);
             frequency.When.Should().Contain(EventTimingEnum.BedTime);
@@ -48,11 +66,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void QOD()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qod").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qod").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 3, Freq = 1, FreqMax = 1, Period = 2, PeriodMax = 2, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 3,
+                Freq = 1,
+                FreqMax = 1,
+                Period = 2,
+                PeriodMax = 2,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
         }
 
@@ -60,11 +87,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void BID()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("bid").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("bid").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 3, Freq = 2, FreqMax = 2, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 3,
+                Freq = 2,
+                FreqMax = 2,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
         }
 
@@ -72,11 +108,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void TID()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("tid").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("tid").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 3, Freq = 3, FreqMax = 3, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 3,
+                Freq = 3,
+                FreqMax = 3,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
         }
 
@@ -84,11 +129,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void QID()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qid").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qid").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 3, Freq = 4, FreqMax = 4, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 3,
+                Freq = 4,
+                FreqMax = 4,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
         }
 
@@ -96,11 +150,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void QPM()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qpm").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qpm").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 3, Freq = 1, FreqMax = 1, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 3,
+                Freq = 1,
+                FreqMax = 1,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
             frequency.When.Should().HaveCount(1);
             frequency.When.Should().Contain(EventTimingEnum.AfterNoon);
@@ -110,11 +173,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void QN()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qn").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qn").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.Intervals.Should().HaveCount(1);
-            var expected = new Interval()
-                { Index = 0, Length = 2, Freq = 1, FreqMax = 1, Period = 1, PeriodMax = 1, PeriodUnit = PeriodEnum.Day, ContainsLatinAbbreviations = true };
+            var expected = new Interval
+            {
+                Index = 0,
+                Length = 2,
+                Freq = 1,
+                FreqMax = 1,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ContainsLatinAbbreviations = true
+            };
             frequency.Intervals[0].Should().BeEquivalentTo(expected);
             frequency.When.Should().HaveCount(1);
             frequency.When.Should().Contain(EventTimingEnum.Night);
@@ -124,7 +196,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresent()
         {
             var frequency = new Frequency();
-            var context = _helper.DefaultParser("qn").latinFrequency();
+            DefaultParser.LatinFrequencyContext context = _helper.DefaultParser("qn").latinFrequency();
             _helper.Visitor.VisitRoot(context, frequency);
             frequency.ContainsLatinAbbreviations.Should().BeTrue();
         }

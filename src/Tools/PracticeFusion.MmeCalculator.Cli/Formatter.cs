@@ -5,7 +5,8 @@ namespace PracticeFusion.MmeCalculator.Cli
 {
     internal static class Formatter
     {
-        internal static string Format(string id, string originalSig, CalculatedResult result, OutputFileFormat outputFormat)
+        internal static string Format(string id, string originalSig, CalculatedResult result,
+            OutputFileFormat outputFormat)
         {
             return outputFormat switch
             {
@@ -17,8 +18,9 @@ namespace PracticeFusion.MmeCalculator.Cli
                     $"PASS\t{id}\t{originalSig}\t{result.ParsedResults[0]!.ParsedSig!.HumanReadable}\t{result.CalculatedResultAnalysis.MaximumMmePerDay}"
             };
         }
-        
-        internal static string FormatError(string id, string originalSig, CalculatedResult result, OutputFileFormat outputFormat)
+
+        internal static string FormatError(string id, string originalSig, CalculatedResult result,
+            OutputFileFormat outputFormat)
         {
             return outputFormat switch
             {
@@ -30,7 +32,7 @@ namespace PracticeFusion.MmeCalculator.Cli
                     $"FAIL\t{id}\t{originalSig}\t{result.CalculatedResultAnalysis.Confidence}\t{string.Join("|", result.CalculatedResultAnalysis.ConfidenceReasons)}"
             };
         }
-        
+
         internal static string Format(string id, string originalSig, ParsedSig result, OutputFileFormat outputFormat)
         {
             return outputFormat switch
@@ -43,7 +45,8 @@ namespace PracticeFusion.MmeCalculator.Cli
             };
         }
 
-        internal static string FormatError(string id, string originalSig, ParsedSig result, OutputFileFormat outputFormat)
+        internal static string FormatError(string id, string originalSig, ParsedSig result,
+            OutputFileFormat outputFormat)
         {
             return outputFormat switch
             {

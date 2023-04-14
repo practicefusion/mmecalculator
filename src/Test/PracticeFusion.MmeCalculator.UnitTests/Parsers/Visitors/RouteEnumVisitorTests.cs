@@ -1,10 +1,10 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -13,26 +13,6 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
     {
         private readonly CoreParserTestHelper<RouteEnumVisitor, DefaultParser.RouteEnumContext, RouteEnum> _helper =
             new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
-
-        [TestMethod]
-        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresent()
-        {
-            var context = _helper.DefaultParser("po").routeEnum();
-            RouteEnumVisitor.ContainsLatinAbbreviations(context).Should().BeTrue();
-        }
-
-        [TestMethod]
-        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsent()
-        {
-            var context = _helper.DefaultParser("orally").routeEnum();
-            RouteEnumVisitor.ContainsLatinAbbreviations(context).Should().BeFalse();
-        }
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
@@ -51,8 +31,28 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "transdermally", RouteEnum.Transdermally },
                 new object[] { "intranasally", RouteEnum.Intranasally },
                 new object[] { "per nostril", RouteEnum.PerNostril },
-                new object[] { "to skin", RouteEnum.Transdermally },
+                new object[] { "to skin", RouteEnum.Transdermally }
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
+
+        [TestMethod]
+        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresent()
+        {
+            DefaultParser.RouteEnumContext context = _helper.DefaultParser("po").routeEnum();
+            RouteEnumVisitor.ContainsLatinAbbreviations(context).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsent()
+        {
+            DefaultParser.RouteEnumContext context = _helper.DefaultParser("orally").routeEnum();
+            RouteEnumVisitor.ContainsLatinAbbreviations(context).Should().BeFalse();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -73,8 +73,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, RouteEnum expected)
         {
-            var tree = _helper.DefaultParser(statement).routeEnum();
-            var result = _helper.Visitor.VisitRoot(tree);
+            DefaultParser.RouteEnumContext tree = _helper.DefaultParser(statement).routeEnum();
+            RouteEnum result = _helper.Visitor.VisitRoot(tree);
 
             result.Should().Be(expected);
         }

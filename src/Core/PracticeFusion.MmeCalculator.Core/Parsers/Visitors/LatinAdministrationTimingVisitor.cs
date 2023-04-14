@@ -3,7 +3,8 @@ using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
-    internal class LatinAdministrationTimingVisitor : IVisitorUpdator<DefaultParser.LatinAdministrationTimingContext, Frequency>
+    internal class
+        LatinAdministrationTimingVisitor : IVisitorUpdator<DefaultParser.LatinAdministrationTimingContext, Frequency>
     {
         public void VisitRoot(DefaultParser.LatinAdministrationTimingContext context, Frequency result)
         {

@@ -3,16 +3,11 @@ using System.IO;
 
 namespace PracticeFusion.MmeCalculator.Cli
 {
-    static class FileUtils
+    internal static class FileUtils
     {
         internal static TextReader GetInputStream(FileInfo input)
         {
-            if (input == null || !input.Exists)
-            {
-                return Console.In;
-            }
-
-            return input.OpenText();
+            return input is not { Exists: true } ? Console.In : input.OpenText();
         }
 
         internal static TextWriter GetOutputStream(FileInfo output, bool overwrite)

@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
@@ -28,11 +28,11 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void WhenParsingSigWillParseAndAnalyze()
         {
-            var sigParserMock = MoqServices.SigParser;
+            Mock<ISigParser> sigParserMock = MoqServices.SigParser;
             sigParserMock.Reset();
             sigParserMock.Setup(x => x.Parse(It.IsAny<string>())).Returns(new ParsedSig());
 
-            var qualityAnalyzerMock = MoqServices.QualityAnalyzer;
+            Mock<IQualityAnalyzer> qualityAnalyzerMock = MoqServices.QualityAnalyzer;
             qualityAnalyzerMock.Reset();
 
             var calculator = new Calculator(
@@ -43,8 +43,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
                 MoqServices.MmeCalculator.Object,
                 qualityAnalyzerMock.Object);
 
-            var response = calculator.ParseSig("take 1 pill by mouth bid");
-            
+            ParsedSig response = calculator.ParseSig("take 1 pill by mouth bid");
+
             sigParserMock.Verify(x => x.Parse(It.IsAny<string>()), Times.Once);
             sigParserMock.VerifyNoOtherCalls();
 
@@ -63,8 +63,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
                 MoqServices.MmeCalculator.Object,
                 MoqServices.QualityAnalyzer.Object);
 
-            var requestWithNullItems = new CalculationRequest() { RequestId = Guid.NewGuid().ToString() };
-            var response = calculator.Calculate(requestWithNullItems);
+            var requestWithNullItems = new CalculationRequest { RequestId = Guid.NewGuid().ToString() };
+            CalculatedResult response = calculator.Calculate(requestWithNullItems);
             response.CalculatedResultAnalysis.Should().BeEquivalentTo(new CalculatedResultAnalysis());
             response.ParsedResults.Should().BeEquivalentTo(new List<ParsedResult>());
             response.RequestId.Should().BeEquivalentTo(requestWithNullItems.RequestId);

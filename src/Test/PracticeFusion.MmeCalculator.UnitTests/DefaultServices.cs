@@ -1,10 +1,10 @@
-﻿using System;
-using Microsoft.Extensions.Caching.Distributed;
+﻿using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using PracticeFusion.MmeCalculator.Core.Services;
 using PracticeFusion.MmeCalculator.LocalRxNormResolver;
 using Serilog;
+using System;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace PracticeFusion.MmeCalculator.UnitTests
@@ -18,7 +18,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests
             Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
 
             var services = new ServiceCollection();
-            services.AddLogging(b => b.AddSerilog(Log.Logger, dispose: true));
+            services.AddLogging(b => b.AddSerilog(Log.Logger, true));
             services.AddDistributedMemoryCache();
             services.AddSingleton<IStringPreprocessor, StringPreprocessor>();
             services.AddSingleton<IRxNormInformationResolver, Client>();

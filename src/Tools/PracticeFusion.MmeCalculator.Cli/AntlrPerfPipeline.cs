@@ -1,27 +1,28 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Atn;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace PracticeFusion.MmeCalculator.Cli
 {
     internal static class AntlrPerfPipeline
     {
-        internal static async Task Execute(FileInfo input, FileInfo output, bool overwrite, OutputFileFormat outputFormat)
+        internal static async Task Execute(FileInfo input, FileInfo output, bool overwrite,
+            OutputFileFormat outputFormat)
         {
             // wire up in and out
-            using var tr = FileUtils.GetInputStream(input);
-            using var tw = FileUtils.GetOutputStream(output, overwrite);
+            using TextReader tr = FileUtils.GetInputStream(input);
+            await using TextWriter tw = FileUtils.GetOutputStream(output, overwrite);
 
             // write the header
-            await tw.WriteLineAsync("Sig\tTimeInPrediction\tInvocations\tTotalLook\tMaxLook\tAmbiguities\tErrors\tRule");
+            await tw.WriteLineAsync(
+                "Sig\tTimeInPrediction\tInvocations\tTotalLook\tMaxLook\tAmbiguities\tErrors\tRule");
 
             // process input
-            string line;
-            int count = 0;
-            while ((line = await tr.ReadLineAsync()) != null)
+            var count = 0;
+            while (await tr.ReadLineAsync() is { } line)
             {
                 count++;
 
@@ -33,7 +34,7 @@ namespace PracticeFusion.MmeCalculator.Cli
                 }
 
                 var id = parts.Length > 1 ? parts[0] : count.ToString();
-                var sig = parts[parts.Length - 1];
+                var sig = parts[^1];
 
                 // construct parser, execute root rule
                 ICharStream stream = CharStreams.fromString(sig);
@@ -41,20 +42,20 @@ namespace PracticeFusion.MmeCalculator.Cli
                 ITokenStream tokens = new CommonTokenStream(lexer);
                 var parser = new DefaultParser(tokens)
                 {
-                    Profile = true,
-                    Interpreter = {PredictionMode = PredictionMode.LL}
+                    Profile = true, Interpreter = { PredictionMode = PredictionMode.LL }
                 };
                 parser.sig();
 
-                var decisionInfo = parser.ParseInfo.getDecisionInfo();
+                DecisionInfo[] decisionInfo = parser.ParseInfo.getDecisionInfo();
                 foreach (DecisionInfo x in decisionInfo)
                 {
-                    var decisionState = parser.Atn.GetDecisionState(x.decision);
+                    DecisionState decisionState = parser.Atn.GetDecisionState(x.decision);
                     var ruleName = parser.RuleNames[decisionState.ruleIndex];
 
                     if (x.timeInPrediction > 0)
                     {
-                        await tw.WriteLineAsync($"{id}\t{x.timeInPrediction}\t{x.invocations}\t{x.LL_TotalLook}\t{x.LL_MaxLook}\t{x.ambiguities.Count}\t{x.errors.Count}\t{ruleName}");
+                        await tw.WriteLineAsync(
+                            $"{id}\t{x.timeInPrediction}\t{x.invocations}\t{x.LL_TotalLook}\t{x.LL_MaxLook}\t{x.ambiguities.Count}\t{x.errors.Count}\t{ruleName}");
                     }
                 }
 

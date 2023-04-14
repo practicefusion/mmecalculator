@@ -1,23 +1,18 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
     [TestClass]
     public class RouteInstructionVisitorTests
     {
-        private readonly CoreParserTestHelper<RouteInstructionVisitor, DefaultParser.RouteInstructionContext, string> _helper =
-            new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
+        private readonly CoreParserTestHelper<RouteInstructionVisitor, DefaultParser.RouteInstructionContext, string>
+            _helper =
+                new();
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
@@ -27,8 +22,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "inhaled per", "inhaled per" },
                 new object[] { "by", "by" },
                 new object[] { "via", "via" },
-                new object[] { "per", "per" },
+                new object[] { "per", "per" }
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -50,10 +51,10 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).routeInstruction();
+            DefaultParser.RouteInstructionContext tree = _helper.DefaultParser(statement).routeInstruction();
             var result = _helper.Visitor.VisitRoot(tree);
 
-            result.ToString().Should().Be(expected);
+            result.Should().Be(expected);
         }
     }
 }

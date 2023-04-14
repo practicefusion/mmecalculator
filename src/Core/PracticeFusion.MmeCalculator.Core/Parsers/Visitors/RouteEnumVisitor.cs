@@ -16,7 +16,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             {
                 DefaultLexer.MOUTH or DefaultLexer.PO or DefaultLexer.ORAL or DefaultLexer.ORALLY => RouteEnum.Orally,
                 // UNDER THE TONGUE
-                DefaultLexer.UNDER or DefaultLexer.SL or DefaultLexer.SUBLINGUAL or DefaultLexer.SUBLINGUALLY => RouteEnum.Sublingually,
+                DefaultLexer.UNDER or DefaultLexer.SL or DefaultLexer.SUBLINGUAL or DefaultLexer.SUBLINGUALLY =>
+                    RouteEnum.Sublingually,
                 // FEEDING TUBE
                 DefaultLexer.FEEDING or DefaultLexer.GASTROSTOMY => RouteEnum.FeedingTube,
                 DefaultLexer.NASALLY => RouteEnum.Nasally,
@@ -24,8 +25,9 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 DefaultLexer.EACH or DefaultLexer.PER => RouteEnum.PerNostril,
                 DefaultLexer.RECTAL or DefaultLexer.RECTALLY => RouteEnum.Rectal,
                 DefaultLexer.TOPICAL or DefaultLexer.TOPICALLY => RouteEnum.Topically,
-                DefaultLexer.TOUPPERTORSO or DefaultLexer.ONSKIN or DefaultLexer.TOSKIN or DefaultLexer.TRANSDERMAL or DefaultLexer.TRANSDERMALLY => RouteEnum.Transdermally,
-                _ => throw new ParsingException($"Route recognized, but cannot be mapped: '{context.Start.Text}'"),
+                DefaultLexer.TOUPPERTORSO or DefaultLexer.ONSKIN or DefaultLexer.TOSKIN or DefaultLexer.TRANSDERMAL
+                    or DefaultLexer.TRANSDERMALLY => RouteEnum.Transdermally,
+                _ => throw new ParsingException($"Route recognized, but cannot be mapped: '{context.Start.Text}'")
             };
         }
 
@@ -37,7 +39,9 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
 
             if (context.Start.Type == DefaultLexer.PO)
+            {
                 return true;
+            }
 
             return false;
         }

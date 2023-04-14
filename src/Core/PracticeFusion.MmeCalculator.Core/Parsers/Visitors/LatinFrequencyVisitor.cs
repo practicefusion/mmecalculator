@@ -106,7 +106,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                     break;
 
                 default:
-                    throw new ParsingException($"Expected a latin frequency abbreviation, but cannot map '{context.GetText()}'");
+                    throw new ParsingException(
+                        $"Expected a latin frequency abbreviation, but cannot map '{context.GetText()}'");
             }
 
             frequency.Intervals.Add(interval);

@@ -1,13 +1,13 @@
-using System;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Messages;
+using System;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
-    /// <inheritdoc cref="ICalculator"/>
+    /// <inheritdoc cref="ICalculator" />
     public class Calculator : ICalculator
     {
         private readonly IQualityAnalyzer _analyzer;
@@ -20,7 +20,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         private readonly ISigParser _sigParser;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="distributedCache"></param>
@@ -45,7 +45,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Constructor uses <see cref="NullLogger"/> and sets <see cref="IDistributedCache"/> to null.
+        ///     Constructor uses <see cref="NullLogger" /> and sets <see cref="IDistributedCache" /> to null.
         /// </summary>
         public Calculator(IMedicationParser medicationParser) : this(
             NullLogger<Calculator>.Instance,
@@ -79,7 +79,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     return result;
                 }
 
-                int count = 0;
+                var count = 0;
                 foreach (CalculationItem item in request.CalculationItems)
                 {
                     if (string.IsNullOrEmpty(item.RequestItemId))
@@ -106,7 +106,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 return result;
             }
         }
-        
+
         /// <inheritdoc />
         public ParsedSig ParseSigStrict(string sig)
         {
@@ -120,11 +120,11 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
         private ParsedResult Calculate(CalculationItem request)
         {
-            string requestItemId = request.RequestItemId!;
-            string rxCui = request.RxCui!;
-            string sig = request.Sig!;
+            var requestItemId = request.RequestItemId!;
+            var rxCui = request.RxCui!;
+            var sig = request.Sig!;
 
-            string key = $"{_cachePrefix}{{{rxCui}}}{{{sig}}}";
+            var key = $"{_cachePrefix}{{{rxCui}}}{{{sig}}}";
 
             if (_distributedCache != null && _distributedCache.TryGetValue(key, out ParsedResult cachedResult))
             {
@@ -133,7 +133,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             }
 
             var result = new ParsedResult();
-            string rxNormName = _medicationParser.GetDrugNameFromRxCui(rxCui);
+            var rxNormName = _medicationParser.GetDrugNameFromRxCui(rxCui);
             result.ParsedMedication = _medicationParser.Parse(rxCui, rxNormName);
             result.ParsedSig = _sigParser.Parse(sig);
             result.MaximumDailyDose = result.ParsedSig.MaximumDosage;
@@ -156,7 +156,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             {
                 foreach (MedicationComponent medComponent in result.ParsedMedication.MedicationComponents)
                 {
-                    MmeCalculatorResult calculatedResult = _mmeCalculator.Calculate(medComponent, result.MaximumDailyDose!, null);
+                    MmeCalculatorResult calculatedResult =
+                        _mmeCalculator.Calculate(medComponent, result.MaximumDailyDose!, null);
 
                     medComponent.OpioidConversionFactor = calculatedResult.OpioidConversionFactor;
                     result.MaximumMmePerDay += calculatedResult.MaximumMmePerDay;

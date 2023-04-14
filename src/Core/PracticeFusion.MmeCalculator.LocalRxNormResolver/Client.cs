@@ -3,7 +3,7 @@
 namespace PracticeFusion.MmeCalculator.LocalRxNormResolver
 {
     /// <summary>
-    /// The client
+    ///     The client
     /// </summary>
     /// <inheritdoc />
     public class Client : IRxNormInformationResolver

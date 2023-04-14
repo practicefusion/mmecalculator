@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using PracticeFusion.MmeCalculator.Core.Entities;
+﻿using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
@@ -20,7 +20,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
             foreach (DefaultParser.RouteContext routeContext in contexts)
             {
-                var route = VisitRoot(routeContext);
+                Route route = VisitRoot(routeContext);
 
                 // merge the routes
                 if (route.ContainsLatinAbbreviations)
@@ -31,9 +31,10 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 // if the route instructions are not the same, exit
                 if (result.RouteInstruction != null && result.RouteInstruction != route.RouteInstruction)
                 {
-                    throw new ParsingException($"Cannot parse multiple routes '{contexts.GetOriginalTextWithSpacing()}'");
+                    throw new ParsingException(
+                        $"Cannot parse multiple routes '{contexts.GetOriginalTextWithSpacing()}'");
                 }
-                
+
                 // merge the route instruction
                 result.RouteInstruction = route.RouteInstruction;
 

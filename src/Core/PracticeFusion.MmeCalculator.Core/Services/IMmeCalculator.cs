@@ -4,12 +4,12 @@ using PracticeFusion.MmeCalculator.Core.Messages;
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
     /// <summary>
-    /// The MME Calculator interface
+    ///     The MME Calculator interface
     /// </summary>
     public interface IMmeCalculator
     {
         /// <summary>
-        /// For a given medication component that contains an opioid, calculate the <see cref="MmeCalculatorResult"/>.
+        ///     For a given medication component that contains an opioid, calculate the <see cref="MmeCalculatorResult" />.
         /// </summary>
         /// <param name="medComponent"></param>
         /// <param name="dose"></param>
@@ -17,8 +17,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         MmeCalculatorResult Calculate(MedicationComponent medComponent, Dose dose, Route? route);
 
         /// <summary>
-        /// Converts a given dose (with potentially a different unit of measure) into the same
-        /// unit of measure in the medication component. This ensures correct calculations.
+        ///     Converts a given dose (with potentially a different unit of measure) into the same
+        ///     unit of measure in the medication component. This ensures correct calculations.
         /// </summary>
         /// <param name="medComponent"></param>
         /// <param name="dose"></param>
@@ -26,7 +26,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         decimal ConvertSigDoseToMedicationComponentStrength(MedicationComponent medComponent, Dose dose);
 
         /// <summary>
-        /// Calculate the conversion factor
+        ///     Calculate the conversion factor
         /// </summary>
         /// <param name="opioid"></param>
         /// <param name="maxDailyDose"></param>
@@ -42,7 +42,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             UnitOfMeasureEnum? opioidUom);
 
         /// <summary>
-        /// Calculate the conversion factor
+        ///     Calculate the conversion factor
         /// </summary>
         /// <param name="opioid"></param>
         /// <returns></returns>

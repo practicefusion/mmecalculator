@@ -1,26 +1,26 @@
-﻿using System;
+﻿using PracticeFusion.MmeCalculator.Core.Messages;
+using PracticeFusion.MmeCalculator.Core.Services;
+using System;
 using System.IO;
 using System.Threading.Tasks;
-using PracticeFusion.MmeCalculator.Core.Messages;
-using PracticeFusion.MmeCalculator.Core.Services;
 
 namespace PracticeFusion.MmeCalculator.Cli
 {
-    static class CalculatePipeline
+    internal static class CalculatePipeline
     {
-        internal static async Task Execute(FileInfo input, FileInfo output, bool overwrite, OutputFileFormat outputFormat)
+        internal static async Task Execute(FileInfo input, FileInfo output, bool overwrite,
+            OutputFileFormat outputFormat)
         {
             // create the parser
             ICalculator calculator = DefaultServices.Calculator;
 
             // wire up in and out
-            using var tr = FileUtils.GetInputStream(input);
-            using var tw = FileUtils.GetOutputStream(output, overwrite);
+            using TextReader tr = FileUtils.GetInputStream(input);
+            await using TextWriter tw = FileUtils.GetOutputStream(output, overwrite);
 
             // process input
-            string line;
-            int count = 0;
-            while ((line = await tr.ReadLineAsync()) != null)
+            var count = 0;
+            while (await tr.ReadLineAsync() is { } line)
             {
                 count++;
 
@@ -48,7 +48,7 @@ namespace PracticeFusion.MmeCalculator.Cli
 
                 var request = new CalculationRequest();
                 request.CalculationItems.Add(calculateItem);
-                var result = calculator.Calculate(request);
+                CalculatedResult result = calculator.Calculate(request);
 
                 // write the line to the output
                 await WriteFormattedCalculatedResult(tw, calculateItem.RequestItemId, line, result, outputFormat);
@@ -60,8 +60,9 @@ namespace PracticeFusion.MmeCalculator.Cli
             // output the performance data
             await Console.Error.WriteLineAsync("\nCompleted.");
         }
-        
-        private static async Task WriteFormattedCalculatedResult(TextWriter tw, string id, string originalSig, CalculatedResult result, OutputFileFormat outputFormat)
+
+        private static async Task WriteFormattedCalculatedResult(TextWriter tw, string id, string originalSig,
+            CalculatedResult result, OutputFileFormat outputFormat)
         {
             if (result.CalculatedResultAnalysis.Confidence == ConfidenceEnum.High)
             {

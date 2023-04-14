@@ -46,8 +46,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             if (context.frequencies() != null && context.frequencies().Length > 0)
             {
                 // combine all frequencies (even across separate rules) into a single frequency
-                List<DefaultParser.FrequencyContext> frequencyContexts = new List<DefaultParser.FrequencyContext>();
-                foreach(var frequencies in context.frequencies())
+                var frequencyContexts = new List<DefaultParser.FrequencyContext>();
+                foreach (DefaultParser.FrequenciesContext? frequencies in context.frequencies())
                 {
                     frequencyContexts.AddRange(frequencies.frequency());
                 }

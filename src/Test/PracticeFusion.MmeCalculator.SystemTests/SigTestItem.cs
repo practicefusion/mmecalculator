@@ -1,9 +1,9 @@
 ﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
 
+using PracticeFusion.MmeCalculator.Core.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using PracticeFusion.MmeCalculator.Core.Messages;
 
 namespace PracticeFusion.MmeCalculator.SystemTests
 {

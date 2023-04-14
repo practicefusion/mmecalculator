@@ -1,6 +1,6 @@
-﻿using System;
-using PracticeFusion.MmeCalculator.Core.Entities;
+﻿using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
@@ -50,17 +50,18 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
         }
 
-        private static void VisitRangeNumericValueWithUOM(DefaultParser.RangeNumericValueWithUOMContext context, Dose dose)
+        private static void VisitRangeNumericValueWithUOM(DefaultParser.RangeNumericValueWithUOMContext context,
+            Dose dose)
         {
             if (context == null)
             {
                 throw new ParsingException("Empty context.");
             }
 
-            decimal min = new NumericValueVisitor().VisitRoot(context.numericValue(0));
+            var min = new NumericValueVisitor().VisitRoot(context.numericValue(0));
             UnitOfMeasure minDoseUnit = new DoseUnitOfMeasureVisitor().VisitRoot(context.doseUnitOfMeasure(0));
 
-            decimal max = new NumericValueVisitor().VisitRoot(context.numericValue(1));
+            var max = new NumericValueVisitor().VisitRoot(context.numericValue(1));
             UnitOfMeasure maxDoseUnit = new DoseUnitOfMeasureVisitor().VisitRoot(context.doseUnitOfMeasure(1));
 
             dose.Complex = true;
@@ -74,10 +75,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                     $"Different units of measure between the min ({minDoseUnit.ValueEnum}) and max ({maxDoseUnit.ValueEnum}) values in the range.");
             }
 
-            dose.DoseUnit = new DoseUnit
-            {
-                UnitOfMeasure = minDoseUnit
-            };
+            dose.DoseUnit = new DoseUnit { UnitOfMeasure = minDoseUnit };
         }
 
         private Dose VisitDoseAndCheckForConversion(DefaultParser.DoseContext context, bool checkForConversion)

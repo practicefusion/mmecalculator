@@ -3,7 +3,8 @@ using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
-    internal class DoseDeliveryMethodVisitor : IVisitorCreator<DefaultParser.DoseDeliveryMethodContext, DoseDeliveryMethod>
+    internal class
+        DoseDeliveryMethodVisitor : IVisitorCreator<DefaultParser.DoseDeliveryMethodContext, DoseDeliveryMethod>
     {
         public DoseDeliveryMethod VisitRoot(DefaultParser.DoseDeliveryMethodContext context)
         {
@@ -15,14 +16,15 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             var result = new DoseDeliveryMethod();
             context.SetStartAndStopIndex(result);
 
-            int actionType = context.Start.Type;
+            var actionType = context.Start.Type;
 
             result.ValueEnum = actionType switch
             {
                 DefaultLexer.ADMINISTER => DoseDeliveryMethodEnum.Administer,
                 DefaultLexer.APPLY => DoseDeliveryMethodEnum.Apply,
-                DefaultLexer.CHEW => context.SWALLOW() != null ? 
-                    DoseDeliveryMethodEnum.ChewAndSwallow : DoseDeliveryMethodEnum.Chew,
+                DefaultLexer.CHEW => context.SWALLOW() != null
+                    ? DoseDeliveryMethodEnum.ChewAndSwallow
+                    : DoseDeliveryMethodEnum.Chew,
                 DefaultLexer.DISSOLVE => DoseDeliveryMethodEnum.Dissolve,
                 DefaultLexer.GIVE => DoseDeliveryMethodEnum.Give,
                 DefaultLexer.INFUSE => DoseDeliveryMethodEnum.Infuse,

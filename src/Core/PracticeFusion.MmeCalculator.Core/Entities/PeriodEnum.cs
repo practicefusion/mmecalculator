@@ -3,49 +3,49 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Period enumeration
+    ///     Period enumeration
     /// </summary>
     [Serializable]
     public enum PeriodEnum
     {
         /// <summary>
-        /// Millisecond (ms)
+        ///     Millisecond (ms)
         /// </summary>
         [ParseableEnum("millisecond", "milliseconds")]
         Millisecond,
 
         /// <summary>
-        /// Second (s)
+        ///     Second (s)
         /// </summary>
         [ParseableEnum("second", "seconds")] Second,
 
         /// <summary>
-        /// Minute (m)
+        ///     Minute (m)
         /// </summary>
         [ParseableEnum("minute", "minutes")] Minute,
 
         /// <summary>
-        /// Hour (h)
+        ///     Hour (h)
         /// </summary>
         [ParseableEnum("hour", "hours")] Hour,
 
         /// <summary>
-        /// Day (d)
+        ///     Day (d)
         /// </summary>
         [ParseableEnum("day", "days")] Day,
 
         /// <summary>
-        /// Week
+        ///     Week
         /// </summary>
         [ParseableEnum("week", "weeks")] Week,
 
         /// <summary>
-        /// Month
+        ///     Month
         /// </summary>
         [ParseableEnum("month", "months")] Month,
 
         /// <summary>
-        /// Year (y)
+        ///     Year (y)
         /// </summary>
         [ParseableEnum("year", "years")] Year
     }

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
@@ -32,7 +32,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         public void IsNotNullCheckLeavesConfidenceResultUnchangedWhenTrue()
         {
             Mock<IConfidence> mock = DefaultConfidenceResult();
-            QualityCheck.IsNotNull<object>(new object(), ConfidenceEnum.None, mock.Object, null);
+            QualityCheck.IsNotNull(new object(), ConfidenceEnum.None, mock.Object, null);
             Assert.AreEqual(ConfidenceEnum.High, mock.Object.Confidence);
             Assert.IsTrue(mock.Object.ConfidenceReasons.Count == 0);
         }
@@ -54,7 +54,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             Mock<IConfidence> high = DefaultConfidenceResult();
             Mock<IConfidence> low = DefaultConfidenceResult(ConfidenceEnum.None);
 
-            QualityCheck.SetLowestConfidence(result.Object, new []{ high.Object, low.Object }, "Reason" );
+            QualityCheck.SetLowestConfidence(result.Object, new[] { high.Object, low.Object }, "Reason");
 
             Assert.AreEqual(ConfidenceEnum.None, result.Object.Confidence);
             Assert.IsTrue(result.Object.ConfidenceReasons.Count == 1);
@@ -77,7 +77,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
 
         private static Mock<IConfidence> DefaultConfidenceResult(ConfidenceEnum confidence = ConfidenceEnum.High)
         {
-            Mock<IConfidence> mock = new Mock<IConfidence>();
+            var mock = new Mock<IConfidence>();
             mock.SetupAllProperties();
             mock.Object.Confidence = confidence;
             mock.Object.ConfidenceReasons = new List<string>();

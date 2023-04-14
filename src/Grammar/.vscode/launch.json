@@ -7,7 +7,7 @@
             "request": "launch",
             "input": "parser-test-input.txt",
             "grammar": "DefaultParser.g4",
-            "startRule": "sig",
+            "startRule": "strictSig",
             "printParseTree": true,
             "visualParseTree": true
         }

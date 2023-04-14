@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace PracticeFusion.MmeCalculator.Core.Parsers
 {
     /// <summary>
-    /// A general exception for parsing errors
+    ///     A general exception for parsing errors
     /// </summary>
     [Serializable]
     public class ParsingException : Exception

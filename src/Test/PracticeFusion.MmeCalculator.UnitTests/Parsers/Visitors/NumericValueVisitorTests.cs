@@ -1,11 +1,10 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Parsers;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
-using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -14,6 +13,35 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
     {
         private readonly CoreParserTestHelper<NumericValueVisitor, DefaultParser.NumericValueContext, decimal> _helper =
             new();
+
+        private static IEnumerable<object[]> TestData =>
+            new List<object[]>
+            {
+                new object[] { "1.5", 1.5m },
+                new object[] { "1.0", 1m },
+                new object[] { "6 hours", 6m },
+                new object[] { "3.5 hours", 3.5m },
+                new object[] { "50,000 ius", 50000m },
+                new object[] { "50,000ius", 50000m },
+                new object[] { ".5", 0.5m },
+                new object[] { "one", 1m },
+                new object[] { "two", 2m },
+                new object[] { "three", 3m },
+                new object[] { "four", 4m },
+                new object[] { "five", 5m },
+                new object[] { "six", 6m },
+                new object[] { "seven", 7m },
+                new object[] { "eight", 8m },
+                new object[] { "nine", 9m },
+                new object[] { "ten", 10m },
+                new object[] { "twelve", 12m },
+                new object[] { "one and one half", 1.5m },
+                new object[] { "two and a half", 2.5m },
+                new object[] { "twenty four", 24m },
+                new object[] { "thirty six", 36m },
+                new object[] { "forty eight", 48m },
+                new object[] { "seventy two", 72m }
+            };
 
         [TestMethod]
         public void NullContextShouldThrowParseException()
@@ -29,10 +57,10 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         [DataRow("11/2")]
         public void DoesNotParseFractionsOtherThanOneHalf(string statement)
         {
-            var tree = _helper.DefaultParser(statement).numericValue();
-            _helper.Visitor.Invoking(x => x.VisitRoot(tree)).Should().
-                Throw<ParsingException>().WithMessage("Expected a numeric value").
-                WithInnerException<ParsingException>().WithMessage("Failed to parse " + statement + " as a valid number.");
+            DefaultParser.NumericValueContext tree = _helper.DefaultParser(statement).numericValue();
+            _helper.Visitor.Invoking(x => x.VisitRoot(tree)).Should().Throw<ParsingException>()
+                .WithMessage("Expected a numeric value").WithInnerException<ParsingException>()
+                .WithMessage("Failed to parse " + statement + " as a valid number.");
         }
 
         [DataTestMethod]
@@ -43,8 +71,9 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         [DataRow("1000,500")]
         public void NumbersWithCommasInUnexpectedPositionsThrowExceptions(string statement)
         {
-            var tree = _helper.DefaultParser(statement).numericValue();
-            _helper.Visitor.Invoking(x => x.VisitRoot(tree)).Should().Throw<ParsingException>().WithMessage("Expected a numeric value");
+            DefaultParser.NumericValueContext tree = _helper.DefaultParser(statement).numericValue();
+            _helper.Visitor.Invoking(x => x.VisitRoot(tree)).Should().Throw<ParsingException>()
+                .WithMessage("Expected a numeric value");
         }
 
         [DataTestMethod]
@@ -54,41 +83,10 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         [DataRow("1,000,500", 1000500)]
         public void NumbersWithCommasInExpectedPositionsParseCorrectly(string statement, int expected)
         {
-            var tree = _helper.DefaultParser(statement).numericValue();
+            DefaultParser.NumericValueContext tree = _helper.DefaultParser(statement).numericValue();
             var result = _helper.Visitor.VisitRoot(tree);
             result.Should().Be(expected);
         }
-
-        private static IEnumerable<object[]> TestData =>
-            new List<object[]>
-            {
-                new object[] { "1.5", 1.5m },
-                new object[] { "1.0", 1m },
-                new object[] { "6 hours", 6m },
-                new object[] { "3.5 hours", 3.5m },
-                new object[] { "50,000 ius", 50000m },
-                new object[] { "50,000ius", 50000m },
-                new object[] { ".5", 0.5m },
-
-                new object[] { "one", 1m },
-                new object[] { "two", 2m },
-                new object[] { "three", 3m },
-                new object[] { "four", 4m },
-                new object[] { "five", 5m },
-                new object[] { "six", 6m },
-                new object[] { "seven", 7m },
-                new object[] { "eight", 8m },
-                new object[] { "nine", 9m },
-                new object[] { "ten", 10m },
-                new object[] { "twelve", 12m },
-
-                new object[] { "one and one half", 1.5m },
-                new object[] { "two and a half", 2.5m },
-                new object[] { "twenty four", 24m },
-                new object[] { "thirty six", 36m },
-                new object[] { "forty eight", 48m },
-                new object[] { "seventy two", 72m },
-            };
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -110,8 +108,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, decimal expected)
         {
-
-            var tree = _helper.DefaultParser(statement).numericValue();
+            DefaultParser.NumericValueContext tree = _helper.DefaultParser(statement).numericValue();
             var result = _helper.Visitor.VisitRoot(tree);
 
             result.Should().Be(expected);

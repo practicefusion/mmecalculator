@@ -1,54 +1,54 @@
-﻿using System;
+﻿using PracticeFusion.MmeCalculator.Core.Messages;
+using System;
 using System.Collections.Generic;
-using PracticeFusion.MmeCalculator.Core.Messages;
 
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// A component of a medication, indicating whether it is an opioid or non-opioid component.
+    ///     A component of a medication, indicating whether it is an opioid or non-opioid component.
     /// </summary>
-    /// <inheritdoc cref="BaseParsedEntity"/>
-    /// <inheritdoc cref="IConfidence"/>
+    /// <inheritdoc cref="BaseParsedEntity" />
+    /// <inheritdoc cref="IConfidence" />
     [Serializable]
     public class MedicationComponent : BaseParsedEntity, IConfidence
     {
         /// <summary>
-        /// Description
+        ///     Description
         /// </summary>
         public string? Description { get; set; }
 
         /// <summary>
-        /// Name
+        ///     Name
         /// </summary>
         public string? Name { get; set; }
 
         /// <summary>
-        /// Strength
+        ///     Strength
         /// </summary>
         public decimal Strength { get; set; }
 
         /// <summary>
-        /// Indicates if the component is an opioid
+        ///     Indicates if the component is an opioid
         /// </summary>
         public bool IsOpioid { get; set; }
 
         /// <summary>
-        /// Opioid
+        ///     Opioid
         /// </summary>
         public Opioid? Opioid { get; set; }
 
         /// <summary>
-        /// The computed conversion factor for the opioid
+        ///     The computed conversion factor for the opioid
         /// </summary>
         public decimal OpioidConversionFactor { get; set; }
 
         /// <summary>
-        /// The unit of measure
+        ///     The unit of measure
         /// </summary>
         public UnitOfMeasure? UnitOfMeasure { get; set; }
 
         /// <summary>
-        /// The form of the medication (all components share the same form)
+        ///     The form of the medication (all components share the same form)
         /// </summary>
         public Form? Form { get; set; }
 
@@ -63,7 +63,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         {
             return $"{Name} {Strength}{(UnitOfMeasure != null ? " " + Pluralize(Strength) : string.Empty)}";
         }
-        
+
         internal string Pluralize(decimal count)
         {
             if (UnitOfMeasure != null)

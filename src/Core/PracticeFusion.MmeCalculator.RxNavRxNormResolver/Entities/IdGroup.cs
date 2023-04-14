@@ -4,18 +4,18 @@ using System.Text.Json.Serialization;
 namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.Entities
 {
     /// <summary>
-    /// Ids
+    ///     Ids
     /// </summary>
     public class IdGroup
     {
         /// <summary>
-        /// Name
+        ///     Name
         /// </summary>
         [JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// RxNorm ID
+        ///     RxNorm ID
         /// </summary>
         [JsonPropertyName("rxnormId")]
         public List<string>? RxNormId { get; set; }

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using PracticeFusion.MmeCalculator.Core.Entities;
+﻿using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {

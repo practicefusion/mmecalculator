@@ -1,12 +1,11 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
-using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -15,221 +14,6 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
     {
         private readonly CoreParserTestHelper<FrequencyVisitor, DefaultParser.FrequencyContext, Frequency> _helper =
             new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
-
-        [TestMethod]
-        public void FrequencyContainingTwiceADayAfterEveryMealDefersToTwiceADay()
-        {
-            var frequency = ParseStatement("1 tablet 2 times per day with meals");
-            frequency.MaximumDailyFrequency.Should().Be(2);
-        }
-
-        [TestMethod]
-        public void FrequencyContainingBeforeEveryMealInfers3TimesADay()
-        {
-            var frequency = ParseStatement("1 tablet daily before every meal");
-            frequency.HumanReadable.Should().Be("every day before every meal");
-        }
-
-        [TestMethod]
-        public void FrequencyContainingAfterEveryMealInfers3TimesADay()
-        {
-            var frequency = ParseStatement("1 tablet daily after every meal");
-            frequency.HumanReadable.Should().Be("every day after every meal");
-        }
-
-        [TestMethod]
-        public void FrequencyContainingWithEveryMealInfers3TimesADay()
-        {
-            var frequency = ParseStatement("1 tablet daily with every meal");
-            frequency.HumanReadable.Should().Be("every day with every meal");
-        }
-
-        [TestMethod]
-        public void FrequencyContainingEveryMealInfers3TimesADayEvenEveryOtherDay()
-        {
-            var frequency = ParseStatement("1 tablet qod before every meal");
-            frequency.HumanReadable.Should().Be("every 2 days before every meal");
-        }
-
-        [TestMethod]
-        public void FrequencyMergesMultipleIntervalsAppropriately()
-        {
-            var frequency = ParseStatement("1 tablet twice a day every other day");
-            frequency.HumanReadable.Should().Be("2 times every 2 days");
-            frequency.Intervals.Count.Should().Be(1);
-
-            // twice a day, merged with...
-            frequency.Intervals[0].Freq.Should().Be(2);
-            frequency.Intervals[0].FreqMax.Should().Be(2);
-
-            // every other day
-            frequency.Intervals[0].PeriodUnit.Should().Be(PeriodEnum.Day);
-            frequency.Intervals[0].Period.Should().Be(2);
-            frequency.Intervals[0].PeriodMax.Should().Be(2);
-        }
-
-        [TestMethod]
-        public void FrequencyWithADailyIntervalMergesCorrectly()
-        {
-            // Every 12 hours daily should parse as every 12 hours
-            var frequency = ParseStatement("1 tablet every 12 hours daily");
-            frequency.HumanReadable.Should().Be("every 12 hours");
-            frequency.Intervals.Count.Should().Be(1);
-            frequency.MaximumDailyFrequency.Should().Be(2);
-        }
-
-        [TestMethod]
-        public void EventsWithProximityShouldBeCountedOnce()
-        {
-            // Some events are proximate, like "at night" and "at bedtime". They should
-            // not count as two separate events. We prefer "at bedtime" as a more precise
-            // event.
-            var frequency = ParseStatement("1 tablet every night at bedtime");
-            frequency.HumanReadable.Should().Be("at bedtime");
-            frequency.MaximumDailyFrequency.Should().Be(1);
-            frequency.When.Count.Should().Be(1);
-            frequency.When[0].Should().Be(EventTimingEnum.BedTime);
-        }
-
-        [TestMethod]
-        public void VariationsBetweenIntervalsAndTimesOfDayShouldBeReportedAsAmbiguous()
-        {
-            // 1 tablet three times a day at 8am and 6pm should throw an exception
-            this.Invoking(x => x.ParseStatement("1 tablet tid at 8am and 6pm")).Should().ThrowExactly<ParsingException>()
-                .WithMessage("Ambiguous frequency: contradicting directions '3 times every day at 08:00 and 18:00'");
-        }
-
-        [TestMethod]
-        public void FrequenciesWithTimesOfDayInjectAnIntervalIfNeeded()
-        {
-            // 1 tablet at 8am and 6pm has a frequency of 2
-            var frequency = ParseStatement("1 tablet at 8am and 6pm");
-            frequency.TimeOfDay.Count.Should().Be(2);
-            frequency.Intervals.Count.Should().Be(1);
-            frequency.Intervals[0].Freq.Should().Be(2);
-            frequency.Intervals[0].FreqMax.Should().Be(2);
-            frequency.MaximumDailyFrequency.Should().Be(2);
-        }
-
-        [TestMethod]
-        public void FrequenciesWithOneAdministrationEventCalculateCorrectMaximumDailyFrequency()
-        {
-            // 1 tablet in the morning has a frequency of 1
-            var frequency = ParseStatement("1 tablet in the morning");
-            frequency.When.Count.Should().Be(1);
-            frequency.Intervals.Count.Should().Be(1);
-            frequency.Intervals[0].Freq.Should().Be(1);
-            frequency.Intervals[0].FreqMax.Should().Be(1);
-            frequency.MaximumDailyFrequency.Should().Be(1);
-        }
-
-        [TestMethod]
-        public void FrequenciesWithMoreThanOneAdministrationEventsCalculateCorrectMaximumDailyFrequency()
-        {
-            // 1 tablet at morning and evening has a frequency of 2
-            var frequency = ParseStatement("1 tablet at morning and evening");
-            frequency.When.Count.Should().Be(2);
-            frequency.Intervals.Count.Should().Be(1);
-            frequency.Intervals[0].Freq.Should().Be(2);
-            frequency.Intervals[0].FreqMax.Should().Be(2);
-            frequency.MaximumDailyFrequency.Should().Be(2);
-        }
-
-        [TestMethod]
-        public void FrequenciesWithMoreThanOneAdministrationEventsAndAnIntervalCalculateCorrectMaximumDailyFrequency()
-        {
-            // 1 tablet daily at morning and evening has a frequency of 2
-            var frequency = ParseStatement("1 tablet daily at morning and evening");
-            frequency.HumanReadable.Should().Be("every day in the morning and at night");
-            frequency.When.Count.Should().Be(2);
-            frequency.Intervals.Count.Should().Be(1);
-            frequency.Intervals[0].Freq.Should().Be(0);
-            frequency.Intervals[0].FreqMax.Should().Be(0);
-            frequency.MaximumDailyFrequency.Should().Be(2);
-        }
-
-        [TestMethod]
-        public void FrequenciesWithTimesOfDayAndAZeroFrequencyIntervalCalculateCorrectMaximumDailyFrequency()
-        {
-            // 1 tablet daily at 8am and 6pm has a frequency of 2
-            var frequency = ParseStatement("1 tablet daily at 8am and 6pm");
-            frequency.HumanReadable.Should().Be("every day at 08:00 and 18:00");
-            frequency.TimeOfDay.Count.Should().Be(2);
-            frequency.Intervals.Count.Should().Be(1);
-            frequency.Intervals[0].Freq.Should().Be(0);
-            frequency.Intervals[0].FreqMax.Should().Be(0);
-            frequency.MaximumDailyFrequency.Should().Be(2);
-        }
-
-
-        [TestMethod]
-        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresentInFrequency()
-        {
-            var result = ParseStatement("1 tablet tid");
-            result.ContainsLatinAbbreviations.Should().BeTrue();
-        }
-
-        [TestMethod]
-        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresentInTiming()
-        {
-            var result = ParseStatement("1 tablet qhs");
-            result.ContainsLatinAbbreviations.Should().BeTrue();
-        }
-
-        [TestMethod]
-        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsentInFrequency()
-        {
-            var result = ParseStatement("1 tablet 3 times a day");
-            result.ContainsLatinAbbreviations.Should().BeFalse();
-        }
-
-        [TestMethod]
-        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsentInTiming()
-        {
-            var result = ParseStatement("1 tablet at bedtime");
-            result.ContainsLatinAbbreviations.Should().BeFalse();
-        }
-
-        [TestMethod]
-        public void ShouldSetContainsLatinAbbreviationsWhenLatinQIsPresentInFrequency()
-        {
-            var result = ParseStatement("1 tablet q4h");
-            result.ContainsLatinAbbreviations.Should().BeTrue();
-        }
-
-        [TestMethod]
-        public void ShouldSetContainsLatinAbbreviationsWhenLatinQIsPresentInFrequencyWithPeriodly()
-        {
-            var result = ParseStatement("1 tablet q daily");
-            result.ContainsLatinAbbreviations.Should().BeTrue();
-        }
-
-        [TestMethod]
-        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinQIsAbsentInFrequency()
-        {
-            var result = ParseStatement("1 tablet every 4 hours");
-            result.ContainsLatinAbbreviations.Should().BeFalse();
-        }
-
-        [TestMethod]
-        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinQIsAbsentInFrequencyWithPeriodly()
-        {
-            var result = ParseStatement("1 tablet daily");
-            result.ContainsLatinAbbreviations.Should().BeFalse();
-        }
-
-        [TestMethod]
-        public void CanParseInTheAfternoonCorrectly()
-        {
-            var result = ParseStatement("1 tablet every day in the afternoon");
-            result.When.Should().Contain(EventTimingEnum.InTheAfternoon);
-        }
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
@@ -256,8 +40,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "thrice weekly", "3 times every week" },
 
                 // day frequency
-                new object[] { "once daily every monday, wednesday and friday", "a day every Monday, Wednesday and Friday" },
-                new object[] { "once daily on monday, wednesday and friday", "a day every Monday, Wednesday and Friday" },
+                new object[]
+                {
+                    "once daily every monday, wednesday and friday", "a day every Monday, Wednesday and Friday"
+                },
+                new object[]
+                {
+                    "once daily on monday, wednesday and friday", "a day every Monday, Wednesday and Friday"
+                },
                 new object[] { "twice daily every tuesday", "2 times a day every Tuesday" },
                 new object[] { "thrice daily every saturday and sunday", "3 times a day every Saturday and Sunday" },
                 new object[] { "thrice daily on saturday and sunday", "3 times a day every Saturday and Sunday" },
@@ -284,7 +74,6 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "every day at noon", "every day at noon" },
                 new object[] { "every day at mid day", "every day at noon" },
                 new object[] { "every day at bed time", "every day at bedtime" },
-
                 new object[] { "Take one capsule by mouth one time daily", "every day" },
                 new object[] { "2 times qd", "2 times every day" },
                 new object[] { "3 times qd", "3 times every day" },
@@ -313,7 +102,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "1 tablet at 14:00", "at 14:00" },
                 new object[] { "1 tablet at 8am and 2pm", "at 08:00 and 14:00" },
                 new object[] { "1 tablet every other day at 8am and 2pm", "every 2 days at 08:00 and 14:00" },
-                new object[] { "every 4 hours (5 times/day)", "every 4 hours (5 times/day)" },
+                new object[] { "every 4 hours (5 times/day)", "every 4 hours (5 times/day)" }
             };
 
         private static IEnumerable<object[]> OneWayOnlyTestData =>
@@ -324,18 +113,234 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "every morning", "in the morning" },
                 new object[] { "every night", "at night" },
                 new object[] { "qhs after", "every day at bedtime" },
-                new object[] { "5 times qd", "every 4 hours (5 times/day)" },
+                new object[] { "5 times qd", "every 4 hours (5 times/day)" }
             };
 
         private static IEnumerable<object[]> ExceptionData =>
             new List<object[]>
             {
                 // negative tests (should throw an exception until we decide how to handle them
-                new object[] { "1 tablet 3 times as needed", "3 times" },
+                new object[] { "1 tablet 3 times as needed", "3 times" }
 
                 // a possible form of bedtime
                 // new object[] { "every bed time after", "at bedtime" },
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
+
+        [TestMethod]
+        public void FrequencyContainingTwiceADayAfterEveryMealDefersToTwiceADay()
+        {
+            Frequency frequency = ParseStatement("1 tablet 2 times per day with meals");
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+        [TestMethod]
+        public void FrequencyContainingBeforeEveryMealInfers3TimesADay()
+        {
+            Frequency frequency = ParseStatement("1 tablet daily before every meal");
+            frequency.HumanReadable.Should().Be("every day before every meal");
+        }
+
+        [TestMethod]
+        public void FrequencyContainingAfterEveryMealInfers3TimesADay()
+        {
+            Frequency frequency = ParseStatement("1 tablet daily after every meal");
+            frequency.HumanReadable.Should().Be("every day after every meal");
+        }
+
+        [TestMethod]
+        public void FrequencyContainingWithEveryMealInfers3TimesADay()
+        {
+            Frequency frequency = ParseStatement("1 tablet daily with every meal");
+            frequency.HumanReadable.Should().Be("every day with every meal");
+        }
+
+        [TestMethod]
+        public void FrequencyContainingEveryMealInfers3TimesADayEvenEveryOtherDay()
+        {
+            Frequency frequency = ParseStatement("1 tablet qod before every meal");
+            frequency.HumanReadable.Should().Be("every 2 days before every meal");
+        }
+
+        [TestMethod]
+        public void FrequencyMergesMultipleIntervalsAppropriately()
+        {
+            Frequency frequency = ParseStatement("1 tablet twice a day every other day");
+            frequency.HumanReadable.Should().Be("2 times every 2 days");
+            frequency.Intervals.Count.Should().Be(1);
+
+            // twice a day, merged with...
+            frequency.Intervals[0].Freq.Should().Be(2);
+            frequency.Intervals[0].FreqMax.Should().Be(2);
+
+            // every other day
+            frequency.Intervals[0].PeriodUnit.Should().Be(PeriodEnum.Day);
+            frequency.Intervals[0].Period.Should().Be(2);
+            frequency.Intervals[0].PeriodMax.Should().Be(2);
+        }
+
+        [TestMethod]
+        public void FrequencyWithADailyIntervalMergesCorrectly()
+        {
+            // Every 12 hours daily should parse as every 12 hours
+            Frequency frequency = ParseStatement("1 tablet every 12 hours daily");
+            frequency.HumanReadable.Should().Be("every 12 hours");
+            frequency.Intervals.Count.Should().Be(1);
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+        [TestMethod]
+        public void EventsWithProximityShouldBeCountedOnce()
+        {
+            // Some events are proximate, like "at night" and "at bedtime". They should
+            // not count as two separate events. We prefer "at bedtime" as a more precise
+            // event.
+            Frequency frequency = ParseStatement("1 tablet every night at bedtime");
+            frequency.HumanReadable.Should().Be("at bedtime");
+            frequency.MaximumDailyFrequency.Should().Be(1);
+            frequency.When.Count.Should().Be(1);
+            frequency.When[0].Should().Be(EventTimingEnum.BedTime);
+        }
+
+        [TestMethod]
+        public void VariationsBetweenIntervalsAndTimesOfDayShouldBeReportedAsAmbiguous()
+        {
+            // 1 tablet three times a day at 8am and 6pm should throw an exception
+            this.Invoking(x => x.ParseStatement("1 tablet tid at 8am and 6pm")).Should()
+                .ThrowExactly<ParsingException>()
+                .WithMessage("Ambiguous frequency: contradicting directions '3 times every day at 08:00 and 18:00'");
+        }
+
+        [TestMethod]
+        public void FrequenciesWithTimesOfDayInjectAnIntervalIfNeeded()
+        {
+            // 1 tablet at 8am and 6pm has a frequency of 2
+            Frequency frequency = ParseStatement("1 tablet at 8am and 6pm");
+            frequency.TimeOfDay.Count.Should().Be(2);
+            frequency.Intervals.Count.Should().Be(1);
+            frequency.Intervals[0].Freq.Should().Be(2);
+            frequency.Intervals[0].FreqMax.Should().Be(2);
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+        [TestMethod]
+        public void FrequenciesWithOneAdministrationEventCalculateCorrectMaximumDailyFrequency()
+        {
+            // 1 tablet in the morning has a frequency of 1
+            Frequency frequency = ParseStatement("1 tablet in the morning");
+            frequency.When.Count.Should().Be(1);
+            frequency.Intervals.Count.Should().Be(1);
+            frequency.Intervals[0].Freq.Should().Be(1);
+            frequency.Intervals[0].FreqMax.Should().Be(1);
+            frequency.MaximumDailyFrequency.Should().Be(1);
+        }
+
+        [TestMethod]
+        public void FrequenciesWithMoreThanOneAdministrationEventsCalculateCorrectMaximumDailyFrequency()
+        {
+            // 1 tablet at morning and evening has a frequency of 2
+            Frequency frequency = ParseStatement("1 tablet at morning and evening");
+            frequency.When.Count.Should().Be(2);
+            frequency.Intervals.Count.Should().Be(1);
+            frequency.Intervals[0].Freq.Should().Be(2);
+            frequency.Intervals[0].FreqMax.Should().Be(2);
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+        [TestMethod]
+        public void FrequenciesWithMoreThanOneAdministrationEventsAndAnIntervalCalculateCorrectMaximumDailyFrequency()
+        {
+            // 1 tablet daily at morning and evening has a frequency of 2
+            Frequency frequency = ParseStatement("1 tablet daily at morning and evening");
+            frequency.HumanReadable.Should().Be("every day in the morning and at night");
+            frequency.When.Count.Should().Be(2);
+            frequency.Intervals.Count.Should().Be(1);
+            frequency.Intervals[0].Freq.Should().Be(0);
+            frequency.Intervals[0].FreqMax.Should().Be(0);
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+        [TestMethod]
+        public void FrequenciesWithTimesOfDayAndAZeroFrequencyIntervalCalculateCorrectMaximumDailyFrequency()
+        {
+            // 1 tablet daily at 8am and 6pm has a frequency of 2
+            Frequency frequency = ParseStatement("1 tablet daily at 8am and 6pm");
+            frequency.HumanReadable.Should().Be("every day at 08:00 and 18:00");
+            frequency.TimeOfDay.Count.Should().Be(2);
+            frequency.Intervals.Count.Should().Be(1);
+            frequency.Intervals[0].Freq.Should().Be(0);
+            frequency.Intervals[0].FreqMax.Should().Be(0);
+            frequency.MaximumDailyFrequency.Should().Be(2);
+        }
+
+
+        [TestMethod]
+        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresentInFrequency()
+        {
+            Frequency result = ParseStatement("1 tablet tid");
+            result.ContainsLatinAbbreviations.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ShouldSetContainsLatinAbbreviationsWhenLatinIsPresentInTiming()
+        {
+            Frequency result = ParseStatement("1 tablet qhs");
+            result.ContainsLatinAbbreviations.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsentInFrequency()
+        {
+            Frequency result = ParseStatement("1 tablet 3 times a day");
+            result.ContainsLatinAbbreviations.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinIsAbsentInTiming()
+        {
+            Frequency result = ParseStatement("1 tablet at bedtime");
+            result.ContainsLatinAbbreviations.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ShouldSetContainsLatinAbbreviationsWhenLatinQIsPresentInFrequency()
+        {
+            Frequency result = ParseStatement("1 tablet q4h");
+            result.ContainsLatinAbbreviations.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ShouldSetContainsLatinAbbreviationsWhenLatinQIsPresentInFrequencyWithPeriodly()
+        {
+            Frequency result = ParseStatement("1 tablet q daily");
+            result.ContainsLatinAbbreviations.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinQIsAbsentInFrequency()
+        {
+            Frequency result = ParseStatement("1 tablet every 4 hours");
+            result.ContainsLatinAbbreviations.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ShouldNotSetContainsLatinAbbreviationsWhenLatinQIsAbsentInFrequencyWithPeriodly()
+        {
+            Frequency result = ParseStatement("1 tablet daily");
+            result.ContainsLatinAbbreviations.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void CanParseInTheAfternoonCorrectly()
+        {
+            Frequency result = ParseStatement("1 tablet every day in the afternoon");
+            result.When.Should().Contain(EventTimingEnum.InTheAfternoon);
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -367,7 +372,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
             this.Invoking(x => x.VisitTest(statement, expected)).Should()
                 .Throw<ParsingException>();
         }
-        
+
         public static string DisplayName(MethodInfo methodInfo, object[] data)
         {
             if (data != null)
@@ -386,9 +391,9 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private Frequency ParseStatement(string statement)
         {
-            var tree = _helper.DefaultParser(statement).testFrequencies();
+            DefaultParser.TestFrequenciesContext tree = _helper.DefaultParser(statement).testFrequencies();
             tree.frequencies().Should().NotBeNull();
-            var result = _helper.Visitor.VisitAllRoot(tree.frequencies().frequency());
+            Frequency result = _helper.Visitor.VisitAllRoot(tree.frequencies().frequency());
             return result;
         }
     }

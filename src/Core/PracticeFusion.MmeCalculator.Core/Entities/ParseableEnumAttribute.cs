@@ -22,7 +22,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         {
             FriendlyName = friendlyName;
             PluralName = friendlyName;
-            IsDefault = isDefault;            
+            IsDefault = isDefault;
         }
 
         public string FriendlyName { get; }

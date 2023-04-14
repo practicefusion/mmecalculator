@@ -23,11 +23,12 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 if (context.numericValue()[0].Start.Text != "4" ||
                     context.numericValue()[1].Start.Text != "5")
                 {
-                    throw new ParsingException($"Cannot parse the special frequency '{context.GetOriginalTextWithSpacing()}'");
+                    throw new ParsingException(
+                        $"Cannot parse the special frequency '{context.GetOriginalTextWithSpacing()}'");
                 }
 
 
-                Interval result = new Interval();
+                var result = new Interval();
                 context.SetStartAndStopIndex(result);
 
                 result.Freq = 5;
@@ -44,10 +45,11 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 // validate that the number is one
                 if (context.NUMBER() == null || context.NUMBER().GetText() != "1")
                 {
-                    throw new ParsingException($"Cannot parse the special frequency '{context.GetOriginalTextWithSpacing()}'");
+                    throw new ParsingException(
+                        $"Cannot parse the special frequency '{context.GetOriginalTextWithSpacing()}'");
                 }
 
-                Interval result = new Interval();
+                var result = new Interval();
                 context.SetStartAndStopIndex(result);
                 result.Freq = 1;
                 result.FreqMax = 1;

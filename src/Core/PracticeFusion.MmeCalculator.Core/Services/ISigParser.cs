@@ -3,19 +3,18 @@
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
     /// <summary>
-    /// Parse a sig into a structure. No analysis is performed on the result.
+    ///     Parse a sig into a structure. No analysis is performed on the result.
     /// </summary>
     public interface ISigParser
     {
         /// <summary>
-        /// Parse the sig
+        ///     Parse the sig
         /// </summary>
         /// <param name="sig"></param>
         /// <returns></returns>
         ParsedSig Parse(string sig);
 
         /// <summary>
-        ///
         /// </summary>
         /// <param name="sig"></param>
         /// <returns></returns>

@@ -6,7 +6,7 @@ using System.Text;
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// An entity that can have more than one value from an enumeration.
+    ///     An entity that can have more than one value from an enumeration.
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
     /// <inheritdoc />
@@ -14,35 +14,35 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
     public class MultipleEnumParsedEntity<TEnum> : BaseParsedEntity where TEnum : Enum
     {
         /// <summary>
-        /// The parsed enums from the original sig
+        ///     The parsed enums from the original sig
         /// </summary>
         public List<TEnum> ValueEnums { get; set; } = new();
 
         /// <summary>
-        /// Exact match of <see cref="ValueEnums"/>
+        ///     Exact match of <see cref="ValueEnums" />
         /// </summary>
         /// <param name="desiredEnums"></param>
-        /// <returns>True if <see cref="ValueEnums"/> and <paramref name="desiredEnums"/> match exactly in length and content</returns>
+        /// <returns>True if <see cref="ValueEnums" /> and <paramref name="desiredEnums" /> match exactly in length and content</returns>
         public bool ExactMatch(params TEnum[] desiredEnums)
         {
             return ValueEnums.SequenceEqual(desiredEnums);
         }
 
         /// <summary>
-        /// Match any <see cref="ValueEnums"/>
+        ///     Match any <see cref="ValueEnums" />
         /// </summary>
         /// <param name="desiredEnums"></param>
-        /// <returns>True if any enum in <paramref name="desiredEnums"/> is matched</returns>
+        /// <returns>True if any enum in <paramref name="desiredEnums" /> is matched</returns>
         public List<TEnum> MatchAny(params TEnum[] desiredEnums)
         {
             return ValueEnums.Intersect(desiredEnums).ToList();
         }
 
         /// <summary>
-        /// Match all <see cref="ValueEnums"/>
+        ///     Match all <see cref="ValueEnums" />
         /// </summary>
         /// <param name="desiredEnums"></param>
-        /// <returns> True if every enum in <paramref name="desiredEnums"/> is found</returns>
+        /// <returns> True if every enum in <paramref name="desiredEnums" /> is found</returns>
         public bool MatchAll(params TEnum[] desiredEnums)
         {
             return desiredEnums.Intersect(ValueEnums).AsEnumerable().SequenceEqual(desiredEnums);

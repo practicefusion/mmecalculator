@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
@@ -18,7 +18,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             contexts.SetStartAndStopIndex(result);
             result.ValueEnums = new List<FormEnum>();
 
-            foreach (var context in contexts)
+            foreach (DefaultParser.FormExpressionContext context in contexts)
             {
                 result.ValueEnums.AddRange(VisitRoot(context).ValueEnums);
             }
@@ -83,7 +83,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 DefaultLexer.TDP => FormEnum.Tdp,
                 DefaultLexer.TRANSDERMAL => FormEnum.Transdermal,
                 DefaultLexer.TROCHE => FormEnum.Troche,
-                _ => throw new ParsingException($"Drug form recognized, but cannot be mapped: '{token.Text}'"),
+                _ => throw new ParsingException($"Drug form recognized, but cannot be mapped: '{token.Text}'")
             };
         }
     }

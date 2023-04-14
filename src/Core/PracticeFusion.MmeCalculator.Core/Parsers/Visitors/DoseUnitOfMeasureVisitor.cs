@@ -15,7 +15,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             var result = new UnitOfMeasure();
             context.SetStartAndStopIndex(result);
 
-            int actionType = context.Start.Type;
+            var actionType = context.Start.Type;
 
             result.ValueEnum = actionType switch
             {
