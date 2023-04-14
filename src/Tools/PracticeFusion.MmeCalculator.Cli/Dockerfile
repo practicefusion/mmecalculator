@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 
 WORKDIR /src
 
@@ -12,7 +12,7 @@ RUN dotnet pack "Tools/PracticeFusion.MmeCalculator.Cli/PracticeFusion.MmeCalcul
 
 RUN dotnet tool install --global --version 1.0.0 --add-source /cli/nuget PracticeFusion.MmeCalculator.Cli
 
-FROM mcr.microsoft.com/dotnet/runtime:6.0
+FROM mcr.microsoft.com/dotnet/runtime:7.0
 COPY --from=build /root/.dotnet/tools /opt/bin
 ENV PATH="${PATH}:/opt/bin"
 
