@@ -120,7 +120,9 @@
             </div>
             <div class="tab-pane fade mt-2" id="sig-realtime" role="tabpanel" aria-labelledby="sig-tab">
                 <div class="form-row mb-2">
-                    <input type="text" class="form-control realtime-sig" placeholder="Start typing sig" autocomplete="on" />
+                    <input type="checkbox" class="form-check-input use-strict"/> 
+                    <label class="form-check-label">Use strict parsing rules</label><br/>
+                    <input type="text" class="form-control realtime-sig" placeholder="Start typing sig" autocomplete="on"/>
                 </div>
                 <div class="row mt-2 justify-content-center" id="parsedSig">
 
@@ -138,11 +140,12 @@
 
     <script>
         let input = document.querySelector('.realtime-sig');
+        let useStrict = document.querySelector('.use-strict');
         let timeout = null;
 
         input.addEventListener('keyup',
             function () {
-                let path = getApiPath();
+                let path = getApiPath(useStrict.checked);
                 path += '?sig=' + input.value;
                 clearTimeout(timeout);
 
@@ -170,6 +173,8 @@
             cards += `<li class="list-group-item"><strong>Confidence:</strong> ${parsedSig.confidence}</li>`;
             cards += `<li class="list-group-item"><strong>Confidence Reasons:</strong> ${parsedSig.confidenceReasons.length !== undefined ? '<span class="badge bg-danger">' +
                 parsedSig.confidenceReasons.join('</span> <span class="badge bg-danger">') + '</span>' : ''}</li>`;
+            cards += `<li class="list-group-item"><strong>Suggestions:</strong> ${parsedSig.sigSuggestions.length !== undefined ? '<span class="badge bg-danger">' +
+                parsedSig.sigSuggestions.join('</span> <span class="badge bg-danger">') + '</span>' : ''}</li>`;            
             cards += structureDisplay(parsedSig);
             cards += '</ul>';
             cards += '</div>';
@@ -299,7 +304,7 @@
             $(row).closest(".form-row").remove();
         }
 
-        function getApiPath() {
+        function getApiPath(useStrict) {
             var noQuery = location.href.substring(0, location.href.lastIndexOf('?'));
             if (noQuery === '')
                 noQuery = location.href.substring(0, location.href.lastIndexOf('#'));
@@ -311,6 +316,8 @@
 
             path = path + '/api/calculator';
 
+            if (useStrict)
+                path = path + '/strict';
             return path;
         }
 

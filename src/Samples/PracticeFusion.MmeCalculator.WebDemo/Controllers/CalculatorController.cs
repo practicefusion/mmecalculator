@@ -99,6 +99,27 @@ namespace PracticeFusion.MmeCalculator.WebDemo.Controllers
             var parsedSig = _calculator.ParseSig(decodedSig);
             return parsedSig;
         }
+        
+        /// <summary>
+        /// Parse a sig using strict sig rules
+        /// </summary>
+        /// <remarks>
+        /// Sample request to parse a tapering sig using strict parsing rules
+        ///
+        ///     GET /api/calculator?sig=1 tablet every 8 hours for 3 days, then 1 tablet every 12 hours for 2 days, then 1 tablet a day prn pain
+        /// 
+        /// </remarks>
+        /// <param name="sig">The sig</param>
+        /// <returns>Machine-readable sig and detailed analysis</returns>
+        [HttpGet("strict")]
+        public ParsedSig ParseSigStrict(string sig)
+        {
+            // double decode just in case
+            var decodedSig = HttpUtility.UrlDecode(HttpUtility.UrlDecode(sig));
+            _logger.LogInformation("Url decoded sig: {decodedSig}", decodedSig);
+            var parsedSig = _calculator.ParseSigStrict(decodedSig);
+            return parsedSig;
+        }
 
         /// <summary>
         /// View data used for parsing sigs, medications and calculating

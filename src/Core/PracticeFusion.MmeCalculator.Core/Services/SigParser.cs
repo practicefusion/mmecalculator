@@ -45,50 +45,6 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <inheritdoc />
         public ParsedSig Parse(string sig)
         {
-            return Parse(sig, BuildSigTree, VisitSigRoot);
-        }
-
-        /// <inheritdoc />
-        public ParsedSig ParseStrict(string sig)
-        {
-            return Parse(sig, BuildStrictSigTree, VisitStrictSigRoot);
-        }
-
-        private ParserRuleContext BuildSigTree(DefaultParser parser) => parser.sig();
-
-        private ParserRuleContext BuildStrictSigTree(DefaultParser parser) => parser.strictSig();
-
-        private ParsedSig VisitSigRoot(ParserRuleContext parserRuleContext)
-        {
-            DefaultParser.SigContext? tree = parserRuleContext as DefaultParser.SigContext;
-            if(tree != null)
-            {
-                var visitor = new SigVisitor();
-                return visitor.VisitRoot(tree);
-            }
-            else
-            {
-                throw new InvalidCastException("Expected the parser rule context to be a SigContext.");
-            }
-        }
-
-        private ParsedSig VisitStrictSigRoot(ParserRuleContext parserRuleContext)
-        {
-            DefaultParser.StrictSigContext? tree = parserRuleContext as DefaultParser.StrictSigContext;
-            if(tree != null)
-            {
-                var visitor = new StrictSigVisitor();
-                return visitor.VisitRoot(tree);
-            }
-            else
-            {
-                throw new InvalidCastException("Expected the parser rule context to be a StrictSigContext.");
-            }
-        }
-
-        /// <inheritdoc />
-        private ParsedSig Parse(string sig, Func<DefaultParser, ParserRuleContext> GetParserRuleContext, Func<ParserRuleContext, ParsedSig> VisitTree)
-        {
             using (_logger.BeginScope("Parsing sig '{sig}'", sig))
             {
                 var key = $"{_cachePrefix}{{{sig}}}";
@@ -116,7 +72,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     parser.AddErrorListener(new ConfidenceErrorListener(parserErrors));
 
                     // parse
-                    ParserRuleContext tree = GetParserRuleContext(parser);
+                    DefaultParser.SigContext tree = parser.sig();
 
                     // check for errors or exceptions
                     if (parser.NumberOfSyntaxErrors > 0)
@@ -130,7 +86,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     }
 
                     // visit the tree
-                    var result = VisitTree(tree);
+                    var visitor = new SigVisitor();
+                    var result = visitor.VisitRoot(tree);
                     result.OriginalSig = sig;
                     result.PreprocessedSig = preprocessedSig;
 
@@ -152,6 +109,95 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     result.Dosages.Clear();
                     result.Confidence = ConfidenceEnum.None;
                     result.ConfidenceReasons.AddRange(e.AllSyntaxErrors.Select(x => x.Item2).ToArray());
+                    result.SigSuggestions.AddRange(e.AllSyntaxErrors.SelectMany(x => x.Item3).ToArray());
+
+                    return result;
+                }
+                catch (ParsingException e)
+                {
+                    var result = new ParsedSig { OriginalSig = sig, PreprocessedSig = preprocessedSig };
+
+                    result.Dosages.Clear();
+                    result.Confidence = ConfidenceEnum.None;
+                    result.ConfidenceReasons.Add(e.Message);
+                    if (e.InnerException is ParsingException)
+                    {
+                        result.ConfidenceReasons.Add(e.InnerException.Message);
+                    }
+
+                    return result;
+                }
+            }
+        }
+
+        /// <inheritdoc />
+        public ParsedSig ParseStrict(string sig)
+        {
+            using (_logger.BeginScope("Parsing sig '{sig}'", sig))
+            {
+                var key = $"{_cachePrefix}{{{sig}}}";
+
+                if (_distributedCache != null && _distributedCache.TryGetValue(key, out ParsedSig cachedResult))
+                {
+                    return cachedResult;
+                }
+
+                var preprocessedSig = string.Empty;
+
+                try
+                {
+                    preprocessedSig = _stringPreprocessor.Normalize(sig);
+
+                    ICharStream stream = CharStreams.fromString(preprocessedSig);
+                    var lexer = new DefaultLexer(stream);
+                    ITokenStream tokens = new CommonTokenStream(lexer);
+                    var parser = new DefaultParser(tokens);
+
+                    // set up the list of errors
+                    var parserErrors =
+                        new List<(ConfidenceEnum Confidence, string ConfidenceReason, List<string>)>();
+                    parser.RemoveErrorListeners();
+                    parser.AddErrorListener(new RuleConfidenceErrorListener(parserErrors));
+
+                    // parse
+                    DefaultParser.StrictSigContext tree = parser.strictSig();
+
+                    // check for errors or exceptions
+                    if (parser.NumberOfSyntaxErrors > 0)
+                    {
+                        throw new ParsingSyntaxException(parserErrors);
+                    }
+
+                    if (tree.exception != null)
+                    {
+                        throw new ParsingException(tree.exception.Message, tree.exception);
+                    }
+
+                    // visit the tree
+                    var visitor = new StrictSigVisitor();
+                    var result = visitor.VisitRoot(tree);
+                    result.OriginalSig = sig;
+                    result.PreprocessedSig = preprocessedSig;
+
+                    // Add the maximum dosage
+                    CalculateMaximumDosage(result);
+
+                    // cache the result
+                    if (_distributedCache != null && !_distributedCache.Exists(key))
+                    {
+                        _distributedCache.Set(key, result);
+                    }
+
+                    return result;
+                }
+                catch (ParsingSyntaxException e)
+                {
+                    var result = new ParsedSig { OriginalSig = sig, PreprocessedSig = preprocessedSig };
+
+                    result.Dosages.Clear();
+                    result.Confidence = ConfidenceEnum.None;
+                    result.ConfidenceReasons.AddRange(e.AllSyntaxErrors.Select(x => x.Item2).ToArray());
+                    result.SigSuggestions.AddRange(e.AllSyntaxErrors.SelectMany(x => x.Item3).ToArray());
 
                     return result;
                 }

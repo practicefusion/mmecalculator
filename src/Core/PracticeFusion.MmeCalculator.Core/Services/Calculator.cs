@@ -106,6 +106,17 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 return result;
             }
         }
+        
+        /// <inheritdoc />
+        public ParsedSig ParseSigStrict(string sig)
+        {
+            using (_logger.BeginScope("Parsing sig strict: '{sig}'", sig))
+            {
+                ParsedSig result = _sigParser.ParseStrict(sig);
+                _analyzer.AnalyzeParsedSig(result);
+                return result;
+            }
+        }
 
         private ParsedResult Calculate(CalculationItem request)
         {

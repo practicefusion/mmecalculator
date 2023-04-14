@@ -12,7 +12,7 @@ namespace PracticeFusion.MmeCalculator.Core.Messages
     /// <inheritdoc cref="BaseParsedEntity"/>
     /// <inheritdoc cref="IConfidence"/>
     [Serializable]
-    public class ParsedSig : BaseParsedEntity, IConfidence
+    public class ParsedSig : BaseParsedEntity, IConfidence, ISigSuggestions
     {
         /// <summary>
         /// Indicates whether any of the components of the sig contain latin abbreviations, e.g. "bid", "po", "prn"
@@ -54,6 +54,9 @@ namespace PracticeFusion.MmeCalculator.Core.Messages
         /// <inheritdoc />
         public List<string> ConfidenceReasons { get; set; } = new();
 
+        /// <inheritdoc />
+        public List<string> SigSuggestions { get; set; } = new();
+        
         /// <inheritdoc />
         public override string ToString()
         {

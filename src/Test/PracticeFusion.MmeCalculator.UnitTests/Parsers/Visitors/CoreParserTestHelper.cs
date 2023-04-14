@@ -1,10 +1,11 @@
 ﻿using System;
 using Antlr4.Runtime;
 using FluentAssertions;
+using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Parsers;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
-using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -16,6 +17,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         }
 
         public TVisitor Visitor { get; }
+        
+        public DefaultParser Parser { get; private set; }
 
         public void NullContextShouldThrowParseException()
         {
@@ -52,6 +55,38 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
             ITokenSource lexer = new DefaultLexer(stream);
             ITokenStream tokens = new CommonTokenStream(lexer);
             return new DefaultParser(tokens);
+        }
+
+        public DefaultParser DefaultParserWithParseErrors(string statement, 
+            out List<(ConfidenceEnum Confidence, string ConfidenceReason, List<string>)> parserErrors)
+        {
+            ICharStream stream = CharStreams.fromString(statement);
+            ITokenSource lexer = new DefaultLexer(stream);
+            ITokenStream tokens = new CommonTokenStream(lexer);
+            Parser = new  DefaultParser(tokens);
+            
+            // set up the list of errors
+            parserErrors =
+                new List<(ConfidenceEnum Confidence, string ConfidenceReason, List<string> ExpectedRules)>();
+            Parser.RemoveErrorListeners();
+            Parser.AddErrorListener(new RuleConfidenceErrorListener(parserErrors));
+
+            return Parser;
+        }
+
+        public void ThrowParserErrors(DefaultParser parser, ParserRuleContext tree, 
+            List<(ConfidenceEnum Confidence, string ConfidenceReason, List<string>)> parserErrors)
+        {
+            // check for errors or exceptions
+            if (parser.NumberOfSyntaxErrors > 0)
+            {
+                throw new ParsingSyntaxException(parserErrors);
+            }
+
+            if (tree.exception != null)
+            {
+                throw new ParsingException(tree.exception.Message, tree.exception);
+            }
         }
     }
 }
