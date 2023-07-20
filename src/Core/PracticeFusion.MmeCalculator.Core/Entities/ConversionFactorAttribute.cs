@@ -1,5 +1,4 @@
-﻿using PracticeFusion.MmeCalculator.Core.Services;
-using System;
+﻿using System;
 using System.Linq;
 using System.Text;
 
@@ -8,6 +7,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
     internal sealed class ConversionFactorAttribute : Attribute
     {
+        private readonly string? _forms;
+
         public ConversionFactorAttribute(UnitOfMeasureEnum unitOfMeasure, double conversionFactor)
         {
             UnitOfMeasure = unitOfMeasure;
@@ -17,7 +18,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             ConversionFactor = (decimal)conversionFactor;
         }
 
-        public ConversionFactorAttribute(UnitOfMeasureEnum unitOfMeasure, double minimumDailyDose, double maximumDailyDose, double conversionFactor)
+        public ConversionFactorAttribute(UnitOfMeasureEnum unitOfMeasure, double minimumDailyDose,
+            double maximumDailyDose, double conversionFactor)
         {
             UnitOfMeasure = unitOfMeasure;
             MinimumDailyDose = minimumDailyDose == double.MinValue ? decimal.MinValue : (decimal)minimumDailyDose;
@@ -49,8 +51,6 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             ConversionFactor = (decimal)conversionFactor;
         }
 
-        private readonly string? _forms;
-
         public FormEnum[]? Forms => _forms == null ? null : ParseForms(_forms);
 
         public UnitOfMeasureEnum UnitOfMeasure { get; }
@@ -58,6 +58,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         public decimal? MaximumDailyDose { get; }
 
         public decimal? MinimumDailyDose { get; }
+
+        public decimal ConversionFactor { get; }
 
         private static FormEnum[] ParseForms(string forms)
         {
@@ -72,17 +74,15 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             }
         }
 
-        public decimal ConversionFactor { get; }
-
         public string GetConversionFactorDescription(OpioidEnum opioid)
         {
             // start with the opioid name
-            StringBuilder sb = new StringBuilder(opioid.ToString());
+            var sb = new StringBuilder(opioid.ToString());
 
             // add form, if present
             if (Forms != null)
             {
-                foreach (var form in Forms)
+                foreach (FormEnum form in Forms)
                 {
                     sb.Append($" {form}");
                 }

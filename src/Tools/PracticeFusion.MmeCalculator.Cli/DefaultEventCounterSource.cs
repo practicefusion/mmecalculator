@@ -3,7 +3,7 @@ using System.Diagnostics.Tracing;
 
 namespace PracticeFusion.MmeCalculator.Cli
 {
-    [EventSource(Name="MmeCalculator.Cli")]
+    [EventSource(Name = "MmeCalculator.Cli")]
     public sealed class DefaultEventCounterSource : EventSource
     {
         public static readonly DefaultEventCounterSource Log = new();
@@ -14,8 +14,7 @@ namespace PracticeFusion.MmeCalculator.Cli
         {
             _calculationCounter = new IncrementingEventCounter("calculation-time", this)
             {
-                DisplayName = "Calculations/Sec",
-                DisplayRateTimeScale = TimeSpan.FromSeconds(1)
+                DisplayName = "Calculations/Sec", DisplayRateTimeScale = TimeSpan.FromSeconds(1)
             };
         }
 

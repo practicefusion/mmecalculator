@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Extensions.Caching.Distributed;
+﻿using Microsoft.Extensions.Caching.Distributed;
+using System;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
@@ -17,7 +17,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
         private static T Get<T>(this IDistributedCache cache, string key, bool bestEffort)
         {
-            byte[]? data = cache?.Get(key);
+            var data = cache?.Get(key);
 
             if (data == null && bestEffort)
             {
@@ -51,7 +51,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             Set(cache, key, value, new DistributedCacheEntryOptions());
         }
 
-        public static void Set<T>(this IDistributedCache cache, string key, T value, DistributedCacheEntryOptions options)
+        public static void Set<T>(this IDistributedCache cache, string key, T value,
+            DistributedCacheEntryOptions options)
         {
             var bytes = JsonUtils.SerializeToUtf8Bytes(value);
             cache.Set(key, bytes, options);

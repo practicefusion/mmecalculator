@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PracticeFusion.MmeCalculator.Core.Messages;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
@@ -12,7 +13,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var mmeCalculator = new Core.Services.MmeCalculator(
                 MoqServices.Logger<Core.Services.MmeCalculator>().Object,
                 MoqServices.OpioidConversionFactor.Object);
-            var result = mmeCalculator.Calculate(DefaultEntities.MedicationComponent, null, null);
+            MmeCalculatorResult result = mmeCalculator.Calculate(DefaultEntities.MedicationComponent, null, null);
             result.OpioidMaximumDailyDose.Should().Be(0);
             result.OpioidMaximumDailyDose.Should().Be(0);
             result.OpioidConversionFactor.Should().Be(0);

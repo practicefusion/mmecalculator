@@ -4,18 +4,18 @@ using System.Text.Json.Serialization;
 namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.Entities
 {
     /// <summary>
-    /// Drugs
+    ///     Drugs
     /// </summary>
     public class DrugGroup
     {
         /// <summary>
-        /// Name
+        ///     Name
         /// </summary>
         [JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// Concept groups
+        ///     Concept groups
         /// </summary>
         [JsonPropertyName("conceptGroup")]
         public List<ConceptGroup>? ConceptGroups { get; set; }

@@ -3,201 +3,179 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Drug form enumeration
+    ///     Drug form enumeration
     /// </summary>
     [Serializable]
     public enum FormEnum
     {
         /// <summary>
-        /// Application
+        ///     Application
         /// </summary>
         [ParseableEnum("application", "applications")]
         Application,
 
         /// <summary>
-        /// Buccal
+        ///     Buccal
         /// </summary>
-        [ParseableEnum("buccal", "buccal")] 
-        Buccal,
+        [ParseableEnum("buccal", "buccal")] Buccal,
 
         /// <summary>
-        /// Capsule
+        ///     Capsule
         /// </summary>
-        [ParseableEnum("capsule", "capsules")] 
-        Capsule,
-        
+        [ParseableEnum("capsule", "capsules")] Capsule,
+
         /// <summary>
-        /// Cartridge
+        ///     Cartridge
         /// </summary>
-        [ParseableEnum("cartridge", "cartridges")] 
+        [ParseableEnum("cartridge", "cartridges")]
         Cartridge,
-        
-        /// <summary>
-        /// Dose
-        /// </summary>
-        [ParseableEnum("dose", "doses", true)] 
-        Dose,
 
         /// <summary>
-        /// Drop
+        ///     Dose
         /// </summary>
-        [ParseableEnum("drop", "drops")] 
-        Drop,
+        [ParseableEnum("dose", "doses", true)] Dose,
 
         /// <summary>
-        /// Elixir
+        ///     Drop
         /// </summary>
-        [ParseableEnum("elixir", "elixir")] 
-        Elixir,
+        [ParseableEnum("drop", "drops")] Drop,
 
         /// <summary>
-        /// Film
+        ///     Elixir
         /// </summary>
-        [ParseableEnum("film", "film")] 
-        Film,
+        [ParseableEnum("elixir", "elixir")] Elixir,
 
         /// <summary>
-        /// Injectable
+        ///     Film
+        /// </summary>
+        [ParseableEnum("film", "film")] Film,
+
+        /// <summary>
+        ///     Injectable
         /// </summary>
         [ParseableEnum("injectable", "injectable")]
         Injectable,
 
         /// <summary>
-        /// Injection
+        ///     Injection
         /// </summary>
         [ParseableEnum("injection", "injection")]
         Injection,
 
         /// <summary>
-        /// Liquid
+        ///     Liquid
         /// </summary>
-        [ParseableEnum("liquid", "liquid")] 
-        Liquid,
+        [ParseableEnum("liquid", "liquid")] Liquid,
 
         /// <summary>
-        /// Lollipop
+        ///     Lollipop
         /// </summary>
         [ParseableEnum("lollipop", "lollipops")]
         Lollipop,
 
         /// <summary>
-        /// Lozenge
+        ///     Lozenge
         /// </summary>
-        [ParseableEnum("lozenge", "lozenges")] 
-        Lozenge,
+        [ParseableEnum("lozenge", "lozenges")] Lozenge,
 
         /// <summary>
-        /// Nasal
+        ///     Nasal
         /// </summary>
-        [ParseableEnum("nasal", "nasal")] 
-        Nasal,
+        [ParseableEnum("nasal", "nasal")] Nasal,
 
         /// <summary>
-        /// Oral
+        ///     Oral
         /// </summary>
-        [ParseableEnum("oral", "oral")] 
-        Oral,
+        [ParseableEnum("oral", "oral")] Oral,
 
         /// <summary>
-        /// Patch
+        ///     Patch
         /// </summary>
-        [ParseableEnum("patch", "patches")] 
-        Patch,
+        [ParseableEnum("patch", "patches")] Patch,
 
         /// <summary>
-        /// Piece
+        ///     Piece
         /// </summary>
-        [ParseableEnum("piece", "pieces")] 
-        Piece,
+        [ParseableEnum("piece", "pieces")] Piece,
 
         /// <summary>
-        /// Pill
+        ///     Pill
         /// </summary>
-        [ParseableEnum("pill", "pills")] 
-        Pill,
+        [ParseableEnum("pill", "pills")] Pill,
 
         /// <summary>
-        /// Puff
+        ///     Puff
         /// </summary>
-        [ParseableEnum("puff", "puffs")] 
-        Puff,
+        [ParseableEnum("puff", "puffs")] Puff,
 
         /// <summary>
-        /// Rectal
+        ///     Rectal
         /// </summary>
-        [ParseableEnum("rectal", "rectal")] 
-        Rectal,
+        [ParseableEnum("rectal", "rectal")] Rectal,
 
         /// <summary>
-        /// Solution
+        ///     Solution
         /// </summary>
         [ParseableEnum("solution", "solution")]
         Solution,
 
         /// <summary>
-        /// Spray
+        ///     Spray
         /// </summary>
-        [ParseableEnum("spray", "sprays")] 
-        Spray,
+        [ParseableEnum("spray", "sprays")] Spray,
 
         /// <summary>
-        /// Sublingual
+        ///     Sublingual
         /// </summary>
         [ParseableEnum("sublingual", "sublingual")]
         Sublingual,
 
         /// <summary>
-        /// Suppository
+        ///     Suppository
         /// </summary>
         [ParseableEnum("suppository", "suppositories")]
         Suppository,
 
         /// <summary>
-        /// Suspension
+        ///     Suspension
         /// </summary>
         [ParseableEnum("suspension", "suspension")]
         Suspension,
 
         /// <summary>
-        /// Syringe
+        ///     Syringe
         /// </summary>
-        [ParseableEnum("syringe", "syringes")] 
-        Syringe,
+        [ParseableEnum("syringe", "syringes")] Syringe,
 
         /// <summary>
-        /// Syrup
+        ///     Syrup
         /// </summary>
-        [ParseableEnum("syrup", "syrup")] 
-        Syrup,
+        [ParseableEnum("syrup", "syrup")] Syrup,
 
         /// <summary>
-        /// System
+        ///     System
         /// </summary>
-        [ParseableEnum("system", "system")] 
-        System,
+        [ParseableEnum("system", "system")] System,
 
         /// <summary>
-        /// Tablet
+        ///     Tablet
         /// </summary>
-        [ParseableEnum("tablet", "tablets")] 
-        Tablet,
+        [ParseableEnum("tablet", "tablets")] Tablet,
 
         /// <summary>
-        /// TDP
+        ///     TDP
         /// </summary>
-        [ParseableEnum("tdp", "tdp")] 
-        Tdp,
+        [ParseableEnum("tdp", "tdp")] Tdp,
 
         /// <summary>
-        /// Transdermal
+        ///     Transdermal
         /// </summary>
         [ParseableEnum("transdermal", "transdermal")]
         Transdermal,
 
         /// <summary>
-        /// Troche
+        ///     Troche
         /// </summary>
-        [ParseableEnum("troche", "troche")] 
-        Troche,
+        [ParseableEnum("troche", "troche")] Troche
     }
 }

@@ -42,6 +42,16 @@ public interface IDefaultParserListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitSig([NotNull] DefaultParser.SigContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="DefaultParser.strictSig"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStrictSig([NotNull] DefaultParser.StrictSigContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DefaultParser.strictSig"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStrictSig([NotNull] DefaultParser.StrictSigContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="DefaultParser.dosage"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -51,6 +61,16 @@ public interface IDefaultParserListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitDosage([NotNull] DefaultParser.DosageContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DefaultParser.strictDosage"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStrictDosage([NotNull] DefaultParser.StrictDosageContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DefaultParser.strictDosage"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStrictDosage([NotNull] DefaultParser.StrictDosageContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DefaultParser.dosageSeparator"/>.
 	/// </summary>

@@ -1,6 +1,7 @@
-﻿using System;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using PracticeFusion.MmeCalculator.Core.Entities;
+using System;
+using Interval = Antlr4.Runtime.Misc.Interval;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
@@ -9,12 +10,13 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
         public static string GetOriginalTextWithSpacing(this ParserRuleContext context)
         {
             // check to make sure we're in a valid context
-            if (context.Start == null || context.Stop == null || context.Start.StartIndex < 0 || context.Stop.StopIndex < 0)
+            if (context.Start == null || context.Stop == null || context.Start.StartIndex < 0 ||
+                context.Stop.StopIndex < 0)
             {
                 return string.Empty;
             }
 
-            return context.Start.InputStream.GetText(Antlr4.Runtime.Misc.Interval.Of(context.Start.StartIndex, context.Stop.StopIndex));
+            return context.Start.InputStream.GetText(Interval.Of(context.Start.StartIndex, context.Stop.StopIndex));
         }
 
         public static string GetOriginalTextWithSpacing(this ParserRuleContext[] contexts)
@@ -31,12 +33,14 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 return string.Empty;
             }
 
-            return firstContext.Start.InputStream.GetText(Antlr4.Runtime.Misc.Interval.Of(firstContext.Start.StartIndex, lastContext.Stop.StopIndex));
+            return firstContext.Start.InputStream.GetText(Interval.Of(firstContext.Start.StartIndex,
+                lastContext.Stop.StopIndex));
         }
 
         public static void SetStartAndStopIndex(this ParserRuleContext context, BaseParsedEntity parsedEntity)
         {
-            if (context.Start == null || context.Stop == null || context.Start.StartIndex < 0 || context.Stop.StopIndex < 0)
+            if (context.Start == null || context.Stop == null || context.Start.StartIndex < 0 ||
+                context.Stop.StopIndex < 0)
             {
                 return;
             }
@@ -53,13 +57,14 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             {
                 foreach (ParserRuleContext context in contexts)
                 {
-                    if (context.Start == null || context.Stop == null || context.Start.StartIndex < 0 || context.Stop.StopIndex < 0)
+                    if (context.Start == null || context.Stop == null || context.Start.StartIndex < 0 ||
+                        context.Stop.StopIndex < 0)
                     {
                         return;
                     }
 
-                    int start = context.Start.StartIndex;
-                    int end = context.Stop.StopIndex;
+                    var start = context.Start.StartIndex;
+                    var end = context.Stop.StopIndex;
 
                     if (!set)
                     {
@@ -69,8 +74,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                     }
                     else
                     {
-                        int currentEnd = parsedEntity.Index + parsedEntity.Length;
-                        int furthestEnd = Math.Max(currentEnd, end);
+                        var currentEnd = parsedEntity.Index + parsedEntity.Length;
+                        var furthestEnd = Math.Max(currentEnd, end);
 
                         parsedEntity.Index = Math.Min(parsedEntity.Index, start);
                         parsedEntity.Length = furthestEnd - parsedEntity.Index + 1;

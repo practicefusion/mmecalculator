@@ -1,21 +1,21 @@
-﻿using System.Text.Json.Serialization;
-using PracticeFusion.MmeCalculator.RxNavRxNormResolver.Entities;
+﻿using PracticeFusion.MmeCalculator.RxNavRxNormResolver.Entities;
+using System.Text.Json.Serialization;
 
 namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.Responses
 {
     /// <summary>
-    /// Response from a drug search
+    ///     Response from a drug search
     /// </summary>
     public class DrugSearchResponse
     {
         /// <summary>
-        /// Drug group
+        ///     Drug group
         /// </summary>
         [JsonPropertyName("drugGroup")]
         public DrugGroup? DrugGroup { get; set; }
 
         /// <summary>
-        /// Id Group
+        ///     Id Group
         /// </summary>
         [JsonPropertyName("idGroup")]
         public IdGroup? IdGroup { get; set; }

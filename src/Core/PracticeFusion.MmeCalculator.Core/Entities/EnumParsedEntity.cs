@@ -3,7 +3,7 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// A parsed entity that contains at least an enumerated value.
+    ///     A parsed entity that contains at least an enumerated value.
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
     /// <inheritdoc />
@@ -11,12 +11,12 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
     public class EnumParsedEntity<TEnum> : BaseParsedEntity where TEnum : Enum
     {
         /// <summary>
-        /// The enumerated value parsed from the original sig.
+        ///     The enumerated value parsed from the original sig.
         /// </summary>
         public TEnum? ValueEnum { get; set; }
 
         /// <summary>
-        /// The human readable presentation
+        ///     The human readable presentation
         /// </summary>
         public override string ToString()
         {

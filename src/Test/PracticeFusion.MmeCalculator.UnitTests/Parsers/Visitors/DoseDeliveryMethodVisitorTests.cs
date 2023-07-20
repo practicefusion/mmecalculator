@@ -1,24 +1,19 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
     [TestClass]
     public class DoseDeliveryMethodVisitorTests
     {
-        private readonly CoreParserTestHelper<DoseDeliveryMethodVisitor, DefaultParser.DoseDeliveryMethodContext, DoseDeliveryMethod>
+        private readonly CoreParserTestHelper<DoseDeliveryMethodVisitor, DefaultParser.DoseDeliveryMethodContext,
+                DoseDeliveryMethod>
             _helper = new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
@@ -36,8 +31,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "place", "place" },
                 new object[] { "suck", "suck" },
                 new object[] { "take", "take" },
-                new object[] { "use", "use" },
+                new object[] { "use", "use" }
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -59,8 +60,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).doseDeliveryMethod();
-            var result = _helper.Visitor.VisitRoot(tree);
+            DefaultParser.DoseDeliveryMethodContext tree = _helper.DefaultParser(statement).doseDeliveryMethod();
+            DoseDeliveryMethod result = _helper.Visitor.VisitRoot(tree);
 
             result.ToString().Should().Be(expected);
             result.Index.Should().Be(0);

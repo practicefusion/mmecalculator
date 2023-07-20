@@ -3,19 +3,17 @@ using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
     [TestClass]
     public class TransparencyUtilsTests
     {
-        private static ILogger<TransparencyUtils> _logger = DefaultServices.LoggerFactory.CreateLogger<TransparencyUtils>();
-        private static IOpioidConversionFactor _opioidConversionFactor = DefaultServices.OpioidConversionFactor;
+        private static readonly ILogger<TransparencyUtils> _logger =
+            DefaultServices.LoggerFactory.CreateLogger<TransparencyUtils>();
+
+        private static readonly IOpioidConversionFactor
+            _opioidConversionFactor = DefaultServices.OpioidConversionFactor;
 
         [TestMethod]
         public void TransparencyUtilsTest()
@@ -26,13 +24,13 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             transparencyUtils.Should().NotBeNull();
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AllDetailsTest()
         {
             var transparencyUtils =
                 new TransparencyUtils(_logger, _opioidConversionFactor);
 
-            var results = transparencyUtils.AllDetails();
+            AllTransparencyDetails results = transparencyUtils.AllDetails();
 
             // Gloss over the results to be sure there's something there.
             results.VersionInformation.Should().HaveCount(2);
@@ -41,7 +39,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             results.Opioids[OpioidEnum.Fentanyl].Should().HaveCount(8);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetFileVersionInfoTest()
         {
             TransparencyUtils.GetFileVersionInfo().Should().NotBeNull();

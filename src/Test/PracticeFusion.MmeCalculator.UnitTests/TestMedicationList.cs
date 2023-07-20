@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using PracticeFusion.MmeCalculator.Core.Messages;
+﻿using PracticeFusion.MmeCalculator.Core.Messages;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.UnitTests
 {

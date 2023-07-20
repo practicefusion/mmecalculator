@@ -7,6 +7,8 @@ options {
 
 sig: dosage (dosage)* ((DOT | COMMA)? freeText)? EOF;
 
+strictSig: strictDosage (strictDosage)* EOF;
+
 dosage:
 	dosageSeparator? doseDeliveryMethod? (dose | ambiguousDose) (
 		route
@@ -15,6 +17,13 @@ dosage:
 		| additionalInstruction
 		| indicationForUse
 	)*;
+
+strictDosage:
+	dosageSeparator? doseDeliveryMethod dose 
+	route
+	frequencies ?
+	additionalInstruction ?
+	indicationForUse? duration?;
 
 //////////////////////////////////////////////////////////////////////////
 // Dose
@@ -205,13 +214,14 @@ timeOfDay:
 	(EVERY | EACH)? (
 		MORNING
 		| DAY? (BEFORE | AFTER | AT) (NOON | MIDDAY)
+		| AFTERNOON
 		| EVENING
 		| NIGHT TIME?
 		| (periodBeforeOrAfter)? BEDTIME
 	);
 
 timingEvent:
-	(BEFORE | AFTER | WITH | periodBeforeOrAfter) (EVERY | EACH) meals;
+	(BEFORE | AFTER | WITH | periodBeforeOrAfter) (EVERY | EACH)? meals;
 
 latinAdministrationTiming: EVERY? (HS | QPC | QAC);
 

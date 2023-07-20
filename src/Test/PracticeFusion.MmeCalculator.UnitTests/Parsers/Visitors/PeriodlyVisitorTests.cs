@@ -1,10 +1,10 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -14,12 +14,6 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
         private readonly CoreParserTestHelper<PeriodlyVisitor, DefaultParser.PeriodlyContext, PeriodEnum> _helper =
             new();
 
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
-
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
             {
@@ -28,8 +22,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "weekly", "week" },
                 new object[] { "monthly", "month" },
                 new object[] { "yearly", "year" },
-                new object[] { "annually", "year" },
+                new object[] { "annually", "year" }
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -50,8 +50,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).periodly();
-            var result = _helper.Visitor.VisitRoot(tree);
+            DefaultParser.PeriodlyContext tree = _helper.DefaultParser(statement).periodly();
+            PeriodEnum result = _helper.Visitor.VisitRoot(tree);
 
             result.ToString().ToLowerInvariant().Should().Be(expected);
         }

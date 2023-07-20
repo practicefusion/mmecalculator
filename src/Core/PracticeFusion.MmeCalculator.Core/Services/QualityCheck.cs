@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using PracticeFusion.MmeCalculator.Core.Messages;
+using System.Collections.Generic;
 using System.Linq;
-using PracticeFusion.MmeCalculator.Core.Messages;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
     internal static class QualityCheck
     {
-        public static bool IsTrue(bool condition, ConfidenceEnum confidence, IConfidence analysis, params string[] reasons)
+        public static bool IsTrue(bool condition, ConfidenceEnum confidence, IConfidence analysis,
+            params string[] reasons)
         {
             if (!condition)
             {
@@ -22,7 +23,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             IConfidence analysis,
             params string[] reasons)
         {
-            bool assertionResult = entity != null;
+            var assertionResult = entity != null;
 
             if (!assertionResult)
             {

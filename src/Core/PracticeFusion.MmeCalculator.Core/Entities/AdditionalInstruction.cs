@@ -3,14 +3,14 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Additional instructions for a dosage, containing one <see cref="AdditionalInstructionEnum"/> and/or a description.
+    ///     Additional instructions for a dosage, containing one <see cref="AdditionalInstructionEnum" /> and/or a description.
     /// </summary>
     /// <inheritdoc />
     [Serializable]
     public class AdditionalInstruction : EnumParsedEntity<AdditionalInstructionEnum>
     {
         /// <summary>
-        /// Optional text included in the instruction
+        ///     Optional text included in the instruction
         /// </summary>
         public string? Description { get; set; }
 

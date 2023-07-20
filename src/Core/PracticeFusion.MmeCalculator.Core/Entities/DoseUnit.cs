@@ -3,19 +3,19 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Dose unit (either Form or Unit of Measure)
+    ///     Dose unit (either Form or Unit of Measure)
     /// </summary>
     /// <inheritdoc />
     [Serializable]
     public class DoseUnit : BaseParsedEntity
     {
         /// <summary>
-        /// Unit of measure
+        ///     Unit of measure
         /// </summary>
         public UnitOfMeasure? UnitOfMeasure { get; set; }
 
         /// <summary>
-        /// Form
+        ///     Form
         /// </summary>
         public Form? Form { get; set; }
 

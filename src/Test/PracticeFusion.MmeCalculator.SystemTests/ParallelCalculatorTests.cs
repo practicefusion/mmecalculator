@@ -1,12 +1,12 @@
+using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PracticeFusion.MmeCalculator.Core.Messages;
+using PracticeFusion.MmeCalculator.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PracticeFusion.MmeCalculator.Core.Messages;
-using PracticeFusion.MmeCalculator.Core.Services;
 
 namespace PracticeFusion.MmeCalculator.SystemTests
 {
@@ -17,17 +17,19 @@ namespace PracticeFusion.MmeCalculator.SystemTests
         private readonly ICalculator _calculator = DefaultServices.Calculator;
 
         private static IEnumerable<object[]> TestData => File.ReadLines("calculator-test-data.txt")
-            .Select(x => new object[] {new CalculatorTestItem(x)});
+            .Select(x => new object[] { new CalculatorTestItem(x) });
 
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
         public void BasicTests(CalculatorTestItem testItem)
         {
-            CalculationRequest request = new CalculationRequest() { RequestId = testItem.Id };
+            var request = new CalculationRequest { RequestId = testItem.Id };
             request.CalculationItems.Add(
-                new CalculationItem()
-                    { RequestItemId = testItem.Id, RxCui = testItem.RxCui, Sig = testItem.Instruction });
+                new CalculationItem
+                {
+                    RequestItemId = testItem.Id, RxCui = testItem.RxCui, Sig = testItem.Instruction
+                });
 
             // calculate the request
             CalculatedResult result = _calculator.Calculate(request);
@@ -36,7 +38,8 @@ namespace PracticeFusion.MmeCalculator.SystemTests
             result?.CalculatedResultAnalysis?.MaximumMmePerDay.Should().BeGreaterThan(0);
 
             // ensure the result is approximately equal (within tolerance)
-            Math.Abs(result.CalculatedResultAnalysis.MaximumMmePerDay - testItem.ExpectedMme).Should().BeLessOrEqualTo(0.001M);
+            Math.Abs(result.CalculatedResultAnalysis.MaximumMmePerDay - testItem.ExpectedMme).Should()
+                .BeLessOrEqualTo(0.001M);
         }
 
         public static string DisplayName(MethodInfo methodInfo, object[] data)

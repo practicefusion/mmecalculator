@@ -3,34 +3,34 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Dose
+    ///     Dose
     /// </summary>
     /// <inheritdoc />
     [Serializable]
     public class Dose : BaseParsedEntity
     {
         /// <summary>
-        /// The minimum dose
+        ///     The minimum dose
         /// </summary>
         public decimal MinDose { get; set; }
 
         /// <summary>
-        /// The maximum dose
+        ///     The maximum dose
         /// </summary>
         public decimal MaxDose { get; set; }
 
         /// <summary>
-        /// An optional unit of measure conversion, e.g. 1 mg (1 ml)
+        ///     An optional unit of measure conversion, e.g. 1 mg (1 ml)
         /// </summary>
         public DoseConversion? DoseConversion { get; set; }
 
         /// <summary>
-        /// Indicates the dose has a different minimum and maximum value.
+        ///     Indicates the dose has a different minimum and maximum value.
         /// </summary>
         public bool Complex { get; set; }
 
         /// <summary>
-        /// The dose unit (form or unit of measure)
+        ///     The dose unit (form or unit of measure)
         /// </summary>
         public DoseUnit? DoseUnit { get; set; }
 

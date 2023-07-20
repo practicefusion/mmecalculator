@@ -1,9 +1,10 @@
-﻿using System;
-using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+﻿using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
-    internal class RangeNumericValueVisitor : IVisitorCreator<DefaultParser.RangeNumericValueContext, Tuple<decimal, decimal>>
+    internal class
+        RangeNumericValueVisitor : IVisitorCreator<DefaultParser.RangeNumericValueContext, Tuple<decimal, decimal>>
     {
         public Tuple<decimal, decimal> VisitRoot(DefaultParser.RangeNumericValueContext context)
         {
@@ -13,8 +14,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
 
             var visitor = new NumericValueVisitor();
-            decimal min = visitor.VisitRoot(context.numericValue(0));
-            decimal max = visitor.VisitRoot(context.numericValue(1));
+            var min = visitor.VisitRoot(context.numericValue(0));
+            var max = visitor.VisitRoot(context.numericValue(1));
             return new Tuple<decimal, decimal>(min, max);
         }
     }

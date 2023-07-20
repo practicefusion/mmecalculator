@@ -1,7 +1,3 @@
-using System;
-using System.IO;
-using System.Reflection;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +6,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PracticeFusion.MmeCalculator.Core.Services;
 using PracticeFusion.MmeCalculator.RxNavRxNormResolver;
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.Json.Serialization;
 
 namespace PracticeFusion.MmeCalculator.WebDemo
 {
@@ -70,8 +70,8 @@ namespace PracticeFusion.MmeCalculator.WebDemo
                         });
 
                     // Set the comments path for the Swagger JSON and UI.
-                    string xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                    string xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                     c.IncludeXmlComments(xmlPath);
                 });
         }

@@ -1,10 +1,10 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
@@ -13,18 +13,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
     {
         private readonly CoreParserTestHelper<DoseUnitVisitor, DefaultParser.DoseUnitContext, DoseUnit> _helper = new();
 
+        private static IEnumerable<object[]> TestData =>
+            new List<object[]> { new object[] { "oral tablet", "oral tablet" }, new object[] { "ml", "ml" } };
+
         [TestMethod]
         public void NullContextShouldThrowParseException()
         {
             _helper.NullContextShouldThrowParseException();
         }
-
-        private static IEnumerable<object[]> TestData =>
-            new List<object[]>
-            {
-                new object[] { "oral tablet", "oral tablet" },
-                new object[] { "ml", "ml" },
-            };
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -46,8 +42,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, string expected)
         {
-            var tree = _helper.DefaultParser(statement).doseUnit();
-            var result = _helper.Visitor.VisitRoot(tree);
+            DefaultParser.DoseUnitContext tree = _helper.DefaultParser(statement).doseUnit();
+            DoseUnit result = _helper.Visitor.VisitRoot(tree);
 
             result.ToString().Should().Be(expected);
             result.Index.Should().Be(0);

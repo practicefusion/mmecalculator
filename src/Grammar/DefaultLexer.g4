@@ -79,6 +79,7 @@ CLOCKNUMBER: DIGIT+ ':' DIGIT+;
 // general
 A_AN: A | A N;
 ADMINISTER: A D M I N I S T E R;
+AFTERNOON: A F T E R N O O N;
 AFTER: A F T E R;
 AM: A M;
 AND: A N D;
@@ -331,7 +332,7 @@ DONOTSWALLOW: D O ' ' N O T ' ' S W A L L O W;
 // ignore whitespace
 WS: [ \r\t\n,]+ -> skip;
 
-WORD: [a-zA-Z]+;
+WORD: [a-zA-Z]+ | [a-zA-Z]+ DASH [a-zA-Z]+;
 
 BRANDNAME: '[' ANYTOKEN+ ']';
 

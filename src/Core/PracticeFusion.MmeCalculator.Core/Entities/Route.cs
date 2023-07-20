@@ -4,19 +4,19 @@ using System.Text;
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Route
+    ///     Route
     /// </summary>
-    /// <inheritdoc cref="MultipleEnumParsedEntity{TEnum}"/>
+    /// <inheritdoc cref="MultipleEnumParsedEntity{TEnum}" />
     [Serializable]
     public class Route : MultipleEnumParsedEntity<RouteEnum>
     {
         /// <summary>
-        /// Indicates whether the route contains latin abbreviations like "po"
+        ///     Indicates whether the route contains latin abbreviations like "po"
         /// </summary>
         public bool ContainsLatinAbbreviations { get; set; }
 
         /// <summary>
-        /// Optional route instruction
+        ///     Optional route instruction
         /// </summary>
         public string? RouteInstruction { get; set; }
 
@@ -28,7 +28,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             foreach (RouteEnum enumValue in ValueEnums)
             {
                 ParseableEnumAttribute data = enumValue.GetParseableEnumData();
-                string display = count <= 1 ? data.FriendlyName : data.PluralName;
+                var display = count <= 1 ? data.FriendlyName : data.PluralName;
 
                 // check the first one, if it starts with "by" and we have a route instruction
                 if (first && !string.IsNullOrEmpty(RouteInstruction) && display.StartsWith("by "))

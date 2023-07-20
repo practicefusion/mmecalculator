@@ -10,7 +10,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         {
             Regex.CacheSize = 1000;
             // lowercase
-            string normalized = inbound.ToLowerInvariant();
+            var normalized = inbound.ToLowerInvariant();
 
             // reduce 's to s
             normalized = Regex.Replace(normalized, @"(\s*\'s)", "s", RegexOptions.Compiled);
@@ -19,7 +19,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             // SEMICOLON: unless surrounded by digits, like time
             // PERIOD: unless surrounded by digits, like a decimal
             // COMMA: unless  surrounded by digits, like thousands separator
-            var unnecessaryCharsPattern = @"([\!\$\%\^\#\'\""\*\[\]\;\<\>\?_\+]|(?!<[0-9]):(?![0-9])|(?!<[0-9])[\.\,](?![0-9]))+";
+            var unnecessaryCharsPattern =
+                @"([\!\$\%\^\#\'\""\*\[\]\;\<\>\?_\+]|(?!<[0-9]):(?![0-9])|(?!<[0-9])[\.\,](?![0-9]))+";
             normalized = Regex.Replace(normalized, unnecessaryCharsPattern, " ", RegexOptions.Compiled);
 
             // replace more than one space with a single space
@@ -72,7 +73,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             normalized = Regex.Replace(normalized, @"thrice", "3 times", RegexOptions.Compiled);
 
             // interpolate "place|apply|change patch" to "place|apply|change 1 patch"
-            normalized = Regex.Replace(normalized, @"\b(replace|place|apply|change)\spatch\s", "$1 1 patch ", RegexOptions.Compiled);
+            normalized = Regex.Replace(normalized, @"\b(replace|place|apply|change)\spatch\s", "$1 1 patch ",
+                RegexOptions.Compiled);
 
             // interpolate "change every" -> "change 1 every"
             normalized = Regex.Replace(normalized, @"^change (every|q)", "change 1 $1", RegexOptions.Compiled);

@@ -12,7 +12,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         private readonly ILogger<MmeCalculator> _logger;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="opioidConversionFactor"></param>
@@ -23,7 +23,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Constructor uses <see cref="NullLogger"/>.
+        ///     Constructor uses <see cref="NullLogger" />.
         /// </summary>
         public MmeCalculator() : this(NullLogger<MmeCalculator>.Instance, new OpioidConversionFactor())
         {
@@ -32,9 +32,13 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <inheritdoc />
         public MmeCalculatorResult Calculate(MedicationComponent medComponent, Dose dose, Route? route)
         {
-            using (_logger.BeginScope("Calculating for medication '{medComponent}' and dose '{dose}", medComponent, dose))
+            using (_logger.BeginScope("Calculating for medication '{medComponent}' and dose '{dose}", medComponent,
+                       dose))
             {
-                var result = new MmeCalculatorResult { MaximumMmePerDay = 0m, OpioidMaximumDailyDose = 0m, OpioidConversionFactor = 0m };
+                var result = new MmeCalculatorResult
+                {
+                    MaximumMmePerDay = 0m, OpioidMaximumDailyDose = 0m, OpioidConversionFactor = 0m
+                };
 
                 if (!medComponent.IsOpioid || medComponent.Opioid == null)
                 {
@@ -63,9 +67,10 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <inheritdoc />
         public decimal ConvertSigDoseToMedicationComponentStrength(MedicationComponent medComponent, Dose dose)
         {
-            using (_logger.BeginScope("Calculating for medication '{medComponent}' and dose '{dose}'", medComponent, dose))
+            using (_logger.BeginScope("Calculating for medication '{medComponent}' and dose '{dose}'", medComponent,
+                       dose))
             {
-                decimal convertedDose = dose.MaxDose;
+                var convertedDose = dose.MaxDose;
 
                 // basic representation
                 if ((dose.DoseUnit == null || medComponent?.UnitOfMeasure == null) && medComponent != null)
@@ -82,7 +87,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 // UOM conversion factor: convert sig 500mcg to .5mg for med strength in mg.
                 if (medComponent != null)
                 {
-                    decimal uomConversionFactor = ConversionUtils.UnitOfMeasureConversionFactor(
+                    var uomConversionFactor = ConversionUtils.UnitOfMeasureConversionFactor(
                         medComponent.UnitOfMeasure?.ValueEnum,
                         dose.DoseUnit?.UnitOfMeasure?.ValueEnum);
                     if (uomConversionFactor != 0)
@@ -94,7 +99,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                 // convert concentrations: sig 1ml, med 20mg/ml = 20mg
                 if (medComponent != null)
                 {
-                    decimal concentrationFactor = ConversionUtils.ConcentrationConversionFactor(
+                    var concentrationFactor = ConversionUtils.ConcentrationConversionFactor(
                         dose.DoseUnit?.UnitOfMeasure?.ValueEnum,
                         medComponent.Strength,
                         medComponent.UnitOfMeasure?.ValueEnum);
@@ -117,13 +122,14 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             UnitOfMeasureEnum? opioidUom)
         {
             using (_logger.BeginScope(
-                "Calculating conversion factor for '{opioid}', '{maxDailyDose}', '{opioid}', '{opioidForm}'",
-                opioid,
-                maxDailyDose,
-                opioid,
-                opioidForm))
+                       "Calculating conversion factor for '{opioid}', '{maxDailyDose}', '{opioid}', '{opioidForm}'",
+                       opioid,
+                       maxDailyDose,
+                       opioid,
+                       opioidForm))
             {
-                decimal result = _conversionFactor.LookupConversionFactor(opioid, maxDailyDose, opioidUom, opioidForm, route);
+                var result =
+                    _conversionFactor.LookupConversionFactor(opioid, maxDailyDose, opioidUom, opioidForm, route);
                 _logger.LogTrace("Conversion factor = {result}", result);
                 return result;
             }
@@ -132,7 +138,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <inheritdoc />
         public decimal CalculateConversionFactor(OpioidAnalysis opioid)
         {
-            return CalculateConversionFactor(opioid.Opioid, opioid.TotalDailyDose, opioid.Form, null, opioid.TotalDailyDoseUom);
+            return CalculateConversionFactor(opioid.Opioid, opioid.TotalDailyDose, opioid.Form, null,
+                opioid.TotalDailyDoseUom);
         }
     }
 }

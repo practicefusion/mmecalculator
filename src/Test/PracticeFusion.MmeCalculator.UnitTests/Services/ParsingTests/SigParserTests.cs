@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
 {
@@ -15,19 +15,44 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
             {
-                new object[] { "take 2 tablets by mouth as one dose on the first day then take 1 tablet daily thereafter", "2 tablets", "take 2 tablets by mouth every day for 1 day", "then take 1 tablet every day thereafter" },
-                new object[] { "one tab PO at HS prn knee pain", "1 tablet", "1 tablet by mouth at bedtime as needed for knee pain" },
-                new object[] { "take 1-2 tablets by mouth at bedtime as needed for discomfort", "2 tablets", "take 1-2 tablets by mouth at bedtime as needed for discomfort" },
-                new object[] { "take 2 tablets as one dose for the first day, then 1 tablet every day for 10 days", "2 tablets", "take 2 tablets every day for 1 day", "then 1 tablet every day for 10 days"},
-                new object[] { "take 1 tablet once daily as directed ", "1 tablet", "take 1 tablet every day as directed" },
+                new object[]
+                {
+                    "take 2 tablets by mouth as one dose on the first day then take 1 tablet daily thereafter",
+                    "2 tablets", "take 2 tablets by mouth every day for 1 day",
+                    "then take 1 tablet every day thereafter"
+                },
+                new object[]
+                {
+                    "one tab PO at HS prn knee pain", "1 tablet",
+                    "1 tablet by mouth at bedtime as needed for knee pain"
+                },
+                new object[]
+                {
+                    "take 1-2 tablets by mouth at bedtime as needed for discomfort", "2 tablets",
+                    "take 1-2 tablets by mouth at bedtime as needed for discomfort"
+                },
+                new object[]
+                {
+                    "take 2 tablets as one dose for the first day, then 1 tablet every day for 10 days",
+                    "2 tablets", "take 2 tablets every day for 1 day", "then 1 tablet every day for 10 days"
+                },
+                new object[]
+                {
+                    "take 1 tablet once daily as directed ", "1 tablet", "take 1 tablet every day as directed"
+                },
                 new object[] { "1 lollipop daily", "1 lollipop", "1 lollipop every day" },
                 new object[] { "1 pill at 08:00 and 14:00", "2 pills", "1 pill at 08:00 and 14:00" },
                 new object[] { "1 pill at 8 am and at 2 pm", "2 pills", "1 pill at 08:00 and 14:00" },
                 new object[] { "1 dose bid daily", "2 doses", "1 dose 2 times every day" },
-                new object[] { "1 patch transdermal change every 72 hours", "1 patch", "1 patch transdermally every 72 hours" },
                 new object[]
                 {
-                    "1 tab(s) orally 1 to 4 times a day x 3 days", "4 tablets", "1 tablet by mouth 1-4 times every day for 3 days"
+                    "1 patch transdermal change every 72 hours", "1 patch",
+                    "1 patch transdermally every 72 hours"
+                },
+                new object[]
+                {
+                    "1 tab(s) orally 1 to 4 times a day x 3 days", "4 tablets",
+                    "1 tablet by mouth 1-4 times every day for 3 days"
                 },
                 new object[] { "10 ml every 6 hours", "40 ml", "10 ml every 6 hours" },
                 new object[] { "2mg/ml every 4 hours", "12 mg/ml", "2 mg/ml every 4 hours" },
@@ -37,9 +62,16 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
                     "1 tablet by mouth every 4 hours as needed for pain for 90 days"
                 },
                 new object[] { "1 pill at 8am", "1 pill", "1 pill at 08:00" },
-                new object[] { "Half tablet twice a day as needed.", "1 tablet", "0.5 tablet 2 times every day as needed" },
+                new object[]
+                {
+                    "Half tablet twice a day as needed.", "1 tablet", "0.5 tablet 2 times every day as needed"
+                },
                 new object[] { "1 q8h", "3", "1 every 8 hours" },
-                new object[] { "1 tablet po q6hr prn pain", "4 tablets", "1 tablet by mouth every 6 hours as needed for pain" },
+                new object[]
+                {
+                    "1 tablet po q6hr prn pain", "4 tablets",
+                    "1 tablet by mouth every 6 hours as needed for pain"
+                },
                 new object[] { "2 tablets q8hr", "6 tablets", "2 tablets every 8 hours" },
                 new object[] { "0.25mg sl q 2 hrs prn", "3 mg", "0.25 mg sublingually every 2 hours as needed" },
                 new object[]
@@ -50,14 +82,20 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
                 new object[] { "2 tablets q8hr for 1 week", "6 tablets", "2 tablets every 8 hours for 1 week" },
                 new object[]
                 {
-                    "take 1 tablets up to 4 times a day as needed for pain", "4 tablets", "take 1 tablet 4 times every day as needed for pain"
+                    "take 1 tablets up to 4 times a day as needed for pain", "4 tablets",
+                    "take 1 tablet 4 times every day as needed for pain"
                 },
                 new object[]
                 {
-                    "take 1 tablets up to 4 times a day on an empty stomach as needed for pain", "4 tablets", "take 1 tablet 4 times every day on an empty stomach as needed for pain"
+                    "take 1 tablets up to 4 times a day on an empty stomach as needed for pain", "4 tablets",
+                    "take 1 tablet 4 times every day on an empty stomach as needed for pain"
                 },
                 new object[] { "chew 1 tablets once a day", "1 tablet", "chew 1 tablet every day" },
-                new object[] { "take 1 tablets sl once a day do not swallow", "1 tablet", "take 1 tablet sublingually every day do not swallow" },
+                new object[]
+                {
+                    "take 1 tablets sl once a day do not swallow", "1 tablet",
+                    "take 1 tablet sublingually every day do not swallow"
+                }
             };
 
         private static IEnumerable<object[]> MddTestData =>
@@ -184,7 +222,10 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
         private static IEnumerable<object[]> ExceptionTestData =>
             new List<object[]>
             {
-                new object[] { "take 1,5 tablets daily", ConfidenceEnum.None, "Failed to parse 1,5 as a valid number." },
+                new object[]
+                {
+                    "take 1,5 tablets daily", ConfidenceEnum.None, "Failed to parse 1,5 as a valid number."
+                }
             };
 
 
@@ -221,14 +262,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
 
         private void RoundTripTest(string input, string expectedMaximumDailyDose, params string[] expected)
         {
-            var result = _sigParser.Parse(input);
+            ParsedSig result = _sigParser.Parse(input);
             result.Dosages.Should().NotBeNull();
-            for (int i = 0; i < expected.Length; i++)
+            for (var i = 0; i < expected.Length; i++)
             {
                 result.Dosages[i].ToString().Should().Be(expected[i]);
 
                 // ensure there is no "Google Translate" type of error
-                var googleTranslation = _sigParser.Parse(result.Dosages[i].ToString());
+                ParsedSig googleTranslation = _sigParser.Parse(result.Dosages[i].ToString());
                 googleTranslation.Dosages[0].ToString().Should().Be(
                     expected[i],
                     "because the human-readable output of a dosage should not change when parsed");
@@ -242,7 +283,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
 
         private void RoundTripTest(string input, decimal expectedMaximumDailyDose)
         {
-            var result = _sigParser.Parse(input);
+            ParsedSig result = _sigParser.Parse(input);
             result.Dosages.Should().NotBeNull();
             result.MaximumDosage.Should().NotBeNull();
             result.MaximumDosage.MaxDose.Should().Be(expectedMaximumDailyDose);
@@ -250,7 +291,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services.ParsingTests
 
         private void ExceptionTest(string input, ConfidenceEnum confidence, string errorMessage)
         {
-            var result = _sigParser.Parse(input);
+            ParsedSig result = _sigParser.Parse(input);
             result.Dosages.Should().NotBeNull();
             result.Dosages.Should().BeEmpty();
             result.Confidence.Should().Be(confidence);

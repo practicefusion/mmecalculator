@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Services;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Services
 {
@@ -16,7 +16,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var qualityAnalyzer = new QualityAnalyzer(
                 MoqServices.Logger<QualityAnalyzer>().Object,
                 MoqServices.MmeCalculator.Object);
-            var calculatedResult = DefaultEntities.CalculatedResult;
+            CalculatedResult calculatedResult = DefaultEntities.CalculatedResult;
             qualityAnalyzer.AnalyzeCalculatedResult(calculatedResult);
             calculatedResult.CalculatedResultAnalysis.Confidence.Should().Be(ConfidenceEnum.High);
         }
@@ -27,7 +27,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var qualityAnalyzer = new QualityAnalyzer(
                 MoqServices.Logger<QualityAnalyzer>().Object,
                 MoqServices.MmeCalculator.Object);
-            var calculatedResult = DefaultEntities.IncompleteCalculatedResult;
+            CalculatedResult calculatedResult = DefaultEntities.IncompleteCalculatedResult;
             qualityAnalyzer.AnalyzeCalculatedResult(calculatedResult);
             calculatedResult.CalculatedResultAnalysis.Confidence.Should().Be(ConfidenceEnum.None);
         }
@@ -38,7 +38,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var qualityAnalyzer = new QualityAnalyzer(
                 MoqServices.Logger<QualityAnalyzer>().Object,
                 MoqServices.MmeCalculator.Object);
-            var calculatedResult = DefaultEntities.CalculatedResult;
+            CalculatedResult calculatedResult = DefaultEntities.CalculatedResult;
             calculatedResult.ParsedResults = null;
             qualityAnalyzer.AnalyzeCalculatedResult(calculatedResult);
             calculatedResult.CalculatedResultAnalysis.Confidence.Should().Be(ConfidenceEnum.None);
@@ -50,7 +50,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var qualityAnalyzer = new QualityAnalyzer(
                 MoqServices.Logger<QualityAnalyzer>().Object,
                 MoqServices.MmeCalculator.Object);
-            var calculatedResult = DefaultEntities.CalculatedResult;
+            CalculatedResult calculatedResult = DefaultEntities.CalculatedResult;
             calculatedResult.ParsedResults = new List<ParsedResult>();
             qualityAnalyzer.AnalyzeCalculatedResult(calculatedResult);
             calculatedResult.CalculatedResultAnalysis.Confidence.Should().Be(ConfidenceEnum.None);
@@ -62,7 +62,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var qualityAnalyzer = new QualityAnalyzer(
                 MoqServices.Logger<QualityAnalyzer>().Object,
                 MoqServices.MmeCalculator.Object);
-            var calculatedResult = DefaultEntities.CalculatedResult;
+            CalculatedResult calculatedResult = DefaultEntities.CalculatedResult;
             calculatedResult.CalculatedResultAnalysis = null;
             qualityAnalyzer.AnalyzeCalculatedResult(calculatedResult);
             calculatedResult.CalculatedResultAnalysis.Should().NotBeNull();
@@ -74,7 +74,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
             var qualityAnalyzer = new QualityAnalyzer(
                 MoqServices.Logger<QualityAnalyzer>().Object,
                 MoqServices.MmeCalculator.Object);
-            var calculatedResult = DefaultEntities.CalculatedResult;
+            CalculatedResult calculatedResult = DefaultEntities.CalculatedResult;
 
             // no dosages should result in no confidence for the parsed result
             calculatedResult.ParsedResults[0].ParsedSig.Dosages = new List<Dosage>();

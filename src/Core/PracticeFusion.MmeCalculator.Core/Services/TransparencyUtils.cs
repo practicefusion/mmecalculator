@@ -9,45 +9,45 @@ using System.Reflection;
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
     /// <summary>
-    /// Details of a specific combination of Opioid, UOM, Max Daily Dose and Form, along with the
-    /// resulting conversion factor.
+    ///     Details of a specific combination of Opioid, UOM, Max Daily Dose and Form, along with the
+    ///     resulting conversion factor.
     /// </summary>
     public class OpioidTransparencyDetails
     {
         /// <summary>
-        /// Readable expression of opioid, unit of measure, max daily dose and form
+        ///     Readable expression of opioid, unit of measure, max daily dose and form
         /// </summary>
         public string Expression { get; set; } = string.Empty;
 
         /// <summary>
-        /// The conversion factor for the given expression
+        ///     The conversion factor for the given expression
         /// </summary>
         public string ConversionFactor { get; set; } = string.Empty;
     }
 
     /// <summary>
-    /// All transparency details available in the system
+    ///     All transparency details available in the system
     /// </summary>
     public class AllTransparencyDetails
     {
         /// <summary>
-        /// The list of opioids and the transparency details for each
+        ///     The list of opioids and the transparency details for each
         /// </summary>
         public Dictionary<OpioidEnum, List<OpioidTransparencyDetails>> Opioids { get; set; } = new();
 
         /// <summary>
-        /// Any version information for the current service
+        ///     Any version information for the current service
         /// </summary>
         public Dictionary<string, string> VersionInformation { get; set; } = new();
 
         /// <summary>
-        /// Any reference information used to build the current service
+        ///     Any reference information used to build the current service
         /// </summary>
         public Dictionary<string, string> ReferenceInformation { get; set; } = new();
     }
 
     /// <summary>
-    /// Utilities to display constants and enumerations used for calculations.
+    ///     Utilities to display constants and enumerations used for calculations.
     /// </summary>
     public class TransparencyUtils
     {
@@ -55,7 +55,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         private readonly ILogger<TransparencyUtils> _logger;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="opioidConversionFactor"></param>
@@ -66,7 +66,13 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Display all transparency details.
+        ///     The <see cref="FileVersionInfo.ProductVersion" /> of the current PracticeFusion.MmeCalculator.Core assembly
+        /// </summary>
+        /// <returns>The ProductVersion if it is available</returns>
+        public static string? ProductVersion => GetFileVersionInfo().ProductVersion;
+
+        /// <summary>
+        ///     Display all transparency details.
         /// </summary>
         /// <returns></returns>
         public AllTransparencyDetails AllDetails()
@@ -77,13 +83,14 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
                 foreach (OpioidEnum opioid in Enum.GetValues(typeof(OpioidEnum)))
                 {
-                    var conversionFactors = opioid.GetConversionFactors();
+                    List<ConversionFactorAttribute> conversionFactors = opioid.GetConversionFactors();
 
-                    var details = conversionFactors.Select(conversionFactor => new OpioidTransparencyDetails()
-                    {
-                        Expression = conversionFactor.GetConversionFactorDescription(opioid),
-                        ConversionFactor = GetConversionFactorValue(opioid, conversionFactor).ToString("G29")
-                    }).ToList();
+                    List<OpioidTransparencyDetails> details = conversionFactors.Select(conversionFactor =>
+                        new OpioidTransparencyDetails
+                        {
+                            Expression = conversionFactor.GetConversionFactorDescription(opioid),
+                            ConversionFactor = GetConversionFactorValue(opioid, conversionFactor).ToString("G29")
+                        }).ToList();
 
                     results.Opioids.Add(opioid, details);
                 }
@@ -103,25 +110,21 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         private decimal GetConversionFactorValue(OpioidEnum opioid, ConversionFactorAttribute conversionFactor)
         {
             UnitOfMeasureEnum uom = conversionFactor.UnitOfMeasure;
-            decimal maxDailyDose = conversionFactor.MaximumDailyDose ?? 0;
+            var maxDailyDose = conversionFactor.MaximumDailyDose ?? 0;
             Form? form = null;
-            if (conversionFactor.Forms != null)
+            if (conversionFactor.Forms == null)
             {
-                form = new();
-                form.ValueEnums.AddRange(conversionFactor.Forms);
+                return _conversionFactorService.LookupConversionFactor(opioid, maxDailyDose, uom, form, null);
             }
+
+            form = new Form();
+            form.ValueEnums.AddRange(conversionFactor.Forms);
 
             return _conversionFactorService.LookupConversionFactor(opioid, maxDailyDose, uom, form, null);
         }
 
         /// <summary>
-        /// The <see cref="FileVersionInfo.ProductVersion"/> of the current PracticeFusion.MmeCalculator.Core assembly
-        /// </summary>
-        /// <returns>The ProductVersion if it is available</returns>
-        public static string? ProductVersion => TransparencyUtils.GetFileVersionInfo().ProductVersion;
-
-        /// <summary>
-        /// The complete <see cref="FileVersionInfo"/> of the current PracticeFusion.MmeCalculator.Core assembly
+        ///     The complete <see cref="FileVersionInfo" /> of the current PracticeFusion.MmeCalculator.Core assembly
         /// </summary>
         /// <returns></returns>
         public static FileVersionInfo GetFileVersionInfo()

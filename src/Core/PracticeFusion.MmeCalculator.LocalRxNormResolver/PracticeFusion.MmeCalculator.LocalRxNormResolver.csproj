@@ -4,14 +4,14 @@
         <Authors>Jonathan Malek</Authors>
         <Description>
             This package provides a static set of RxNorm lookups. For testing ONLY, not for production use.
-            
-            The data contained in this package is static, and will not be updated regularly. It is retrieved from the NIH Value Set Authority Center: 
-            
-            Value Set Name: Opioids, All 
-            Code System: RXNORM 
-            OID: 2.16.840.1.113762.1.4.1196.226 
-            Type: Extensional 
-            Definition Version: 20191126 
+
+            The data contained in this package is static, and will not be updated regularly. It is retrieved from the NIH Value Set Authority Center:
+
+            Value Set Name: Opioids, All
+            Code System: RXNORM
+            OID: 2.16.840.1.113762.1.4.1196.226
+            Type: Extensional
+            Definition Version: 20191126
             Steward: IMPAQ International
         </Description>
         <Copyright>Copyright (c) 2021 Practice Fusion, Inc</Copyright>
@@ -26,7 +26,7 @@
 
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>../../PracticeFusion.MmeCalculator.Core.snk</AssemblyOriginatorKeyFile>
-        
+
         <!-- SourceLink -->
         <!-- Publish the repo in the nupkg -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -45,10 +45,10 @@
 
     <ItemGroup>
         <!-- for source link, and versioning -->
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-        <PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+        <PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All"/>
 
-        <ProjectReference Include="..\PracticeFusion.MmeCalculator.Core\PracticeFusion.MmeCalculator.Core.csproj" />
+        <ProjectReference Include="..\PracticeFusion.MmeCalculator.Core\PracticeFusion.MmeCalculator.Core.csproj"/>
     </ItemGroup>
 
 </Project>

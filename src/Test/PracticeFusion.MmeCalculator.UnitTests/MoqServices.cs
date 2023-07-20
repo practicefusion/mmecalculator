@@ -29,7 +29,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests
             get
             {
                 var mmeCalculator = new Mock<IMmeCalculator>();
-                mmeCalculator.Setup(x => x.Calculate(It.IsAny<MedicationComponent>(), It.IsAny<Dose>(), It.IsAny<Route>()))
+                mmeCalculator.Setup(x =>
+                        x.Calculate(It.IsAny<MedicationComponent>(), It.IsAny<Dose>(), It.IsAny<Route>()))
                     .Returns(DefaultEntities.MmeCalculatorResult);
                 return mmeCalculator;
             }

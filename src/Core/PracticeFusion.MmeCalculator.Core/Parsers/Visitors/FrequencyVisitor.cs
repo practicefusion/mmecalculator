@@ -1,15 +1,15 @@
-using System;
-using System.Collections.Generic;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
     internal class FrequencyVisitor : IManyToOneVisitor<DefaultParser.FrequencyContext, Frequency>
     {
-        private readonly SpecialFrequencyVisitor _specialFrequencyVisitor = new();
         private readonly LatinAdministrationTimingVisitor _latinAdministrationTimingVisitor = new();
         private readonly LatinFrequencyVisitor _latinFrequencyVisitor = new();
+        private readonly SpecialFrequencyVisitor _specialFrequencyVisitor = new();
 
         public Frequency VisitAllRoot(DefaultParser.FrequencyContext[] contexts)
         {
@@ -30,7 +30,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             {
                 throw new ParsingException("Empty context.");
             }
-            
+
             return VisitRoot(new[] { context });
         }
 
@@ -44,9 +44,9 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             var result = new Frequency();
             contexts.SetStartAndStopIndex(result);
 
-            foreach (var frequencyContext in contexts)
+            foreach (DefaultParser.FrequencyContext frequencyContext in contexts)
             {
-                if(frequencyContext.specialFrequency() != null)
+                if (frequencyContext.specialFrequency() != null)
                 {
                     _specialFrequencyVisitor.VisitRoot(frequencyContext.specialFrequency(), result);
                 }
@@ -81,7 +81,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             {
                 throw new ParsingException("Empty context.");
             }
-            
+
             var interval = new Interval();
             context.SetStartAndStopIndex(interval);
 
@@ -103,7 +103,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 }
                 else
                 {
-                    Tuple<decimal, decimal> minMax = new RangeNumericValueVisitor().VisitRoot(context.periodVal().rangeNumericValue());
+                    Tuple<decimal, decimal> minMax =
+                        new RangeNumericValueVisitor().VisitRoot(context.periodVal().rangeNumericValue());
                     interval.Period = minMax.Item1;
                     interval.PeriodMax = minMax.Item2;
                 }
@@ -137,7 +138,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
                 if (mergeFrequency.Intervals.Count > 0)
                 {
-                    var mergeInterval = mergeFrequency.Intervals[0];
+                    Interval? mergeInterval = mergeFrequency.Intervals[0];
 
                     // merge the frequency
                     if (interval.Freq < mergeInterval.Freq || interval.FreqMax < mergeInterval.FreqMax)
@@ -158,12 +159,12 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                     {
                         if (interval.PeriodUnit != null && interval.PeriodUnit != mergeInterval.PeriodUnit)
                         {
-                            throw new ParsingException($"Ambiguous periods: cannot combine '{interval}' and '{mergeInterval}'");
+                            throw new ParsingException(
+                                $"Ambiguous periods: cannot combine '{interval}' and '{mergeInterval}'");
                         }
 
                         interval.PeriodUnit = mergeInterval.PeriodUnit;
                     }
-
                 }
             }
 
@@ -225,14 +226,15 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
             foreach (DefaultParser.SpecificTimeContext specificTimeContext in contexts.specificTime())
             {
-                string candidateTime = specificTimeContext.GetOriginalTextWithSpacing();
+                var candidateTime = specificTimeContext.GetOriginalTextWithSpacing();
                 if (DateTime.TryParse(candidateTime, out DateTime parseResult))
                 {
                     result.TimeOfDay.Add(parseResult.ToString("HH:mm"));
                 }
                 else
                 {
-                    throw new ParsingException($"Expected time of day in hour, or hour:minute format, but found '{candidateTime}'");
+                    throw new ParsingException(
+                        $"Expected time of day in hour, or hour:minute format, but found '{candidateTime}'");
                 }
             }
         }
@@ -246,12 +248,18 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
             if (context.periodBeforeOrAfter() != null)
             {
-                throw new ParsingException($"Cannot parse timing instructions: '{context.GetOriginalTextWithSpacing()}'");
+                throw new ParsingException(
+                    $"Cannot parse timing instructions: '{context.GetOriginalTextWithSpacing()}'");
             }
 
             if (context.MORNING() != null)
             {
                 result.When.Add(EventTimingEnum.Morning);
+            }
+
+            if (context.AFTERNOON() != null)
+            {
+                result.When.Add(EventTimingEnum.InTheAfternoon);
             }
 
             if (context.NOON() != null || context.MIDDAY() != null)
@@ -283,6 +291,45 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             }
         }
 
+        private static void VisitTimingEventMeal(DefaultParser.TimingEventContext context, Frequency result, bool every,
+            bool specific,
+            EventTimingEnum before, EventTimingEnum with, EventTimingEnum after)
+        {
+            // when "every" or "each" is present, infer 3 (all meals)
+            // when there is a specific meal (breakfast, lunch, dinner), infer 1.
+            // otherwise, infer at least 1
+            result.Intervals.Add(InferMealInterval(every ? 3 : 1));
+
+            if (context.BEFORE() != null)
+            {
+                result.When.Add(before);
+            }
+
+            if (context.WITH() != null)
+            {
+                result.When.Add(with);
+            }
+
+            if (context.AFTER() != null)
+            {
+                result.When.Add(after);
+            }
+        }
+
+        private static Interval InferMealInterval(int countOfMeals)
+        {
+            return new Interval
+            {
+                Freq = countOfMeals,
+                FreqMax = countOfMeals,
+                Period = 1,
+                PeriodMax = 1,
+                PeriodUnit = PeriodEnum.Day,
+                ExpressAsPer = false,
+                Inferred = true
+            };
+        }
+
         private static void VisitTimingEvent(DefaultParser.TimingEventContext context, Frequency result)
         {
             if (context == null)
@@ -297,34 +344,37 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                     $"Identified an administration timing, but cannot parse offset timings yet '{context.GetOriginalTextWithSpacing()}'");
             }
 
-            // set up an inferred interval
-            var interval = new Interval
+            var every = context.EVERY() != null || context.EACH() != null;
+            if (context.meals()?.BREAKFAST() != null)
             {
-                Freq = 3,
-                FreqMax = 3,
-                Period = 1,
-                PeriodMax = 1,
-                PeriodUnit = PeriodEnum.Day,
-                ExpressAsPer = false,
-                Inferred = true
-            };
-
-            // add it to the frequency
-            result.Intervals.Add(interval);
-
-            if (context.BEFORE() != null)
-            {
-                result.When.Add(EventTimingEnum.BeforeEveryMeal);
+                VisitTimingEventMeal(context, result, every, true, EventTimingEnum.BeforeBreakfast,
+                    EventTimingEnum.WithBreakfast, EventTimingEnum.AfterBreakfast);
             }
 
-            if (context.AFTER() != null)
+            if (context.meals()?.LUNCH() != null)
             {
-                result.When.Add(EventTimingEnum.AfterEveryMeal);
+                VisitTimingEventMeal(context, result, every, true, EventTimingEnum.BeforeLunch,
+                    EventTimingEnum.WithLunch, EventTimingEnum.AfterLunch);
             }
 
-            if (context.WITH() != null)
+            if (context.meals()?.DINNER() != null)
             {
-                result.When.Add(EventTimingEnum.WithEveryMeal);
+                VisitTimingEventMeal(context, result, every, true, EventTimingEnum.BeforeDinner,
+                    EventTimingEnum.WithDinner, EventTimingEnum.AfterDinner);
+            }
+
+            if (context.meals()?.MEAL() != null)
+            {
+                if (every)
+                {
+                    VisitTimingEventMeal(context, result, every, false, EventTimingEnum.BeforeEveryMeal,
+                        EventTimingEnum.WithEveryMeal, EventTimingEnum.AfterEveryMeal);
+                }
+                else
+                {
+                    VisitTimingEventMeal(context, result, every, false, EventTimingEnum.BeforeMeals,
+                        EventTimingEnum.WithMeals, EventTimingEnum.AfterMeals);
+                }
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿using PracticeFusion.MmeCalculator.Core.Entities;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
@@ -15,7 +15,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             Form? form,
             Route? route)
         {
-            var conversionFactors = opioid.GetConversionFactors();
+            List<ConversionFactorAttribute> conversionFactors = opioid.GetConversionFactors();
 
             if (conversionFactors.Count == 0)
             {
@@ -32,19 +32,18 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             var highestConversionFactor = 0m;
             var highestUomConversionFactor = 1m;
 
-            foreach (var conversionFactor in conversionFactors)
+            foreach (ConversionFactorAttribute? conversionFactor in conversionFactors)
             {
                 var uomCf = GetUomConversionFactor(uom, conversionFactor.UnitOfMeasure);
 
                 highestConversionFactor = Math.Max(conversionFactor.ConversionFactor, highestConversionFactor);
-                
+
                 // if the current conversion factor is the highest
                 if (highestConversionFactor == conversionFactor.ConversionFactor)
                 {
                     // make sure the current UOM is used as well (for highest CF)
                     highestUomConversionFactor = uomCf;
                 }
-                
 
 
                 // return CF based on MDD range
@@ -72,9 +71,12 @@ namespace PracticeFusion.MmeCalculator.Core.Services
             return highestConversionFactor * highestUomConversionFactor;
         }
 
-        private static decimal GetUomConversionFactor(UnitOfMeasureEnum? sourceUom, UnitOfMeasureEnum conversionFactorUom)
+        private static decimal GetUomConversionFactor(UnitOfMeasureEnum? sourceUom,
+            UnitOfMeasureEnum conversionFactorUom)
         {
-            return sourceUom.HasValue ? ConversionUtils.UnitOfMeasureConversionFactor(conversionFactorUom, sourceUom) : 1;
+            return sourceUom.HasValue
+                ? ConversionUtils.UnitOfMeasureConversionFactor(conversionFactorUom, sourceUom)
+                : 1;
         }
     }
 }

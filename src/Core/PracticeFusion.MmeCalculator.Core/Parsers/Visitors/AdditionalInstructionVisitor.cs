@@ -3,7 +3,9 @@ using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
-    internal class AdditionalInstructionVisitor : IManyToOneVisitor<DefaultParser.AdditionalInstructionContext, AdditionalInstruction>
+    internal class
+        AdditionalInstructionVisitor : IManyToOneVisitor<DefaultParser.AdditionalInstructionContext,
+            AdditionalInstruction>
     {
         public AdditionalInstruction VisitAllRoot(DefaultParser.AdditionalInstructionContext[] contexts)
         {
@@ -14,7 +16,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
             if (contexts.Length > 1)
             {
-                throw new ParsingException("Ambiguous additional instructions: there are multiple additional instructions.");
+                throw new ParsingException(
+                    "Ambiguous additional instructions: there are multiple additional instructions.");
             }
 
             return VisitRoot(contexts[0]);
@@ -50,7 +53,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 result.ValueEnum = AdditionalInstructionEnum.AsDirected;
             }
 
-            if(context.doNotSwallow() != null)
+            if (context.doNotSwallow() != null)
             {
                 result.ValueEnum = AdditionalInstructionEnum.DoNotSwallow;
             }
@@ -71,7 +74,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
             {
                 return AdditionalInstructionEnum.AfterMeals;
             }
-            
+
             // our only structure for "food" (with food)
             if (context.WITH() != null && context.FOOD() != null)
             {

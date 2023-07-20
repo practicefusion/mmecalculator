@@ -6,12 +6,12 @@ using System.Text.Json.Serialization;
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
     /// <summary>
-    /// A set of utilities for consistent JSON serialization and deserialization of entities.
+    ///     A set of utilities for consistent JSON serialization and deserialization of entities.
     /// </summary>
     public static class JsonUtils
     {
         /// <summary>
-        /// Serialize and return a formatted or unformatted json string.
+        ///     Serialize and return a formatted or unformatted json string.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
@@ -19,14 +19,19 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         /// <returns></returns>
         public static string Serialize<T>(T entity, bool formatted = true)
         {
-            var options = new JsonSerializerOptions { WriteIndented = formatted, IgnoreReadOnlyProperties = false, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull };
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = formatted,
+                IgnoreReadOnlyProperties = false,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
             options.Converters.Add(new JsonStringEnumConverter());
 
             return JsonSerializer.Serialize(entity, options);
         }
 
         /// <summary>
-        /// Serialize to UTF8 bytes, used in place of BinaryFormatter
+        ///     Serialize to UTF8 bytes, used in place of BinaryFormatter
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
@@ -37,28 +42,34 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Serialize for debug purposes, formatted. Does not ignore readonly properties or null values.
+        ///     Serialize for debug purposes, formatted. Does not ignore readonly properties or null values.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
         /// <returns></returns>
         public static string Debug<T>(T entity)
         {
-            var options = new JsonSerializerOptions { WriteIndented = true, IgnoreReadOnlyProperties = false, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull };
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                IgnoreReadOnlyProperties = false,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
             options.Converters.Add(new JsonStringEnumConverter());
 
             return JsonSerializer.Serialize(entity, options);
         }
 
         /// <summary>
-        /// Deserialize (allows trailing commas, ignores comments, is case insensitive to property names, and ignores null values)
+        ///     Deserialize (allows trailing commas, ignores comments, is case insensitive to property names, and ignores null
+        ///     values)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="json"></param>
         /// <returns></returns>
         public static T? Deserialize<T>(string? json)
         {
-            if(string.IsNullOrEmpty(json))
+            if (string.IsNullOrEmpty(json))
             {
                 return default;
             }
@@ -76,25 +87,28 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Deserialize to UTF8 bytes, used in place of BinaryFormatter
+        ///     Deserialize to UTF8 bytes, used in place of BinaryFormatter
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="jsonUtf8Bytes"></param>
         /// <returns></returns>
         public static T DeserializeFromUtf8Bytes<T>(ReadOnlySpan<byte> jsonUtf8Bytes)
         {
-            return JsonSerializer.Deserialize<T>(jsonUtf8Bytes) ?? throw new ArgumentNullException(nameof(jsonUtf8Bytes));
+            return JsonSerializer.Deserialize<T>(jsonUtf8Bytes) ??
+                   throw new ArgumentNullException(nameof(jsonUtf8Bytes));
         }
-        
+
         /// <summary>
-        /// Formats a json string
+        ///     Formats a json string
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>
         public static string JsonFormat(string? json)
         {
             if (string.IsNullOrEmpty(json))
+            {
                 return string.Empty;
+            }
 
             using JsonDocument jsonDocument = JsonDocument.Parse(json!);
             using var memoryStream = new MemoryStream();

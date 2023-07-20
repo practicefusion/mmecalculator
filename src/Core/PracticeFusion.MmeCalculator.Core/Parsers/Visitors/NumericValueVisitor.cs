@@ -1,5 +1,5 @@
-﻿using System;
-using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+﻿using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
+using System;
 
 namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 {
@@ -21,7 +21,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
 
                 //// validate the numeric string is valid, as .NET will parse "1,2" as "12" even with
                 //// invariant culture.
-                string numericValue = context.GetText();
+                var numericValue = context.GetText();
 
                 // while a regex would be simpler here, the performance hit of the typical
                 // numeric pattern matching rules is too high, so instead we will walk through 
@@ -33,11 +33,11 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 // should pass: 1,500
                 // should fail: 1,5
                 // should fail: 4500,500
-                bool passedDecimal = false;
-                bool commasAllowed = true;
-                bool commaFound = false;
-                char[] chars = numericValue.ToCharArray();
-                for (int i = 0; i < chars.Length; i++)
+                var passedDecimal = false;
+                var commasAllowed = true;
+                var commaFound = false;
+                var chars = numericValue.ToCharArray();
+                for (var i = 0; i < chars.Length; i++)
                 {
                     var c = chars[i];
                     if (char.IsNumber(c))
@@ -47,6 +47,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                         {
                             commasAllowed = false;
                         }
+
                         continue;
                     }
 
@@ -79,7 +80,7 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                         }
 
                         // look ahead exactly 3
-                        for (int x = 1; x <= 3 && i + x < chars.Length; x++)
+                        for (var x = 1; x <= 3 && i + x < chars.Length; x++)
                         {
                             if (!char.IsNumber(chars[i + x]))
                             {
@@ -126,11 +127,12 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 // ignore the AND and A_AN
                 if (context.children[i] is DefaultParser.WordDigitContext x)
                 {
-                    decimal digits = VisitWordDigit(x);
+                    var digits = VisitWordDigit(x);
 
                     // peek forward: if the next is 'half', and this is one,
                     // then we can ignore it ('one half' vs. 'one and one half')
-                    if (digits == 1m && i + 1 < context.ChildCount && context.children[i + 1] is DefaultParser.WordDigitContext y &&
+                    if (digits == 1m && i + 1 < context.ChildCount &&
+                        context.children[i + 1] is DefaultParser.WordDigitContext y &&
                         y.Start.Type == DefaultLexer.HALF)
                     {
                         continue;
@@ -168,7 +170,8 @@ namespace PracticeFusion.MmeCalculator.Core.Parsers.Visitors
                 DefaultLexer.THIRTY => 30m,
                 DefaultLexer.FORTY => 40m,
                 DefaultLexer.SEVENTY => 70m,
-                _ => throw new ParsingException($"Expecting a digit expressed as a word, but cannot map: '{context.Start.Text}'")
+                _ => throw new ParsingException(
+                    $"Expecting a digit expressed as a word, but cannot map: '{context.Start.Text}'")
             };
         }
     }

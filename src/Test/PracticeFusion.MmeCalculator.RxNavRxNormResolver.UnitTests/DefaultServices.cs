@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.Extensions.Caching.Distributed;
+﻿using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
-using ILogger = Microsoft.Extensions.Logging.ILogger;
+using System;
 
 namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests
 {
@@ -16,7 +15,7 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests
             Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.Console().CreateLogger();
 
             var services = new ServiceCollection();
-            services.AddLogging(b => b.AddSerilog(Log.Logger, dispose: true));
+            services.AddLogging(b => b.AddSerilog(Log.Logger, true));
 
             services.AddDistributedMemoryCache();
             ServiceProvider = services.BuildServiceProvider();
@@ -26,8 +25,9 @@ namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.UnitTests
 
         public static IDistributedCache DistributedCache =>
             _instance.Value.ServiceProvider.GetService<MemoryDistributedCache>();
-        
-        public static ILogger<Client> Logger => _instance.Value.ServiceProvider.GetService<ILoggerFactory>()!.CreateLogger<Client>();
+
+        public static ILogger<Client> Logger =>
+            _instance.Value.ServiceProvider.GetService<ILoggerFactory>()!.CreateLogger<Client>();
 
         public ServiceProvider ServiceProvider { get; }
     }

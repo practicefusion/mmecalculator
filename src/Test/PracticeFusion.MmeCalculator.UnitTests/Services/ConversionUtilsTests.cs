@@ -32,7 +32,8 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void ImpossibleConversionReturnsZero()
         {
-            ConversionUtils.UnitOfMeasureConversionFactor(UnitOfMeasureEnum.Centimeter, UnitOfMeasureEnum.Microgram).Should().Be(0m);
+            ConversionUtils.UnitOfMeasureConversionFactor(UnitOfMeasureEnum.Centimeter, UnitOfMeasureEnum.Microgram)
+                .Should().Be(0m);
         }
 
         [TestMethod]
@@ -59,52 +60,63 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Services
         [TestMethod]
         public void ImpossibleEquivalentReturnsFalse()
         {
-            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Centimeter, UnitOfMeasureEnum.Microgram).Should().BeFalse();
+            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Centimeter, UnitOfMeasureEnum.Microgram).Should()
+                .BeFalse();
         }
 
         [TestMethod]
         public void MicrogramAndMicrogramPerHourAreEquivalent()
         {
-            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Microgram, UnitOfMeasureEnum.MicrogramPerHour).Should().BeTrue();
+            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Microgram, UnitOfMeasureEnum.MicrogramPerHour)
+                .Should().BeTrue();
         }
 
         [TestMethod]
         public void MilligramAndMilligramPerHourAreEquivalent()
         {
-            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Milligram, UnitOfMeasureEnum.MilligramPerHour).Should().BeTrue();
+            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Milligram, UnitOfMeasureEnum.MilligramPerHour)
+                .Should().BeTrue();
         }
 
         [TestMethod]
         public void CubicCentimeterAndMilliliterAreEquivalent()
         {
-            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.CubicCentimeter, UnitOfMeasureEnum.Milliliter).Should().BeTrue();
+            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.CubicCentimeter, UnitOfMeasureEnum.Milliliter)
+                .Should().BeTrue();
         }
 
         [TestMethod]
         public void NotMilligramEquivalent()
         {
-            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Milligram, UnitOfMeasureEnum.Microgram).Should().BeFalse();
+            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Milligram, UnitOfMeasureEnum.Microgram).Should()
+                .BeFalse();
         }
 
         [TestMethod]
         public void NotMicrogramEquivalent()
         {
-            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Microgram, UnitOfMeasureEnum.Milligram).Should().BeFalse();
+            ConversionUtils.EquivalentUnitOfMeasure(UnitOfMeasureEnum.Microgram, UnitOfMeasureEnum.Milligram).Should()
+                .BeFalse();
         }
 
         [TestMethod]
         public void GetNumeratorUomMilligram()
         {
-            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MilligramPerActuation).Should().Be(UnitOfMeasureEnum.Milligram);
-            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MilligramPerHour).Should().Be(UnitOfMeasureEnum.Milligram);
-            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MilligramPerMilliliter).Should().Be(UnitOfMeasureEnum.Milligram);
+            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MilligramPerActuation).Should()
+                .Be(UnitOfMeasureEnum.Milligram);
+            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MilligramPerHour).Should()
+                .Be(UnitOfMeasureEnum.Milligram);
+            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MilligramPerMilliliter).Should()
+                .Be(UnitOfMeasureEnum.Milligram);
         }
 
         [TestMethod]
         public void GetNumeratorUomMicrogram()
         {
-            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MicrogramPerActuation).Should().Be(UnitOfMeasureEnum.Microgram);
-            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MicrogramPerHour).Should().Be(UnitOfMeasureEnum.Microgram);
+            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MicrogramPerActuation).Should()
+                .Be(UnitOfMeasureEnum.Microgram);
+            ConversionUtils.GetNumeratorUom(UnitOfMeasureEnum.MicrogramPerHour).Should()
+                .Be(UnitOfMeasureEnum.Microgram);
         }
     }
 }

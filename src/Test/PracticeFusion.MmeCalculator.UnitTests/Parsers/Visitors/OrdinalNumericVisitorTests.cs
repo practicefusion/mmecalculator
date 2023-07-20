@@ -1,23 +1,18 @@
-using System.Collections.Generic;
-using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Parsers.Generated;
 using PracticeFusion.MmeCalculator.Core.Parsers.Visitors;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 {
     [TestClass]
     public class OrdinalNumericVisitorTests
     {
-        private readonly CoreParserTestHelper<OrdinalNumericVisitor, DefaultParser.OrdinalNumericContext, decimal> _helper =
-            new();
-
-        [TestMethod]
-        public void NullContextShouldThrowParseException()
-        {
-            _helper.NullContextShouldThrowParseException();
-        }
+        private readonly CoreParserTestHelper<OrdinalNumericVisitor, DefaultParser.OrdinalNumericContext, decimal>
+            _helper =
+                new();
 
         private static IEnumerable<object[]> TestData =>
             new List<object[]>
@@ -28,8 +23,14 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
                 new object[] { "fourth", 4m },
                 new object[] { "fifth", 5m },
                 new object[] { "sixth", 6m },
-                new object[] { "seventh", 7m },
+                new object[] { "seventh", 7m }
             };
+
+        [TestMethod]
+        public void NullContextShouldThrowParseException()
+        {
+            _helper.NullContextShouldThrowParseException();
+        }
 
         [DataTestMethod]
         [DynamicData(nameof(TestData), DynamicDataDisplayName = "DisplayName")]
@@ -50,7 +51,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers.Visitors
 
         private void VisitTest(string statement, decimal expected)
         {
-            var tree = _helper.DefaultParser(statement).ordinalNumeric();
+            DefaultParser.OrdinalNumericContext tree = _helper.DefaultParser(statement).ordinalNumeric();
             var result = _helper.Visitor.VisitRoot(tree);
 
             result.Should().Be(expected);

@@ -4,12 +4,12 @@ using System.Text.Json.Serialization;
 namespace PracticeFusion.MmeCalculator.RxNavRxNormResolver.Entities
 {
     /// <summary>
-    /// Property concepts
+    ///     Property concepts
     /// </summary>
     public class PropertyConceptGroup
     {
         /// <summary>
-        /// Property concepts
+        ///     Property concepts
         /// </summary>
         [JsonPropertyName("propConcept")]
         public List<PropertyConcept>? PropertyConcepts { get; set; }

@@ -1,58 +1,61 @@
-﻿using System;
+﻿using PracticeFusion.MmeCalculator.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PracticeFusion.MmeCalculator.Core.Entities;
 
 namespace PracticeFusion.MmeCalculator.Core.Messages
 {
     /// <summary>
-    /// Parse a sig
+    ///     Parse a sig
     /// </summary>
-    /// <inheritdoc cref="BaseParsedEntity"/>
-    /// <inheritdoc cref="IConfidence"/>
+    /// <inheritdoc cref="BaseParsedEntity" />
+    /// <inheritdoc cref="IConfidence" />
     [Serializable]
-    public class ParsedSig : BaseParsedEntity, IConfidence
+    public class ParsedSig : BaseParsedEntity, IConfidence, ISigSuggestions
     {
         /// <summary>
-        /// Indicates whether any of the components of the sig contain latin abbreviations, e.g. "bid", "po", "prn"
+        ///     Indicates whether any of the components of the sig contain latin abbreviations, e.g. "bid", "po", "prn"
         /// </summary>
         public bool ContainsLatinAbbreviations =>
             Dosages.Any(
-                d => d.IndicationForUse is {ContainsLatinAbbreviations: true} ||
-                     d.Frequency is {ContainsLatinAbbreviations: true} ||
-                     d.Route is {ContainsLatinAbbreviations: true});
+                d => d.IndicationForUse is { ContainsLatinAbbreviations: true } ||
+                     d.Frequency is { ContainsLatinAbbreviations: true } ||
+                     d.Route is { ContainsLatinAbbreviations: true });
 
         /// <summary>
-        /// The original sig text
+        ///     The original sig text
         /// </summary>
         public string? OriginalSig { get; set; }
 
         /// <summary>
-        /// The pre-processed text of the sig 
+        ///     The pre-processed text of the sig
         /// </summary>
         public string? PreprocessedSig { get; set; }
 
         /// <summary>
-        /// The maximum dosage from <see cref="Dosages"/>
+        ///     The maximum dosage from <see cref="Dosages" />
         /// </summary>
         public Dose? MaximumDosage { get; set; }
 
         /// <summary>
-        /// Each of the dosages parsed from the sig
+        ///     Each of the dosages parsed from the sig
         /// </summary>
         public List<Dosage> Dosages { get; set; } = new();
 
         /// <summary>
-        /// Optional clarifying free text at the end of a sig
+        ///     Optional clarifying free text at the end of a sig
         /// </summary>
         public string? ClarifyingFreeText { get; set; }
-        
+
         /// <inheritdoc />
         public ConfidenceEnum Confidence { get; set; } = ConfidenceEnum.None;
-        
+
         /// <inheritdoc />
         public List<string> ConfidenceReasons { get; set; } = new();
+
+        /// <inheritdoc />
+        public List<string> SigSuggestions { get; set; } = new();
 
         /// <inheritdoc />
         public override string ToString()

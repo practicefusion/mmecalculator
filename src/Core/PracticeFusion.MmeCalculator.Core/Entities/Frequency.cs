@@ -7,47 +7,46 @@ using System.Text;
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Frequency
+    ///     Frequency
     /// </summary>
     /// <inheritdoc />
     [Serializable]
     public class Frequency : BaseParsedEntity
     {
-
         /// <summary>
-        /// Indicates whether the frequency contains latin abbreviations like "bid"
+        ///     Indicates whether the frequency contains latin abbreviations like "bid"
         /// </summary>
         public bool ContainsLatinAbbreviations { get; set; }
 
         /// <summary>
-        /// Intervals, e.g. "2 times every hour"
+        ///     Intervals, e.g. "2 times every hour"
         /// </summary>
         public List<Interval> Intervals { get; set; } = new();
 
         /// <summary>
-        /// Event timing, see <see cref="EventTimingEnum"/>
+        ///     Event timing, see <see cref="EventTimingEnum" />
         /// </summary>
         public List<EventTimingEnum> When { get; set; } = new();
 
         /// <summary>
-        /// One or more specific times of day, e.g. "8 am"
+        ///     One or more specific times of day, e.g. "8 am"
         /// </summary>
         public List<string> TimeOfDay { get; set; } = new();
 
         /// <summary>
-        /// One or more days of the week
+        ///     One or more days of the week
         /// </summary>
         public List<DayOfWeek> DaysOfWeek { get; set; } = new();
 
         /// <summary>
-        /// The maximum daily frequency, or shortest intervals in a given day.
+        ///     The maximum daily frequency, or shortest intervals in a given day.
         /// </summary>
         public decimal MaximumDailyFrequency
         {
             get
             {
                 // maximum intervals in a day
-                decimal intervalMax = Intervals.Count > 0 ? Intervals.Max(x => x.MaximumDailyFrequency) : 0;
+                var intervalMax = Intervals.Count > 0 ? Intervals.Max(x => x.MaximumDailyFrequency) : 0;
 
                 // if there are no intervals in a day, but there are DaysOfWeek, count that as 1
                 // e.g. take 1 tablet every Monday
@@ -57,35 +56,12 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                 }
 
                 // get the highest frequency
+                // return Math.Max(intervalMax, MaximumDailyTiming);
                 return Math.Max(intervalMax, MaximumDailyTiming);
             }
         }
 
-        private decimal MaximumDailyTiming
-        {
-            get
-            {
-                decimal maxTiming = 0m;
-
-                if (When.Count > 0)
-                {
-                    if (When.Contains(EventTimingEnum.BeforeEveryMeal) || When.Contains(EventTimingEnum.AfterEveryMeal) ||
-                        When.Contains(EventTimingEnum.WithEveryMeal))
-                    {
-                        // food is 3 times a day
-                        maxTiming = 3m;
-                    }
-                    else
-                    {
-                        // others are single occurrence events
-                        maxTiming = When.Count;
-
-                    }
-                }
-
-                return Math.Max(TimeOfDay.Count, maxTiming);
-            }
-        }
+        private decimal MaximumDailyTiming => Math.Max(TimeOfDay.Count, When.Count(x => !x.EventTimingAboutFood()));
 
         internal static void Rationalize(Frequency frequency)
         {
@@ -116,9 +92,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         private static void RationalizeCannotHaveMoreThanOneTimingWhenFoodIsInvolved(Frequency frequency)
         {
             if (frequency.When.Count > 1 &&
-                (frequency.When.Contains(EventTimingEnum.BeforeEveryMeal) ||
-                 frequency.When.Contains(EventTimingEnum.AfterEveryMeal) ||
-                 frequency.When.Contains(EventTimingEnum.WithEveryMeal)))
+                frequency.When.Any(x => x.EventTimingAboutFood()))
             {
                 throw new ParsingException($"Ambiguous event timing directions '{frequency.HumanReadable}'");
             }
@@ -129,7 +103,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             // Event timing with proximity will be calculated as two separate events for timing purposes.
             // This means that "night" and "bedtime" would be two separate times. We prefer "bedtime".
             if (frequency.When.Count > 0 &&
-                frequency.When.Contains(EventTimingEnum.Night) && 
+                frequency.When.Contains(EventTimingEnum.Night) &&
                 frequency.When.Contains(EventTimingEnum.BedTime))
             {
                 frequency.When.Remove(EventTimingEnum.Night);
@@ -143,14 +117,15 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
 
             // however, it is common enough to express it as "once daily at 8am and 6pm".
             // so we only examine frequencies greater than 1.
-            decimal maxInterval = frequency.Intervals.Count > 0 ? frequency.Intervals.Max(x => x.MaximumDailyFrequency) : 0;
+            var maxInterval = frequency.Intervals.Count > 0 ? frequency.Intervals.Max(x => x.MaximumDailyFrequency) : 0;
             if (maxInterval > 1)
             {
-                decimal maxTiming = frequency.MaximumDailyTiming;
+                var maxTiming = frequency.MaximumDailyTiming;
 
                 if (maxTiming > 0 && maxTiming != maxInterval)
                 {
-                    throw new ParsingException($"Ambiguous frequency: contradicting directions '{frequency.HumanReadable}'");
+                    throw new ParsingException(
+                        $"Ambiguous frequency: contradicting directions '{frequency.HumanReadable}'");
                 }
             }
         }
@@ -181,7 +156,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
 
                 if (mergedInterval == null)
                 {
-                    throw new ParsingException($"Ambiguous frequency: could not combine intervals '{frequency.HumanReadable}'");
+                    throw new ParsingException(
+                        $"Ambiguous frequency: could not combine intervals '{frequency.HumanReadable}'");
                 }
 
                 frequency.Intervals.Clear();
@@ -194,9 +170,9 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             // if days of the week are present, and the periodUnit is "day",
             // then the periodMax MUST be 1, this prevents statements like:
             // every other day on Monday and Tuesday.
-            if (frequency.DaysOfWeek is {Count: > 0})
+            if (frequency.DaysOfWeek is { Count: > 0 })
             {
-                foreach (var interval in frequency.Intervals)
+                foreach (Interval? interval in frequency.Intervals)
                 {
                     if (interval.PeriodUnit == PeriodEnum.Day && interval.PeriodMax != 1)
                     {
@@ -210,7 +186,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         private static void RationalizeMinMustNotBeGreaterThanMax(Frequency frequency)
         {
             // mins must be not be greater than max
-            foreach (var interval in frequency.Intervals)
+            foreach (Interval? interval in frequency.Intervals)
             {
                 if (interval.Freq > interval.FreqMax || interval.Period > interval.PeriodMax)
                 {
@@ -224,10 +200,10 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         {
             if ((frequency.TimeOfDay.Count > 0 || frequency.When.Count > 0) && frequency.Intervals.Count == 0)
             {
-                decimal maxTiming = frequency.MaximumDailyTiming;
+                var maxTiming = frequency.MaximumDailyTiming;
 
                 frequency.Intervals.Add(
-                    new Interval()
+                    new Interval
                     {
                         Freq = maxTiming,
                         FreqMax = maxTiming,
@@ -250,9 +226,9 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             // times and period
             if (Intervals.Count > 0)
             {
-                foreach (var interval in Intervals.Where(x => !x.Inferred))
+                foreach (Interval? interval in Intervals.Where(x => !x.Inferred))
                 {
-                    sb.AppendFormat("{0}{1}", sb.Length > 0 ? " " : "", interval.ToString(DaysOfWeek?.Count> 0));
+                    sb.AppendFormat("{0}{1}", sb.Length > 0 ? " " : "", interval.ToString(DaysOfWeek?.Count > 0));
                 }
             }
 
@@ -281,7 +257,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         {
             sb.AppendFormat("{0}every ", sb.Length > 0 ? " " : "");
 
-            for (int i = 0; i < DaysOfWeek.Count; i++)
+            for (var i = 0; i < DaysOfWeek.Count; i++)
             {
                 // first or first and last
                 if (i == 0 || DaysOfWeek.Count == 1)
@@ -308,9 +284,9 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         {
             sb.AppendFormat("{0}at {1}", sb.Length > 0 ? " " : "", TimeOfDay[0]);
 
-            for (int i = 1; i < TimeOfDay.Count; i++)
+            for (var i = 1; i < TimeOfDay.Count; i++)
             {
-                string joiner = ", ";
+                var joiner = ", ";
                 if (i == TimeOfDay.Count - 1)
                 {
                     joiner = " and ";
@@ -327,7 +303,7 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
                 sb.Append(' ');
             }
 
-            for (int i = 0; i < When.Count; i++)
+            for (var i = 0; i < When.Count; i++)
             {
                 // first or first and last
                 if (i == 0 || When.Count == 1)
@@ -352,19 +328,8 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
 
         private static string ExpressEventTiming(EventTimingEnum timing)
         {
-            return timing switch
-            {
-                EventTimingEnum.BeforeEveryMeal => "before every meal",
-                EventTimingEnum.AfterEveryMeal => "after every meal",
-                EventTimingEnum.WithEveryMeal => "with every meal",
-                EventTimingEnum.BeforeNoon => "before noon",
-                EventTimingEnum.Morning => "in the morning",
-                EventTimingEnum.BedTime => "at bedtime",
-                EventTimingEnum.Night => "at night",
-                EventTimingEnum.AfterNoon => "afternoon",
-                EventTimingEnum.AtNoon => "at noon",
-                _ => throw new ParsingException($"Unexpected event timing: {timing}"),
-            };
+            ParseableEnumAttribute data = timing.GetParseableEnumData();
+            return data.FriendlyName;
         }
     }
 }

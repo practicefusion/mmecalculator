@@ -364,3 +364,9 @@ console/mme.csv
 dataconsole/mme.csv
 
 .DS_Store
+
+src/.idea/
+
+src/generate-test-file.sh
+
+src/Grammar/antlr-4.9.3-complete.jar

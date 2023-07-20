@@ -3,54 +3,119 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// Timing using events rather than time of day
+    ///     Event timing enum
     /// </summary>
     [Serializable]
     public enum EventTimingEnum
     {
         /// <summary>
-        /// After noon
+        ///     After noon
         /// </summary>
-        AfterNoon,
+        [ParseableEnum("after noon")] AfterNoon,
 
         /// <summary>
-        /// At noon
+        ///     In the afternoon
         /// </summary>
-        AtNoon,
+        [ParseableEnum("in the afternoon")] InTheAfternoon,
 
         /// <summary>
-        /// Before noon
+        ///     At noon
         /// </summary>
-        BeforeNoon,
+        [ParseableEnum("at noon")] AtNoon,
 
         /// <summary>
-        /// Morning
+        ///     Before noon
         /// </summary>
-        Morning,
+        [ParseableEnum("before noon")] BeforeNoon,
 
         /// <summary>
-        /// Night
+        ///     Morning
         /// </summary>
-        Night,
+        [ParseableEnum("in the morning")] Morning,
 
         /// <summary>
-        /// Bedtime
+        ///     Night
         /// </summary>
-        BedTime,
+        [ParseableEnum("at night")] Night,
 
         /// <summary>
-        /// Before every meal
+        ///     Bedtime
         /// </summary>
-        BeforeEveryMeal,
+        [ParseableEnum("at bedtime")] BedTime,
 
         /// <summary>
-        /// After every meal
+        ///     Before every meal
         /// </summary>
-        AfterEveryMeal,
+        [ParseableEnum("before every meal")] BeforeEveryMeal,
 
         /// <summary>
-        /// With every meal
+        ///     After every meal
         /// </summary>
-        WithEveryMeal
+        [ParseableEnum("after every meal")] AfterEveryMeal,
+
+        /// <summary>
+        ///     With every meal
+        /// </summary>
+        [ParseableEnum("with every meal")] WithEveryMeal,
+
+        /// <summary>
+        ///     Before meals
+        /// </summary>
+        [ParseableEnum("before meals")] BeforeMeals,
+
+        /// <summary>
+        ///     After every meal
+        /// </summary>
+        [ParseableEnum("after meals")] AfterMeals,
+
+        /// <summary>
+        ///     With every meal
+        /// </summary>
+        [ParseableEnum("with meals")] WithMeals,
+
+        /// <summary>
+        ///     Before breakfast
+        /// </summary>
+        [ParseableEnum("before breakfast")] BeforeBreakfast,
+
+        /// <summary>
+        ///     With breakfast
+        /// </summary>
+        [ParseableEnum("with breakfast")] WithBreakfast,
+
+        /// <summary>
+        ///     After breakfast
+        /// </summary>
+        [ParseableEnum("after breakfast")] AfterBreakfast,
+
+        /// <summary>
+        ///     Before lunch
+        /// </summary>
+        [ParseableEnum("before lunch")] BeforeLunch,
+
+        /// <summary>
+        ///     With lunch
+        /// </summary>
+        [ParseableEnum("with lunch")] WithLunch,
+
+        /// <summary>
+        ///     After lunch
+        /// </summary>
+        [ParseableEnum("after lunch")] AfterLunch,
+
+        /// <summary>
+        ///     Before dinner
+        /// </summary>
+        [ParseableEnum("before dinner")] BeforeDinner,
+
+        /// <summary>
+        ///     With dinner
+        /// </summary>
+        [ParseableEnum("with dinner")] WithDinner,
+
+        /// <summary>
+        ///     After dinner
+        /// </summary>
+        [ParseableEnum("after dinner")] AfterDinner
     }
 }

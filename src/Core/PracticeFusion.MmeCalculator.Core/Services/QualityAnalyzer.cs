@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using PracticeFusion.MmeCalculator.Core.Entities;
 using PracticeFusion.MmeCalculator.Core.Messages;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PracticeFusion.MmeCalculator.Core.Services
 {
@@ -14,7 +14,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         private readonly IMmeCalculator _mmeCalculator;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="mmeCalculator"></param>
@@ -25,7 +25,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
         }
 
         /// <summary>
-        /// Constructor uses <see cref="NullLogger"/>.
+        ///     Constructor uses <see cref="NullLogger" />.
         /// </summary>
         public QualityAnalyzer() : this(NullLogger<QualityAnalyzer>.Instance, new MmeCalculator())
         {
@@ -80,25 +80,29 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
                 // step through every parsed result with an opioid in the med
                 foreach (ParsedResult parsedResult in calculatedResult.ParsedResults
-                    .Where(x => x.ParsedMedication?.MedicationComponents.Count(y => y.IsOpioid) > 0))
+                             .Where(x => x.ParsedMedication?.MedicationComponents.Count(y => y.IsOpioid) > 0))
                 {
-                    if(parsedResult.ParsedSig == null || parsedResult.ParsedMedication == null)
+                    if (parsedResult.ParsedSig == null || parsedResult.ParsedMedication == null)
                     {
                         parsedResult.Confidence = ConfidenceEnum.None;
-                        parsedResult.ConfidenceReasons.Add("Missing either a parsed sig or a parsed medication, require both.");
+                        parsedResult.ConfidenceReasons.Add(
+                            "Missing either a parsed sig or a parsed medication, require both.");
                         continue;
                     }
 
                     // use the initial route as the global route
-                    Route? route = parsedResult.ParsedSig?.Dosages?.Count > 0 ? parsedResult.ParsedSig.Dosages[0].Route : null;
+                    Route? route = parsedResult.ParsedSig?.Dosages?.Count > 0
+                        ? parsedResult.ParsedSig.Dosages[0].Route
+                        : null;
 
-                    foreach (MedicationComponent medicationComponent in parsedResult.ParsedMedication.MedicationComponents.Where(
-                        x =>
-                            x.IsOpioid && x.Confidence == ConfidenceEnum.High))
+                    foreach (MedicationComponent medicationComponent in parsedResult.ParsedMedication
+                                 .MedicationComponents.Where(
+                                     x =>
+                                         x.IsOpioid && x.Confidence == ConfidenceEnum.High))
                     {
                         OpioidEnum opioidEnum = medicationComponent.Opioid!.ValueEnum;
                         Form? formEnums = medicationComponent.Form;
-                        string relatedItem = parsedResult.RequestItemId!;
+                        var relatedItem = parsedResult.RequestItemId!;
                         var key = $"{{{opioidEnum}}}{{{formEnums}}}";
 
                         MmeCalculatorResult mmeCalculatorResult = _mmeCalculator.Calculate(
@@ -106,7 +110,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                             parsedResult.ParsedSig!.MaximumDosage!,
                             route);
 
-                        decimal mdd = mmeCalculatorResult.OpioidMaximumDailyDose;
+                        var mdd = mmeCalculatorResult.OpioidMaximumDailyDose;
                         UnitOfMeasureEnum? uom = medicationComponent.UnitOfMeasure?.ValueEnum;
 
                         // strip out the denominator UOM
@@ -131,7 +135,7 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                             OpioidAnalysis opioid = opioids[key];
 
                             // confirm the UOM (from a previous med/component calculation) is equivalent, otherwise convert
-                            decimal strengthConversion =
+                            var strengthConversion =
                                 ConversionUtils.UnitOfMeasureConversionFactor(opioid.TotalDailyDoseUom, uom);
 
                             opioid.TotalDailyDose += strengthConversion * mdd;
@@ -186,8 +190,10 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     AnalyzeParsedMedication(parsedResult.ParsedMedication!);
                 }
 
-                QualityCheck.SetLowestConfidence(parsedResult, new[] { parsedResult.ParsedSig! }, "Sig not high confidence");
-                QualityCheck.SetLowestConfidence(parsedResult, new[] { parsedResult.ParsedMedication! }, "Medication not high confidence");
+                QualityCheck.SetLowestConfidence(parsedResult, new[] { parsedResult.ParsedSig! },
+                    "Sig not high confidence");
+                QualityCheck.SetLowestConfidence(parsedResult, new[] { parsedResult.ParsedMedication! },
+                    "Medication not high confidence");
             }
         }
 
@@ -228,7 +234,8 @@ namespace PracticeFusion.MmeCalculator.Core.Services
 
                 // next, check for a gap between the last dosage + the length of any ClarifyingFreeText,
                 // and the end of the sig.
-                if ((currentReadPoint + (parsedSig.ClarifyingFreeText?.Length ?? 0) + 4) < parsedSig.PreprocessedSig?.Length)
+                if (currentReadPoint + (parsedSig.ClarifyingFreeText?.Length ?? 0) + 4 <
+                    parsedSig.PreprocessedSig?.Length)
                 {
                     parsedSig.Confidence = ConfidenceEnum.None;
                     parsedSig.ConfidenceReasons.Add(
@@ -270,9 +277,11 @@ namespace PracticeFusion.MmeCalculator.Core.Services
                     dosage.Confidence = ConfidenceEnum.High;
                 }
 
-                QualityCheck.IsTrue(dosage.HumanReadable?.Length > 0, ConfidenceEnum.None, dosage, "Failed to parse the sig");
+                QualityCheck.IsTrue(dosage.HumanReadable?.Length > 0, ConfidenceEnum.None, dosage,
+                    "Failed to parse the sig");
                 QualityCheck.IsNotNull(dosage.Dose, ConfidenceEnum.None, dosage, "No dose information present");
-                QualityCheck.IsTrue(dosage.HumanReadable?.Length >= 4, ConfidenceEnum.None, dosage, "Original sig too short or ambiguous");
+                QualityCheck.IsTrue(dosage.HumanReadable?.Length >= 4, ConfidenceEnum.None, dosage,
+                    "Original sig too short or ambiguous");
                 QualityCheck.IsTrue(
                     dosage.Frequency != null && dosage.Frequency.ToString().Length > 0,
                     ConfidenceEnum.None,

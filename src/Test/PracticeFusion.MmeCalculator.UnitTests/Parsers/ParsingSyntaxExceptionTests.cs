@@ -2,16 +2,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PracticeFusion.MmeCalculator.Core.Messages;
 using PracticeFusion.MmeCalculator.Core.Parsers;
-using PracticeFusion.MmeCalculator.Core.Services;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace PracticeFusion.MmeCalculator.UnitTests.Parsers
 {
@@ -19,6 +12,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers
     public class ParsingSyntaxExceptionTests
     {
         private static readonly string message = "Test message";
+
         private static readonly List<(ConfidenceEnum, string)> allSyntaxErrors = new()
         {
             (ConfidenceEnum.High, "High confidence"),
@@ -63,7 +57,7 @@ namespace PracticeFusion.MmeCalculator.UnitTests.Parsers
         public void ShouldBeSerializable()
         {
             ParsingSyntaxException ex = new(allSyntaxErrors);
-            string exceptionToString = ex.ToString();
+            var exceptionToString = ex.ToString();
 
             ex.Should().BeBinarySerializable();
         }

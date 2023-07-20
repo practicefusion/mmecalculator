@@ -3,28 +3,32 @@
 namespace PracticeFusion.MmeCalculator.Core.Entities
 {
     /// <summary>
-    /// The active opioid
-    ///
-    /// from: https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/Opioid%20Morphine%20EQ%20Conversion%20Factors%20%28vFeb%202018%29.pdf
-    /// which is pointed at from: https://www.hhs.gov/guidance/document/opioid-oral-morphine-milligram-equivalent-mme-conversion-factors-0
+    ///     The active opioid
+    ///     from:
+    ///     https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/Opioid%20Morphine%20EQ%20Conversion%20Factors%20%28vFeb%202018%29.pdf
+    ///     which is pointed at from:
+    ///     https://www.hhs.gov/guidance/document/opioid-oral-morphine-milligram-equivalent-mme-conversion-factors-0
     /// </summary>
     [Serializable]
     public enum OpioidEnum
     {
         /// <summary>
-        /// Buprenorphine
-        /// The April 2017 version of the document noted above (no longer available) included several variations of conversion factors
-        /// for buprenorphine. The current document states:
-        ///
-        /// "Buprenorphine products are listed but do not have an associated MME conversion factor. These buprenorphine products, as partial opioid
-        /// agonists, are not expected to be associated with overdose risk in the same dose-dependent manner as doses for full agonist opioids.
-        /// The conversion factors for drugs prescribed or provided as part of medication-assisted treatment for opioid use disorder should not be
-        /// used to benchmark against dosage thresholds meant for opioids prescribed for pain."
-        /// 
-        /// In order to match as closely as possible the concept of "...listed but do not have an associated MME conversion factor", we keep
-        /// buprenorphine present, with a 0 conversion factor.
+        ///     Buprenorphine
+        ///     The April 2017 version of the document noted above (no longer available) included several variations of conversion
+        ///     factors
+        ///     for buprenorphine. The current document states:
+        ///     "Buprenorphine products are listed but do not have an associated MME conversion factor. These buprenorphine
+        ///     products, as partial opioid
+        ///     agonists, are not expected to be associated with overdose risk in the same dose-dependent manner as doses for full
+        ///     agonist opioids.
+        ///     The conversion factors for drugs prescribed or provided as part of medication-assisted treatment for opioid use
+        ///     disorder should not be
+        ///     used to benchmark against dosage thresholds meant for opioids prescribed for pain."
+        ///     In order to match as closely as possible the concept of "...listed but do not have an associated MME conversion
+        ///     factor", we keep
+        ///     buprenorphine present, with a 0 conversion factor.
         /// </summary>
-        [ParseableEnum("buprenorphine", "buprenorphine")] 
+        [ParseableEnum("buprenorphine", "buprenorphine")]
         [ConversionFactor(UnitOfMeasureEnum.Milligram, "Film", 0)]
         [ConversionFactor(UnitOfMeasureEnum.Milligram, "Tablet", 0)]
         [ConversionFactor(UnitOfMeasureEnum.MicrogramPerHour, "Patch", 0)]
@@ -32,28 +36,25 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         Buprenorphine,
 
         /// <summary>
-        /// Butorphanol
+        ///     Butorphanol
         /// </summary>
-        [ParseableEnum("butorphanol", "butorphanol")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 7)]
+        [ParseableEnum("butorphanol", "butorphanol")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 7)]
         Butorphanol,
 
         /// <summary>
-        /// Codeine
+        ///     Codeine
         /// </summary>
-        [ParseableEnum("codeine", "codeine")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.15)]
+        [ParseableEnum("codeine", "codeine")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.15)]
         Codeine,
 
         /// <summary>
-        /// Dihydrocodeine
+        ///     Dihydrocodeine
         /// </summary>
-        [ParseableEnum("dihydrocodeine", "dihydrocodeine")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.25)]
+        [ParseableEnum("dihydrocodeine", "dihydrocodeine")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.25)]
         Dihydrocodeine,
 
         /// <summary>
-        /// Fentanyl
+        ///     Fentanyl
         /// </summary>
         [ParseableEnum("fentanyl", "fentanyl")]
         [ConversionFactor(UnitOfMeasureEnum.Microgram, "Buccal, Tablet", 0.13)]
@@ -68,35 +69,31 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         Fentanyl,
 
         /// <summary>
-        /// Hydrocodone
+        ///     Hydrocodone
         /// </summary>
-        [ParseableEnum("hydrocodone", "hydrocodone")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 1)]
+        [ParseableEnum("hydrocodone", "hydrocodone")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 1)]
         Hydrocodone,
 
         /// <summary>
-        /// Hydromorphone
+        ///     Hydromorphone
         /// </summary>
-        [ParseableEnum("hydromorphone", "hydromorphone")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 4)]
+        [ParseableEnum("hydromorphone", "hydromorphone")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 4)]
         Hydromorphone,
 
         /// <summary>
-        /// Levorphanol
+        ///     Levorphanol
         /// </summary>
-        [ParseableEnum("levorphanol", "levorphanol")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 11)]
+        [ParseableEnum("levorphanol", "levorphanol")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 11)]
         Levorphanol,
 
         /// <summary>
-        /// Meperidine
+        ///     Meperidine
         /// </summary>
-        [ParseableEnum("meperidine", "meperidine")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.1)]
+        [ParseableEnum("meperidine", "meperidine")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.1)]
         Meperidine,
 
         /// <summary>
-        /// Methadone
+        ///     Methadone
         /// </summary>
         [ParseableEnum("methadone", "methadone")]
         [ConversionFactor(UnitOfMeasureEnum.Milligram, double.MinValue, 20, 4)]
@@ -106,52 +103,45 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
         Methadone,
 
         /// <summary>
-        /// Morphine
+        ///     Morphine
         /// </summary>
-        [ParseableEnum("morphine", "morphine")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 1)]
+        [ParseableEnum("morphine", "morphine")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 1)]
         Morphine,
 
         /// <summary>
-        /// Opium
+        ///     Opium
         /// </summary>
-        [ParseableEnum("opium", "opium")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 1)]
+        [ParseableEnum("opium", "opium")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 1)]
         Opium,
 
         /// <summary>
-        /// Oxycodone
+        ///     Oxycodone
         /// </summary>
-        [ParseableEnum("oxycodone", "oxycodone")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 1.5)]
+        [ParseableEnum("oxycodone", "oxycodone")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 1.5)]
         Oxycodone,
 
         /// <summary>
-        /// Oxymorphone
+        ///     Oxymorphone
         /// </summary>
-        [ParseableEnum("oxymorphone", "oxymorphone")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 3)]
+        [ParseableEnum("oxymorphone", "oxymorphone")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 3)]
         Oxymorphone,
 
         /// <summary>
-        /// Pentazocine
+        ///     Pentazocine
         /// </summary>
-        [ParseableEnum("pentazocine", "pentazocine")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.37)]
+        [ParseableEnum("pentazocine", "pentazocine")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.37)]
         Pentazocine,
 
         /// <summary>
-        /// Tapentadol
+        ///     Tapentadol
         /// </summary>
-        [ParseableEnum("tapentadol", "tapentadol")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.4)]
+        [ParseableEnum("tapentadol", "tapentadol")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.4)]
         Tapentadol,
 
         /// <summary>
-        /// Tramadol
+        ///     Tramadol
         /// </summary>
-        [ParseableEnum("tramadol", "tramadol")]
-        [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.1)]
+        [ParseableEnum("tramadol", "tramadol")] [ConversionFactor(UnitOfMeasureEnum.Milligram, 0.1)]
         Tramadol
     }
 }

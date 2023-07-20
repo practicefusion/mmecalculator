@@ -16,6 +16,15 @@ namespace PracticeFusion.MmeCalculator.Core.Entities
             IsDefault = isDefault;
         }
 
+        public ParseableEnumAttribute(
+            string friendlyName,
+            bool isDefault = false)
+        {
+            FriendlyName = friendlyName;
+            PluralName = friendlyName;
+            IsDefault = isDefault;
+        }
+
         public string FriendlyName { get; }
 
         public string PluralName { get; }
