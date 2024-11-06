@@ -40,8 +40,8 @@
         <!-- for source link, and versioning -->
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
         <PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All"/>
-        <PackageReference Include="RestSharp" Version="110.2.0"/>
-        <PackageReference Include="System.Text.Json" Version="7.0.2"/>
+        <PackageReference Include="RestSharp" Version="112.0.0"/>
+        <PackageReference Include="System.Text.Json" Version="8.0.4"/>
     </ItemGroup>
 
     <ItemGroup>
